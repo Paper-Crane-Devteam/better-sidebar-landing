@@ -11,7 +11,7 @@
 	"assets": {
 		"directory": "./dist/client",
 		"not_found_handling": "single-page-application",
-		"serve_directly": true,
+		"serve_directly": false,
 		"binding": "ASSETS"
 	}
 }
