@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "首頁",
+    "privacy": "隱私政策"
+  },
+  "hero": {
+    "title1": "Better Sidebar —",
+    "gemini": "Gemini",
+    "and": "與",
+    "aiStudio": "AI Studio",
+    "description": "你的 AI 對話不該淹沒在雜亂的聊天列表和遺失的提示詞中。用資料夾、標籤、全文搜尋和提示詞庫來整理一切——同時支援 Gemini 和 AI Studio。幾秒鐘找到任何對話。",
+    "addChrome": "安裝到 Chrome",
+    "addFirefox": "安裝到 Firefox"
+  },
+  "features": {
+    "heading": "你需要的一切，",
+    "headingHighlight": "開箱即用",
+    "subtitle": "九大強力功能，將簡單的聊天列表變成高效工作空間。全部在瀏覽器本地運行。",
+    "multiPlatform": "多平台支援",
+    "multiPlatformDesc": "無縫支援 Gemini 和 AI Studio。一個側邊欄管理所有 AI 對話，無論你偏好哪個平台。",
+    "foldersTags": "資料夾與標籤管理",
+    "foldersTagsDesc": "將對話整理到巢狀資料夾中，並用標籤快速篩選。建構符合你思維和工作方式的結構。",
+    "promptLibrary": "提示詞庫",
+    "promptLibraryDesc": "儲存、分類和複用你最好的提示詞。不再重複編寫相同的指令——一鍵存取你的個人庫。",
+    "search": "全文搜尋",
+    "searchDesc": "透過強大的全文搜尋即時找到任何對話。不再在無盡的聊天列表中捲動尋找那個對話。",
+    "driveSync": "Google Drive 同步",
+    "driveSyncDesc": "透過 Google Drive 跨裝置同步你的設定、提示詞和配置。你的資料歸你所有——聊天內容永遠不會上傳。",
+    "uiCustom": "介面自訂",
+    "uiCustomDesc": "調整側邊欄寬度、主題和佈局以適應你的工作流程。讓介面感覺像是為你量身打造的。",
+    "multiAccount": "多帳戶支援",
+    "multiAccountDesc": "在多個 Google 帳戶之間切換而不會遺失位置。將工作和個人對話整齊分開。",
+    "export": "對話匯出",
+    "exportDesc": "以多種格式匯出對話，用於備份、分享或進一步分析。你的資料始終可攜帶。",
+    "imageDownload": "無浮水印圖片下載",
+    "imageDownloadDesc": "下載無浮水印的 AI 生成圖片。直接從對話中取得乾淨、可直接使用的視覺內容。"
+  },
+  "video": {
+    "heading": "看看它如何運作",
+    "subtitle": "快速了解核心功能以及它們如何融入你的日常工作流程。",
+    "comingSoon": "影片即將推出"
+  },
+  "install": {
+    "heading": "幾秒鐘即可開始",
+    "subtitle": "選擇你的瀏覽器並安裝。無需帳戶，無需設定。",
+    "chrome": "安裝到 Chrome",
+    "firefox": "安裝到 Firefox",
+    "edge": "即將推出"
+  },
+  "openSource": {
+    "heading": "開源，",
+    "headingHighlight": "社群驅動",
+    "description": "基於 GPL-3.0 授權條款。閱讀程式碼、回報問題或提交 PR。這是一個獨立專案，與 Google 無關。",
+    "viewGithub": "在 GitHub 上查看"
+  },
+  "footer": {
+    "brand": "Better Sidebar",
+    "license": "基於 GPL-3.0 授權條款發布",
+    "github": "GitHub",
+    "chromeStore": "Chrome 線上應用程式商店",
+    "firefoxAddons": "Firefox 附加元件",
+    "privacy": "隱私政策",
+    "disclaimer": "這是一個獨立專案，與 Google 無關。",
+    "copyright": "© {{year}} Better Sidebar"
+  }
+}

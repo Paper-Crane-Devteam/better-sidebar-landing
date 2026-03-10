@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "首页",
+    "privacy": "隐私政策"
+  },
+  "hero": {
+    "title1": "Better Sidebar —",
+    "gemini": "Gemini",
+    "and": "与",
+    "aiStudio": "AI Studio",
+    "description": "你的 AI 对话不该淹没在杂乱的聊天列表和丢失的提示词中。用文件夹、标签、全文搜索和提示词库来整理一切——同时支持 Gemini 和 AI Studio。几秒钟找到任何对话。",
+    "addChrome": "安装到 Chrome",
+    "addFirefox": "安装到 Firefox"
+  },
+  "features": {
+    "heading": "你需要的一切，",
+    "headingHighlight": "开箱即用",
+    "subtitle": "九大强力功能，将简单的聊天列表变成高效工作空间。全部在浏览器本地运行。",
+    "multiPlatform": "多平台支持",
+    "multiPlatformDesc": "无缝支持 Gemini 和 AI Studio。一个侧边栏管理所有 AI 对话，无论你偏好哪个平台。",
+    "foldersTags": "文件夹与标签管理",
+    "foldersTagsDesc": "将对话整理到嵌套文件夹中，并用标签快速筛选。构建符合你思维和工作方式的结构。",
+    "promptLibrary": "提示词库",
+    "promptLibraryDesc": "保存、分类和复用你最好的提示词。不再重复编写相同的指令——一键访问你的个人库。",
+    "search": "全文搜索",
+    "searchDesc": "通过强大的全文搜索即时找到任何对话。不再在无尽的聊天列表中滚动寻找那个对话。",
+    "driveSync": "Google Drive 同步",
+    "driveSyncDesc": "通过 Google Drive 跨设备同步你的设置、提示词和配置。你的数据归你所有——聊天内容永远不会上传。",
+    "uiCustom": "界面自定义",
+    "uiCustomDesc": "调整侧边栏宽度、主题和布局以适应你的工作流程。让界面感觉像是为你量身定制的。",
+    "multiAccount": "多账户支持",
+    "multiAccountDesc": "在多个 Google 账户之间切换而不会丢失位置。将工作和个人对话整齐分开。",
+    "export": "对话导出",
+    "exportDesc": "以多种格式导出对话，用于备份、分享或进一步分析。你的数据始终可移植。",
+    "imageDownload": "无水印图片下载",
+    "imageDownloadDesc": "下载无水印的 AI 生成图片。直接从对话中获取干净、可直接使用的视觉内容。"
+  },
+  "video": {
+    "heading": "看看它如何工作",
+    "subtitle": "快速了解核心功能以及它们如何融入你的日常工作流程。",
+    "comingSoon": "视频即将推出"
+  },
+  "install": {
+    "heading": "几秒钟即可开始",
+    "subtitle": "选择你的浏览器并安装。无需账户，无需设置。",
+    "chrome": "安装到 Chrome",
+    "firefox": "安装到 Firefox",
+    "edge": "即将推出"
+  },
+  "openSource": {
+    "heading": "开源，",
+    "headingHighlight": "社区驱动",
+    "description": "基于 GPL-3.0 许可证。阅读代码、报告问题或提交 PR。这是一个独立项目，与 Google 无关。",
+    "viewGithub": "在 GitHub 上查看"
+  },
+  "footer": {
+    "brand": "Better Sidebar",
+    "license": "基于 GPL-3.0 许可证发布",
+    "github": "GitHub",
+    "chromeStore": "Chrome 网上应用店",
+    "firefoxAddons": "Firefox 附加组件",
+    "privacy": "隐私政策",
+    "disclaimer": "这是一个独立项目，与 Google 无关。",
+    "copyright": "© {{year}} Better Sidebar"
+  }
+}

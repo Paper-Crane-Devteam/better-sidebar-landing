@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Início",
+    "privacy": "Política de Privacidade"
+  },
+  "hero": {
+    "title1": "Better Sidebar para",
+    "gemini": "Gemini",
+    "and": "e",
+    "aiStudio": "AI Studio",
+    "description": "Suas conversas de IA merecem mais do que listas de chat bagunçadas e prompts perdidos. Organize tudo com pastas, tags, busca de texto completo e uma biblioteca de prompts — no Gemini e AI Studio. Encontre qualquer conversa em segundos.",
+    "addChrome": "Adicionar ao Chrome",
+    "addFirefox": "Adicionar ao Firefox"
+  },
+  "features": {
+    "heading": "Tudo o que você precisa,",
+    "headingHighlight": "integrado",
+    "subtitle": "Nove recursos poderosos que transformam uma lista de chat básica em um espaço de trabalho produtivo. Tudo rodando localmente no seu navegador.",
+    "multiPlatform": "Suporte Multiplataforma",
+    "multiPlatformDesc": "Funciona perfeitamente no Gemini e AI Studio. Uma barra lateral para gerenciar todas as suas conversas de IA, independente da plataforma.",
+    "foldersTags": "Gestão de Pastas e Tags",
+    "foldersTagsDesc": "Organize conversas em pastas aninhadas e marque com tags para filtragem rápida. Construa uma estrutura que combine com seu jeito de pensar e trabalhar.",
+    "promptLibrary": "Biblioteca de Prompts",
+    "promptLibraryDesc": "Salve, categorize e reutilize seus melhores prompts. Pare de reescrever as mesmas instruções — crie uma biblioteca pessoal acessível com um clique.",
+    "search": "Busca de Texto Completo",
+    "searchDesc": "Encontre qualquer conversa instantaneamente com busca de texto completo poderosa. Chega de rolar listas intermináveis de chat para achar aquela conversa.",
+    "driveSync": "Sincronização com Google Drive",
+    "driveSyncDesc": "Sincronize suas configurações, prompts e ajustes entre dispositivos via Google Drive. Seus dados são seus — o conteúdo do chat nunca é enviado.",
+    "uiCustom": "Personalização da Interface",
+    "uiCustomDesc": "Ajuste a largura da barra lateral, tema e layout para se adequar ao seu fluxo de trabalho. Faça a interface parecer feita sob medida para você.",
+    "multiAccount": "Suporte a Múltiplas Contas",
+    "multiAccountDesc": "Alterne entre múltiplas contas Google sem perder seu lugar. Mantenha conversas de trabalho e pessoais bem separadas.",
+    "export": "Exportação de Conversas",
+    "exportDesc": "Exporte suas conversas em múltiplos formatos para backup, compartilhamento ou análise. Seus dados são sempre portáteis.",
+    "imageDownload": "Download de Imagens sem Marca d'Água",
+    "imageDownloadDesc": "Baixe imagens geradas por IA sem marcas d'água. Obtenha visuais limpos e prontos para uso diretamente das suas conversas."
+  },
+  "video": {
+    "heading": "Veja como funciona",
+    "subtitle": "Um tour rápido pelos recursos principais e como eles se encaixam no seu fluxo de trabalho diário.",
+    "comingSoon": "Vídeo em breve"
+  },
+  "install": {
+    "heading": "Comece em segundos",
+    "subtitle": "Escolha seu navegador e instale. Sem conta necessária, sem configuração.",
+    "chrome": "Instalar no Chrome",
+    "firefox": "Instalar no Firefox",
+    "edge": "Em breve"
+  },
+  "openSource": {
+    "heading": "Código aberto,",
+    "headingHighlight": "movido pela comunidade",
+    "description": "Licenciado sob GPL-3.0. Leia o código, reporte problemas ou envie um pull request. Este é um projeto independente e não é afiliado ao Google.",
+    "viewGithub": "Ver no GitHub"
+  },
+  "footer": {
+    "brand": "Better Sidebar",
+    "license": "Publicado sob a Licença GPL-3.0",
+    "github": "GitHub",
+    "chromeStore": "Chrome Web Store",
+    "firefoxAddons": "Complementos do Firefox",
+    "privacy": "Política de Privacidade",
+    "disclaimer": "Este é um projeto independente e não é afiliado ao Google.",
+    "copyright": "© {{year}} Better Sidebar"
+  }
+}

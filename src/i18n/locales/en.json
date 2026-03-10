@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "privacy": "Privacy Policy"
+  },
+  "hero": {
+    "title1": "Better Sidebar for",
+    "gemini": "Gemini",
+    "and": "&",
+    "aiStudio": "AI Studio",
+    "description": "Your AI conversations deserve better than messy chat lists and lost prompts. Organize everything with folders, tags, full-text search, and a prompt library — across both Gemini and AI Studio. Find any conversation in seconds, not minutes.",
+    "addChrome": "Add to Chrome",
+    "addFirefox": "Add to Firefox"
+  },
+  "features": {
+    "heading": "Everything you need,",
+    "headingHighlight": "built in",
+    "subtitle": "Nine powerful features that turn a basic chat list into a productivity workspace. All running locally in your browser.",
+    "multiPlatform": "Multi-Platform Support",
+    "multiPlatformDesc": "Works seamlessly across both Gemini and AI Studio. One sidebar to manage all your AI conversations, no matter which platform you prefer.",
+    "foldersTags": "Folders & Tags Management",
+    "foldersTagsDesc": "Organize conversations into nested folders and tag them for quick filtering. Build a structure that matches how you actually think and work.",
+    "promptLibrary": "Prompt Library",
+    "promptLibraryDesc": "Save, categorize, and reuse your best prompts. Stop rewriting the same instructions — build a personal library you can access in one click.",
+    "search": "Full-Text Search",
+    "searchDesc": "Find any conversation instantly with powerful full-text search. No more scrolling through endless chat lists to locate that one thread.",
+    "driveSync": "Google Drive Sync",
+    "driveSyncDesc": "Sync your settings, prompts, and configuration across devices via Google Drive. Your data stays yours — chat content is never uploaded.",
+    "uiCustom": "UI Customization",
+    "uiCustomDesc": "Adjust the sidebar width, theme, and layout to fit your workflow. Make the interface feel like it was built just for you.",
+    "multiAccount": "Multi-Account Support",
+    "multiAccountDesc": "Switch between multiple Google accounts without losing your place. Keep work and personal conversations neatly separated.",
+    "export": "Conversation Export",
+    "exportDesc": "Export your conversations in multiple formats for backup, sharing, or further analysis. Your data is always portable.",
+    "imageDownload": "Watermark-Free Image Downloads",
+    "imageDownloadDesc": "Download AI-generated images without watermarks. Get clean, ready-to-use visuals directly from your conversations."
+  },
+  "video": {
+    "heading": "See how it works",
+    "subtitle": "A quick walkthrough of the key features and how they fit into your daily workflow.",
+    "comingSoon": "Video coming soon"
+  },
+  "install": {
+    "heading": "Get started in seconds",
+    "subtitle": "Pick your browser and install. No account needed, no setup required.",
+    "chrome": "Install on Chrome",
+    "firefox": "Install on Firefox",
+    "edge": "Coming Soon"
+  },
+  "openSource": {
+    "heading": "Open source,",
+    "headingHighlight": "community driven",
+    "description": "Licensed under GPL-3.0. Read the code, report issues, or submit a pull request. This is an independent project and is not affiliated with Google.",
+    "viewGithub": "View on GitHub"
+  },
+  "footer": {
+    "brand": "Better Sidebar",
+    "license": "Released under the GPL-3.0 License",
+    "github": "GitHub",
+    "chromeStore": "Chrome Web Store",
+    "firefoxAddons": "Firefox Add-ons",
+    "privacy": "Privacy Policy",
+    "disclaimer": "This is an independent project and is not affiliated with Google.",
+    "copyright": "© {{year}} Better Sidebar"
+  }
+}

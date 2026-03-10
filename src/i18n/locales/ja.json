@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "privacy": "プライバシーポリシー"
+  },
+  "hero": {
+    "title1": "Better Sidebar —",
+    "gemini": "Gemini",
+    "and": "と",
+    "aiStudio": "AI Studio",
+    "description": "AI の会話が散らかったチャットリストや失われたプロンプトに埋もれる必要はありません。フォルダ、タグ、全文検索、プロンプトライブラリで整理しましょう。Gemini と AI Studio の両方に対応。数秒で会話を見つけられます。",
+    "addChrome": "Chrome に追加",
+    "addFirefox": "Firefox に追加"
+  },
+  "features": {
+    "heading": "必要なものすべてが、",
+    "headingHighlight": "組み込み済み",
+    "subtitle": "基本的なチャットリストを生産性ワークスペースに変える9つの強力な機能。すべてブラウザ内でローカルに動作します。",
+    "multiPlatform": "マルチプラットフォーム対応",
+    "multiPlatformDesc": "Gemini と AI Studio の両方でシームレスに動作。どのプラットフォームを使っても、1つのサイドバーですべての AI 会話を管理できます。",
+    "foldersTags": "フォルダとタグ管理",
+    "foldersTagsDesc": "会話をネストされたフォルダに整理し、タグで素早くフィルタリング。あなたの思考と作業方法に合った構造を構築できます。",
+    "promptLibrary": "プロンプトライブラリ",
+    "promptLibraryDesc": "最高のプロンプトを保存、分類、再利用。同じ指示を書き直す必要はありません。ワンクリックでアクセスできる個人ライブラリを構築しましょう。",
+    "search": "全文検索",
+    "searchDesc": "強力な全文検索で会話を即座に見つけられます。あのスレッドを探すために延々とチャットリストをスクロールする必要はもうありません。",
+    "driveSync": "Google Drive 同期",
+    "driveSyncDesc": "Google Drive を通じてデバイス間で設定、プロンプト、構成を同期。データはあなたのもの — チャット内容はアップロードされません。",
+    "uiCustom": "UI カスタマイズ",
+    "uiCustomDesc": "サイドバーの幅、テーマ、レイアウトをワークフローに合わせて調整。あなた専用に作られたようなインターフェースに。",
+    "multiAccount": "マルチアカウント対応",
+    "multiAccountDesc": "複数の Google アカウントを切り替えても場所を見失いません。仕事と個人の会話をきれいに分離できます。",
+    "export": "会話エクスポート",
+    "exportDesc": "バックアップ、共有、分析のために複数の形式で会話をエクスポート。データは常にポータブルです。",
+    "imageDownload": "透かしなし画像ダウンロード",
+    "imageDownloadDesc": "透かしなしで AI 生成画像をダウンロード。会話から直接、クリーンですぐに使えるビジュアルを取得できます。"
+  },
+  "video": {
+    "heading": "使い方を見る",
+    "subtitle": "主要機能と日常のワークフローへの組み込み方を簡単にご紹介します。",
+    "comingSoon": "動画は近日公開"
+  },
+  "install": {
+    "heading": "数秒で始められます",
+    "subtitle": "ブラウザを選んでインストール。アカウント不要、セットアップ不要。",
+    "chrome": "Chrome にインストール",
+    "firefox": "Firefox にインストール",
+    "edge": "近日公開"
+  },
+  "openSource": {
+    "heading": "オープンソース、",
+    "headingHighlight": "コミュニティ主導",
+    "description": "GPL-3.0 ライセンス。コードを読み、問題を報告し、プルリクエストを送信できます。これは独立したプロジェクトであり、Google とは関係ありません。",
+    "viewGithub": "GitHub で見る"
+  },
+  "footer": {
+    "brand": "Better Sidebar",
+    "license": "GPL-3.0 ライセンスで公開",
+    "github": "GitHub",
+    "chromeStore": "Chrome ウェブストア",
+    "firefoxAddons": "Firefox アドオン",
+    "privacy": "プライバシーポリシー",
+    "disclaimer": "これは独立したプロジェクトであり、Google とは関係ありません。",
+    "copyright": "© {{year}} Better Sidebar"
+  }
+}
