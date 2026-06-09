@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "Getting Started"
+  },
+  {
+    "type": "file",
+    "name": "installation",
+    "label": "Installation"
+  },
+  {
+    "type": "file",
+    "name": "folders-and-tags",
+    "label": "Folders & Tags"
+  },
+  {
+    "type": "file",
+    "name": "prompt-library",
+    "label": "Prompt Library"
+  },
+  {
+    "type": "file",
+    "name": "search",
+    "label": "Full-Text Search"
+  },
+  {
+    "type": "file",
+    "name": "drive-sync",
+    "label": "Google Drive Sync"
+  },
+  {
+    "type": "file",
+    "name": "export",
+    "label": "Conversation Export"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "label": "FAQ"
+  }
+]

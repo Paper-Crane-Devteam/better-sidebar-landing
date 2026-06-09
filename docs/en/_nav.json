@@ -1,0 +1,19 @@
+[
+  {
+    "text": "Features",
+    "link": "/#features"
+  },
+  {
+    "text": "Pricing",
+    "link": "/#pricing"
+  },
+  {
+    "text": "Guide",
+    "link": "/guide/getting-started",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "Privacy",
+    "link": "/privacy"
+  }
+]

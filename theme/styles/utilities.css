@@ -1,0 +1,47 @@
+/* ─── Utility Classes · Celine Design System ──────────────────────────
+   漫反射微光 · 超椭圆曲率 · 触觉温度感
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* ─── Organic Border Radius (Squircle) ───────────────────────────────── */
+.rounded-squircle {
+  border-radius: 20px;
+}
+.rounded-squircle-sm {
+  border-radius: 14px;
+}
+.rounded-squircle-lg {
+  border-radius: 28px;
+}
+
+/* ─── Diffuse Glow Shadows · 漫反射微光 ──────────────────────────────── */
+.shadow-diffuse {
+  box-shadow:
+    0 4px 40px -8px rgba(123, 142, 168, 0.06),
+    0 2px 12px -2px rgba(44, 42, 39, 0.03);
+}
+.shadow-diffuse-warm {
+  box-shadow:
+    0 8px 48px -12px rgba(176, 122, 99, 0.08),
+    0 2px 16px -4px rgba(44, 42, 39, 0.03);
+}
+.shadow-diffuse-lg {
+  box-shadow:
+    0 12px 60px -16px rgba(123, 142, 168, 0.1),
+    0 4px 20px -4px rgba(44, 42, 39, 0.04);
+}
+
+/* ─── Typography Utilities ───────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ─── Transition Presets · 微风拂过 ──────────────────────────────────── */
+.transition-gentle {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.transition-breeze {
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}

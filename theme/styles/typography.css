@@ -1,0 +1,63 @@
+/* ─── Typography · Celine Design System ───────────────────────────────
+   艺术馆展签般的排版气质
+   骨架: Outfit (sans-serif) / 点睛: Playfair Display (serif)
+   ─────────────────────────────────────────────────────────────────────── */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Body text — Outfit */
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Doc content area */
+.rp-doc-content {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+
+/* Headings in docs — slight serif accent for h1 */
+.rp-doc-content h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.rp-doc-content h2,
+.rp-doc-content h3,
+.rp-doc-content h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* Paragraph spacing */
+.rp-doc-content p {
+  margin-bottom: 1.25em;
+  color: var(--text-secondary);
+}
+
+/* Inline code — warm tint */
+.rp-doc-content code:not([class*="language-"]) {
+  background: var(--surface-secondary);
+  border: 1px solid var(--surface-muted);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+  color: var(--color-accent-600);
+}
+.dark .rp-doc-content code:not([class*="language-"]) {
+  background: var(--rp-c-bg-soft);
+  border-color: var(--rp-c-divider);
+  color: var(--color-accent-300);
+}

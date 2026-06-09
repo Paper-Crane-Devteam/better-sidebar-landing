@@ -1,0 +1,75 @@
+/* ─── Rspress CSS Variable Overrides ────────────────────────────────────
+   Level 1: 用 Celine 暖色系覆盖 Rspress 默认冷色
+   参考: https://rspress.rs/ui/vars
+   ─────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand — warm slate-blue, never cold */
+  --rp-c-brand: #7b8ea8;
+  --rp-c-brand-dark: #6a7d97;
+  --rp-c-brand-darker: #586b82;
+  --rp-c-brand-light: #9caabb;
+  --rp-c-brand-lighter: #b8c4d1;
+  --rp-c-brand-tint: rgba(123, 142, 168, 0.06);
+
+  /* Background — warm pearl, NO pure white */
+  --rp-c-bg: #faf8f5;
+  --rp-c-bg-soft: #f5f2ed;
+  --rp-c-bg-mute: #eae6e0;
+
+  /* Text — warm ink, NO pure black */
+  --rp-c-text-1: #2c2a27;
+  --rp-c-text-2: #6b6560;
+  --rp-c-text-3: #9c958e;
+  --rp-c-text-4: #b8b2ab;
+
+  /* Dividers — warm, subtle */
+  --rp-c-divider: #eae6e0;
+  --rp-c-divider-light: #f0ece7;
+
+  /* Nav / Sidebar — warm surfaces */
+  --rp-nav-height: 64px;
+  --rp-sidebar-width: 280px;
+
+  /* Code blocks — warm tinted */
+  --rp-c-code-bg: #f5f2ed;
+
+  /* Home hero secondary */
+  --rp-home-hero-secondary-color: #7b8ea8;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────────────── */
+.dark {
+  --rp-c-brand: #a3b4cb;
+  --rp-c-brand-dark: #b8c4d1;
+  --rp-c-brand-darker: #c9d4e2;
+  --rp-c-brand-light: #7b8ea8;
+  --rp-c-brand-lighter: #627d9a;
+  --rp-c-brand-tint: rgba(163, 180, 203, 0.08);
+
+  --rp-c-bg: #1e1c1a;
+  --rp-c-bg-soft: #262421;
+  --rp-c-bg-mute: #302d2a;
+
+  --rp-c-text-1: #f0ece7;
+  --rp-c-text-2: #b8b2ab;
+  --rp-c-text-3: #9c958e;
+  --rp-c-text-4: #6b6560;
+
+  --rp-c-divider: #3d3a36;
+  --rp-c-divider-light: #332f2c;
+
+  --rp-c-code-bg: #262421;
+
+  /* Surface tokens for landing page dark mode */
+  --surface-primary: #1e1c1a;
+  --surface-secondary: #262421;
+  --surface-elevated: #302d2a;
+  --surface-deep: #141210;
+  --surface-muted: #3d3a36;
+
+  --text-primary: #f0ece7;
+  --text-secondary: #b8b2ab;
+  --text-tertiary: #9c958e;
+  --text-inverse: #1e1c1a;
+}

@@ -1,0 +1,174 @@
+---
+pageType: custom
+title: Better Sidebar - Gemini 与 AI Studio 增强侧边栏
+description: 全能 AI 对话管理器、提示词库与效率工具，适用于 Google Gemini 和 AI Studio。
+---
+
+import LandingPage from '../../theme/components/LandingPage';
+
+<LandingPage
+  content={{
+    hero: {
+      title: '为你的 AI 对话打造',
+      highlight1: 'Gemini',
+      highlight2: 'AI Studio',
+      description:
+        '文件夹、标签、全文搜索、提示词库、Gem 管理、对话导出、Google Drive 同步。将你的 AI 工作空间变成有组织的知识库。',
+      cta: '安装到 Chrome — 免费',
+      badge: 'v2.7 — 快捷键支持 & AI 主题',
+    },
+    features: {
+      heading: '强大功能，',
+      headingHighlight: '零摩擦',
+      subtitle:
+        '所有功能在浏览器本地运行。无需云服务器，无需注册账户。安装即用。',
+      categories: [
+        {
+          label: '组织管理',
+          items: [
+            {
+              title: '文件夹 & 颜色',
+              desc: '将对话拖入嵌套文件夹。自定义颜色，一目了然。',
+            },
+            {
+              title: '智能标签',
+              desc: '为对话打上自定义标签，从侧边栏即时按标签筛选。',
+            },
+            {
+              title: '收藏 & 置顶',
+              desc: '将重要对话或提示词置顶，随时快速访问。',
+            },
+            {
+              title: '批量删除',
+              desc: '真正的服务端删除，彻底清理。不再有幽灵对话。',
+            },
+          ],
+        },
+        {
+          label: '搜索 & 效率',
+          items: [
+            {
+              title: '全文搜索',
+              desc: '搜索历史中的每条消息。组合标题、标签、类型等多条件精确过滤。',
+            },
+            {
+              title: '提示词库',
+              desc: '保存和复用提示词，支持变量、组合和系统提示词导入。',
+            },
+            {
+              title: 'Gem 管理',
+              desc: '直接从侧边栏浏览、筛选、创建和启动 Gem 对话。',
+            },
+            {
+              title: '笔记本集成',
+              desc: '完整支持 Gemini 笔记本——从侧边栏浏览、整理和管理。',
+            },
+          ],
+        },
+        {
+          label: '同步 & 导出',
+          items: [
+            {
+              title: 'Google Drive 同步',
+              desc: '后台自动同步设置、提示词和配置到 Drive。始终有备份。',
+            },
+            {
+              title: '对话导出',
+              desc: '导出为 Markdown、JSON 或纯文本，用于文档或备份。',
+            },
+            {
+              title: '无水印图片',
+              desc: '下载无水印的 AI 生成图片，包括 Pro HD 图片。',
+            },
+            {
+              title: '快捷键',
+              desc: '键盘快捷键实现快速导航和所有主要操作。',
+            },
+          ],
+        },
+      ],
+    },
+    pricing: {
+      heading: '免费使用，',
+      headingHighlight: '付费定制',
+      subtitle:
+        '所有核心功能永久免费且开源。Supporter Pack 解锁专属主题，同时支持开发者。',
+      free: {
+        title: '免费版',
+        price: '¥0',
+        desc: '全部核心功能，永久免费。',
+        features: [
+          '文件夹、标签、收藏、置顶',
+          '全文搜索和多条件筛选',
+          '提示词库（支持变量）',
+          'Google Drive 同步',
+          '对话导出（MD/JSON/TXT）',
+          'Gem 和笔记本管理',
+          '多账户配置',
+          '快捷键',
+          '无水印图片下载',
+        ],
+        cta: '免费安装',
+        ctaLink: 'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj',
+      },
+      supporter: {
+        title: 'Supporter Pack',
+        price: '¥35',
+        priceNote: '一次性购买，终身使用',
+        desc: '专属主题和高级定制。支持独立开发。',
+        features: [
+          '3 个专属高级主题',
+          'AI 生成自定义主题——创造任何你想象的风格',
+          '无限主题槽位',
+          '跨设备使用',
+          '支持独立开源开发',
+        ],
+        cta: '获取 Supporter Pack',
+        ctaLink: 'https://afdian.com/item/9f96a3ca5a5e11f1950152540025c377',
+      },
+    },
+    privacy: {
+      heading: '隐私优先，',
+      headingHighlight: '从设计开始',
+      subtitle:
+        '你的对话和数据永远不会离开浏览器。我们基于本地优先架构构建此扩展，因为你的 AI 对话只属于你。',
+      items: [
+        {
+          title: '100% 本地存储',
+          desc: '嵌入式 SQLite 数据库完全在浏览器中运行。没有任何内容发送到我们的服务器。',
+        },
+        {
+          title: '无云端收集',
+          desc: '我们不收集、存储或传输你的聊天记录、提示词或个人数据。',
+        },
+        {
+          title: '不用于 AI 训练',
+          desc: '我们从不读取你的对话来训练模型或用于任何其他目的。',
+        },
+        {
+          title: '最小权限',
+          desc: '仅访问 Gemini 和 AI Studio 页面。无法读取你的其他浏览历史。',
+        },
+      ],
+    },
+    openSource: {
+      heading: '开源，',
+      headingHighlight: '社区驱动',
+      description:
+        '基于 GPL-3.0 许可证。阅读代码、报告问题或参与贡献。加入 Discord 分享反馈，与其他用户交流。',
+      viewGithub: '在 GitHub 上查看',
+      joinDiscord: '加入 Discord',
+    },
+    footer: {
+      brand: 'Better Sidebar',
+      license: '基于 GPL-3.0 许可证发布',
+      github: 'GitHub',
+      chromeStore: 'Chrome 网上应用店',
+      discord: 'Discord',
+      privacy: '隐私政策',
+      disclaimer: '这是一个独立项目，与 Google 无关联、无背书、无赞助。',
+      copyright: `© ${new Date().getFullYear()} Better Sidebar`,
+      privacyLink: '/better-sidebar/zh/privacy',
+    },
+  }}
+/>

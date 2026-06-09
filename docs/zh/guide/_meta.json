@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "快速开始"
+  },
+  {
+    "type": "file",
+    "name": "installation",
+    "label": "安装"
+  },
+  {
+    "type": "file",
+    "name": "folders-and-tags",
+    "label": "文件夹与标签"
+  },
+  {
+    "type": "file",
+    "name": "prompt-library",
+    "label": "提示词库"
+  },
+  {
+    "type": "file",
+    "name": "search",
+    "label": "全文搜索"
+  },
+  {
+    "type": "file",
+    "name": "drive-sync",
+    "label": "Google Drive 同步"
+  },
+  {
+    "type": "file",
+    "name": "export",
+    "label": "对话导出"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "label": "常见问题"
+  }
+]

@@ -1,17 +1,14 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "better-sidebar-landing",
-	"main": "./src/worker/index.ts",
 	"compatibility_date": "2025-10-08",
 	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": true
 	},
-	"upload_source_maps": true,
 	"assets": {
-		"directory": "./dist/client",
+		"directory": "./doc_build",
 		"not_found_handling": "single-page-application",
-		"serve_directly": false,
-		"binding": "ASSETS"
+		"serve_directly": true
 	}
 }
