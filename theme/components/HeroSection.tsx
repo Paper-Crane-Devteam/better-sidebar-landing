@@ -1,20 +1,16 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from '@phosphor-icons/react';
 
-const springTransition = {
-  type: 'spring' as const,
-  stiffness: 80,
-  damping: 24,
-};
+const snapTransition = { duration: 0.4, ease: [0.16, 1, 0.3, 1] };
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: springTransition },
+const fadeIn = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: snapTransition },
 };
 
 const staggerContainer = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 const CHROME_URL =
@@ -29,222 +25,232 @@ export interface HeroContent {
   badge: string;
 }
 
-/**
- * Illustration — warm, minimal, organic
- * Evokes the feeling of organized thought without being literal
- */
-function SidebarIllustration() {
-  return (
-    <div className="relative w-full aspect-[4/3.5] flex items-center justify-center">
-      {/* Soft ambient glow behind the card */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div
-          className="w-[85%] h-[75%] rounded-[60px] opacity-40"
-          style={{
-            background:
-              'radial-gradient(ellipse at 50% 40%, rgba(123,142,168,0.12) 0%, transparent 70%)',
-          }}
-        />
-      </div>
-
-      <svg
-        viewBox="0 0 480 380"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto relative z-10"
-        aria-label="Illustration of an organized workspace sidebar"
-        role="img"
-      >
-        {/* Main container — squircle, warm elevated surface */}
-        <rect x="24" y="20" width="432" height="340" rx="28" fill="#fffdfb" />
-        <rect
-          x="24"
-          y="20"
-          width="432"
-          height="340"
-          rx="28"
-          stroke="#eae6e0"
-          strokeWidth="1.2"
-        />
-
-        {/* Title bar */}
-        <rect x="24" y="20" width="432" height="44" rx="28" fill="#f5f2ed" />
-        <rect x="24" y="44" width="432" height="20" fill="#f5f2ed" />
-        <circle cx="52" cy="42" r="4.5" fill="#e4b49e" opacity="0.7" />
-        <circle cx="68" cy="42" r="4.5" fill="#c9d4e2" opacity="0.7" />
-        <circle cx="84" cy="42" r="4.5" fill="#eae6e0" opacity="0.7" />
-
-        {/* Sidebar panel — warm charcoal */}
-        <rect x="24" y="64" width="152" height="296" fill="#2c2a27" />
-        <rect x="24" y="332" width="152" height="28" rx="28" fill="#2c2a27" />
-
-        {/* Search bar in sidebar */}
-        <rect x="38" y="78" width="124" height="26" rx="13" fill="#3d3b37" />
-        <circle cx="52" cy="91" r="5" stroke="#9c958e" strokeWidth="1.2" fill="none" />
-        <line x1="56" y1="95" x2="59" y2="98" stroke="#9c958e" strokeWidth="1.2" strokeLinecap="round" />
-        <rect x="66" y="87" width="50" height="6" rx="3" fill="#6b6560" opacity="0.5" />
-
-        {/* Active item — accent highlight */}
-        <rect x="38" y="116" width="124" height="30" rx="12" fill="#627d9a" opacity="0.15" />
-        <rect x="52" y="126" width="8" height="10" rx="2" fill="#7b8ea8" />
-        <rect x="66" y="127" width="60" height="7" rx="3.5" fill="#7b8ea8" opacity="0.8" />
-        <rect x="132" y="125" width="22" height="14" rx="7" fill="#627d9a" opacity="0.2" />
-        <text x="143" y="135" textAnchor="middle" fill="#7b8ea8" fontSize="8" fontWeight="500" fontFamily="system-ui">8</text>
-
-        {/* List items */}
-        <circle cx="52" cy="162" r="2.5" fill="#6b6560" opacity="0.4" />
-        <rect x="60" y="158" width="72" height="6" rx="3" fill="#6b6560" opacity="0.3" />
-        <circle cx="52" cy="178" r="2.5" fill="#6b6560" opacity="0.4" />
-        <rect x="60" y="174" width="56" height="6" rx="3" fill="#6b6560" opacity="0.3" />
-
-        {/* Folder groups */}
-        <rect x="38" y="198" width="124" height="28" rx="12" fill="#3d3b37" />
-        <rect x="52" y="207" width="8" height="10" rx="2" fill="#e4b49e" opacity="0.6" />
-        <rect x="66" y="208" width="50" height="7" rx="3.5" fill="#9c958e" opacity="0.6" />
-
-        <rect x="38" y="234" width="124" height="28" rx="12" fill="#3d3b37" />
-        <rect x="52" y="243" width="8" height="10" rx="2" fill="#a3b4cb" opacity="0.6" />
-        <rect x="66" y="244" width="62" height="7" rx="3.5" fill="#9c958e" opacity="0.6" />
-
-        {/* Tags */}
-        <rect x="38" y="278" width="42" height="5" rx="2.5" fill="#6b6560" opacity="0.3" />
-        <rect x="38" y="290" width="40" height="16" rx="8" fill="#627d9a" opacity="0.15" />
-        <text x="58" y="301" textAnchor="middle" fill="#7b8ea8" fontSize="7.5" fontWeight="500" fontFamily="system-ui">work</text>
-        <rect x="84" y="290" width="48" height="16" rx="8" fill="#e4b49e" opacity="0.15" />
-        <text x="108" y="301" textAnchor="middle" fill="#b07a63" fontSize="7.5" fontWeight="500" fontFamily="system-ui">ideas</text>
-
-        {/* Main content area — conversation bubbles */}
-        <rect x="196" y="78" width="240" height="36" rx="14" fill="#f5f2ed" />
-        <rect x="212" y="90" width="120" height="6" rx="3" fill="#eae6e0" />
-        <rect x="212" y="100" width="80" height="6" rx="3" fill="#eae6e0" />
-
-        <rect x="216" y="130" width="200" height="36" rx="14" fill="#627d9a" opacity="0.07" />
-        <rect x="232" y="142" width="140" height="6" rx="3" fill="#7b8ea8" opacity="0.25" />
-        <rect x="232" y="152" width="100" height="6" rx="3" fill="#7b8ea8" opacity="0.25" />
-
-        <rect x="196" y="182" width="240" height="36" rx="14" fill="#f5f2ed" />
-        <rect x="212" y="194" width="160" height="6" rx="3" fill="#eae6e0" />
-        <rect x="212" y="204" width="110" height="6" rx="3" fill="#eae6e0" />
-
-        <rect x="216" y="234" width="200" height="50" rx="14" fill="#627d9a" opacity="0.07" />
-        <rect x="232" y="246" width="150" height="6" rx="3" fill="#7b8ea8" opacity="0.25" />
-        <rect x="232" y="258" width="120" height="6" rx="3" fill="#7b8ea8" opacity="0.25" />
-        <rect x="232" y="270" width="80" height="6" rx="3" fill="#7b8ea8" opacity="0.25" />
-
-        <rect x="196" y="300" width="240" height="36" rx="14" fill="#f5f2ed" />
-        <rect x="212" y="312" width="140" height="6" rx="3" fill="#eae6e0" />
-        <rect x="212" y="322" width="96" height="6" rx="3" fill="#eae6e0" />
-      </svg>
-    </div>
-  );
-}
-
 export default function HeroSection({ content }: { content: HeroContent }) {
   return (
     <section
       className="min-h-[100dvh] flex items-center"
-      style={{ background: 'var(--surface-primary)' }}
+      style={{
+        background: 'var(--surface-primary)',
+        borderBottom: '1px solid var(--text-primary)',
+      }}
     >
-      <div className="max-w-[1280px] mx-auto px-8 py-24 md:py-0 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left — Copy */}
+      <div className="max-w-[1200px] mx-auto px-6 py-20 md:py-0 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-20 items-center">
+          {/* Copy — left side */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="flex flex-col gap-7"
+            className="flex flex-col gap-6"
           >
-            {/* Version badge — subtle, warm */}
-            <motion.div variants={fadeInUp}>
+            {/* Badge — monospace label */}
+            <motion.div variants={fadeIn}>
               <span
-                className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-medium tracking-wide"
                 style={{
-                  background: 'var(--color-warm-50)',
-                  color: 'var(--color-warm-500)',
-                  borderRadius: '100px',
-                  border: '1px solid var(--color-warm-200)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.6rem',
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  color: 'var(--color-signal)',
+                  background: 'var(--color-signal-tint)',
+                  border: '1px solid var(--color-signal-muted)',
+                  padding: '4px 10px',
+                  display: 'inline-block',
                 }}
               >
-                <span style={{ fontSize: '10px' }}>●</span>
                 {content.badge}
               </span>
             </motion.div>
 
-            {/* Headline — serif for display, sans for body */}
+            {/* Headline — massive, tight tracking */}
             <motion.h1
-              variants={fadeInUp}
-              className="leading-[1.08] tracking-tight"
+              variants={fadeIn}
               style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2.4rem, 5vw, 3.5rem)',
+                fontFamily: 'var(--font-system)',
+                fontSize: 'clamp(2.8rem, 7vw, 5rem)',
+                fontWeight: 800,
+                lineHeight: 0.95,
+                letterSpacing: '-0.04em',
                 color: 'var(--text-primary)',
-                fontWeight: 500,
               }}
             >
-              {content.title}{' '}
-              <span style={{ color: 'var(--color-accent-500)' }}>
+              {content.title}
+              <br />
+              <span style={{ color: 'var(--color-signal)' }}>
                 {content.highlight1}
               </span>
               {' & '}
-              <span style={{ color: 'var(--color-accent-500)' }}>
+              <span style={{ color: 'var(--color-signal)' }}>
                 {content.highlight2}
               </span>
             </motion.h1>
 
-            {/* Subtitle — generous line height, warm gray */}
+            {/* Description — system font, tight */}
             <motion.p
-              variants={fadeInUp}
-              className="max-w-[52ch]"
+              variants={fadeIn}
+              className="max-w-[50ch]"
               style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: 'clamp(1rem, 1.8vw, 1.125rem)',
-                lineHeight: 1.7,
+                fontFamily: 'var(--font-system)',
+                fontSize: '0.95rem',
+                lineHeight: 1.5,
                 color: 'var(--text-secondary)',
               }}
             >
               {content.description}
             </motion.p>
 
-            {/* CTA — pill button with diffuse glow */}
-            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-5 pt-3">
+            {/* CTA — signal orange, hard edge, no border-radius */}
+            <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href={CHROME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-8 py-4 font-medium text-sm active:scale-[0.97] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-sm active:scale-[0.97] transition-transform"
                 style={{
-                  fontFamily: 'var(--font-body)',
-                  background: 'var(--color-accent-500)',
-                  color: 'var(--text-inverse)',
-                  borderRadius: '100px',
-                  boxShadow: '0 8px 32px -8px rgba(98, 125, 154, 0.25)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.75rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  background: 'var(--color-signal)',
+                  color: '#ffffff',
+                  border: 'none',
+                  boxShadow: '3px 3px 0 0 var(--text-primary)',
                 }}
               >
                 {content.cta}
-                <ArrowRight size={16} weight="bold" />
+                <ArrowRight size={14} weight="bold" />
               </a>
               <span
-                className="text-sm"
                 style={{
-                  fontFamily: 'var(--font-body)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.6rem',
                   color: 'var(--text-tertiary)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
                 }}
               >
-                Free &amp; Open Source
+                Free · Open Source · GPL-3.0
               </span>
             </motion.div>
           </motion.div>
 
-          {/* Right — Illustration */}
+          {/* Right — Technical Diagram Illustration */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...springTransition, delay: 0.35 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ...snapTransition, delay: 0.3 }}
           >
-            <SidebarIllustration />
+            <TechDiagram />
           </motion.div>
         </div>
       </div>
     </section>
+  );
+}
+
+/** Technical diagram — circuit board / exploded view aesthetic */
+function TechDiagram() {
+  return (
+    <svg
+      viewBox="0 0 380 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-auto"
+      aria-label="Technical diagram of Better Sidebar interface"
+      role="img"
+    >
+      {/* Outer frame — hard edge */}
+      <rect x="1" y="1" width="378" height="438" stroke="black" strokeWidth="1" fill="none" />
+
+      {/* Title bar */}
+      <rect x="1" y="1" width="378" height="32" fill="#f7f7f7" stroke="black" strokeWidth="1" />
+      <circle cx="18" cy="17" r="4" fill="none" stroke="black" strokeWidth="1" />
+      <circle cx="32" cy="17" r="4" fill="none" stroke="black" strokeWidth="1" />
+      <circle cx="46" cy="17" r="4" fill="none" stroke="black" strokeWidth="1" />
+      <text x="190" y="20" textAnchor="middle" fill="black" fontSize="8" fontFamily="monospace" fontWeight="600" letterSpacing="0.1em">BETTER_SIDEBAR</text>
+
+      {/* Sidebar panel */}
+      <rect x="1" y="33" width="120" height="406" fill="#f7f7f7" stroke="black" strokeWidth="1" />
+
+      {/* Sidebar label */}
+      <text x="10" y="50" fill="#999" fontSize="6" fontFamily="monospace" fontWeight="600" letterSpacing="0.12em">NAVIGATION</text>
+
+      {/* Search box */}
+      <rect x="10" y="58" width="102" height="20" fill="white" stroke="black" strokeWidth="0.75" />
+      <text x="16" y="71" fill="#999" fontSize="7" fontFamily="monospace">search_</text>
+
+      {/* Active item */}
+      <rect x="10" y="88" width="102" height="22" fill="#ff4400" fillOpacity="0.08" stroke="#ff4400" strokeWidth="0.75" />
+      <rect x="10" y="88" width="3" height="22" fill="#ff4400" />
+      <text x="20" y="102" fill="#ff4400" fontSize="7.5" fontFamily="monospace" fontWeight="600">01_PROJECT</text>
+      <text x="98" y="102" fill="#ff4400" fontSize="7" fontFamily="monospace" textAnchor="end">12</text>
+
+      {/* List items */}
+      <rect x="10" y="116" width="102" height="18" fill="none" />
+      <text x="20" y="128" fill="#666" fontSize="7.5" fontFamily="monospace">02_research</text>
+
+      <rect x="10" y="138" width="102" height="18" fill="none" />
+      <text x="20" y="150" fill="#666" fontSize="7.5" fontFamily="monospace">03_archive</text>
+
+      {/* Folder section */}
+      <line x1="10" y1="168" x2="112" y2="168" stroke="#e5e5e5" strokeWidth="0.75" />
+      <text x="10" y="182" fill="#999" fontSize="6" fontFamily="monospace" fontWeight="600" letterSpacing="0.12em">FOLDERS</text>
+
+      <rect x="10" y="190" width="102" height="18" fill="none" />
+      <rect x="14" y="194" width="8" height="8" fill="none" stroke="black" strokeWidth="0.75" />
+      <text x="28" y="202" fill="black" fontSize="7.5" fontFamily="monospace">work/</text>
+
+      <rect x="10" y="212" width="102" height="18" fill="none" />
+      <rect x="14" y="216" width="8" height="8" fill="none" stroke="black" strokeWidth="0.75" />
+      <text x="28" y="224" fill="black" fontSize="7.5" fontFamily="monospace">personal/</text>
+
+      {/* Tags */}
+      <line x1="10" y1="244" x2="112" y2="244" stroke="#e5e5e5" strokeWidth="0.75" />
+      <text x="10" y="258" fill="#999" fontSize="6" fontFamily="monospace" fontWeight="600" letterSpacing="0.12em">TAGS</text>
+
+      <rect x="10" y="266" width="38" height="14" fill="none" stroke="black" strokeWidth="0.75" />
+      <text x="29" y="276" textAnchor="middle" fill="black" fontSize="6.5" fontFamily="monospace">code</text>
+
+      <rect x="54" y="266" width="40" height="14" fill="none" stroke="#ff4400" strokeWidth="0.75" />
+      <text x="74" y="276" textAnchor="middle" fill="#ff4400" fontSize="6.5" fontFamily="monospace">urgent</text>
+
+      {/* Content area */}
+      <rect x="121" y="33" width="258" height="406" fill="white" />
+
+      {/* Content label */}
+      <text x="132" y="50" fill="#999" fontSize="6" fontFamily="monospace" fontWeight="600" letterSpacing="0.12em">CONVERSATION</text>
+
+      {/* Chat bubbles — geometric */}
+      <rect x="132" y="60" width="180" height="28" fill="#f7f7f7" stroke="#e5e5e5" strokeWidth="0.75" />
+      <rect x="140" y="70" width="100" height="5" rx="1" fill="#e5e5e5" />
+      <rect x="140" y="78" width="70" height="5" rx="1" fill="#e5e5e5" />
+
+      <rect x="162" y="98" width="200" height="36" fill="#ff4400" fillOpacity="0.04" stroke="#ff4400" strokeWidth="0.5" strokeDasharray="2 2" />
+      <rect x="170" y="110" width="130" height="5" rx="1" fill="#ff4400" fillOpacity="0.2" />
+      <rect x="170" y="119" width="90" height="5" rx="1" fill="#ff4400" fillOpacity="0.2" />
+
+      <rect x="132" y="146" width="180" height="28" fill="#f7f7f7" stroke="#e5e5e5" strokeWidth="0.75" />
+      <rect x="140" y="156" width="140" height="5" rx="1" fill="#e5e5e5" />
+      <rect x="140" y="164" width="80" height="5" rx="1" fill="#e5e5e5" />
+
+      <rect x="162" y="186" width="200" height="46" fill="#ff4400" fillOpacity="0.04" stroke="#ff4400" strokeWidth="0.5" strokeDasharray="2 2" />
+      <rect x="170" y="198" width="150" height="5" rx="1" fill="#ff4400" fillOpacity="0.2" />
+      <rect x="170" y="207" width="120" height="5" rx="1" fill="#ff4400" fillOpacity="0.2" />
+      <rect x="170" y="216" width="80" height="5" rx="1" fill="#ff4400" fillOpacity="0.2" />
+
+      {/* Spec callout labels */}
+      <line x1="364" y1="108" x2="374" y2="108" stroke="#ff4400" strokeWidth="0.5" />
+      <text x="374" y="103" fill="#ff4400" fontSize="5.5" fontFamily="monospace" textAnchor="start" transform="rotate(90 374 103)">AI_RESP</text>
+
+      <line x1="130" y1="72" x2="126" y2="72" stroke="black" strokeWidth="0.5" />
+      <text x="126" y="67" fill="black" fontSize="5.5" fontFamily="monospace" textAnchor="end" transform="rotate(-90 126 67)">USER_MSG</text>
+
+      {/* Bottom input bar */}
+      <rect x="132" y="400" width="236" height="28" fill="#f7f7f7" stroke="black" strokeWidth="0.75" />
+      <text x="142" y="417" fill="#999" fontSize="7.5" fontFamily="monospace">type_message_</text>
+      <rect x="344" y="404" width="20" height="20" fill="black" />
+      <text x="354" y="417" textAnchor="middle" fill="white" fontSize="10" fontFamily="monospace">→</text>
+    </svg>
   );
 }

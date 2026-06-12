@@ -1,63 +1,82 @@
-/* ─── Typography · Celine Design System ───────────────────────────────
-   艺术馆展签般的排版气质
-   骨架: Outfit (sans-serif) / 点睛: Playfair Display (serif)
+/* ─── Typography · Kouthoofd System ────────────────────────────────────
+   等宽字体至上 · 代码般的视觉节奏
+   信息密度极高 · 技术图纸气质
    ─────────────────────────────────────────────────────────────────────── */
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: geometricPrecision;
 }
 
-/* Body text — Outfit */
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-system);
   color: var(--text-primary);
-  line-height: 1.7;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
 }
 
-/* Doc content area */
+/* Doc content */
 .rp-doc-content {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-family: var(--font-system);
+  font-size: 0.9rem;
+  line-height: 1.65;
   color: var(--text-primary);
 }
 
-/* Headings in docs — slight serif accent for h1 */
+/* ALL headings — monospace, uppercase vibe, tight tracking */
 .rp-doc-content h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 0.3em;
+}
+
+.rp-doc-content h2 {
+  font-family: var(--font-mono);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text-primary);
+  margin-top: 2.5em;
 }
 
-.rp-doc-content h2,
 .rp-doc-content h3,
 .rp-doc-content h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
-/* Paragraph spacing */
+/* Paragraphs — system font, functional */
 .rp-doc-content p {
-  margin-bottom: 1.25em;
+  margin-bottom: 1em;
   color: var(--text-secondary);
 }
 
-/* Inline code — warm tint */
+/* Inline code — monospace, signal tint background */
 .rp-doc-content code:not([class*="language-"]) {
-  background: var(--surface-secondary);
-  border: 1px solid var(--surface-muted);
-  border-radius: 6px;
-  padding: 0.15em 0.4em;
-  font-size: 0.875em;
-  color: var(--color-accent-600);
+  background: var(--color-signal-tint);
+  border: 1px solid var(--color-signal-muted);
+  border-radius: 2px;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+  color: var(--color-signal-dark);
 }
 .dark .rp-doc-content code:not([class*="language-"]) {
-  background: var(--rp-c-bg-soft);
-  border-color: var(--rp-c-divider);
-  color: var(--color-accent-300);
+  background: rgba(255, 102, 51, 0.1);
+  border-color: rgba(255, 102, 51, 0.2);
+  color: var(--color-signal-light);
+}
+
+/* Strong emphasis — uppercase mono */
+.rp-doc-content strong {
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }

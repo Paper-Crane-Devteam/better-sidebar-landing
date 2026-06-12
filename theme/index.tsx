@@ -4,55 +4,59 @@ import { Layout as OriginalLayout } from '@rspress/core/theme-original';
 export * from '@rspress/core/theme-original';
 
 /**
- * Custom Layout — Celine Design System
+ * Custom Layout — Kouthoofd / Teenage Engineering System
  *
- * Uses Level 3 (Layout Slots) to inject:
- * - beforeNavTitle: Custom branded logo with display font
- * - bottom: Warm footer strip for doc pages
+ * Level 3 Layout Slots:
+ * - beforeNavTitle: Industrial monospace brand mark
+ * - bottom: Technical spec footer strip
  *
- * We keep it minimal — slot injection only, no full ejection.
+ * Minimal. Functional. Every pixel has a reason to exist.
  */
 export function Layout() {
   return (
     <OriginalLayout
       beforeNavTitle={<NavBrand />}
-      bottom={<DocFooterStrip />}
+      bottom={<TechFooter />}
     />
   );
 }
 
-/** Branded nav title — Playfair Display serif for the brand name */
+/** Brand — monospace, uppercase, precise */
 function NavBrand() {
   return (
     <span
       style={{
-        fontFamily: 'var(--font-display)',
-        fontWeight: 500,
-        fontSize: '1.05rem',
+        fontFamily: 'var(--font-mono)',
+        fontWeight: 600,
+        fontSize: '0.7rem',
         color: 'var(--text-primary)',
-        letterSpacing: '-0.02em',
-        marginLeft: '4px',
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase' as const,
+        marginLeft: '6px',
       }}
     >
-      Better Sidebar
+      Better_Sidebar
     </span>
   );
 }
 
-/** Minimal doc footer strip — warm, subtle */
-function DocFooterStrip() {
+/** Footer — technical, minimal, datasheet feel */
+function TechFooter() {
   return (
     <div
       style={{
-        padding: '24px 0',
+        padding: '16px 0',
         textAlign: 'center',
-        fontFamily: 'var(--font-body)',
-        fontSize: '0.75rem',
+        fontFamily: 'var(--font-mono)',
+        fontSize: '0.6rem',
+        fontWeight: 500,
         color: 'var(--text-tertiary)',
+        textTransform: 'uppercase' as const,
+        letterSpacing: '0.1em',
         borderTop: '1px solid var(--surface-muted)',
       }}
     >
-      Made with care by Paper Crane · Open Source
+      PAPER CRANE DEV · GPL-3.0 · 2024–{new Date().getFullYear()}
     </div>
   );
 }

@@ -1,12 +1,7 @@
 import { motion } from 'framer-motion';
-import { Check, Heart } from '@phosphor-icons/react';
+import { Check } from '@phosphor-icons/react';
 
-
-const springTransition = {
-  type: 'spring' as const,
-  stiffness: 80,
-  damping: 22,
-};
+const snapTransition = { duration: 0.35, ease: [0.16, 1, 0.3, 1] };
 
 export interface PricingContent {
   heading: string;
@@ -34,39 +29,57 @@ export interface PricingContent {
 export default function PricingSection({ content }: { content: PricingContent }) {
   return (
     <section
-      className="py-28 md:py-36"
+      className="py-20 md:py-28"
       id="pricing"
-      style={{ background: 'var(--surface-primary)' }}
+      style={{
+        background: 'var(--surface-primary)',
+        borderBottom: '1px solid var(--text-primary)',
+      }}
     >
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={springTransition}
-          className="mb-16 text-center"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={snapTransition}
+          className="mb-14"
         >
-          <h2
-            className="leading-[1.1] tracking-tight"
+          <span
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-              color: 'var(--text-primary)',
-              fontWeight: 500,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.6rem',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              color: 'var(--color-signal)',
+              display: 'block',
+              marginBottom: '12px',
             }}
           >
-            {content.heading}{' '}
-            <span style={{ color: 'var(--color-accent-500)' }}>
+            03 — Pricing
+          </span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-system)',
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontWeight: 800,
+              lineHeight: 1,
+              letterSpacing: '-0.04em',
+              color: 'var(--text-primary)',
+            }}
+          >
+            {content.heading}
+            <span style={{ color: 'var(--color-signal)' }}>
               {content.headingHighlight}
             </span>
           </h2>
           <p
-            className="mt-5 max-w-[54ch] mx-auto"
+            className="mt-3 max-w-[50ch]"
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1rem',
-              lineHeight: 1.7,
+              fontFamily: 'var(--font-system)',
+              fontSize: '0.9rem',
+              lineHeight: 1.5,
               color: 'var(--text-secondary)',
             }}
           >
@@ -74,73 +87,73 @@ export default function PricingSection({ content }: { content: PricingContent })
           </p>
         </motion.div>
 
-        {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-[860px] mx-auto">
+        {/* Pricing grid — 1px border separation */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 max-w-[800px]"
+          style={{ border: '1px solid var(--text-primary)' }}
+        >
           {/* Free Tier */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ ...springTransition, delay: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ ...snapTransition, delay: 0 }}
             className="p-8 flex flex-col"
             style={{
-              background: 'var(--surface-elevated)',
-              borderRadius: '24px',
-              border: '1px solid var(--surface-muted)',
-              boxShadow:
-                '0 4px 40px -8px rgba(123,142,168,0.04), 0 1px 8px -2px rgba(44,42,39,0.02)',
+              background: 'var(--surface-primary)',
+              borderRight: '1px solid var(--text-primary)',
             }}
           >
-            <h3
+            {/* Label */}
+            <span
               style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '1rem',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6rem',
                 fontWeight: 600,
-                color: 'var(--text-primary)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'var(--text-tertiary)',
+                marginBottom: '8px',
               }}
             >
               {content.free.title}
-            </h3>
-            <div className="mt-3 mb-4">
-              <span
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.2rem',
-                  fontWeight: 500,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                {content.free.price}
-              </span>
-            </div>
-            <p
-              className="mb-7"
+            </span>
+            {/* Price */}
+            <span
               style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.85rem',
+                fontFamily: 'var(--font-system)',
+                fontSize: '3rem',
+                fontWeight: 800,
+                letterSpacing: '-0.04em',
+                color: 'var(--text-primary)',
+                lineHeight: 1,
+              }}
+            >
+              {content.free.price}
+            </span>
+            <p
+              className="mt-3 mb-6"
+              style={{
+                fontFamily: 'var(--font-system)',
+                fontSize: '0.82rem',
                 color: 'var(--text-secondary)',
               }}
             >
               {content.free.desc}
             </p>
 
-            <ul className="flex flex-col gap-3 mb-8 flex-1">
+            <ul className="flex flex-col gap-2 mb-8 flex-1">
               {content.free.features.map((f) => (
                 <li
                   key={f}
-                  className="flex items-start gap-2.5"
+                  className="flex items-start gap-2"
                   style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.825rem',
+                    fontFamily: 'var(--font-system)',
+                    fontSize: '0.78rem',
                     color: 'var(--text-secondary)',
                   }}
                 >
-                  <Check
-                    size={15}
-                    weight="bold"
-                    className="mt-0.5 shrink-0"
-                    style={{ color: 'var(--color-accent-500)' }}
-                  />
+                  <Check size={13} weight="bold" className="mt-0.5 shrink-0" style={{ color: 'var(--text-primary)' }} />
                   {f}
                 </li>
               ))}
@@ -150,12 +163,15 @@ export default function PricingSection({ content }: { content: PricingContent })
               href={content.free.ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
+              className="block text-center py-3 font-semibold text-sm active:scale-[0.97] transition-transform"
               style={{
-                fontFamily: 'var(--font-body)',
-                borderRadius: '100px',
-                border: '1px solid var(--surface-muted)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                border: '1px solid var(--text-primary)',
                 color: 'var(--text-primary)',
+                background: 'transparent',
               }}
             >
               {content.free.cta}
@@ -164,115 +180,101 @@ export default function PricingSection({ content }: { content: PricingContent })
 
           {/* Supporter Pack */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ ...springTransition, delay: 0.1 }}
-            className="p-8 flex flex-col relative overflow-hidden"
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ ...snapTransition, delay: 0.08 }}
+            className="p-8 flex flex-col"
             style={{
-              background: 'var(--surface-elevated)',
-              borderRadius: '24px',
-              border: '1.5px solid var(--color-warm-200)',
-              boxShadow:
-                '0 8px 48px -12px rgba(176,122,99,0.08), 0 2px 16px -4px rgba(44,42,39,0.03)',
+              background: 'var(--text-primary)',
+              color: 'var(--text-inverse)',
             }}
           >
-            {/* Subtle warm gradient overlay */}
-            <div
-              className="absolute top-0 right-0 w-48 h-48 opacity-30 pointer-events-none"
+            {/* Label */}
+            <span
               style={{
-                background:
-                  'radial-gradient(circle at top right, rgba(228,180,158,0.3) 0%, transparent 70%)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6rem',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'var(--color-signal)',
+                marginBottom: '8px',
               }}
-            />
+            >
+              {content.supporter.title}
+            </span>
+            {/* Price */}
+            <span
+              style={{
+                fontFamily: 'var(--font-system)',
+                fontSize: '3rem',
+                fontWeight: 800,
+                letterSpacing: '-0.04em',
+                color: 'var(--text-inverse)',
+                lineHeight: 1,
+              }}
+            >
+              {content.supporter.price}
+            </span>
+            <span
+              className="mt-1"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6rem',
+                color: 'var(--text-tertiary)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              {content.supporter.priceNote}
+            </span>
+            <p
+              className="mt-3 mb-6"
+              style={{
+                fontFamily: 'var(--font-system)',
+                fontSize: '0.82rem',
+                color: 'var(--text-tertiary)',
+              }}
+            >
+              {content.supporter.desc}
+            </p>
 
-            <div className="relative z-10 flex flex-col flex-1">
-              <div className="flex items-center justify-between">
-                <h3
-                  className="flex items-center gap-2"
+            <ul className="flex flex-col gap-2 mb-8 flex-1">
+              {content.supporter.features.map((f) => (
+                <li
+                  key={f}
+                  className="flex items-start gap-2"
                   style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
+                    fontFamily: 'var(--font-system)',
+                    fontSize: '0.78rem',
+                    color: '#a0a0a0',
                   }}
                 >
-                  <Heart size={18} weight="fill" style={{ color: 'var(--color-warm-400)' }} />
-                  {content.supporter.title}
-                </h3>
-              </div>
+                  <Check size={13} weight="bold" className="mt-0.5 shrink-0" style={{ color: 'var(--color-signal)' }} />
+                  {f}
+                </li>
+              ))}
+            </ul>
 
-              <div className="mt-3 mb-1">
-                <span
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '2.2rem',
-                    fontWeight: 500,
-                    color: 'var(--text-primary)',
-                  }}
-                >
-                  {content.supporter.price}
-                </span>
-              </div>
-              <p
-                className="mb-4"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.75rem',
-                  color: 'var(--text-tertiary)',
-                }}
-              >
-                {content.supporter.priceNote}
-              </p>
-              <p
-                className="mb-7"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.85rem',
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                {content.supporter.desc}
-              </p>
-
-              <ul className="flex flex-col gap-3 mb-8 flex-1">
-                {content.supporter.features.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-2.5"
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.825rem',
-                      color: 'var(--text-secondary)',
-                    }}
-                  >
-                    <Check
-                      size={15}
-                      weight="bold"
-                      className="mt-0.5 shrink-0"
-                      style={{ color: 'var(--color-warm-500)' }}
-                    />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={content.supporter.ctaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  borderRadius: '100px',
-                  background: 'var(--color-warm-500)',
-                  color: 'var(--text-inverse)',
-                  boxShadow: '0 6px 24px -6px rgba(176,122,99,0.3)',
-                }}
-              >
-                {content.supporter.cta}
-              </a>
-            </div>
+            <a
+              href={content.supporter.ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center py-3 font-semibold text-sm active:scale-[0.97] transition-transform"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                background: 'var(--color-signal)',
+                color: '#ffffff',
+                border: 'none',
+                boxShadow: '3px 3px 0 0 rgba(255,255,255,0.2)',
+              }}
+            >
+              {content.supporter.cta}
+            </a>
           </motion.div>
         </div>
       </div>

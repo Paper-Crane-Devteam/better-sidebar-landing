@@ -1,41 +1,37 @@
-/* ─── Design Tokens · Celine Design System ─────────────────────────────
-   人文主义极简色彩系统 · Humanistic Minimalism
+/* ─── Design Tokens · Kouthoofd System ─────────────────────────────────
+   Industrial Functionalism · Teenage Engineering Aesthetic
+   极限对比 · 等宽节奏 · 电路板精确度
    ─────────────────────────────────────────────────────────────────────── */
 
 :root {
   /* ─── Typography ────────────────────────────────────────────────── */
-  --font-display: 'Playfair Display', 'Georgia', serif;
-  --font-body: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --font-system: 'Inter', -apple-system, system-ui, sans-serif;
 
-  /* ─── Surface Palette · 温暖中性色 ─────────────────────────────── */
-  --surface-primary: #faf8f5;     /* 珍珠白 · warm pearl */
-  --surface-secondary: #f5f2ed;   /* 燕麦色 · oat cream */
-  --surface-elevated: #fffdfb;    /* 微暖白 · lifted card */
-  --surface-deep: #2c2a27;        /* 暖炭 · warm charcoal */
-  --surface-muted: #eae6e0;       /* 暖雾 · warm mist */
+  /* ─── Surface Palette · 工业灰阶 ───────────────────────────────── */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f7f7f7;
+  --surface-elevated: #ffffff;
+  --surface-deep: #000000;
+  --surface-muted: #e5e5e5;
+  --surface-invert: #1a1a1a;
 
-  /* ─── Text Palette · 温暖墨色 ──────────────────────────────────── */
-  --text-primary: #2c2a27;
-  --text-secondary: #6b6560;
-  --text-tertiary: #9c958e;
-  --text-inverse: #faf8f5;
+  /* ─── Text Palette · 高对比墨色 ────────────────────────────────── */
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-inverse: #ffffff;
 
-  /* ─── Accent · 莫兰迪蓝 ────────────────────────────────────────── */
-  --color-accent-50: #f4f6f9;
-  --color-accent-100: #e6ebf1;
-  --color-accent-200: #c9d4e2;
-  --color-accent-300: #a3b4cb;
-  --color-accent-400: #7b8ea8;
-  --color-accent-500: #627d9a;
-  --color-accent-600: #4e6880;
-  --color-accent-700: #3d5268;
+  /* ─── Signal Orange · TE 标志色 ────────────────────────────────── */
+  --color-signal: #ff4400;
+  --color-signal-light: #ff6633;
+  --color-signal-dark: #cc3700;
+  --color-signal-tint: rgba(255, 68, 0, 0.06);
+  --color-signal-muted: rgba(255, 68, 0, 0.12);
 
-  /* ─── Warm Accent · 赤陶大地色 ─────────────────────────────────── */
-  --color-warm-50: #fdf6f2;
-  --color-warm-100: #f8ebe3;
-  --color-warm-200: #f0d5c6;
-  --color-warm-300: #e4b49e;
-  --color-warm-400: #c8917a;
-  --color-warm-500: #b07a63;
-  --color-warm-600: #965f4b;
+  /* ─── Functional Colors · 系统信号 ─────────────────────────────── */
+  --color-success: #00cc66;
+  --color-warning: #ffcc00;
+  --color-error: #ff4400;
+  --color-info: #0066ff;
 }

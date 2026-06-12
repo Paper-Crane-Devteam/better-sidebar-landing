@@ -1,75 +1,76 @@
-/* ─── Rspress CSS Variable Overrides ────────────────────────────────────
-   Level 1: 用 Celine 暖色系覆盖 Rspress 默认冷色
-   参考: https://rspress.rs/ui/vars
+/* ─── Rspress CSS Variable Overrides · Kouthoofd System ────────────────
+   Level 1: 工业功能主义覆盖
+   黑白极限对比 + 信号橙强调
    ─────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* Brand — warm slate-blue, never cold */
-  --rp-c-brand: #7b8ea8;
-  --rp-c-brand-dark: #6a7d97;
-  --rp-c-brand-darker: #586b82;
-  --rp-c-brand-light: #9caabb;
-  --rp-c-brand-lighter: #b8c4d1;
-  --rp-c-brand-tint: rgba(123, 142, 168, 0.06);
+  /* Brand — signal orange */
+  --rp-c-brand: #ff4400;
+  --rp-c-brand-dark: #cc3700;
+  --rp-c-brand-darker: #992900;
+  --rp-c-brand-light: #ff6633;
+  --rp-c-brand-lighter: #ff8866;
+  --rp-c-brand-tint: rgba(255, 68, 0, 0.06);
 
-  /* Background — warm pearl, NO pure white */
-  --rp-c-bg: #faf8f5;
-  --rp-c-bg-soft: #f5f2ed;
-  --rp-c-bg-mute: #eae6e0;
+  /* Background — pure white, clinical */
+  --rp-c-bg: #ffffff;
+  --rp-c-bg-soft: #f7f7f7;
+  --rp-c-bg-mute: #eeeeee;
 
-  /* Text — warm ink, NO pure black */
-  --rp-c-text-1: #2c2a27;
-  --rp-c-text-2: #6b6560;
-  --rp-c-text-3: #9c958e;
-  --rp-c-text-4: #b8b2ab;
+  /* Text — pure black, maximum contrast */
+  --rp-c-text-1: #000000;
+  --rp-c-text-2: #666666;
+  --rp-c-text-3: #999999;
+  --rp-c-text-4: #cccccc;
 
-  /* Dividers — warm, subtle */
-  --rp-c-divider: #eae6e0;
-  --rp-c-divider-light: #f0ece7;
+  /* Dividers — precise hairlines */
+  --rp-c-divider: #e5e5e5;
+  --rp-c-divider-light: #f0f0f0;
 
-  /* Nav / Sidebar — warm surfaces */
-  --rp-nav-height: 64px;
-  --rp-sidebar-width: 280px;
+  /* Layout — tight, functional */
+  --rp-nav-height: 56px;
+  --rp-sidebar-width: 260px;
 
-  /* Code blocks — warm tinted */
-  --rp-c-code-bg: #f5f2ed;
+  /* Code — dark terminal */
+  --rp-c-code-bg: #1a1a1a;
 
-  /* Home hero secondary */
-  --rp-home-hero-secondary-color: #7b8ea8;
+  /* Home hero */
+  --rp-home-hero-secondary-color: #ff4400;
 }
 
-/* ─── Dark Mode ─────────────────────────────────────────────────────── */
+/* ─── Dark Mode · 反转 ──────────────────────────────────────────────── */
 .dark {
-  --rp-c-brand: #a3b4cb;
-  --rp-c-brand-dark: #b8c4d1;
-  --rp-c-brand-darker: #c9d4e2;
-  --rp-c-brand-light: #7b8ea8;
-  --rp-c-brand-lighter: #627d9a;
-  --rp-c-brand-tint: rgba(163, 180, 203, 0.08);
+  --rp-c-brand: #ff6633;
+  --rp-c-brand-dark: #ff4400;
+  --rp-c-brand-darker: #ff8866;
+  --rp-c-brand-light: #cc3700;
+  --rp-c-brand-lighter: #992900;
+  --rp-c-brand-tint: rgba(255, 102, 51, 0.1);
 
-  --rp-c-bg: #1e1c1a;
-  --rp-c-bg-soft: #262421;
-  --rp-c-bg-mute: #302d2a;
+  --rp-c-bg: #0a0a0a;
+  --rp-c-bg-soft: #141414;
+  --rp-c-bg-mute: #1f1f1f;
 
-  --rp-c-text-1: #f0ece7;
-  --rp-c-text-2: #b8b2ab;
-  --rp-c-text-3: #9c958e;
-  --rp-c-text-4: #6b6560;
+  --rp-c-text-1: #ffffff;
+  --rp-c-text-2: #a0a0a0;
+  --rp-c-text-3: #666666;
+  --rp-c-text-4: #333333;
 
-  --rp-c-divider: #3d3a36;
-  --rp-c-divider-light: #332f2c;
+  --rp-c-divider: #2a2a2a;
+  --rp-c-divider-light: #1f1f1f;
 
-  --rp-c-code-bg: #262421;
+  --rp-c-code-bg: #0a0a0a;
 
-  /* Surface tokens for landing page dark mode */
-  --surface-primary: #1e1c1a;
-  --surface-secondary: #262421;
-  --surface-elevated: #302d2a;
-  --surface-deep: #141210;
-  --surface-muted: #3d3a36;
+  /* Surface tokens for landing page */
+  --surface-primary: #0a0a0a;
+  --surface-secondary: #141414;
+  --surface-elevated: #1f1f1f;
+  --surface-deep: #000000;
+  --surface-muted: #2a2a2a;
+  --surface-invert: #ffffff;
 
-  --text-primary: #f0ece7;
-  --text-secondary: #b8b2ab;
-  --text-tertiary: #9c958e;
-  --text-inverse: #1e1c1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #666666;
+  --text-inverse: #000000;
 }

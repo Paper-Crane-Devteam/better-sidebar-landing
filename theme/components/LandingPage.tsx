@@ -26,7 +26,7 @@ export default function LandingPage({ content }: { content: LandingPageContent }
       style={{
         background: 'var(--surface-primary)',
         color: 'var(--text-primary)',
-        fontFamily: 'var(--font-body)',
+        fontFamily: 'var(--font-system)',
       }}
     >
       <main>

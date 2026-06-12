@@ -5,11 +5,7 @@ const GITHUB_URL =
   'https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-gemini-and-ai-studio';
 const DISCORD_URL = 'https://discord.gg/FRzesxaGAx';
 
-const springTransition = {
-  type: 'spring' as const,
-  stiffness: 80,
-  damping: 22,
-};
+const snapTransition = { duration: 0.35, ease: [0.16, 1, 0.3, 1] };
 
 export interface OpenSourceContent {
   heading: string;
@@ -22,73 +18,101 @@ export interface OpenSourceContent {
 export default function OpenSourceBanner({ content }: { content: OpenSourceContent }) {
   return (
     <section
-      className="py-28 md:py-36"
-      style={{ background: 'var(--surface-deep)' }}
+      className="py-20 md:py-28"
+      style={{
+        background: 'var(--text-primary)',
+        borderBottom: '1px solid var(--text-primary)',
+      }}
     >
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={springTransition}
-          className="text-center"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={snapTransition}
         >
-          <h2
-            className="leading-[1.1] tracking-tight mb-5"
+          {/* Section label */}
+          <span
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-              color: 'var(--text-inverse)',
-              fontWeight: 500,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.6rem',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              color: 'var(--color-signal)',
+              display: 'block',
+              marginBottom: '12px',
             }}
           >
-            {content.heading}{' '}
-            <span style={{ color: 'var(--color-accent-300)' }}>
+            05 — Open Source
+          </span>
+
+          <h2
+            style={{
+              fontFamily: 'var(--font-system)',
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontWeight: 800,
+              lineHeight: 1,
+              letterSpacing: '-0.04em',
+              color: 'var(--text-inverse)',
+            }}
+          >
+            {content.heading}
+            <span style={{ color: 'var(--color-signal)' }}>
               {content.headingHighlight}
             </span>
           </h2>
+
           <p
-            className="max-w-[50ch] mx-auto mb-10"
+            className="mt-3 max-w-[50ch] mb-8"
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1rem',
-              lineHeight: 1.7,
-              color: '#9c958e',
+              fontFamily: 'var(--font-system)',
+              fontSize: '0.9rem',
+              lineHeight: 1.5,
+              color: '#999999',
             }}
           >
             {content.description}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* CTAs — hard edge buttons */}
+          <div className="flex flex-wrap items-center gap-3">
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 font-semibold text-sm active:scale-[0.97] transition-transform"
               style={{
-                fontFamily: 'var(--font-body)',
-                borderRadius: '100px',
-                background: 'var(--surface-primary)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                background: 'var(--text-inverse)',
                 color: 'var(--text-primary)',
+                border: 'none',
+                boxShadow: '3px 3px 0 0 var(--color-signal)',
               }}
             >
-              <GithubLogo size={18} weight="fill" />
+              <GithubLogo size={16} weight="bold" />
               {content.viewGithub}
-              <ArrowRight size={14} weight="bold" />
+              <ArrowRight size={12} weight="bold" />
             </a>
             <a
               href={DISCORD_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 font-semibold text-sm active:scale-[0.97] transition-transform"
               style={{
-                fontFamily: 'var(--font-body)',
-                borderRadius: '100px',
-                border: '1px solid #4a4744',
-                color: '#9c958e',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                background: 'transparent',
+                color: '#999999',
+                border: '1px solid #333333',
               }}
             >
-              <DiscordLogo size={18} weight="fill" />
+              <DiscordLogo size={16} weight="bold" />
               {content.joinDiscord}
             </a>
           </div>

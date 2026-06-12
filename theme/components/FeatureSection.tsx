@@ -15,20 +15,16 @@ import {
 } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
 
-const springTransition = {
-  type: 'spring' as const,
-  stiffness: 80,
-  damping: 22,
-};
+const snapTransition = { duration: 0.35, ease: [0.16, 1, 0.3, 1] };
 
 const staggerContainer = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.07 } },
+  visible: { transition: { staggerChildren: 0.04 } },
 };
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: springTransition },
+const fadeIn = {
+  hidden: { opacity: 0, y: 8 },
+  visible: { opacity: 1, y: 0, transition: snapTransition },
 };
 
 export interface FeatureContent {
@@ -50,39 +46,58 @@ const CATEGORY_ICONS: Icon[][] = [
 export default function FeatureSection({ content }: { content: FeatureContent }) {
   return (
     <section
-      className="py-28 md:py-36"
+      className="py-20 md:py-28"
       id="features"
-      style={{ background: 'var(--surface-secondary)' }}
+      style={{
+        background: 'var(--surface-secondary)',
+        borderBottom: '1px solid var(--text-primary)',
+      }}
     >
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={springTransition}
-          className="mb-20 text-center"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={snapTransition}
+          className="mb-16"
         >
-          <h2
-            className="leading-[1.1] tracking-tight"
+          {/* Section number — industrial label */}
+          <span
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-              color: 'var(--text-primary)',
-              fontWeight: 500,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.6rem',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              color: 'var(--color-signal)',
+              display: 'block',
+              marginBottom: '12px',
             }}
           >
-            {content.heading}{' '}
-            <span style={{ color: 'var(--color-accent-500)' }}>
+            02 — Features
+          </span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-system)',
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontWeight: 800,
+              lineHeight: 1,
+              letterSpacing: '-0.04em',
+              color: 'var(--text-primary)',
+            }}
+          >
+            {content.heading}
+            <span style={{ color: 'var(--color-signal)' }}>
               {content.headingHighlight}
             </span>
           </h2>
           <p
-            className="mt-5 max-w-[54ch] mx-auto"
+            className="mt-3 max-w-[50ch]"
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1rem',
-              lineHeight: 1.7,
+              fontFamily: 'var(--font-system)',
+              fontSize: '0.9rem',
+              lineHeight: 1.5,
               color: 'var(--text-secondary)',
             }}
           >
@@ -91,82 +106,84 @@ export default function FeatureSection({ content }: { content: FeatureContent })
         </motion.div>
 
         {/* Feature categories */}
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-16">
           {content.categories.map((category, catIdx) => (
             <div key={category.label}>
-              {/* Category label — small, serif, elegant */}
-              <motion.h3
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={springTransition}
-                className="mb-7"
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '0.85rem',
-                  fontWeight: 500,
-                  fontStyle: 'italic',
-                  color: 'var(--color-warm-500)',
-                  letterSpacing: '0.02em',
-                }}
+              {/* Category label — uppercase mono */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={snapTransition}
+                className="mb-5 flex items-center gap-3"
               >
-                {category.label}
-              </motion.h3>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.6rem',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    color: 'var(--text-tertiary)',
+                  }}
+                >
+                  {category.label}
+                </span>
+                <div
+                  style={{
+                    flex: 1,
+                    height: '1px',
+                    background: 'var(--surface-muted)',
+                  }}
+                />
+              </motion.div>
 
-              {/* Cards grid */}
+              {/* Card grid — tight, grid-like */}
               <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: '-60px' }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+                viewport={{ once: true, margin: '-40px' }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px]"
+                style={{ background: 'var(--text-primary)' }}
               >
                 {category.items.map((item, itemIdx) => {
                   const IconComponent = CATEGORY_ICONS[catIdx]?.[itemIdx] ?? FolderSimple;
                   return (
                     <motion.div
                       key={item.title}
-                      variants={fadeInUp}
-                      className="group p-6 transition-all duration-300"
+                      variants={fadeIn}
+                      className="group p-5"
                       style={{
-                        background: 'var(--surface-elevated)',
-                        borderRadius: '20px',
-                        border: '1px solid var(--surface-muted)',
-                        boxShadow:
-                          '0 4px 40px -8px rgba(123,142,168,0.04), 0 1px 8px -2px rgba(44,42,39,0.02)',
+                        background: 'var(--surface-primary)',
                       }}
                     >
-                      {/* Icon container — organic shape */}
-                      <div
-                        className="w-10 h-10 flex items-center justify-center mb-4 transition-colors duration-300"
-                        style={{
-                          borderRadius: '12px',
-                          background: 'var(--color-accent-50)',
-                        }}
-                      >
-                        <IconComponent
-                          size={19}
-                          weight="duotone"
-                          style={{ color: 'var(--color-accent-500)' }}
-                        />
-                      </div>
+                      {/* Icon — minimal, no container */}
+                      <IconComponent
+                        size={20}
+                        weight="regular"
+                        style={{ color: 'var(--text-primary)', marginBottom: '12px' }}
+                      />
 
+                      {/* Title — mono, small */}
                       <h4
-                        className="mb-1.5"
                         style={{
-                          fontFamily: 'var(--font-body)',
-                          fontSize: '0.875rem',
+                          fontFamily: 'var(--font-mono)',
+                          fontSize: '0.7rem',
                           fontWeight: 600,
                           color: 'var(--text-primary)',
+                          marginBottom: '4px',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.03em',
                         }}
                       >
                         {item.title}
                       </h4>
                       <p
                         style={{
-                          fontFamily: 'var(--font-body)',
-                          fontSize: '0.8rem',
-                          lineHeight: 1.6,
+                          fontFamily: 'var(--font-system)',
+                          fontSize: '0.78rem',
+                          lineHeight: 1.5,
                           color: 'var(--text-secondary)',
                         }}
                       >
