@@ -1,0 +1,17 @@
+[
+  {
+    "type": "file",
+    "name": "layout-and-width",
+    "label": "Layout & Width"
+  },
+  {
+    "type": "file",
+    "name": "smart-scrollbar",
+    "label": "Smart Scrollbar"
+  },
+  {
+    "type": "file",
+    "name": "image-download",
+    "label": "Image Download"
+  }
+]

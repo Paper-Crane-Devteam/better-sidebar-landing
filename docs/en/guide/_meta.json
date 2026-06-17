@@ -10,29 +10,24 @@
     "label": "Installation"
   },
   {
-    "type": "file",
-    "name": "folders-and-tags",
-    "label": "Folders & Tags"
+    "type": "dir",
+    "name": "sidebar",
+    "label": "Sidebar"
   },
   {
-    "type": "file",
-    "name": "prompt-library",
-    "label": "Prompt Library"
+    "type": "dir",
+    "name": "ui-customization",
+    "label": "UI Customization"
   },
   {
-    "type": "file",
-    "name": "search",
-    "label": "Full-Text Search"
+    "type": "dir",
+    "name": "extras",
+    "label": "Extras"
   },
   {
-    "type": "file",
-    "name": "drive-sync",
-    "label": "Google Drive Sync"
-  },
-  {
-    "type": "file",
-    "name": "export",
-    "label": "Conversation Export"
+    "type": "dir",
+    "name": "settings",
+    "label": "Settings"
   },
   {
     "type": "file",

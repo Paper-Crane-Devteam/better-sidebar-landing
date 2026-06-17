@@ -4,59 +4,71 @@ import { Layout as OriginalLayout } from '@rspress/core/theme-original';
 export * from '@rspress/core/theme-original';
 
 /**
- * Custom Layout — Kouthoofd / Teenage Engineering System
+ * Custom Layout — Zaha Hadid / Parametric Fluidity
  *
  * Level 3 Layout Slots:
- * - beforeNavTitle: Industrial monospace brand mark
- * - bottom: Technical spec footer strip
- *
- * Minimal. Functional. Every pixel has a reason to exist.
+ * - beforeNavTitle: Gradient brand glow
+ * - bottom: Ethereal footer strip
  */
 export function Layout() {
   return (
     <OriginalLayout
       beforeNavTitle={<NavBrand />}
-      bottom={<TechFooter />}
+      bottom={<FluidFooter />}
     />
   );
 }
 
-/** Brand — monospace, uppercase, precise */
+/** Brand — logo + gradient text, clickable */
 function NavBrand() {
   return (
-    <span
+    <a
+      href="/better-sidebar/"
       style={{
-        fontFamily: 'var(--font-mono)',
-        fontWeight: 600,
-        fontSize: '0.7rem',
-        color: 'var(--text-primary)',
-        letterSpacing: '0.08em',
-        textTransform: 'uppercase' as const,
-        marginLeft: '6px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '8px',
+        textDecoration: 'none',
       }}
     >
-      Better_Sidebar
-    </span>
+      <img
+        src="/better-sidebar/fav.png"
+        alt=""
+        style={{ width: '24px', height: '24px', borderRadius: '6px' }}
+      />
+      <span
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontWeight: 700,
+          fontSize: '1rem',
+          letterSpacing: '-0.03em',
+          background: 'var(--gradient-aurora)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}
+      >
+        Better Sidebar
+      </span>
+    </a>
   );
 }
 
-/** Footer — technical, minimal, datasheet feel */
-function TechFooter() {
+/** Footer — minimal, ethereal */
+function FluidFooter() {
   return (
     <div
       style={{
-        padding: '16px 0',
+        padding: '20px 0',
         textAlign: 'center',
-        fontFamily: 'var(--font-mono)',
-        fontSize: '0.6rem',
-        fontWeight: 500,
+        fontFamily: 'var(--font-body)',
+        fontSize: '0.7rem',
+        fontWeight: 400,
         color: 'var(--text-tertiary)',
-        textTransform: 'uppercase' as const,
-        letterSpacing: '0.1em',
-        borderTop: '1px solid var(--surface-muted)',
+        borderTop: '1px solid var(--glass-border)',
       }}
     >
-      PAPER CRANE DEV · GPL-3.0 · 2024–{new Date().getFullYear()}
+      Paper Crane · Flowing into the future
     </div>
   );
 }

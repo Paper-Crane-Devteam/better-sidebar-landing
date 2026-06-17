@@ -1,0 +1,37 @@
+[
+  {
+    "type": "file",
+    "name": "files-tab",
+    "label": "Files"
+  },
+  {
+    "type": "file",
+    "name": "search-tab",
+    "label": "Search"
+  },
+  {
+    "type": "file",
+    "name": "prompts-tab",
+    "label": "Prompts"
+  },
+  {
+    "type": "file",
+    "name": "tags-tab",
+    "label": "Tags"
+  },
+  {
+    "type": "file",
+    "name": "favorites-tab",
+    "label": "Favorites"
+  },
+  {
+    "type": "file",
+    "name": "gems-tab",
+    "label": "Gems (Gemini)"
+  },
+  {
+    "type": "file",
+    "name": "notebooks-tab",
+    "label": "Notebooks (Gemini)"
+  }
+]

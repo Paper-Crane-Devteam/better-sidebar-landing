@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "general",
+    "label": "General"
+  },
+  {
+    "type": "file",
+    "name": "keyboard-shortcuts",
+    "label": "Keyboard Shortcuts"
+  },
+  {
+    "type": "file",
+    "name": "themes",
+    "label": "Themes"
+  },
+  {
+    "type": "file",
+    "name": "multi-account",
+    "label": "Multi-Account"
+  },
+  {
+    "type": "file",
+    "name": "platform-manager",
+    "label": "Platform Manager"
+  }
+]

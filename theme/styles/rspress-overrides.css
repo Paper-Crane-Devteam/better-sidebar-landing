@@ -1,76 +1,82 @@
-/* ─── Rspress CSS Variable Overrides · Kouthoofd System ────────────────
-   Level 1: 工业功能主义覆盖
-   黑白极限对比 + 信号橙强调
+/* ─── Rspress CSS Variable Overrides · Zaha Hadid System ───────────────
+   Level 1: 深空未来主义
    ─────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* Brand — signal orange */
-  --rp-c-brand: #ff4400;
-  --rp-c-brand-dark: #cc3700;
-  --rp-c-brand-darker: #992900;
-  --rp-c-brand-light: #ff6633;
-  --rp-c-brand-lighter: #ff8866;
-  --rp-c-brand-tint: rgba(255, 68, 0, 0.06);
+  /* Brand — violet-pink iridescent */
+  --rp-c-brand: #8b5cf6;
+  --rp-c-brand-dark: #7c3aed;
+  --rp-c-brand-darker: #6d28d9;
+  --rp-c-brand-light: #a78bfa;
+  --rp-c-brand-lighter: #c4b5fd;
+  --rp-c-brand-tint: rgba(139, 92, 246, 0.08);
 
-  /* Background — pure white, clinical */
-  --rp-c-bg: #ffffff;
-  --rp-c-bg-soft: #f7f7f7;
-  --rp-c-bg-mute: #eeeeee;
+  /* Background — deep space */
+  --rp-c-bg: #0b0d11;
+  --rp-c-bg-soft: #12151c;
+  --rp-c-bg-mute: #1a1e28;
 
-  /* Text — pure black, maximum contrast */
-  --rp-c-text-1: #000000;
-  --rp-c-text-2: #666666;
-  --rp-c-text-3: #999999;
-  --rp-c-text-4: #cccccc;
+  /* Text — luminous */
+  --rp-c-text-1: #f0f2f8;
+  --rp-c-text-2: rgba(240, 242, 248, 0.7);
+  --rp-c-text-3: rgba(240, 242, 248, 0.45);
+  --rp-c-text-4: rgba(240, 242, 248, 0.2);
 
-  /* Dividers — precise hairlines */
-  --rp-c-divider: #e5e5e5;
-  --rp-c-divider-light: #f0f0f0;
+  /* Dividers — glass edges */
+  --rp-c-divider: rgba(255, 255, 255, 0.08);
+  --rp-c-divider-light: rgba(255, 255, 255, 0.04);
 
-  /* Layout — tight, functional */
-  --rp-nav-height: 56px;
-  --rp-sidebar-width: 260px;
+  /* Layout */
+  --rp-nav-height: 64px;
+  --rp-sidebar-width: 280px;
 
-  /* Code — dark terminal */
-  --rp-c-code-bg: #1a1a1a;
+  /* Code — deep */
+  --rp-c-code-bg: #0b0d11;
 
-  /* Home hero */
-  --rp-home-hero-secondary-color: #ff4400;
+  /* Hero */
+  --rp-home-hero-secondary-color: #8b5cf6;
 }
 
-/* ─── Dark Mode · 反转 ──────────────────────────────────────────────── */
+/* Dark mode is the default — light mode adaptation */
 .dark {
-  --rp-c-brand: #ff6633;
-  --rp-c-brand-dark: #ff4400;
-  --rp-c-brand-darker: #ff8866;
-  --rp-c-brand-light: #cc3700;
-  --rp-c-brand-lighter: #992900;
-  --rp-c-brand-tint: rgba(255, 102, 51, 0.1);
+  --rp-c-bg: #050608;
+  --rp-c-bg-soft: #0b0d11;
+  --rp-c-bg-mute: #12151c;
+}
 
-  --rp-c-bg: #0a0a0a;
-  --rp-c-bg-soft: #141414;
-  --rp-c-bg-mute: #1f1f1f;
 
-  --rp-c-text-1: #ffffff;
-  --rp-c-text-2: #a0a0a0;
-  --rp-c-text-3: #666666;
-  --rp-c-text-4: #333333;
+/* ─── Custom Block / Container (tip, warning, info, etc.) ────────────── */
+.rp-callout {
+  background: var(--surface-elevated) !important;
+  border-color: var(--glass-border) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 12px !important;
+}
+.rp-callout p,
+.rp-callout li,
+.rp-callout span {
+  color: var(--text-secondary) !important;
+}
+.rp-callout__title {
+  color: var(--text-primary) !important;
+}
+.rp-callout--tip {
+  border-left-color: #67e8f9 !important;
+}
+.rp-callout--warning {
+  border-left-color: #fbbf24 !important;
+}
+.rp-callout--danger {
+  border-left-color: #f87171 !important;
+}
+.rp-callout--info,
+.rp-callout--note {
+  border-left-color: #a78bfa !important;
+}
 
-  --rp-c-divider: #2a2a2a;
-  --rp-c-divider-light: #1f1f1f;
 
-  --rp-c-code-bg: #0a0a0a;
 
-  /* Surface tokens for landing page */
-  --surface-primary: #0a0a0a;
-  --surface-secondary: #141414;
-  --surface-elevated: #1f1f1f;
-  --surface-deep: #000000;
-  --surface-muted: #2a2a2a;
-  --surface-invert: #ffffff;
-
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --text-tertiary: #666666;
-  --text-inverse: #000000;
+/* ─── Hide Rspress auto-rendered nav title (we use custom NavBrand) ───── */
+.rp-nav__title {
+  display: none !important;
 }

@@ -9,7 +9,7 @@ export default defineConfig({
     'Better Sidebar for Gemini & AI Studio - Organize your AI conversations with folders, tags, search, and more.',
   lang: 'en',
   icon: '/fav.png',
-  logo: '/fav.png',
+  logo: '',
   locales: [
     {
       lang: 'en',
@@ -45,12 +45,13 @@ export default defineConfig({
     [
       'link',
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         rel: 'stylesheet',
       },
     ],
   ],
   themeConfig: {
+    darkMode: false,
     socialLinks: [
       {
         icon: 'github',

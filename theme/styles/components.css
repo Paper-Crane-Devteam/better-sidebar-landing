@@ -1,96 +1,68 @@
-/* ─── Component Overrides · Kouthoofd System ──────────────────────────
-   Level 2 BEM: 工业面板、精确线条、技术仪表盘质感
+/* ─── Component Overrides · Zaha Hadid System ─────────────────────────
+   Level 2 BEM: 毛玻璃面板、流体边缘、发光交互
    ─────────────────────────────────────────────────────────────────────── */
 
-/* ─── Navigation · 导航仪表条 ────────────────────────────────────────── */
+/* ─── Navigation · 悬浮毛玻璃条 ──────────────────────────────────────── */
 .rp-nav {
-  background: var(--surface-primary) !important;
-  border-bottom: 1px solid var(--text-primary) !important;
-  backdrop-filter: none !important;
-}
-.dark .rp-nav {
-  background: var(--surface-primary) !important;
-  border-bottom-color: var(--surface-muted) !important;
+  background: var(--surface-glass) !important;
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
 }
 
-/* Nav items — monospace, uppercase, small */
+/* Nav items */
 .rp-nav .rp-nav-menu__item {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-family: var(--font-body);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
 }
 
-/* Active state — signal orange underline */
+/* Active — glow accent */
 .rp-nav-menu__item--active {
-  color: var(--color-signal) !important;
-}
-.rp-nav-menu__item--active::after {
-  background: var(--color-signal) !important;
+  color: #a78bfa !important;
+  text-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
 }
 
-/* ─── Sidebar · 模块索引面板 ─────────────────────────────────────────── */
+/* ─── Sidebar · 深空面板 ─────────────────────────────────────────────── */
 .rp-sidebar {
-  border-right: 1px solid var(--text-primary) !important;
-  background: var(--surface-primary) !important;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-}
-.dark .rp-sidebar {
-  border-right-color: var(--surface-muted) !important;
-  background: var(--surface-primary) !important;
+  border-right: 1px solid var(--glass-border) !important;
+  background: var(--surface-secondary) !important;
 }
 
-/* Sidebar links — no border-radius, industrial */
+/* Sidebar links — glow hover */
 .rp-sidebar a:hover {
-  background: var(--surface-secondary) !important;
-  border-radius: 0 !important;
+  background: rgba(139, 92, 246, 0.08) !important;
+  border-radius: 12px;
 }
 .rp-sidebar a.active {
-  background: var(--color-signal-tint) !important;
-  color: var(--color-signal) !important;
-  border-radius: 0 !important;
-  border-left: 2px solid var(--color-signal);
+  background: rgba(139, 92, 246, 0.12) !important;
+  color: #a78bfa !important;
+  border-radius: 12px;
+  box-shadow: inset 0 0 16px rgba(139, 92, 246, 0.1);
 }
 
-/* ─── Code Blocks · 终端面板 ─────────────────────────────────────────── */
+/* ─── Code Blocks · 深渊终端 ─────────────────────────────────────────── */
 .rp-codeblock {
-  border-radius: 0 !important;
-  border: 1px solid var(--text-primary) !important;
-}
-.dark .rp-codeblock {
-  border-color: var(--surface-muted) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--glass-border) !important;
+  overflow: hidden;
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
 }
 .rp-codeblock__title {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 1px solid var(--surface-muted);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--glass-border);
 }
 
-/* ─── Links · 信号色 ─────────────────────────────────────────────────── */
+/* ─── Links · 虹彩悬停 ───────────────────────────────────────────────── */
 .rp-link {
-  color: var(--color-signal);
+  color: #a78bfa;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
+  transition: all 0.3s ease;
 }
 .rp-link:hover {
-  border-bottom-color: var(--color-signal);
-}
-
-/* ─── Tables · 数据网格 ──────────────────────────────────────────────── */
-.rp-doc-content table {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  border-collapse: collapse;
-}
-.rp-doc-content th {
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  color: #c4b5fd;
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
 }

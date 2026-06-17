@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Database, CloudSlash, Eye } from '@phosphor-icons/react';
 
-const snapTransition = { duration: 0.35, ease: [0.16, 1, 0.3, 1] };
+const fluidTransition = { duration: 0.7, ease: [0.23, 1, 0.32, 1] };
 
 export interface PrivacySectionContent {
   heading: string;
@@ -11,60 +11,57 @@ export interface PrivacySectionContent {
 }
 
 const ICONS = [Database, CloudSlash, Eye, ShieldCheck];
+const GLOW_COLORS = [
+  'rgba(6, 182, 212, 0.15)',
+  'rgba(139, 92, 246, 0.15)',
+  'rgba(236, 72, 153, 0.12)',
+  'rgba(34, 197, 94, 0.12)',
+];
+const ACCENT_COLORS = ['#67e8f9', '#a78bfa', '#f472b6', '#4ade80'];
 
 export default function PrivacySection({ content }: { content: PrivacySectionContent }) {
   return (
     <section
-      className="py-20 md:py-28"
-      style={{
-        background: 'var(--surface-secondary)',
-        borderBottom: '1px solid var(--text-primary)',
-      }}
+      className="py-24 md:py-32 relative"
+      style={{ background: 'var(--surface-primary)' }}
     >
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={snapTransition}
-          className="mb-14"
+          transition={fluidTransition}
+          className="mb-14 text-center"
         >
-          <span
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.6rem',
-              fontWeight: 600,
-              textTransform: 'uppercase',
-              letterSpacing: '0.12em',
-              color: 'var(--color-signal)',
-              display: 'block',
-              marginBottom: '12px',
-            }}
-          >
-            04 — Security
-          </span>
           <h2
             style={{
-              fontFamily: 'var(--font-system)',
-              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-              fontWeight: 800,
-              lineHeight: 1,
-              letterSpacing: '-0.04em',
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(2rem, 4.5vw, 3rem)',
+              fontWeight: 700,
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
               color: 'var(--text-primary)',
             }}
           >
-            {content.heading}
-            <span style={{ color: 'var(--color-signal)' }}>
+            {content.heading}{' '}
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #4ade80, #06b6d4)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
               {content.headingHighlight}
             </span>
           </h2>
           <p
-            className="mt-3 max-w-[50ch]"
+            className="mt-4 max-w-[50ch] mx-auto"
             style={{
-              fontFamily: 'var(--font-system)',
-              fontSize: '0.9rem',
-              lineHeight: 1.5,
+              fontFamily: 'var(--font-body)',
+              fontSize: '1rem',
+              lineHeight: 1.6,
               color: 'var(--text-secondary)',
             }}
           >
@@ -72,66 +69,52 @@ export default function PrivacySection({ content }: { content: PrivacySectionCon
           </p>
         </motion.div>
 
-        {/* Privacy grid — horizontal strip layout */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-          style={{ border: '1px solid var(--text-primary)' }}
-        >
+        {/* Privacy grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[1000px] mx-auto">
           {content.items.map((item, i) => {
             const Icon = ICONS[i] ?? ShieldCheck;
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: '-40px' }}
-                transition={{ ...snapTransition, delay: i * 0.05 }}
-                className="p-6"
+                transition={{ ...fluidTransition, delay: i * 0.08 }}
+                className="p-6 text-center"
                 style={{
-                  background: 'var(--surface-primary)',
-                  borderRight: i < 3 ? '1px solid var(--text-primary)' : 'none',
+                  background: 'var(--surface-glass)',
+                  backdropFilter: 'blur(16px)',
+                  borderRadius: '22px',
+                  border: '1px solid var(--glass-border)',
                 }}
               >
-                {/* Index number */}
-                <span
+                {/* Icon with glow */}
+                <div
+                  className="w-12 h-12 flex items-center justify-center mx-auto mb-4"
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.55rem',
-                    fontWeight: 600,
-                    color: 'var(--text-tertiary)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
-                    display: 'block',
-                    marginBottom: '12px',
+                    borderRadius: '16px',
+                    background: GLOW_COLORS[i],
+                    boxShadow: `0 0 24px -4px ${GLOW_COLORS[i]}`,
                   }}
                 >
-                  0{i + 1}
-                </span>
-
-                <Icon
-                  size={20}
-                  weight="regular"
-                  style={{ color: 'var(--text-primary)', marginBottom: '10px' }}
-                />
-
+                  <Icon size={22} weight="duotone" style={{ color: ACCENT_COLORS[i] }} />
+                </div>
                 <h4
+                  className="mb-2"
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.7rem',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.85rem',
                     fontWeight: 600,
                     color: 'var(--text-primary)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.03em',
-                    marginBottom: '6px',
                   }}
                 >
                   {item.title}
                 </h4>
                 <p
                   style={{
-                    fontFamily: 'var(--font-system)',
+                    fontFamily: 'var(--font-body)',
                     fontSize: '0.78rem',
-                    lineHeight: 1.5,
+                    lineHeight: 1.55,
                     color: 'var(--text-secondary)',
                   }}
                 >
