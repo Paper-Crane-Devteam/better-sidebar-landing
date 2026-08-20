@@ -28,7 +28,7 @@ All three are slider controls with a live pixel/percentage readout. Changes appl
 <!-- IMG_PLACEHOLDER: platform-gemini-sliders — Screenshot of the three width sliders in Gemini Platform settings, each showing their current value -->
 
 :::tip
-For details on using these width controls effectively, see the dedicated [Layout & Width](/better-sidebar/en/guide/ui-customization/layout-and-width) page.
+For details on using these width controls effectively, see the dedicated [Layout & Width](/en/guide/ui-customization/layout-and-width) page.
 :::
 
 ### Element Visibility
@@ -50,11 +50,11 @@ Enhanced functionality toggles:
 
 | Feature | Description |
 | --- | --- |
-| **Zen Mode** | Distraction-free mode that hides most chrome. [Learn more](/better-sidebar/en/guide/ui-customization/layout-and-width#zen-mode) |
+| **Zen Mode** | Distraction-free mode that hides most chrome. [Learn more](/en/guide/ui-customization/layout-and-width#zen-mode-gemini-only) |
 | **Quick Resend** | Adds a resend button to quickly re-submit your last prompt |
 | **Show Conversation Tag** | Displays the conversation's tag in the top bar for quick context |
-| **Remove Auto Watermark** | Disables SynthID watermark on AI-generated images. [Learn more](/better-sidebar/en/guide/ui-customization/image-download) |
-| **Smart Scrollbar** | Shows a floating conversation outline for navigation. [Learn more](/better-sidebar/en/guide/ui-customization/smart-scrollbar) |
+| **Remove Auto Watermark** | Disables SynthID watermark on AI-generated images. [Learn more](/en/guide/ui-customization/image-download) |
+| **Smart Scrollbar** | Shows a floating conversation outline for navigation. [Learn more](/en/guide/ui-customization/smart-scrollbar) |
 | **Auto-hide Input** | Makes the input box semi-transparent when scrolling through messages |
 
 ## AI Studio Settings

@@ -165,7 +165,7 @@ When your library grows beyond a screenful, filters become essential. The filter
 
 Click the 🔍 button (or use the hotkey) to open an inline search field. As you type, the tree prunes to show only conversations and folders that match your query. Folders are kept visible if any of their children match.
 
-This is a quick local filter — for full-text search across message content, use the dedicated [Search tab](/better-sidebar/en/guide/sidebar/search-tab).
+This is a quick local filter — for full-text search across message content, use the dedicated [Search tab](/en/guide/sidebar/search-tab).
 
 ### Tag filter
 
@@ -282,7 +282,7 @@ Note: Scan Chat List only imports **titles and metadata** (conversation ID, crea
 
 On a fresh install, only your most recent conversations are captured automatically. To import older conversations:
 
-- **AI Studio** — Use the **Import Chat History** feature in the [Search tab](/better-sidebar/en/guide/sidebar/search-tab#import-chat-history) to bulk-import message content from a Google Drive export.
+- **AI Studio** — Use the **Import Chat History** feature in the [Search tab](/en/guide/sidebar/search-tab#import-chat-history) to bulk-import message content from a Google Drive export.
 - **Gemini** — Run **Scan Chat List** to import titles, then open individual conversations to index their message content. There's no bulk import for Gemini at this time.
 
 :::tip

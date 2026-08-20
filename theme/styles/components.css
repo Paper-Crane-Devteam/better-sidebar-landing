@@ -1,68 +1,162 @@
-/* ─── Component Overrides · Zaha Hadid System ─────────────────────────
-   Level 2 BEM: 毛玻璃面板、流体边缘、发光交互
+/* ─── Component Overrides · Paper Crane Dev v2.0 ───────────────────────
+   Level 2 BEM: 无边框、无毛玻璃、无投影
+   层级只靠纸色色块；高光只在 hover 出现
    ─────────────────────────────────────────────────────────────────────── */
 
-/* ─── Navigation · 悬浮毛玻璃条 ──────────────────────────────────────── */
+/* ─── Navigation · 实心纸面，不是毛玻璃 ─────────────────────────────── */
 .rp-nav {
-  background: var(--surface-glass) !important;
-  backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
-  border-bottom: 1px solid var(--glass-border) !important;
+  background: var(--paper-1) !important;
+  backdrop-filter: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Nav items */
+/* 导航项 — mono 全大写 */
 .rp-nav .rp-nav-menu__item {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 0.85rem;
-  letter-spacing: -0.01em;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  transition: color var(--duration) var(--ease);
+}
+.rp-nav .rp-nav-menu__item:hover {
+  color: var(--ink-1);
 }
 
-/* Active — glow accent */
+/* 当前项 — 墨色加重，不发光不变色 */
 .rp-nav-menu__item--active {
-  color: #a78bfa !important;
-  text-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  color: var(--ink-1) !important;
+  text-shadow: none !important;
 }
 
-/* ─── Sidebar · 深空面板 ─────────────────────────────────────────────── */
+/* ─── Sidebar · 纸色面板，左侧 2px 墨条表示当前 ───────────────────── */
 .rp-sidebar {
-  border-right: 1px solid var(--glass-border) !important;
-  background: var(--surface-secondary) !important;
+  background: var(--paper-1) !important;
+  border-right: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Sidebar links — glow hover */
+.rp-sidebar a {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+  border-radius: var(--radius) !important;
+  border-left: 2px solid transparent;
+  transition:
+    background var(--duration) var(--ease),
+    color var(--duration) var(--ease);
+}
 .rp-sidebar a:hover {
-  background: rgba(139, 92, 246, 0.08) !important;
-  border-radius: 12px;
+  background: var(--paper-2) !important;
+  color: var(--ink-1) !important;
 }
 .rp-sidebar a.active {
-  background: rgba(139, 92, 246, 0.12) !important;
-  color: #a78bfa !important;
-  border-radius: 12px;
-  box-shadow: inset 0 0 16px rgba(139, 92, 246, 0.1);
+  background: var(--paper-2) !important;
+  color: var(--ink-1) !important;
+  border-left-color: var(--ink-1);
+  box-shadow: none !important;
 }
 
-/* ─── Code Blocks · 深渊终端 ─────────────────────────────────────────── */
+/* 侧栏分组标题 */
+.rp-sidebar-group__title,
+.rp-sidebar h2 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ─── Code blocks · 扁平纸片，2px 圆角，无投影 ──────────────────────── */
 .rp-codeblock {
-  border-radius: 16px !important;
-  border: 1px solid var(--glass-border) !important;
+  background: var(--paper-2) !important;
+  border: 0 !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
   overflow: hidden;
-  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+}
+.rp-codeblock pre,
+.rp-codeblock code {
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  background: transparent !important;
 }
 .rp-codeblock__title {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid var(--glass-border);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  background: var(--paper-3);
+  border-bottom: 0;
 }
 
-/* ─── Links · 虹彩悬停 ───────────────────────────────────────────────── */
-.rp-link {
-  color: #a78bfa;
-  text-decoration: none;
-  transition: all 0.3s ease;
+/* ─── Links · 墨色下划线，hover 才转高光 ───────────────────────────── */
+.rp-link,
+.rp-doc-content a {
+  color: var(--ink-1);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition:
+    color var(--duration) var(--ease),
+    text-decoration-color var(--duration) var(--ease);
 }
-.rp-link:hover {
-  color: #c4b5fd;
-  text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+.rp-link:hover,
+.rp-doc-content a:hover {
+  color: var(--glow-b);
+  text-decoration-color: var(--glow-b);
+  text-shadow: none;
+}
+
+/* ─── Search · 纸槽，focus 时发光 ──────────────────────────────────── */
+.rp-search input,
+.rp-nav-search-button {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  background: var(--paper-2) !important;
+  border: 0 !important;
+  border-radius: var(--radius) !important;
+  color: var(--ink-1);
+  box-shadow: none !important;
+  transition: box-shadow var(--duration-glow) var(--ease);
+}
+.rp-search input:focus,
+.rp-nav-search-button:hover {
+  outline: none;
+  box-shadow: var(--shadow-ai-glow-sm) !important;
+}
+
+/* ─── Prev/Next & Outline · 去边框去圆角 ──────────────────────────── */
+.rp-doc-footer a,
+.rp-prev-next a {
+  background: var(--paper-2) !important;
+  border: 0 !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  transition: box-shadow var(--duration-glow) var(--ease);
+}
+.rp-doc-footer a:hover,
+.rp-prev-next a:hover {
+  box-shadow: var(--shadow-ai-glow-sm) !important;
+}
+
+.rp-aside,
+.rp-outline {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+/* ─── 全局清理：任何残留的圆角与玻璃 ──────────────────────────────── */
+.rp-nav *,
+.rp-sidebar * {
+  backdrop-filter: none !important;
 }

@@ -1,130 +1,154 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Database, CloudSlash, Eye } from '@phosphor-icons/react';
-
-const fluidTransition = { duration: 0.7, ease: [0.23, 1, 0.32, 1] };
+import { Kicker, MonoLink, Section, TickRule, rise, stagger } from './sections/shared';
 
 export interface PrivacySectionContent {
-  heading: string;
-  headingHighlight: string;
-  subtitle: string;
-  items: Array<{ title: string; desc: string }>;
+  kicker: string;
+  /** 一句巨大的衬线陈述句 */
+  statement: string;
+  /** 4 条 mono 事实 */
+  items: { title: string; desc: string }[];
+  /** 权限说明 */
+  note: string;
+  policyLabel: string;
+  policyLink: string;
 }
 
-const ICONS = [Database, CloudSlash, Eye, ShieldCheck];
-const GLOW_COLORS = [
-  'rgba(6, 182, 212, 0.15)',
-  'rgba(139, 92, 246, 0.15)',
-  'rgba(236, 72, 153, 0.12)',
-  'rgba(34, 197, 94, 0.12)',
-];
-const ACCENT_COLORS = ['#67e8f9', '#a78bfa', '#f472b6', '#4ade80'];
-
+/**
+ * 07 · 隐私
+ * 一句大字 + 四条事实，大留白。不用图标卡片。
+ */
 export default function PrivacySection({ content }: { content: PrivacySectionContent }) {
   return (
-    <section
-      className="py-24 md:py-32 relative"
-      style={{ background: 'var(--surface-primary)' }}
-    >
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={fluidTransition}
-          className="mb-14 text-center"
-        >
-          <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 4.5vw, 3rem)',
-              fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
-              color: 'var(--text-primary)',
-            }}
-          >
-            {content.heading}{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #4ade80, #06b6d4)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              {content.headingHighlight}
-            </span>
-          </h2>
-          <p
-            className="mt-4 max-w-[50ch] mx-auto"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1rem',
-              lineHeight: 1.6,
-              color: 'var(--text-secondary)',
-            }}
-          >
-            {content.subtitle}
-          </p>
+    <Section id="privacy" tone="paper-1" crease creasePosition="center 78%" creaseOpacity={0.45}>
+      {/* 折纸鹤水印 —— 单色 PNG，靠 opacity 压成纸上的淡印子 */}
+      <img
+        src="/better-sidebar/images/crane-mark.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="crane-watermark"
+        style={{
+          position: 'absolute',
+          right: '-40px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '380px',
+          height: 'auto',
+          opacity: 0.05,
+          pointerEvents: 'none',
+        }}
+      />
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div variants={rise}>
+          <Kicker index="07">{content.kicker}</Kicker>
         </motion.div>
 
-        {/* Privacy grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[1000px] mx-auto">
-          {content.items.map((item, i) => {
-            const Icon = ICONS[i] ?? ShieldCheck;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 16, scale: 0.97 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ ...fluidTransition, delay: i * 0.08 }}
-                className="p-6 text-center"
+        <motion.p
+          variants={rise}
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontWeight: 700,
+            fontSize: 'clamp(1.9rem, 4.6vw, 3.4rem)',
+            lineHeight: 1.16,
+            letterSpacing: '-0.025em',
+            color: 'var(--ink-1)',
+            maxWidth: '24ch',
+            margin: 0,
+          }}
+        >
+          {content.statement}
+        </motion.p>
+
+        <motion.div variants={rise}>
+          <TickRule tall style={{ width: '100%', margin: 'var(--space-lg) 0 var(--space-md)' }} />
+        </motion.div>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
+            gap: 'var(--space-md)',
+          }}
+        >
+          {content.items.map((item, i) => (
+            <motion.div key={item.title} variants={rise}>
+              <div
                 style={{
-                  background: 'var(--surface-glass)',
-                  backdropFilter: 'blur(16px)',
-                  borderRadius: '22px',
-                  border: '1px solid var(--glass-border)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.58rem',
+                  letterSpacing: '0.2em',
+                  color: 'var(--ink-3)',
+                  marginBottom: '10px',
                 }}
               >
-                {/* Icon with glow */}
-                <div
-                  className="w-12 h-12 flex items-center justify-center mx-auto mb-4"
-                  style={{
-                    borderRadius: '16px',
-                    background: GLOW_COLORS[i],
-                    boxShadow: `0 0 24px -4px ${GLOW_COLORS[i]}`,
-                  }}
-                >
-                  <Icon size={22} weight="duotone" style={{ color: ACCENT_COLORS[i] }} />
-                </div>
-                <h4
-                  className="mb-2"
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.78rem',
-                    lineHeight: 1.55,
-                    color: 'var(--text-secondary)',
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </motion.div>
-            );
-          })}
+                {String(i + 1).padStart(2, '0')}
+              </div>
+              <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.74rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: 'var(--ink-1)',
+                  marginBottom: '8px',
+                }}
+              >
+                {item.title}
+              </div>
+              <div
+                style={{
+                  fontFamily: 'var(--font-text)',
+                  fontSize: '0.86rem',
+                  lineHeight: 1.72,
+                  color: 'var(--ink-2)',
+                }}
+              >
+                {item.desc}
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
-    </section>
+
+        <motion.div
+          variants={rise}
+          style={{
+            marginTop: 'var(--space-lg)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: 'var(--space-md)',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-text)',
+              fontSize: '0.88rem',
+              lineHeight: 1.72,
+              color: 'var(--ink-2)',
+              maxWidth: '58ch',
+              margin: 0,
+            }}
+          >
+            {content.note}
+          </p>
+          <MonoLink href={content.policyLink} newTab={false}>
+            {content.policyLabel}
+          </MonoLink>
+        </motion.div>
+      </motion.div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .crane-watermark { display: none; }
+        }
+      `}</style>
+    </Section>
   );
 }

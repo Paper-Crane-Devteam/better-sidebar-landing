@@ -38,11 +38,11 @@ These are just the highlights. Each feature has its own dedicated guide — see 
 
 ### 1. Install the extension
 
-Head to the [Chrome Web Store](https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj) (or [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/better-sidebar-for-ai-studio)) and install. For detailed steps, see the [Installation guide](/better-sidebar/en/guide/installation).
+Head to the [Chrome Web Store](https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj) (or [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/better-sidebar-for-ai-studio)) and install. For detailed steps, see the [Installation guide](/en/guide/installation).
 
 ### 2. Sign in to your Google account
 
-Better Sidebar is **account-bound**. You must be signed in to your Google account on Gemini or AI Studio for the extension to work. The sidebar detects your active account and creates an independent database for it — this is also how [multi-account support](/better-sidebar/en/guide/multi-account/multi-account) works.
+Better Sidebar is **account-bound**. You must be signed in to your Google account on Gemini or AI Studio for the extension to work. The sidebar detects your active account and creates an independent database for it — this is also how [multi-account support](/en/guide/settings/multi-account) works.
 
 <!-- IMG_PLACEHOLDER: account-detected — A screenshot or callout showing the account indicator in the sidebar header -->
 
@@ -86,9 +86,9 @@ Depending on what you want to do next, pick a section:
 
 | I want to… | Go to |
 | --- | --- |
-| Organize conversations into folders and tags | [Files Tab](/better-sidebar/en/guide/sidebar/files-tab) |
-| Find old conversations quickly | [Search Tab](/better-sidebar/en/guide/sidebar/search-tab) |
-| Build a reusable prompt library | [Prompts Tab](/better-sidebar/en/guide/sidebar/prompts-tab) |
-| Adjust sidebar layout and Focus Mode | [Layout & Width](/better-sidebar/en/guide/ui-customization/layout-and-width) |
-| Sync my data across devices | [Google Drive Sync](/better-sidebar/en/guide/extras/drive-sync) |
-| Customize hotkeys and themes | [Settings](/better-sidebar/en/guide/settings/general) |
+| Organize conversations into folders and tags | [Files Tab](/en/guide/sidebar/files-tab) |
+| Find old conversations quickly | [Search Tab](/en/guide/sidebar/search-tab) |
+| Build a reusable prompt library | [Prompts Tab](/en/guide/sidebar/prompts-tab) |
+| Adjust sidebar layout and Focus Mode | [Layout & Width](/en/guide/ui-customization/layout-and-width) |
+| Sync my data across devices | [Google Drive Sync](/en/guide/extras/drive-sync) |
+| Customize hotkeys and themes | [Settings](/en/guide/settings/general) |

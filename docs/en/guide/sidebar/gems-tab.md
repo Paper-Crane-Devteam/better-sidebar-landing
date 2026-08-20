@@ -78,7 +78,7 @@ Deleting a gem is permanent. The gem and its configuration are gone from Gemini 
 
 ## Gem Conversations
 
-Expand any gem to see the conversations you've had with it. These child items work exactly like conversations in the [Files tab](/better-sidebar/en/guide/sidebar/files-tab):
+Expand any gem to see the conversations you've had with it. These child items work exactly like conversations in the [Files tab](/en/guide/sidebar/files-tab):
 
 - Click to navigate to the conversation
 - Right-click for the full context menu (rename, move, tag, export, delete)

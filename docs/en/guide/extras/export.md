@@ -90,7 +90,7 @@ Export is available anywhere a conversation appears in the sidebar:
 - **Search results** — after finding a conversation, navigate to it and export from the tree
 
 :::tip
-For batch exports, there isn't a built-in "export all" button — but you can export conversations one at a time. If you need a full database backup (all conversations at once), use the [Data Backup](/better-sidebar/en/guide/extras/data-backup) feature instead, which exports your entire database as a single file.
+For batch exports, there isn't a built-in "export all" button — but you can export conversations one at a time. If you need a full database backup (all conversations at once), use the [Data Backup](/en/guide/extras/data-backup) feature instead, which exports your entire database as a single file.
 :::
 
 ## File Naming

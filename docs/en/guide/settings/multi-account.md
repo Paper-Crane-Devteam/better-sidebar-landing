@@ -103,5 +103,5 @@ If you log into Gemini with different accounts for different purposes, create a 
 Want to try a completely different organization system without losing your current one? Create a new profile, experiment freely, and switch back if it doesn't work out.
 
 :::tip
-Multi-Account profiles pair perfectly with [Google Drive Sync](/better-sidebar/en/guide/extras/drive-sync). Each profile can be backed up independently to Drive, giving you cloud safety for all your organizational systems.
+Multi-Account profiles pair perfectly with [Google Drive Sync](/en/guide/extras/drive-sync). Each profile can be backed up independently to Drive, giving you cloud safety for all your organizational systems.
 :::

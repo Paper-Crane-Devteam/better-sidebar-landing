@@ -1,68 +1,146 @@
-/* ─── Typography · Zaha Hadid System ───────────────────────────────────
-   Space Grotesk — 几何未来主义
-   流体标题 · 发光文字 · 轻盈正文
+/* ─── Typography · Paper Crane Dev v2.0 ────────────────────────────────
+   display = Playfair Display  (仅 H1/H2)
+   text    = Literata          (长段落)
+   mono    = JetBrains Mono    (UI chrome)
    ─────────────────────────────────────────────────────────────────────── */
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--text-primary);
-  line-height: 1.6;
-  background: var(--surface-primary);
+  font-family: var(--font-text);
+  color: var(--ink-1);
+  line-height: 1.7;
+  background: var(--paper-1);
   overflow-x: hidden;
 }
 
-/* Doc content */
+/* ─── Doc content · 文档正文用衬线，长段落可读 ────────────────────── */
 .rp-doc-content {
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  line-height: 1.7;
-  color: var(--text-primary);
+  font-family: var(--font-text);
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--ink-1);
 }
 
-/* Headings — large, tight, gradient potential */
 .rp-doc-content h1 {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  color: var(--ink-1);
 }
 
 .rp-doc-content h2 {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-1);
   margin-top: 2.5em;
 }
 
+/* H3/H4 降级为 mono — 它们是结构标记，不是标题 */
 .rp-doc-content h3,
 .rp-doc-content h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-1);
+}
+
+.rp-doc-content p,
+.rp-doc-content li {
+  color: var(--ink-1);
 }
 
 .rp-doc-content p {
   margin-bottom: 1.2em;
-  color: var(--text-secondary);
 }
 
-/* Inline code — glass effect */
-.rp-doc-content code:not([class*="language-"]) {
-  background: var(--surface-glass);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  padding: 0.15em 0.45em;
-  font-size: 0.85em;
-  color: #a78bfa;
+.rp-doc-content strong {
+  font-weight: 600;
+  color: var(--ink-1);
+}
+
+.rp-doc-content blockquote {
+  border-left: 2px solid var(--ink-3);
+  padding-left: var(--space-sm);
+  color: var(--ink-2);
+  font-style: normal;
+}
+
+/* ─── Inline code · 纸片，不是玻璃 ────────────────────────────────── */
+.rp-doc-content code:not([class*='language-']) {
+  font-family: var(--font-mono);
+  background: var(--paper-2);
+  border: 0;
+  border-radius: var(--radius);
+  padding: 0.12em 0.4em;
+  font-size: 0.82em;
+  color: var(--ink-1);
+}
+
+/* ─── Tables · 斑马纹靠色块，不靠边框 ───────────────────────────── */
+.rp-doc-content table {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+.rp-doc-content th {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--paper-2);
+  padding: var(--space-xs) var(--space-sm);
+  border: 0;
+}
+.rp-doc-content td {
+  padding: var(--space-xs) var(--space-sm);
+  border: 0;
+  color: var(--ink-1);
+}
+.rp-doc-content tbody tr:nth-child(even) {
+  background: var(--paper-2);
+}
+
+/* ─── Utility type roles ────────────────────────────────────────────── */
+.type-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--ink-1);
+}
+
+/* mono 元数据 / 标签 / 序号的统一形态 */
+.type-meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.type-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.type-body {
+  font-family: var(--font-text);
+  line-height: 1.75;
+  color: var(--ink-2);
 }

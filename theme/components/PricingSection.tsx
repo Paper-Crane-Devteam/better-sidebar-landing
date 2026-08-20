@@ -1,287 +1,222 @@
 import { motion } from 'framer-motion';
-import { Check, Heart } from '@phosphor-icons/react';
+import { Kicker, Lede, MonoButton, Section, SectionTitle, rise, stagger } from './sections/shared';
 
-const fluidTransition = { duration: 0.7, ease: [0.23, 1, 0.32, 1] };
-
-export interface PricingContent {
-  heading: string;
-  headingHighlight: string;
-  subtitle: string;
-  free: {
-    title: string;
-    price: string;
-    desc: string;
-    features: string[];
-    cta: string;
-    ctaLink: string;
-  };
-  supporter: {
-    title: string;
-    price: string;
-    priceNote: string;
-    desc: string;
-    features: string[];
-    cta: string;
-    ctaLink: string;
-  };
+export interface PricingTier {
+  /** mono 小标 — FREE / SUPPORT PACK / POWER PACK */
+  label: string;
+  price: string;
+  priceNote: string;
+  tagline: string;
+  features: string[];
+  cta: string;
+  ctaLink: string;
+  /** 主推列 */
+  featured?: boolean;
+  /** 继承关系说明，如 "含 Support Pack 全部内容" */
+  inherits?: string;
 }
 
+export interface PricingContent {
+  kicker: string;
+  title: string;
+  subtitle: string;
+  tiers: PricingTier[];
+  /** 退款说明 */
+  note: string;
+}
+
+/**
+ * 08 · 定价 —— 三栏
+ * Free / Support Pack / Power Pack。价格数字用超大 mono。
+ * 主推列靠纸色深一级区分，不靠渐变或描边。
+ */
 export default function PricingSection({ content }: { content: PricingContent }) {
   return (
-    <section
-      className="py-24 md:py-32 relative"
-      id="pricing"
-      style={{ background: 'var(--surface-secondary)' }}
-    >
-      {/* Background orb */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(236,72,153,0.05) 0%, transparent 60%)',
-          filter: 'blur(80px)',
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={fluidTransition}
-          className="mb-14 text-center"
-        >
-          <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 4.5vw, 3rem)',
-              fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
-              color: 'var(--text-primary)',
-            }}
-          >
-            {content.heading}{' '}
-            <span
-              style={{
-                background: 'var(--gradient-iridescent)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              {content.headingHighlight}
-            </span>
-          </h2>
-          <p
-            className="mt-4 max-w-[50ch] mx-auto"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1rem',
-              lineHeight: 1.6,
-              color: 'var(--text-secondary)',
-            }}
-          >
-            {content.subtitle}
-          </p>
+    <Section id="pricing" tone="paper-2">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.12 }}
+      >
+        <motion.div variants={rise}>
+          <Kicker index="08">{content.kicker}</Kicker>
+        </motion.div>
+        <motion.div variants={rise}>
+          <SectionTitle>{content.title}</SectionTitle>
+        </motion.div>
+        <motion.div variants={rise}>
+          <Lede>{content.subtitle}</Lede>
         </motion.div>
 
-        {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[840px] mx-auto">
-          {/* Free Tier — glass card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ ...fluidTransition, delay: 0 }}
-            className="p-7 flex flex-col"
-            style={{
-              background: 'var(--surface-glass)',
-              backdropFilter: 'blur(24px)',
-              borderRadius: '24px',
-              border: '1px solid var(--glass-border)',
-            }}
-          >
-            <span
+        <div
+          className="pricing-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+            gap: '2px',
+            marginTop: 'var(--space-lg)',
+          }}
+        >
+          {content.tiers.map((tier) => (
+            <motion.div
+              key={tier.label}
+              variants={rise}
+              className="glow-on-hover"
               style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.85rem',
-                fontWeight: 600,
-                color: 'var(--text-primary)',
+                display: 'flex',
+                flexDirection: 'column',
+                background: tier.featured ? 'var(--paper-3)' : 'var(--paper-1)',
+                borderRadius: 'var(--radius)',
+                padding: 'var(--space-md)',
               }}
             >
-              {content.free.title}
-            </span>
-            <span
-              className="mt-2"
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '2.5rem',
-                fontWeight: 700,
-                letterSpacing: '-0.03em',
-                color: 'var(--text-primary)',
-                lineHeight: 1,
-              }}
-            >
-              {content.free.price}
-            </span>
-            <p
-              className="mt-2 mb-6"
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.82rem',
-                color: 'var(--text-secondary)',
-              }}
-            >
-              {content.free.desc}
-            </p>
-
-            <ul className="flex flex-col gap-2.5 mb-7 flex-1">
-              {content.free.features.map((f) => (
-                <li
-                  key={f}
-                  className="flex items-start gap-2"
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.78rem',
-                    color: 'var(--text-secondary)',
-                  }}
-                >
-                  <Check size={14} weight="bold" className="mt-0.5 shrink-0" style={{ color: '#67e8f9' }} />
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href={content.free.ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
-              style={{
-                fontFamily: 'var(--font-body)',
-                borderRadius: '100px',
-                border: '1px solid var(--glass-border)',
-                color: 'var(--text-primary)',
-                background: 'transparent',
-              }}
-            >
-              {content.free.cta}
-            </a>
-          </motion.div>
-
-          {/* Supporter Pack — rotating gradient border card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ ...fluidTransition, delay: 0.1 }}
-            className="relative border-gradient-spin"
-            style={{ borderRadius: '25px' }}
-          >
-            {/* Glow behind */}
-            <div
-              className="absolute inset-0 animate-pulse-glow"
-              style={{
-                borderRadius: '25px',
-                background: 'var(--gradient-aurora)',
-                opacity: 0.15,
-                filter: 'blur(20px)',
-              }}
-            />
-            <div
-              className="relative p-7 flex flex-col h-full"
-              style={{
-                background: 'var(--surface-elevated)',
-                borderRadius: '24px',
-                border: '1px solid rgba(139,92,246,0.2)',
-                margin: '1px',
-              }}
-            >
-              <div className="flex items-center gap-2">
-                <Heart size={16} weight="fill" style={{ color: '#f472b6' }} />
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  justifyContent: 'space-between',
+                  gap: 'var(--space-xs)',
+                }}
+              >
                 <span
                   style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.66rem',
+                    fontWeight: 500,
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    color: 'var(--ink-1)',
                   }}
                 >
-                  {content.supporter.title}
+                  {tier.label}
                 </span>
-              </div>
-              <span
-                className="mt-2"
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.5rem',
-                  fontWeight: 700,
-                  letterSpacing: '-0.03em',
-                  color: 'var(--text-primary)',
-                  lineHeight: 1,
-                }}
-              >
-                {content.supporter.price}
-              </span>
-              <span
-                className="mt-1"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.7rem',
-                  color: 'var(--text-tertiary)',
-                }}
-              >
-                {content.supporter.priceNote}
-              </span>
-              <p
-                className="mt-2 mb-6"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.82rem',
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                {content.supporter.desc}
-              </p>
-
-              <ul className="flex flex-col gap-2.5 mb-7 flex-1">
-                {content.supporter.features.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-2"
+                {tier.featured && (
+                  <span
                     style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.78rem',
-                      color: 'var(--text-secondary)',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.54rem',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: 'var(--ink-3)',
                     }}
                   >
-                    <Check size={14} weight="bold" className="mt-0.5 shrink-0" style={{ color: '#a78bfa' }} />
-                    {f}
-                  </li>
-                ))}
-              </ul>
+                    popular
+                  </span>
+                )}
+              </div>
 
-              <a
-                href={content.supporter.ctaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center py-3.5 font-medium text-sm active:scale-[0.97] transition-all"
+              {/* 价格 — 超大 mono */}
+              <div style={{ marginTop: 'var(--space-md)' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+                    fontWeight: 500,
+                    letterSpacing: '-0.03em',
+                    lineHeight: 1,
+                    color: 'var(--ink-1)',
+                  }}
+                >
+                  {tier.price}
+                </span>
+              </div>
+              <div
                 style={{
-                  fontFamily: 'var(--font-body)',
-                  borderRadius: '100px',
-                  background: 'var(--gradient-aurora)',
-                  color: '#ffffff',
-                  boxShadow: '0 0 32px -8px rgba(139,92,246,0.3)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.6rem',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--ink-3)',
+                  marginTop: '10px',
                 }}
               >
-                {content.supporter.cta}
-              </a>
-            </div>
-          </motion.div>
+                {tier.priceNote}
+              </div>
+
+              <p
+                style={{
+                  fontFamily: 'var(--font-text)',
+                  fontSize: '0.88rem',
+                  lineHeight: 1.7,
+                  color: 'var(--ink-2)',
+                  margin: 'var(--space-md) 0 0',
+                }}
+              >
+                {tier.tagline}
+              </p>
+
+              {tier.inherits && (
+                <div
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.64rem',
+                    letterSpacing: '0.06em',
+                    color: 'var(--ink-1)',
+                    background: tier.featured ? 'var(--paper-1)' : 'var(--paper-2)',
+                    borderRadius: 'var(--radius)',
+                    padding: '7px 10px',
+                    marginTop: 'var(--space-sm)',
+                  }}
+                >
+                  &#8627;&nbsp; {tier.inherits}
+                </div>
+              )}
+
+              <div style={{ marginTop: 'var(--space-md)', flex: 1 }}>
+                {tier.features.map((f) => (
+                  <div
+                    key={f}
+                    style={{
+                      display: 'flex',
+                      gap: 'var(--space-xs)',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.7rem',
+                      lineHeight: 1.85,
+                      color: 'var(--ink-2)',
+                      marginBottom: '5px',
+                    }}
+                  >
+                    <span aria-hidden="true" style={{ color: 'var(--ink-3)' }}>
+                      ·
+                    </span>
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ marginTop: 'var(--space-md)' }}>
+                <MonoButton
+                  href={tier.ctaLink}
+                  variant={tier.featured ? 'primary' : 'secondary'}
+                >
+                  {tier.cta}
+                </MonoButton>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
-    </section>
+
+        <motion.div
+          variants={rise}
+          style={{
+            marginTop: 'var(--space-md)',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.62rem',
+            letterSpacing: '0.16em',
+            textTransform: 'uppercase',
+            color: 'var(--ink-3)',
+          }}
+        >
+          {content.note}
+        </motion.div>
+      </motion.div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .pricing-grid { grid-template-columns: minmax(0, 1fr) !important; }
+        }
+      `}</style>
+    </Section>
   );
 }

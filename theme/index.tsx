@@ -1,25 +1,21 @@
 import './index.css';
 import { Layout as OriginalLayout } from '@rspress/core/theme-original';
+import Logo from './components/Logo';
 
 export * from '@rspress/core/theme-original';
 
 /**
- * Custom Layout — Zaha Hadid / Parametric Fluidity
+ * Custom Layout · Paper Crane Dev v2.0
  *
  * Level 3 Layout Slots:
- * - beforeNavTitle: Gradient brand glow
- * - bottom: Ethereal footer strip
+ * - beforeNavTitle: 折纸 mark + mono 品牌名
+ * - bottom: colophon 版权页式页脚
  */
 export function Layout() {
-  return (
-    <OriginalLayout
-      beforeNavTitle={<NavBrand />}
-      bottom={<FluidFooter />}
-    />
-  );
+  return <OriginalLayout beforeNavTitle={<NavBrand />} bottom={<Colophon />} />;
 }
 
-/** Brand — logo + gradient text, clickable */
+/** 品牌 — 单色 mark + mono 字，无渐变 */
 function NavBrand() {
   return (
     <a
@@ -27,25 +23,20 @@ function NavBrand() {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        gap: '8px',
+        gap: '10px',
         textDecoration: 'none',
       }}
     >
-      <img
-        src="/better-sidebar/fav.png"
-        alt=""
-        style={{ width: '24px', height: '24px', borderRadius: '6px' }}
-      />
+      <Logo size={24} />
       <span
         style={{
-          fontFamily: 'var(--font-display)',
-          fontWeight: 700,
-          fontSize: '1rem',
-          letterSpacing: '-0.03em',
-          background: 'var(--gradient-aurora)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
+          fontFamily: 'var(--font-mono)',
+          fontWeight: 500,
+          fontSize: '0.78rem',
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: 'var(--ink-1)',
+          whiteSpace: 'nowrap',
         }}
       >
         Better Sidebar
@@ -54,21 +45,22 @@ function NavBrand() {
   );
 }
 
-/** Footer — minimal, ethereal */
-function FluidFooter() {
+/** 页脚 — 书籍版权页 (colophon) 风格 */
+function Colophon() {
   return (
     <div
       style={{
-        padding: '20px 0',
+        padding: '20px 24px',
         textAlign: 'center',
-        fontFamily: 'var(--font-body)',
-        fontSize: '0.7rem',
-        fontWeight: 400,
-        color: 'var(--text-tertiary)',
-        borderTop: '1px solid var(--glass-border)',
+        fontFamily: 'var(--font-mono)',
+        fontSize: '0.6rem',
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        color: 'var(--ink-3)',
+        background: 'var(--paper-1)',
       }}
     >
-      Paper Crane · Flowing into the future
+      Paper Crane Dev &nbsp;·&nbsp; set in Playfair Display &amp; JetBrains Mono
     </div>
   );
 }

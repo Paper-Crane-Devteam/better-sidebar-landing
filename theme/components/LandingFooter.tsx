@@ -1,127 +1,131 @@
-import { GithubLogo, ShieldCheck, GoogleChromeLogo, DiscordLogo } from '@phosphor-icons/react';
-
-const GITHUB_URL =
-  'https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-gemini-and-ai-studio';
-const CHROME_URL =
-  'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj';
-const DISCORD_URL = 'https://discord.gg/FRzesxaGAx';
+import Logo from './Logo';
+import { CHROME_URL, DISCORD_URL, GITHUB_URL, TickRule } from './sections/shared';
 
 export interface FooterContent {
   brand: string;
-  license: string;
-  github: string;
-  chromeStore: string;
-  discord: string;
+  /** colophon 正文 —— 书籍版权页的字体说明 */
+  colophon: string;
+  links: { label: string; href: string }[];
   privacy: string;
+  privacyLink: string;
+  license: string;
   disclaimer: string;
   copyright: string;
-  privacyLink: string;
 }
 
+/**
+ * 10 · Footer —— 书籍版权页 (colophon) 风格
+ * 全 mono 小字，无社交图标墙。
+ */
 export default function LandingFooter({ content }: { content: FooterContent }) {
-  const EXTERNAL_LINKS = [
-    { href: GITHUB_URL, label: content.github, icon: GithubLogo },
-    { href: CHROME_URL, label: content.chromeStore, icon: GoogleChromeLogo },
-    { href: DISCORD_URL, label: content.discord, icon: DiscordLogo },
-  ];
+  const mono = (size: number, color = 'var(--ink-3)') => ({
+    fontFamily: 'var(--font-mono)',
+    fontSize: `${size}rem`,
+    letterSpacing: '0.14em',
+    textTransform: 'uppercase' as const,
+    color,
+  });
 
   return (
-    <footer style={{ background: 'var(--surface-primary)', borderTop: '1px solid var(--glass-border)' }}>
-      <div className="max-w-[1200px] mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
-          {/* Brand */}
-          <div className="flex flex-col gap-2">
-            <span
+    <footer style={{ background: 'var(--paper-2)', padding: 'var(--space-lg) 24px' }}>
+      <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto' }}>
+        <TickRule style={{ width: '100%', marginBottom: 'var(--space-md)' }} />
+
+        <div
+          className="footer-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1.2fr) repeat(2, minmax(0, 0.9fr))',
+            gap: 'var(--space-md)',
+          }}
+        >
+          {/* 品牌 + colophon */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Logo size={22} />
+              <span style={{ ...mono(0.74, 'var(--ink-1)'), fontWeight: 500 }}>
+                {content.brand}
+              </span>
+            </div>
+            <p
               style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '1rem',
-                fontWeight: 600,
-                letterSpacing: '-0.02em',
-                background: 'var(--gradient-aurora)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.62rem',
+                lineHeight: 1.9,
+                letterSpacing: '0.04em',
+                color: 'var(--ink-3)',
+                maxWidth: '34ch',
+                margin: 'var(--space-sm) 0 0',
               }}
             >
-              {content.brand}
-            </span>
-            <span
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.72rem',
-                color: 'var(--text-tertiary)',
-              }}
-            >
-              {content.license}
-            </span>
+              {content.colophon}
+            </p>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-col gap-2.5">
-            {EXTERNAL_LINKS.map(({ href, label, icon: Icon }) => (
+          {/* 链接 */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {[
+              ...content.links,
+              { label: content.privacy, href: content.privacyLink },
+            ].map((l) => (
               <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 transition-colors"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.8rem',
-                  color: 'var(--text-secondary)',
+                key={l.label}
+                href={l.href}
+                {...(l.href.startsWith('http')
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+                style={{ ...mono(0.64, 'var(--ink-2)'), textDecoration: 'none' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'var(--ink-1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--ink-2)';
                 }}
               >
-                <Icon size={14} weight="regular" />
-                {label}
+                &gt;&nbsp;{l.label}
               </a>
             ))}
           </div>
 
-          {/* Privacy */}
-          <div className="flex flex-col gap-2.5">
-            <a
-              href={content.privacyLink}
-              className="flex items-center gap-2 transition-colors"
+          {/* 法务 —— 折纸鹤是工作室落款，上方的方块 mark 是产品标 */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <img
+              src="/better-sidebar/images/crane-mark.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              style={{ width: '26px', height: '26px', opacity: 0.35, marginBottom: '2px' }}
+            />
+            <span style={mono(0.6)}>{content.license}</span>
+            <span
               style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.8rem',
-                color: 'var(--text-secondary)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6rem',
+                lineHeight: 1.85,
+                letterSpacing: '0.04em',
+                color: 'var(--ink-3)',
               }}
             >
-              <ShieldCheck size={14} weight="regular" />
-              {content.privacy}
-            </a>
+              {content.disclaimer}
+            </span>
+            <span style={mono(0.6)}>{content.copyright}</span>
           </div>
         </div>
-
-        {/* Bottom */}
-        <div
-          className="mt-10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
-          style={{ borderTop: '1px solid var(--glass-border)' }}
-        >
-          <p
-            className="max-w-[60ch]"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.7rem',
-              lineHeight: 1.5,
-              color: 'var(--text-tertiary)',
-            }}
-          >
-            {content.disclaimer}
-          </p>
-          <p
-            className="whitespace-nowrap"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.7rem',
-              color: 'var(--text-tertiary)',
-            }}
-          >
-            {content.copyright}
-          </p>
-        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 780px) {
+          .footer-grid { grid-template-columns: minmax(0, 1fr) !important; }
+        }
+      `}</style>
     </footer>
   );
 }
+
+/** 供 mdx 使用的默认外链，避免文案里重复硬编码 */
+export const FOOTER_LINKS = {
+  chrome: CHROME_URL,
+  github: GITHUB_URL,
+  discord: DISCORD_URL,
+};

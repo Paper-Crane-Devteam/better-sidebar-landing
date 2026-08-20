@@ -1,82 +1,79 @@
-/* ─── Rspress CSS Variable Overrides · Zaha Hadid System ───────────────
-   Level 1: 深空未来主义
+/* ─── Rspress CSS Variable Overrides · Paper Crane Dev v2.0 ────────────
+   Level 1: 纸张色域覆盖 Rspress 原生变量
+   品牌色 = 墨色（不是紫色）。紫色只在发光时出现。
    ─────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* Brand — violet-pink iridescent */
-  --rp-c-brand: #8b5cf6;
-  --rp-c-brand-dark: #7c3aed;
-  --rp-c-brand-darker: #6d28d9;
-  --rp-c-brand-light: #a78bfa;
-  --rp-c-brand-lighter: #c4b5fd;
-  --rp-c-brand-tint: rgba(139, 92, 246, 0.08);
+  /* Brand — 墨色，而非高光色 */
+  --rp-c-brand: #4a4238;
+  --rp-c-brand-dark: #3b352d;
+  --rp-c-brand-darker: #2e2923;
+  --rp-c-brand-light: #857b71;
+  --rp-c-brand-lighter: #b8afa4;
+  --rp-c-brand-tint: rgba(74, 66, 56, 0.06);
 
-  /* Background — deep space */
-  --rp-c-bg: #0b0d11;
-  --rp-c-bg-soft: #12151c;
-  --rp-c-bg-mute: #1a1e28;
+  /* Background — 纸张色阶 */
+  --rp-c-bg: #fdfbf7;
+  --rp-c-bg-soft: #f4f1eb;
+  --rp-c-bg-mute: #eae5dc;
 
-  /* Text — luminous */
-  --rp-c-text-1: #f0f2f8;
-  --rp-c-text-2: rgba(240, 242, 248, 0.7);
-  --rp-c-text-3: rgba(240, 242, 248, 0.45);
-  --rp-c-text-4: rgba(240, 242, 248, 0.2);
+  /* Text — 暖墨 */
+  --rp-c-text-1: #4a4238;
+  --rp-c-text-2: #857b71;
+  --rp-c-text-3: #b8afa4;
+  --rp-c-text-4: #cec6bc;
 
-  /* Dividers — glass edges */
-  --rp-c-divider: rgba(255, 255, 255, 0.08);
-  --rp-c-divider-light: rgba(255, 255, 255, 0.04);
+  /* Dividers — 折痕 */
+  --rp-c-divider: #e3ded8;
+  --rp-c-divider-light: #eae5dc;
 
   /* Layout */
   --rp-nav-height: 64px;
-  --rp-sidebar-width: 280px;
+  --rp-sidebar-width: 272px;
 
-  /* Code — deep */
-  --rp-c-code-bg: #0b0d11;
+  /* Code — 纸片，不是深渊 */
+  --rp-c-code-bg: #f4f1eb;
 
   /* Hero */
-  --rp-home-hero-secondary-color: #8b5cf6;
+  --rp-home-hero-secondary-color: #857b71;
 }
 
-/* Dark mode is the default — light mode adaptation */
-.dark {
-  --rp-c-bg: #050608;
-  --rp-c-bg-soft: #0b0d11;
-  --rp-c-bg-mute: #12151c;
-}
-
-
-/* ─── Custom Block / Container (tip, warning, info, etc.) ────────────── */
+/* ─── Callout / Custom container · 扁平纸片 + 2px 墨条 ──────────────── */
 .rp-callout {
-  background: var(--surface-elevated) !important;
-  border-color: var(--glass-border) !important;
-  color: var(--text-secondary) !important;
-  border-radius: 12px !important;
+  background: var(--paper-2) !important;
+  border: 0 !important;
+  border-left: 2px solid var(--ink-3) !important;
+  border-radius: var(--radius) !important;
+  color: var(--ink-1) !important;
+  box-shadow: none !important;
 }
 .rp-callout p,
 .rp-callout li,
 .rp-callout span {
-  color: var(--text-secondary) !important;
+  color: var(--ink-1) !important;
 }
 .rp-callout__title {
-  color: var(--text-primary) !important;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2) !important;
 }
 .rp-callout--tip {
-  border-left-color: #67e8f9 !important;
+  border-left-color: var(--glow-a) !important;
 }
 .rp-callout--warning {
-  border-left-color: #fbbf24 !important;
+  border-left-color: #b78a2c !important;
 }
 .rp-callout--danger {
-  border-left-color: #f87171 !important;
+  border-left-color: #a35247 !important;
 }
 .rp-callout--info,
 .rp-callout--note {
-  border-left-color: #a78bfa !important;
+  border-left-color: var(--ink-3) !important;
 }
 
-
-
-/* ─── Hide Rspress auto-rendered nav title (we use custom NavBrand) ───── */
+/* ─── Hide Rspress auto-rendered nav title (custom NavBrand in use) ──── */
 .rp-nav__title {
   display: none !important;
 }

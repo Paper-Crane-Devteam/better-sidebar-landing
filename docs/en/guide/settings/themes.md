@@ -55,7 +55,7 @@ Click any premium theme to activate a **5-minute preview**. The theme applies im
 
 > 👁 Preview active — theme will revert in 5 minutes
 
-After 5 minutes, it automatically reverts to your previous theme. To keep a premium theme permanently, purchase the [Supporter Pack](/better-sidebar/en/guide/settings/multi-account).
+After 5 minutes, it automatically reverts to your previous theme. To keep a premium theme permanently, purchase the [Supporter Pack](/en/guide/settings/multi-account).
 
 :::tip
 Preview mode lets you test drive premium themes in your actual workflow before deciding. Try each one for a few minutes to see which one you'd actually enjoy using daily.
@@ -69,7 +69,7 @@ Don't like any of the presets? Generate your own using AI:
 
 ### Step 1: Create the Generator Prompt
 
-Click **Create Prompt**. This adds a special prompt template to your [Prompt Library](/better-sidebar/en/guide/sidebar/prompts-tab) called "Better Sidebar Theme Generator". It contains instructions for the AI to generate theme CSS variables.
+Click **Create Prompt**. This adds a special prompt template to your [Prompt Library](/en/guide/sidebar/prompts-tab) called "Better Sidebar Theme Generator". It contains instructions for the AI to generate theme CSS variables.
 
 ### Step 2: Use the Prompt with Gemini
 

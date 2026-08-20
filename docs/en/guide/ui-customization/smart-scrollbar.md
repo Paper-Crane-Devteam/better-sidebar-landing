@@ -80,5 +80,5 @@ The Smart Scrollbar shines in specific scenarios:
 For short conversations (under 10 messages), it's less necessary — but it's always there if you want it.
 
 :::tip
-Combine the Smart Scrollbar with [Zen Mode](/better-sidebar/en/guide/ui-customization/layout-and-width#zen-mode) for a focused reading experience: maximum chat width, no distractions, and quick navigation to any point in the conversation.
+Combine the Smart Scrollbar with [Zen Mode](/en/guide/ui-customization/layout-and-width#zen-mode-gemini-only) for a focused reading experience: maximum chat width, no distractions, and quick navigation to any point in the conversation.
 :::

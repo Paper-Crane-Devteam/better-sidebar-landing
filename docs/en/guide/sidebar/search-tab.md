@@ -19,7 +19,7 @@ Better Sidebar maintains a local SQLite database with full-text search indexing.
 Results appear instantly as you type, with a 500ms debounce to avoid hammering the database on every keystroke.
 
 :::tip
-The Search tab searches message *content*. If you just want to filter conversations by title, use the search filter in the [Files tab](/better-sidebar/en/guide/sidebar/files-tab#text-search) instead — that's faster for quick title lookups.
+The Search tab searches message *content*. If you just want to filter conversations by title, use the search filter in the [Files tab](/en/guide/sidebar/files-tab#text-search) instead — that's faster for quick title lookups.
 :::
 
 ## The Search Input

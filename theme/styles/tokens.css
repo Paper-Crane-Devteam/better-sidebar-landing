@@ -1,40 +1,67 @@
-/* ─── Design Tokens · Zaha Hadid System ────────────────────────────────
-   Parametric Fluidity · 参数化流体
-   深空色域 · 虹彩渐变 · 有机光影
+/* ─── Design Tokens · Paper Crane Dev v2.0 ─────────────────────────────
+   折纸的物理阴影 (The Physical Shadow of a Fold)
+   90% 哑光纸张 · 10% 发光数字
+   无边框 · 绝对扁平 · 单一光照（无深色模式）
    ─────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* ─── Typography ────────────────────────────────────────────────── */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  /* ─── Typography · 三角色字体 ───────────────────────────────────── */
+  /* display: 仅 H1/H2/Slogan/大数字 */
+  --font-display: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  /* text: 文档正文、长段落 */
+  --font-text: 'Literata', 'Noto Serif SC', Georgia, serif;
+  /* mono: 所有 UI chrome — 按钮/导航/标签/序号/数据/图版 */
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 
-  /* ─── Deep Space Surface · 深空色域 ────────────────────────────── */
-  --surface-primary: #0b0d11;     /* void black — 深渊 */
-  --surface-secondary: #12151c;   /* dark matter */
-  --surface-elevated: #1a1e28;    /* raised layer */
-  --surface-glass: rgba(26, 30, 40, 0.6);  /* frosted panel */
-  --surface-deep: #050608;        /* absolute deep */
-  --surface-muted: rgba(255, 255, 255, 0.06);
+  /* ─── Paper Scale · 纸张色阶 ────────────────────────────────────── */
+  --paper-0: #fffdfa; /* 最亮 — 图版内浮起的纸片 */
+  --paper-1: #fdfbf7; /* 页面主背景 — 暖白未涂布纸 */
+  --paper-2: #f4f1eb; /* 卡片 / 图版容器 / 输入框内部 */
+  --paper-3: #eae5dc; /* 斑马纹深行 / 次级块 / 进度槽 */
 
-  /* ─── Text · 发光文字 ──────────────────────────────────────────── */
-  --text-primary: #f0f2f8;
-  --text-secondary: rgba(240, 242, 248, 0.6);
-  --text-tertiary: rgba(240, 242, 248, 0.35);
-  --text-inverse: #0b0d11;
+  /* ─── Ink Scale · 暖咖啡墨水 ───────────────────────────────────── */
+  --ink-1: #4a4238; /* 主标题、重要正文 */
+  --ink-2: #857b71; /* 次要信息、说明、注释 */
+  --ink-3: #b8afa4; /* 极弱 — 序号、刻度、占位、禁用 */
 
-  /* ─── Iridescent Gradient · 虹彩 ───────────────────────────────── */
-  --gradient-iridescent: linear-gradient(135deg, #667eea 0%, #a855f7 30%, #ec4899 60%, #f97316 100%);
-  --gradient-aurora: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(168, 85, 247, 0.15) 50%, rgba(236, 72, 153, 0.08) 100%);
+  /* ─── Magic · 仅用于交互瞬间 ───────────────────────────────────── */
+  --glow-a: #8ab4f8; /* Gemini 蓝 */
+  --glow-b: #c58af9; /* Gemini 紫 */
+  --shadow-ai-glow:
+    0 0 0 1px rgba(138, 180, 248, 0.25), 0 8px 32px -8px rgba(197, 138, 249, 0.35);
+  --shadow-ai-glow-sm:
+    0 0 0 1px rgba(138, 180, 248, 0.2), 0 4px 16px -6px rgba(197, 138, 249, 0.3);
 
-  /* ─── Glow Colors · 发光色 ─────────────────────────────────────── */
-  --glow-primary: rgba(139, 92, 246, 0.4);
-  --glow-secondary: rgba(236, 72, 153, 0.3);
-  --glow-accent: rgba(6, 182, 212, 0.3);
-  --glow-warm: rgba(249, 115, 22, 0.2);
+  /* ─── Crease · 降级使用的折痕线 ────────────────────────────────── */
+  --crease: #e3ded8;
 
-  /* ─── Glass Properties ─────────────────────────────────────────── */
-  --glass-blur: 24px;
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.04);
+  /* ─── Tag Colors · 仅用于图版中如实呈现"文件夹/标签自定义颜色" ──
+     全部去饱和处理，保证落在纸面上不刺眼。不得用于装饰。 */
+  --tag-clay: #b0785c;
+  --tag-olive: #7d8a5c;
+  --tag-indigo: #6b7a99;
+  --tag-plum: #8f6b86;
+  --tag-ochre: #b3903f;
+
+  /* ─── Spacing · 8px 网格 ───────────────────────────────────────── */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+
+  /* ─── Paper Grain · 纸张颗粒强度（唯一的手调旋钮）─────────────────
+     0.03 = 几乎察觉不到 / 0.06 = 摸得到 / 0.12 = 明显的纸纹
+     太高会变成"噪点滤镜"，破坏哑光纸的干净感。 */
+  --grain-opacity: 0.07;
+
+  /* ─── Form · 唯一圆角与唯一缓动 ────────────────────────────────── */
+  --radius: 2px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 300ms;
+  --duration-glow: 500ms;
+
+  /* ─── Layout ───────────────────────────────────────────────────── */
+  --content-max: 1200px;
 }

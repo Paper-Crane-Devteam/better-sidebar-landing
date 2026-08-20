@@ -24,7 +24,7 @@ Click **Export** to download your entire database as a `.db` file. This is a raw
 The file downloads immediately to your downloads folder, named with a timestamp for easy identification.
 
 :::tip
-Export regularly if you're not using [Google Drive Sync](/better-sidebar/en/guide/extras/drive-sync). It only takes a second and gives you a safety net in case anything goes wrong with your browser or extension.
+Export regularly if you're not using [Google Drive Sync](/en/guide/extras/drive-sync). It only takes a second and gives you a safety net in case anything goes wrong with your browser or extension.
 :::
 
 ## Importing a Database
@@ -80,7 +80,7 @@ For AI Studio specifically, you can import full message content from a Google Dr
 2. Downloading them as a ZIP
 3. Uploading the ZIP for Better Sidebar to index
 
-This indexes the actual *content* of your messages, making them searchable via the [Search tab](/better-sidebar/en/guide/sidebar/search-tab).
+This indexes the actual *content* of your messages, making them searchable via the [Search tab](/en/guide/sidebar/search-tab).
 
 ## Where to Find These Controls
 

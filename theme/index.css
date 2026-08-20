@@ -1,11 +1,12 @@
 @import 'tailwindcss';
 
-/* ─── Zaha Hadid Design System · 参数化流体未来主义 ────────────────────
-   1. tokens        — 深空色域、虹彩渐变、发光色
-   2. rspress       — Rspress 变量覆盖
-   3. typography    — Space Grotesk 几何未来体
-   4. components    — 毛玻璃面板、流体边缘
-   5. utilities     — blob 形态、发光阴影、氛围动画
+/* ─── Paper Crane Dev Design System v2.0 ──────────────────────────────
+   折纸的物理阴影 · 90% 哑光纸张 / 10% 发光数字
+   1. tokens        — 纸张色阶、墨水色阶、高光、8px 网格
+   2. rspress       — Rspress 原生变量覆盖
+   3. typography    — Playfair Display / Literata / JetBrains Mono
+   4. components    — 无边框导航、侧栏、代码块
+   5. utilities     — 纸张颗粒、卡纸、偏移叠纸、交互光晕
    ─────────────────────────────────────────────────────────────────────── */
 
 @import './styles/tokens.css';
@@ -16,19 +17,36 @@
 
 /* ─── Tailwind Theme Tokens ──────────────────────────────────────────── */
 @theme {
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-display: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  --font-text: 'Literata', 'Noto Serif SC', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 
-  --color-surface-primary: #0b0d11;
-  --color-surface-secondary: #12151c;
-  --color-surface-elevated: #1a1e28;
-  --color-surface-deep: #050608;
+  --color-paper-0: #fffdfa;
+  --color-paper-1: #fdfbf7;
+  --color-paper-2: #f4f1eb;
+  --color-paper-3: #eae5dc;
 
-  --color-text-primary: #f0f2f8;
-  --color-text-secondary: rgba(240, 242, 248, 0.6);
-  --color-text-tertiary: rgba(240, 242, 248, 0.35);
+  --color-ink-1: #4a4238;
+  --color-ink-2: #857b71;
+  --color-ink-3: #b8afa4;
 
-  --color-glow-purple: rgba(139, 92, 246, 0.4);
-  --color-glow-pink: rgba(236, 72, 153, 0.3);
-  --color-glow-cyan: rgba(6, 182, 212, 0.3);
+  --color-glow-a: #8ab4f8;
+  --color-glow-b: #c58af9;
+
+  --color-crease: #e3ded8;
+
+  --color-tag-clay: #b0785c;
+  --color-tag-olive: #7d8a5c;
+  --color-tag-indigo: #6b7a99;
+  --color-tag-plum: #8f6b86;
+  --color-tag-ochre: #b3903f;
+
+  --radius-sheet: 2px;
+
+  --shadow-ai-glow:
+    0 0 0 1px rgba(138, 180, 248, 0.25), 0 8px 32px -8px rgba(197, 138, 249, 0.35);
+  --shadow-ai-glow-sm:
+    0 0 0 1px rgba(138, 180, 248, 0.2), 0 4px 16px -6px rgba(197, 138, 249, 0.3);
+
+  --ease-paper: cubic-bezier(0.4, 0, 0.2, 1);
 }
