@@ -17,10 +17,13 @@ body::after {
   pointer-events: none;
   z-index: 60;
   opacity: var(--grain-opacity);
-  mix-blend-mode: multiply;
   background-repeat: repeat;
   background-size: 160px 160px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* feColorMatrix 把噪声的红通道搬进 alpha，RGB 压成纯黑：
+     得到"透明度随机的黑色斑点"。只压暗，强度可预测。
+     若保留 feTurbulence 原始输出，alpha 本身也是均值 0.5 的噪声、
+     RGB 又是中灰，叠出来的亮度方差不到 1%，肉眼完全看不到。 */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* 打印时不要颗粒 */
@@ -59,6 +62,59 @@ body::after {
 }
 .glow-on-hover-sm:hover {
   box-shadow: var(--shadow-ai-glow-sm);
+}
+
+/* ─── 朱红印章 CTA · 全站唯一的饱和色，只用于"安装插件" ───────────────
+   构造：墨色的按钮面 + 一块偏移的朱红块垫在下面。
+   读起来是"墨印盖在朱砂上"，红色只露出 5px 的边（约按钮面积的 2%），
+   所以够抢眼但不出戏。
+   hover：红块偏移变大 + 按钮面抬起 + 柔光亮起 —— 像把印章从纸上拿起来。
+   这是 法则1「偏移叠纸」的复用，不是新增的阴影。 */
+.seal-cta {
+  position: relative;
+  display: inline-flex;
+}
+
+.seal-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--seal);
+  border-radius: var(--radius);
+  transform: translate(5px, 5px);
+  transition: transform var(--duration) var(--ease);
+}
+
+.seal-cta:hover::before {
+  transform: translate(7px, 7px);
+}
+
+.seal-cta__face {
+  position: relative;
+  z-index: 1;
+  transition:
+    transform var(--duration) var(--ease),
+    box-shadow var(--duration-glow) var(--ease);
+}
+
+.seal-cta:hover .seal-cta__face {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-ai-glow-soft);
+}
+
+.seal-cta:active::before {
+  transform: translate(2px, 2px);
+}
+.seal-cta:active .seal-cta__face {
+  transform: translateY(1px);
+}
+
+/* 键盘可达性：focus 与 hover 同款反馈 */
+.seal-cta__face:focus-visible {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-ai-glow-soft);
 }
 
 /* ─── 偏移叠纸 · 替代阴影的唯一"厚度"手段 ────────────────────────── */

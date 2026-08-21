@@ -93,7 +93,9 @@ export default function HeroSection({ content }: { content: HeroContent }) {
                 marginTop: 'var(--space-md)',
               }}
             >
-              <MonoButton href={CHROME_URL}>{content.cta}</MonoButton>
+              <MonoButton href={CHROME_URL} variant="seal" large>
+                {content.cta}
+              </MonoButton>
               <MonoLink href={FIREFOX_URL}>{content.ctaSecondary}</MonoLink>
             </motion.div>
           </div>

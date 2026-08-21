@@ -171,32 +171,44 @@ export function Lede({
 
 /* ─── Controls · CLI 化文本 ────────────────────────────────────────── */
 
+/**
+ * CLI 化按钮。
+ *
+ * variant:
+ *  - seal      朱红印章。**只允许用于"安装插件"这一个动作**，全站的色彩爆点
+ *  - primary   墨色实底
+ *  - secondary 纸色
+ */
 export function MonoButton({
   href,
   children,
   variant = 'primary',
   newTab = true,
+  large,
 }: {
   href: string;
   children: string;
-  variant?: 'primary' | 'secondary';
+  variant?: 'seal' | 'primary' | 'secondary';
   newTab?: boolean;
+  large?: boolean;
 }) {
-  const primary = variant === 'primary';
-  return (
+  const seal = variant === 'seal';
+  const inkFace = seal || variant === 'primary';
+
+  const face = (
     <a
       href={href}
       {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className="glow-on-hover"
+      className={seal ? 'seal-cta__face' : 'glow-on-hover'}
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        padding: '13px 22px',
-        background: primary ? 'var(--ink-1)' : 'var(--paper-2)',
-        color: primary ? 'var(--paper-0)' : 'var(--ink-1)',
+        padding: large ? '16px 28px' : '13px 22px',
+        background: inkFace ? 'var(--ink-1)' : 'var(--paper-2)',
+        color: inkFace ? 'var(--paper-0)' : 'var(--ink-1)',
         borderRadius: 'var(--radius)',
         fontFamily: 'var(--font-mono)',
-        fontSize: '0.72rem',
+        fontSize: large ? '0.78rem' : '0.72rem',
         fontWeight: 500,
         letterSpacing: '0.16em',
         textTransform: 'uppercase',
@@ -207,6 +219,8 @@ export function MonoButton({
       [&nbsp;{children}&nbsp;]
     </a>
   );
+
+  return seal ? <span className="seal-cta">{face}</span> : face;
 }
 
 /** `> TEXT` 形式的链接 */

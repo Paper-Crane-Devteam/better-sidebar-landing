@@ -12,6 +12,8 @@ export interface PricingTier {
   ctaLink: string;
   /** 主推列 */
   featured?: boolean;
+  /** 用朱红印章按钮。只有"安装插件"这个动作可以用 */
+  seal?: boolean;
   /** 继承关系说明，如 "含 Support Pack 全部内容" */
   inherits?: string;
 }
@@ -188,7 +190,7 @@ export default function PricingSection({ content }: { content: PricingContent })
               <div style={{ marginTop: 'var(--space-md)' }}>
                 <MonoButton
                   href={tier.ctaLink}
-                  variant={tier.featured ? 'primary' : 'secondary'}
+                  variant={tier.seal ? 'seal' : tier.featured ? 'primary' : 'secondary'}
                 >
                   {tier.cta}
                 </MonoButton>
