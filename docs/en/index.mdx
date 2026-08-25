@@ -1,7 +1,7 @@
 ---
 pageType: custom
 title: Better Sidebar for Gemini & AI Studio
-description: Folders, tags, full-text search, a prompt library and an AI agent for your Google Gemini and AI Studio history. Everything stays in your browser.
+description: A quiet, efficient environment to organize your Gemini and AI Studio history. Your data always stays local.
 ---
 
 import LandingPage from '../../theme/components/LandingPage';
@@ -9,10 +9,10 @@ import LandingPage from '../../theme/components/LandingPage';
 <LandingPage
   content={{
     hero: {
-      titleTop: 'Your AI history,',
-      titleBottom: 'finally filed.',
+      titleTop: 'A quiet home',
+      titleBottom: 'for your AI chats.',
       description:
-        'Better Sidebar replaces the endless flat chat list with folders, tags, full-text search and a prompt library — plus an agent that can reorganize all of it on request. Nothing leaves your browser.',
+        'We hope to offer a more comfortable environment for your daily work. Use folders, tags, and search to replace that long flat list, and let our little AI assistant help you tidy up your history. Everything runs locally in your browser, quiet and secure.',
       cta: 'add to chrome',
       ctaSecondary: 'firefox add-on',
       meta: ['paper crane dev', 'gemini + ai studio', 'v2.9.x', 'manifest v3', 'local sqlite'],
@@ -20,84 +20,84 @@ import LandingPage from '../../theme/components/LandingPage';
       scrollHint: 'scroll',
     },
     problem: {
-      kicker: 'the problem',
+      kicker: 'why we built this',
       statement:
-        'A year of good thinking, stored as one flat list, sorted by nothing but recency.',
+        'As time goes by, we found that the long, flat chat list becomes increasingly difficult to manage.',
       symptoms: [
         {
           index: '01',
-          text: "Yesterday's chat is findable. Last month's may as well not exist.",
+          text: "Finding a great conversation from last month can often take quite a bit of scrolling.",
         },
         {
           index: '02',
-          text: 'The prompt you keep rewriting lives in six half-remembered places.',
+          text: 'Carefully crafted prompts are sometimes hard to locate again without a proper place to keep them.',
         },
         {
           index: '03',
-          text: 'Search matches titles, so the actual insight — buried in message forty — never surfaces.',
+          text: 'When you want to find a specific thought buried deep in a message, limited search can feel a bit frustrating.',
         },
       ],
       answer:
-        'Better Sidebar treats your history as what it already is: a database. Folders and tags to file it, full-text search to reach inside it, and an agent that can query and reorganize it when you ask.',
+        'We created Better Sidebar hoping to provide a slightly better way to organize. You can use folders and tags to sort your ideas, full-text search to retrieve memories, and an AI assistant to help share some of the tedious sorting work.',
     },
     demo: {
-      kicker: 'demo',
-      title: 'Ninety seconds, no narration.',
+      kicker: 'preview',
+      title: 'A quick look',
       description:
-        'The fastest way to judge this is to watch it work on a real, messy library. Everything else on this page is drawn in HTML — the video is the actual product.',
+        'You can watch this short video to see if the workflow might be a good fit for you.',
       youtubeId: '',
       duration: 'coming soon',
       placeholder: 'recording in progress',
       playLabel: 'play',
     },
     agent: {
-      kicker: 'ai agent',
-      title: 'Type > and describe the work.',
+      kicker: 'ai assistant',
+      title: 'Type > and let it help you.',
       description:
-        'The Agent has genuine query access to your local database. It writes its own queries, reads the results, and decides the next step — a real multi-turn conversation, not a menu of canned actions. It runs inside your browser on your own Gemini session: no API key, no extra tokens, nothing sent anywhere.',
-      meta: ['no api key', 'your own session', 'multi-step', 'undo window'],
+        'After some exploration, we’ve added a small feature: an AI assistant. It understands your local data and can help with consecutive tasks. Since it runs locally using your current Gemini session, it requires no API keys and sends no data outside.',
+      meta: ['no api keys', 'your own session', 'multi-step', 'easily reversible'],
       figureLabel: 'auto-organize',
-      safetyLabel: 'guard rails',
+      safetyLabel: 'safety first',
       safety: [
-        'Every write asks for approval first. Reads run free.',
-        'Speed Mode turns the prompts off once you trust it — undo still applies.',
-        'The Agent Dock sits above your input: status, stop, approvals, even with the sidebar closed.',
-        'Circuit breakers kill runs that loop or stall, and tell you why.',
+        'We respect your data. All write operations will wait for your explicit approval before executing, while reads run smoothly.',
+        'If you find it reliable, you can enable Speed Mode to reduce interruptions. Don’t worry, you can always undo its actions.',
+        'Its status rests quietly above your input box, keeping you informed and giving you the control to stop it at any time.',
+        'If it encounters an issue or gets stuck, it will pause automatically and honestly report the reason.',
       ],
-      skillsLabel: 'skills in the box',
+      skillsLabel: 'built-in skills',
       skills: [
         {
           name: 'auto-organize',
-          desc: 'Sort your last 200 chats into folders and tag them. It reads the titles, builds the taxonomy, creates the folders, moves everything.',
+          desc: 'If you’d like, it can read titles, build categories, and neatly file your recent chats into folders with tags.',
         },
         {
           name: 'backfill search index',
-          desc: 'Messages are only recorded while a chat is open. This syncs older conversations in, so full-text search and export finally see everything.',
+          desc: 'Due to platform limits, older chats might not be fully recorded. This feature helps sync your history so search and exports are complete.',
         },
         {
           name: 'query your own data',
-          desc: '"Which folder grew the most last month?" Ask your history like a database, because it is one.',
+          desc: 'You can chat with it like a friend, asking for stats and details about your own conversation history.',
         },
         {
           name: 'prompts & snippets',
-          desc: 'Rewrite, reorganize and deduplicate your library in bulk instead of one entry at a time.',
+          desc: 'We hope this saves you a little time by helping you rewrite, rearrange, and deduplicate your prompts in bulk.',
         },
         {
           name: 'custom skills',
-          desc: 'Define your own in Settings → Agent. Each one becomes a permanent single-click card.',
+          desc: 'If you have specific habits, you’re welcome to define your own custom workflows in the settings so it can serve you better.',
         },
       ],
     },
     highlights: {
-      kicker: 'in detail',
-      title: 'Four things you will use every day.',
+      kicker: 'core features',
+      title: 'A few small designs that might bring some convenience.',
       items: [
         {
           figure: 'search',
           figureLabel: 'chained search',
           label: 'search',
-          title: 'Reach inside the messages, not just the titles.',
-          desc: 'Full-text search across every message in your history, with conditions you can stack: keyword, tag, platform, or scoped to the conversation you already have open.',
+          title: 'Search the content, not just titles.',
+          desc: 'You can perform full-text searches across all your history by combining keywords, tags, or platforms. You can also scope it to your active chat if needed.',
           points: [
             'searches message bodies, not only titles',
             'stack title / tag / type filters',
@@ -109,11 +109,11 @@ import LandingPage from '../../theme/components/LandingPage';
           figure: 'prompt',
           figureLabel: 'prompt library',
           label: 'prompts',
-          title: 'Stop rewriting the same prompt.',
-          desc: 'Keep your prompts in one library with {{variables}} you fill in at call time. Type / in either platform to summon it without leaving the input box.',
+          title: 'Keep your prompts safely organized.',
+          desc: 'Store your frequently used prompts in one place with variables. Simply type / to summon them without leaving the input box, making your workflow smoother.',
           points: [
             'option variables and prompt composition',
-            'import system prompts',
+            'easily import system prompts',
             'slash commands in Gemini and AI Studio',
             'pin the ones you actually use',
           ],
@@ -122,8 +122,8 @@ import LandingPage from '../../theme/components/LandingPage';
           figure: 'export',
           figureLabel: 'export',
           label: 'export',
-          title: 'Take conversations somewhere useful.',
-          desc: 'Export as Markdown, plain text or JSON with formatting intact. Power Pack adds direct export to Notion and Obsidian, in batches.',
+          title: 'Easily export your conversations.',
+          desc: 'You can export your chats perfectly formatted as Markdown, plain text, or JSON. If you prefer Notion or Obsidian, we offer support for those too (Power Pack).',
           points: [
             'markdown keeps headings, lists, code fences',
             'notion pages and obsidian notes — power pack',
@@ -135,8 +135,8 @@ import LandingPage from '../../theme/components/LandingPage';
           figure: 'tag',
           figureLabel: 'tags & colors',
           label: 'organize',
-          title: 'Colour is faster than reading.',
-          desc: 'Nested folders and tags, both colourable, both draggable. Gems and Notebooks can claim a default folder so new chats file themselves.',
+          title: 'Organize your thoughts with colors.',
+          desc: 'You can assign different colors to folders and tags to make sorting more intuitive. New chats from Gems and Notebooks can also automatically find their designated homes.',
           points: [
             'drag and drop into nested folders',
             'tags visible in the chat header',
@@ -147,11 +147,11 @@ import LandingPage from '../../theme/components/LandingPage';
       ],
     },
     features: {
-      kicker: 'feature index',
-      title: 'Everything else, in one list.',
+      kicker: 'feature overview',
+      title: 'More details, welcome to explore.',
       subtitle:
-        'No feature grid, no marketing cards — just the index. Everything here runs locally, needs no account, and works on both Gemini and AI Studio unless noted.',
-      totalLabel: 'entries',
+        'Here is a list of all features. They run locally without requiring an account, quietly hoping to improve your efficiency.',
+      totalLabel: 'items',
       groups: [
         {
           label: 'organization',
@@ -215,43 +215,43 @@ import LandingPage from '../../theme/components/LandingPage';
       ],
     },
     privacy: {
-      kicker: 'privacy',
-      statement: 'Your conversations never leave your browser.',
+      kicker: 'privacy & security',
+      statement: 'Please rest assured, your data remains yours.',
       note:
-        'On install, your browser asks permission to read and change data on gemini.google.com and aistudio.google.com. That is solely to inject the sidebar and read chat titles for organization. Google Drive sync, when you enable it, is between you and your own Google account.',
+        'Because we need to adjust the interface and read titles for sorting, your browser will request permissions for these domains upon installation. This is only to let the extension function properly. Your data is kept locally, or synced through your own Google Drive.',
       policyLabel: 'read the policy',
       policyLink: '/better-sidebar/privacy',
       items: [
         {
           title: 'local by default',
-          desc: 'An embedded SQLite database runs entirely inside your browser. There is no server of ours for it to talk to.',
+          desc: 'The database runs entirely locally within your browser. We have no servers to receive your data.',
         },
         {
           title: 'no collection',
-          desc: 'We do not collect, store or transmit your chat history, prompts, folders or notes.',
+          desc: 'We do not collect, store, or transmit your chat content or any personal settings.',
         },
         {
           title: 'no training',
-          desc: 'We never read your conversations — not to train models, not for anything else.',
+          desc: 'We deeply respect your privacy and will never read your conversations for model training or any other purpose.',
         },
         {
           title: 'minimal permissions',
-          desc: 'Only Gemini and AI Studio pages. The extension cannot see the rest of your browsing.',
+          desc: 'Permissions are strictly limited to the necessary domains. We cannot see any of your other browsing activities.',
         },
       ],
     },
     pricing: {
-      kicker: 'pricing',
-      title: 'Free to use. Paid to go hands-free.',
+      kicker: 'get the extension',
+      title: 'If you find it helpful, you’re welcome to support us.',
       subtitle:
-        'Every organizing feature is free and open source. The packs cover themes and the autonomous side of the Agent, and they fund the work.',
+        'The core organizing tools will always remain free and open source. If you’d like, you can support our ongoing maintenance by getting the extra features.',
       note: '7-day no-questions-asked refund · one-time purchase, no subscription',
       tiers: [
         {
           label: 'free',
           price: '$0',
           priceNote: 'forever',
-          tagline: 'The whole organizer. No account, no trial, no nag.',
+          tagline: 'A quiet organizer. No account required, and no intrusive popups to bother you.',
           features: [
             'folders, tags, colours, pinning',
             'full-text search & chained filters',
@@ -272,7 +272,7 @@ import LandingPage from '../../theme/components/LandingPage';
           label: 'support pack',
           price: '$5',
           priceNote: 'one-time · lifetime',
-          tagline: 'Premium themes, and a way to say thanks.',
+          tagline: 'A little extra theme variety, and a wonderful way to encourage us.',
           features: [
             'all premium themes unlocked permanently',
             'future themes at no extra cost',
@@ -290,7 +290,7 @@ import LandingPage from '../../theme/components/LandingPage';
           featured: true,
           inherits: 'everything in Support Pack included',
           tagline:
-            'The Agent stops asking and starts doing — organizing, moving, tagging and exporting on your behalf.',
+            'Unlock the full potential of the AI assistant, letting it automatically handle the tedious sorting for you.',
           features: [
             'agent takes action — auto-organize, create folders, batch-tag',
             'hands-free workspace — rename, move, merge, clean up',
@@ -305,9 +305,9 @@ import LandingPage from '../../theme/components/LandingPage';
     },
     openSource: {
       kicker: 'open source',
-      title: 'Read the code. Change the code.',
+      title: 'Open, and improving together.',
       description:
-        'Licensed under GPL-3.0 and developed in the open. Issues and pull requests are welcome, and Discord is where feature decisions actually get argued out.',
+        'The project is open source under the GPL-3.0 license. If you encounter issues or have any thoughts to share, we’d love to hear from you via GitHub Issues or Discord.',
       viewGithub: 'view on github',
       joinDiscord: 'join discord',
       license: 'gpl-3.0',
