@@ -1,0 +1,334 @@
+---
+pageType: custom
+title: Better Sidebar for Gemini & AI Studio
+description: Gemini と AI Studio の履歴を整理するための、静かで効率的な環境。データは常にローカルに残ります。
+---
+
+import LandingPage from '../../theme/components/LandingPage';
+
+<LandingPage
+  content={{
+    hero: {
+      titleTop: 'AI チャットのための、',
+      titleBottom: '静かな居場所。',
+      description:
+        '日々の作業をもう少し快適にしたいと思っています。フォルダ、タグ、検索で長いフラットなリストに代わり、小さな AI アシスタントが履歴の整理を手伝います。すべてブラウザ内でローカルに動き、静かで安全です。',
+      cta: 'chrome に追加',
+      ctaSecondary: 'firefox アドオン',
+      meta: ['paper crane dev', 'gemini + ai studio', 'v2.9.x', 'manifest v3', 'local sqlite'],
+      figureLabel: 'サイドバー',
+      scrollHint: 'スクロール',
+    },
+    problem: {
+      kicker: 'なぜ作ったか',
+      statement:
+        '時間が経つにつれ、長く平坦なチャット一覧はますます管理しづらくなっていきました。',
+      symptoms: [
+        {
+          index: '01',
+          text: '先月の印象的な会話を探すのに、かなりスクロールが必要なことがよくあります。',
+        },
+        {
+          index: '02',
+          text: '丁寧に磨いたプロンプトも、置き場所がなければ再び見つけるのが難しいことがあります。',
+        },
+        {
+          index: '03',
+          text: 'メッセージの奥に埋もれた特定の考えを探したいとき、限られた検索ではもどかしく感じることがあります。',
+        },
+      ],
+      answer:
+        'Better Sidebar は、もう少し良い整理の仕方を届けたいという思いから生まれました。フォルダとタグで考えを分類し、全文検索で記憶を取り戻し、AI アシスタントに面倒な仕分けの一部を任せられます。',
+    },
+    demo: {
+      kicker: 'プレビュー',
+      title: 'ひと目でわかる',
+      description:
+        '短い動画で、このワークフローが自分に合うかどうかご覧いただけます。',
+      youtubeId: '',
+      duration: '近日公開',
+      placeholder: '収録中',
+      playLabel: '再生',
+    },
+    agent: {
+      kicker: 'ai アシスタント',
+      title: '「>」と入力して、手伝ってもらう。',
+      description:
+        '試行錯誤の末、小さな機能を追加しました。AI アシスタントです。ローカルのデータを理解し、連続した作業を手伝えます。現在の Gemini セッションを使ってローカルで動くため、API キーは不要で、データを外に送りません。',
+      meta: ['api キー不要', '自分のセッション', 'マルチステップ', '簡単に取り消せる'],
+      figureLabel: '自動整理',
+      safetyLabel: '安全第一',
+      safety: [
+        'データを尊重します。書き込み操作は明示的な承認のあとでのみ実行され、読み取りはスムーズに進みます。',
+        '信頼できると感じたら、Speed Mode を有効にして割り込みを減らせます。いつでも操作を取り消せます。',
+        '状態は入力欄の上に静かに表示され、状況を知らせつつ、いつでも止められるようにしています。',
+        '問題や行き詰まりに出会うと、自動で一時停止し、理由を正直に報告します。',
+      ],
+      skillsLabel: '組み込みスキル',
+      skills: [
+        {
+          name: '自動整理',
+          desc: '希望すれば、タイトルを読み、カテゴリを作り、最近のチャットをフォルダとタグへきれいに振り分けます。',
+        },
+        {
+          name: '検索インデックスの補完',
+          desc: 'プラットフォームの制限で、古いチャットが十分に記録されていないことがあります。履歴を同期し、検索とエクスポートを完全にします。',
+        },
+        {
+          name: '自分のデータを問い合わせ',
+          desc: '友人に話すように、会話履歴の統計や詳細を尋ねられます。',
+        },
+        {
+          name: 'プロンプトとスニペット',
+          desc: 'プロンプトの書き換え、並べ替え、重複除去をまとめて手伝い、少し時間を節約できればと考えています。',
+        },
+        {
+          name: 'カスタムスキル',
+          desc: '特定の習慣があるなら、設定で独自のワークフローを定義し、より良く働いてもらえます。',
+        },
+      ],
+    },
+    highlights: {
+      kicker: 'コア機能',
+      title: '少し便利になる、いくつかの小さな工夫。',
+      items: [
+        {
+          figure: 'search',
+          figureLabel: '連鎖検索',
+          label: '検索',
+          title: 'タイトルだけでなく、中身を検索。',
+          desc: 'キーワード、タグ、プラットフォームを組み合わせて、履歴全体を全文検索できます。必要ならアクティブなチャットに絞ることもできます。',
+          points: [
+            'タイトルだけでなくメッセージ本文を検索',
+            'タイトル / タグ / 種別フィルタを重ねられる',
+            'アクティブなチャットに限定してすぐ文脈を掴む',
+            'インデックスは端末上に保持',
+          ],
+        },
+        {
+          figure: 'prompt',
+          figureLabel: 'プロンプトライブラリ',
+          label: 'プロンプト',
+          title: 'プロンプトを安全に整理。',
+          desc: 'よく使うプロンプトを変数付きで一か所に保存。入力欄を離れず / で呼び出せ、作業がスムーズになります。',
+          points: [
+            'オプション変数とプロンプトの組み合わせ',
+            'システムプロンプトを簡単にインポート',
+            'Gemini と AI Studio でスラッシュコマンド',
+            '実際に使うものをピン留め',
+          ],
+        },
+        {
+          figure: 'export',
+          figureLabel: 'エクスポート',
+          label: 'エクスポート',
+          title: '会話をかんたんに書き出し。',
+          desc: 'Markdown、プレーンテキスト、JSON へきれいに整形してエクスポートできます。Notion や Obsidian もサポートしています（Power Pack）。',
+          points: [
+            'markdown は見出し、リスト、コードフェンスを保持',
+            'notion ページと obsidian ノート — power pack',
+            'スニペットもエクスポート可能',
+            'いつでも完全な SQL ダンプ',
+          ],
+        },
+        {
+          figure: 'tag',
+          figureLabel: 'タグと色',
+          label: '整理',
+          title: '色で思考を整理。',
+          desc: 'フォルダとタグに色を付けて、直感的に分類できます。Gem や Notebook からの新しいチャットも、指定の場所へ自動で収まります。',
+          points: [
+            'ネストしたフォルダへドラッグ＆ドロップ',
+            'チャットヘッダーにタグを表示',
+            'フォルダをピン留めして並べ替え',
+            'Gem と Notebook のデフォルトフォルダ',
+          ],
+        },
+      ],
+    },
+    features: {
+      kicker: '機能一覧',
+      title: 'さらに詳しくは、こちらから。',
+      subtitle:
+        'すべての機能一覧です。アカウント不要でローカルに動き、静かに効率を上げたいと考えています。',
+      totalLabel: '項目',
+      groups: [
+        {
+          label: '整理',
+          items: [
+            { name: 'フォルダと色', desc: 'チャットをネストしたフォルダへドラッグし、それぞれに色を付けられます。' },
+            { name: 'スマートタグ', desc: '色付きのカスタムタグ。チャットヘッダーに表示されます。' },
+            { name: 'お気に入りとピン留め', desc: 'よく使うチャットとプロンプトを上部に固定。' },
+            { name: 'フォルダのピン留め', desc: 'お気に入りフォルダをピン留めし、ドラッグで並べ替え。' },
+            { name: 'デフォルトの場所', desc: 'Gem や Notebook にデフォルトフォルダを割り当て、新しいチャットが自動で収まります。' },
+            { name: 'チャットメモ', desc: '任意のチャットにメモを追加。ホバーで日付、タグ、メモを表示。' },
+            { name: 'アクティブチャットを探す', desc: 'ワンクリックでツリーを展開し、現在の会話へスナップ。' },
+          ],
+        },
+        {
+          label: '検索とナビ',
+          items: [
+            { name: '全文検索', desc: 'タイトルだけでなく、履歴のすべてのメッセージ。' },
+            { name: '連鎖フィルタ', desc: 'タイトル、タグ、種別の条件を組み合わせて精密に絞り込み。' },
+            { name: '会話アウトライン', desc: '長い会話の構造を一目で把握。' },
+            { name: 'スマートスクロールバー', desc: 'Gemini 向けの視覚的スクロールバー。クリックでメッセージ一覧に展開。' },
+            { name: 'タイムライン表示', desc: '今日、昨日、先週 — 作業をタイムラインとして。' },
+          ],
+        },
+        {
+          label: '執筆と再利用',
+          items: [
+            { name: 'プロンプトライブラリ', desc: '変数、組み合わせ、システムプロンプトのインポートに対応した再利用可能なプロンプト。' },
+            { name: 'スラッシュコマンド', desc: 'Gemini や AI Studio で / を入力してライブラリを呼び出し。' },
+            { name: 'スニペット', desc: '任意の返信からハイライトを抽出し、フォルダ付きスニペットライブラリへ。' },
+            { name: 'テキスト選択ツールバー', desc: 'テキストを選択して説明、要約、スニペット保存、コピー。' },
+          ],
+        },
+        {
+          label: 'プラットフォーム制御',
+          items: [
+            { name: 'マルチプラットフォーム', desc: 'Gemini と Google AI Studio の両方で一つのサイドバー。' },
+            { name: 'マルチアカウントプロファイル', desc: '仕事用と個人用など、それぞれ独立したデータベース。' },
+            { name: 'Gem 管理', desc: 'サイドバーから Gem の閲覧、フィルタ、作成、会話開始。' },
+            { name: 'Notebook 連携', desc: 'サイドバーを離れずに Gemini ノートブックを閲覧・整理。' },
+            { name: 'Gemini Spark', desc: 'アカウントで有効なら、ネイティブタブとして表示。' },
+            { name: 'デフォルトモデル', desc: '一度選べば、新しい Gemini チャットはすべてそのモデルを使用。' },
+            { name: '真の名前変更', desc: '名前変更は Google へリアルタイム同期 — ローカルだけではありません。' },
+            { name: '真の削除', desc: 'サーバー側の実削除。単体でも一括でも。幽霊チャットなし。' },
+            { name: 'UI カスタマイズ', desc: '幅の制御、Zen Mode、Gemini の要素表示切替。' },
+            { name: 'プラットフォームマネージャ', desc: 'ツールバーのポップアップからプラットフォームと機能を切替。' },
+            { name: 'テーマ同期', desc: 'プラットフォームのライト / ダークモードに自動追従。' },
+            { name: '透かしなしダウンロード', desc: '生成画像の透かしを除去。Pro HD も含む。' },
+          ],
+        },
+        {
+          label: 'データとプライバシー',
+          items: [
+            { name: 'ローカル SQLite', desc: 'ブラウザ内の埋め込みデータベース。こちらへは何も送られません。' },
+            { name: '自動ローカルバックアップ', desc: 'スケジュールと手動のスナップショット、ロールバック付き。' },
+            { name: 'Google Drive バックアップ', desc: 'あなた自身の Drive へアップロード。復元は常に意図的な手動ダウンロード。' },
+            { name: '会話のエクスポート', desc: 'Markdown、プレーンテキスト、JSON。書式を保持。' },
+            { name: 'Notion & Obsidian エクスポート', desc: '会話とスニペットをボルトやワークスペースへ直接送信。', pack: 'power pack' },
+            { name: 'データコントロール', desc: '必要に応じて完全な SQL ダンプ。データは最初から持ち運び可能。' },
+          ],
+        },
+      ],
+    },
+    privacy: {
+      kicker: 'プライバシーとセキュリティ',
+      statement: 'ご安心ください。データはあなたのものであり続けます。',
+      note:
+        'インターフェースの調整や整理のためのタイトル読み取りが必要なため、インストール時にこれらのドメインへの権限が求められます。拡張が正しく動くためだけです。データはローカルに保たれ、またはあなた自身の Google Drive 経由で同期されます。',
+      policyLabel: 'ポリシーを読む',
+      policyLink: '/better-sidebar/ja/privacy',
+      items: [
+        {
+          title: 'デフォルトでローカル',
+          desc: 'データベースはブラウザ内で完全にローカルに動作します。データを受け取るサーバーはありません。',
+        },
+        {
+          title: '収集なし',
+          desc: 'チャット内容や個人設定を収集、保存、送信することはありません。',
+        },
+        {
+          title: '学習に使わない',
+          desc: 'プライバシーを深く尊重し、モデル学習やその他の目的であなたの会話を読むことは決してありません。',
+        },
+        {
+          title: '最小限の権限',
+          desc: '権限は必要なドメインに厳密に限定されています。その他の閲覧活動は見えません。',
+        },
+      ],
+    },
+    pricing: {
+      kicker: '拡張を入手',
+      title: '役に立ったなら、応援していただけると嬉しいです。',
+      subtitle:
+        'コアの整理ツールは、ずっと無料でオープンソースのままです。よければ、追加機能で継続的なメンテナンスを支えてください。',
+      note: '7日間・理由不問の返金 · 買い切り、サブスクなし',
+      tiers: [
+        {
+          label: 'free',
+          price: '$0',
+          priceNote: 'ずっと',
+          tagline: '静かな整理ツール。アカウント不要、邪魔なポップアップもありません。',
+          features: [
+            'フォルダ、タグ、色、ピン留め',
+            '全文検索と連鎖フィルタ',
+            'プロンプトライブラリとスラッシュコマンド',
+            'スニペットと会話アウトライン',
+            'gems、notebooks、マルチアカウント',
+            'markdown / text / json へのエクスポート',
+            'google drive バックアップ',
+            'ロールバック付きローカルバックアップ',
+            'agent — 読み取りと質問（直近 7 日）',
+          ],
+          cta: '無料でインストール',
+          seal: true,
+          ctaLink:
+            'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj',
+        },
+        {
+          label: 'support pack',
+          price: '$5',
+          priceNote: '買い切り · 生涯',
+          tagline: '少し多めのテーマと、私たちへの温かい応援。',
+          features: [
+            'プレミアムテーマをすべて永久アンロック',
+            '今後のテーマも追加料金なし',
+            'AI 生成のカスタムテーマ',
+            '無制限のテーマスロット',
+            'プロファイルや PC をまたぎ最大 10 回まで有効化',
+          ],
+          cta: 'support pack を入手',
+          ctaLink: 'https://papercranedev.gumroad.com/l/support-pack',
+        },
+        {
+          label: 'power pack',
+          price: '$19.99',
+          priceNote: '買い切り · 生涯',
+          featured: true,
+          inherits: 'Support Pack のすべてを含む',
+          tagline:
+            'AI アシスタントの本領を解放し、面倒な仕分けを自動で任せる。',
+          features: [
+            'agent が実行 — 自動整理、フォルダ作成、一括タグ',
+            'ハンズフリーのワークスペース — 名前変更、移動、マージ、クリーンアップ',
+            'フルタイムライン — 直近 7 日ではなく全履歴',
+            'notion と obsidian へのエクスポート、バッチ含む',
+            'カスタム agent スキル',
+          ],
+          cta: 'power pack を入手',
+          ctaLink: 'https://papercranedev.gumroad.com/l/power-pack',
+        },
+      ],
+    },
+    openSource: {
+      kicker: 'オープンソース',
+      title: '開かれていて、一緒に良くなる。',
+      description:
+        'プロジェクトは GPL-3.0 ライセンスでオープンソースです。問題やご意見があれば、GitHub Issues や Discord でぜひお聞かせください。',
+      viewGithub: 'github で見る',
+      joinDiscord: 'discord に参加',
+      license: 'gpl-3.0',
+    },
+    footer: {
+      brand: 'Better Sidebar',
+      colophon:
+        'Built by Paper Crane Dev. Set in Playfair Display, Literata and JetBrains Mono. Every interface on this page is drawn in HTML, not screenshotted.',
+      links: [
+        { label: 'ドキュメント', href: '/better-sidebar/ja/guide/getting-started' },
+        { label: 'chrome web store', href: 'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj' },
+        { label: 'firefox アドオン', href: 'https://addons.mozilla.org/en-US/firefox/addon/better-sidebar-for-ai-studio' },
+        { label: 'github', href: 'https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio' },
+        { label: 'discord', href: 'https://discord.gg/FRzesxaGAx' },
+      ],
+      privacy: 'プライバシーポリシー',
+      privacyLink: '/better-sidebar/ja/privacy',
+      license: 'gpl-3.0 で公開',
+      disclaimer:
+        '独立したプロジェクトです。Google の関連・後援・スポンサーではありません。',
+      copyright: `© ${new Date().getFullYear()} paper crane dev`,
+    },
+  }}
+/>

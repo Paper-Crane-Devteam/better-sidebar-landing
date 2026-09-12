@@ -1,0 +1,47 @@
+[
+  {
+    "type": "file",
+    "name": "library-tab",
+    "label": "Biblioteca"
+  },
+  {
+    "type": "file",
+    "name": "search-tab",
+    "label": "Búsqueda"
+  },
+  {
+    "type": "file",
+    "name": "outline",
+    "label": "Esquema"
+  },
+  {
+    "type": "file",
+    "name": "prompts-tab",
+    "label": "Prompts"
+  },
+  {
+    "type": "file",
+    "name": "snippets-tab",
+    "label": "Snippets"
+  },
+  {
+    "type": "file",
+    "name": "tags-tab",
+    "label": "Etiquetas"
+  },
+  {
+    "type": "file",
+    "name": "favorites-tab",
+    "label": "Favoritos"
+  },
+  {
+    "type": "file",
+    "name": "gems-tab",
+    "label": "Gems (Gemini)"
+  },
+  {
+    "type": "file",
+    "name": "notebooks-tab",
+    "label": "Notebooks (Gemini)"
+  }
+]

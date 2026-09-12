@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "export",
+    "label": "エクスポート"
+  },
+  {
+    "type": "file",
+    "name": "integrations",
+    "label": "Notion と Obsidian"
+  },
+  {
+    "type": "file",
+    "name": "drive-sync",
+    "label": "Google Drive 同期"
+  },
+  {
+    "type": "file",
+    "name": "data-backup",
+    "label": "バックアップと復元"
+  }
+]

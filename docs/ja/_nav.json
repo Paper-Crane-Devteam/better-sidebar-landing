@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Agent",
+    "link": "/#agent"
+  },
+  {
+    "text": "機能",
+    "link": "/#features"
+  },
+  {
+    "text": "料金",
+    "link": "/#pricing"
+  },
+  {
+    "text": "ガイド",
+    "link": "/guide/getting-started",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "プライバシー",
+    "link": "/privacy"
+  }
+]

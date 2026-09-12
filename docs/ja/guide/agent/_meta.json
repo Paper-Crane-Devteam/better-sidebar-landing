@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "overview",
+    "label": "概要"
+  },
+  {
+    "type": "file",
+    "name": "better-sidebar-agent",
+    "label": "Better Sidebar エージェント"
+  },
+  {
+    "type": "file",
+    "name": "workspace-agent",
+    "label": "ワークスペースエージェント"
+  },
+  {
+    "type": "file",
+    "name": "skills-and-tools",
+    "label": "スキルとツール"
+  }
+]

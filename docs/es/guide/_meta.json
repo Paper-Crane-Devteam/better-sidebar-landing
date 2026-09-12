@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "Primeros pasos"
+  },
+  {
+    "type": "file",
+    "name": "installation",
+    "label": "Instalación"
+  },
+  {
+    "type": "dir",
+    "name": "sidebar",
+    "label": "Barra lateral"
+  },
+  {
+    "type": "dir",
+    "name": "agent",
+    "label": "Agente de IA"
+  },
+  {
+    "type": "dir",
+    "name": "ui-customization",
+    "label": "Funciones en la página"
+  },
+  {
+    "type": "dir",
+    "name": "extras",
+    "label": "Exportar y respaldar"
+  },
+  {
+    "type": "dir",
+    "name": "settings",
+    "label": "Ajustes"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "label": "Preguntas frecuentes"
+  }
+]

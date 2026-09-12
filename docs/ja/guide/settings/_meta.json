@@ -1,0 +1,37 @@
+[
+  {
+    "type": "file",
+    "name": "general",
+    "label": "一般"
+  },
+  {
+    "type": "file",
+    "name": "library",
+    "label": "ライブラリ"
+  },
+  {
+    "type": "file",
+    "name": "themes",
+    "label": "テーマ"
+  },
+  {
+    "type": "file",
+    "name": "keyboard-shortcuts",
+    "label": "キーボードショートカット"
+  },
+  {
+    "type": "file",
+    "name": "multi-account",
+    "label": "マルチアカウント"
+  },
+  {
+    "type": "file",
+    "name": "platform-manager",
+    "label": "プラットフォーム管理"
+  },
+  {
+    "type": "file",
+    "name": "packs",
+    "label": "パックとライセンス"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "overview",
+    "label": "Descripción general"
+  },
+  {
+    "type": "file",
+    "name": "better-sidebar-agent",
+    "label": "Agente Better Sidebar"
+  },
+  {
+    "type": "file",
+    "name": "workspace-agent",
+    "label": "Agente Workspace"
+  },
+  {
+    "type": "file",
+    "name": "skills-and-tools",
+    "label": "Skills y herramientas"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "export",
+    "label": "Exportar"
+  },
+  {
+    "type": "file",
+    "name": "integrations",
+    "label": "Notion y Obsidian"
+  },
+  {
+    "type": "file",
+    "name": "drive-sync",
+    "label": "Sincronización con Google Drive"
+  },
+  {
+    "type": "file",
+    "name": "data-backup",
+    "label": "Copias de seguridad y restauración"
+  }
+]

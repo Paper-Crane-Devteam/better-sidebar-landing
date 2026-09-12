@@ -1,0 +1,47 @@
+[
+  {
+    "type": "file",
+    "name": "library-tab",
+    "label": "ライブラリ"
+  },
+  {
+    "type": "file",
+    "name": "search-tab",
+    "label": "検索"
+  },
+  {
+    "type": "file",
+    "name": "outline",
+    "label": "アウトライン"
+  },
+  {
+    "type": "file",
+    "name": "prompts-tab",
+    "label": "プロンプト"
+  },
+  {
+    "type": "file",
+    "name": "snippets-tab",
+    "label": "スニペット"
+  },
+  {
+    "type": "file",
+    "name": "tags-tab",
+    "label": "タグ"
+  },
+  {
+    "type": "file",
+    "name": "favorites-tab",
+    "label": "お気に入り"
+  },
+  {
+    "type": "file",
+    "name": "gems-tab",
+    "label": "Gems（Gemini）"
+  },
+  {
+    "type": "file",
+    "name": "notebooks-tab",
+    "label": "Notebooks（Gemini）"
+  }
+]

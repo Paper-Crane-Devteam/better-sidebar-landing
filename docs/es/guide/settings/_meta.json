@@ -1,0 +1,37 @@
+[
+  {
+    "type": "file",
+    "name": "general",
+    "label": "General"
+  },
+  {
+    "type": "file",
+    "name": "library",
+    "label": "Biblioteca"
+  },
+  {
+    "type": "file",
+    "name": "themes",
+    "label": "Temas"
+  },
+  {
+    "type": "file",
+    "name": "keyboard-shortcuts",
+    "label": "Atajos de teclado"
+  },
+  {
+    "type": "file",
+    "name": "multi-account",
+    "label": "Varias cuentas"
+  },
+  {
+    "type": "file",
+    "name": "platform-manager",
+    "label": "Gestor de plataformas"
+  },
+  {
+    "type": "file",
+    "name": "packs",
+    "label": "Packs y licencias"
+  }
+]

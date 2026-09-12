@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Agent",
+    "link": "/#agent"
+  },
+  {
+    "text": "Funciones",
+    "link": "/#features"
+  },
+  {
+    "text": "Precios",
+    "link": "/#pricing"
+  },
+  {
+    "text": "Guía",
+    "link": "/guide/getting-started",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "Privacidad",
+    "link": "/privacy"
+  }
+]

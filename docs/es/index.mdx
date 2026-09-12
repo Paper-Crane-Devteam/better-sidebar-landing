@@ -1,0 +1,334 @@
+---
+pageType: custom
+title: Better Sidebar for Gemini & AI Studio
+description: Un entorno tranquilo y eficiente para organizar tu historial de Gemini y AI Studio. Tus datos siempre permanecen locales.
+---
+
+import LandingPage from '../../theme/components/LandingPage';
+
+<LandingPage
+  content={{
+    hero: {
+      titleTop: 'Un hogar tranquilo',
+      titleBottom: 'para tus chats de IA.',
+      description:
+        'Queremos ofrecerte un entorno más cómodo para el trabajo diario. Usa carpetas, etiquetas y búsqueda para reemplazar esa larga lista plana, y deja que nuestro pequeño asistente de IA te ayude a ordenar el historial. Todo corre localmente en tu navegador, en silencio y con seguridad.',
+      cta: 'añadir a chrome',
+      ctaSecondary: 'complemento de firefox',
+      meta: ['paper crane dev', 'gemini + ai studio', 'v2.9.x', 'manifest v3', 'local sqlite'],
+      figureLabel: 'barra lateral',
+      scrollHint: 'desplazar',
+    },
+    problem: {
+      kicker: 'por qué lo creamos',
+      statement:
+        'Con el tiempo, vimos que la larga lista plana de chats se vuelve cada vez más difícil de gestionar.',
+      symptoms: [
+        {
+          index: '01',
+          text: 'Encontrar una gran conversación del mes pasado a menudo exige bastante desplazamiento.',
+        },
+        {
+          index: '02',
+          text: 'Los prompts cuidadosamente elaborados a veces son difíciles de volver a encontrar sin un lugar adecuado donde guardarlos.',
+        },
+        {
+          index: '03',
+          text: 'Cuando quieres hallar una idea concreta enterrada en un mensaje, la búsqueda limitada puede resultar frustrante.',
+        },
+      ],
+      answer:
+        'Creamos Better Sidebar con la esperanza de ofrecer una forma un poco mejor de organizar. Puedes usar carpetas y etiquetas para ordenar tus ideas, búsqueda de texto completo para recuperar recuerdos, y un asistente de IA para compartir parte del tedioso trabajo de clasificación.',
+    },
+    demo: {
+      kicker: 'vista previa',
+      title: 'Un vistazo rápido',
+      description:
+        'Puedes ver este vídeo corto para comprobar si el flujo de trabajo te encaja.',
+      youtubeId: '',
+      duration: 'próximamente',
+      placeholder: 'grabación en curso',
+      playLabel: 'reproducir',
+    },
+    agent: {
+      kicker: 'asistente de ia',
+      title: 'Escribe > y deja que te ayude.',
+      description:
+        'Tras explorar un poco, añadimos una función pequeña: un asistente de IA. Entiende tus datos locales y puede ayudar con tareas consecutivas. Como corre localmente con tu sesión actual de Gemini, no requiere claves API y no envía datos fuera.',
+      meta: ['sin claves api', 'tu propia sesión', 'varios pasos', 'fácilmente reversible'],
+      figureLabel: 'auto-organización',
+      safetyLabel: 'seguridad primero',
+      safety: [
+        'Respetamos tus datos. Todas las operaciones de escritura esperan tu aprobación explícita antes de ejecutarse; las lecturas fluyen con normalidad.',
+        'Si te parece fiable, puedes activar Speed Mode para reducir interrupciones. No te preocupes: siempre puedes deshacer sus acciones.',
+        'Su estado descansa en silencio encima del cuadro de entrada, para informarte y darte el control de detenerlo en cualquier momento.',
+        'Si encuentra un problema o se atasca, se pausa automáticamente y reporta el motivo con honestidad.',
+      ],
+      skillsLabel: 'habilidades integradas',
+      skills: [
+        {
+          name: 'auto-organización',
+          desc: 'Si quieres, puede leer títulos, crear categorías y archivar con cuidado tus chats recientes en carpetas con etiquetas.',
+        },
+        {
+          name: 'completar índice de búsqueda',
+          desc: 'Por límites de la plataforma, los chats antiguos pueden no estar del todo registrados. Esta función ayuda a sincronizar el historial para que la búsqueda y las exportaciones estén completas.',
+        },
+        {
+          name: 'consultar tus propios datos',
+          desc: 'Puedes hablar con él como con un amigo, pidiendo estadísticas y detalles de tu propio historial de conversaciones.',
+        },
+        {
+          name: 'prompts y fragmentos',
+          desc: 'Esperamos ahorrarte un poco de tiempo ayudándote a reescribir, reordenar y deduplicar tus prompts en lote.',
+        },
+        {
+          name: 'habilidades personalizadas',
+          desc: 'Si tienes hábitos concretos, puedes definir tus propios flujos de trabajo en la configuración para que te sirva mejor.',
+        },
+      ],
+    },
+    highlights: {
+      kicker: 'funciones clave',
+      title: 'Algunos pequeños diseños que pueden aportar comodidad.',
+      items: [
+        {
+          figure: 'search',
+          figureLabel: 'búsqueda encadenada',
+          label: 'búsqueda',
+          title: 'Busca el contenido, no solo los títulos.',
+          desc: 'Puedes hacer búsquedas de texto completo en todo tu historial combinando palabras clave, etiquetas o plataformas. También puedes limitarla al chat activo si lo necesitas.',
+          points: [
+            'busca en el cuerpo de los mensajes, no solo en títulos',
+            'apila filtros de título / etiqueta / tipo',
+            'limita al chat activo para contexto inmediato',
+            'el índice vive en tu dispositivo',
+          ],
+        },
+        {
+          figure: 'prompt',
+          figureLabel: 'biblioteca de prompts',
+          label: 'prompts',
+          title: 'Mantén tus prompts organizados con seguridad.',
+          desc: 'Guarda tus prompts frecuentes en un solo lugar con variables. Escribe / para invocarlos sin salir del cuadro de entrada y agilizar el flujo.',
+          points: [
+            'variables opcionales y composición de prompts',
+            'importa prompts de sistema con facilidad',
+            'comandos con barra en Gemini y AI Studio',
+            'fija los que realmente usas',
+          ],
+        },
+        {
+          figure: 'export',
+          figureLabel: 'exportar',
+          label: 'exportar',
+          title: 'Exporta tus conversaciones con facilidad.',
+          desc: 'Puedes exportar tus chats perfectamente formateados como Markdown, texto plano o JSON. Si prefieres Notion u Obsidian, también los soportamos (Power Pack).',
+          points: [
+            'markdown conserva encabezados, listas y bloques de código',
+            'páginas de notion y notas de obsidian — power pack',
+            'los fragmentos también se exportan',
+            'volcado SQL completo cuando quieras salir',
+          ],
+        },
+        {
+          figure: 'tag',
+          figureLabel: 'etiquetas y colores',
+          label: 'organizar',
+          title: 'Organiza tus ideas con colores.',
+          desc: 'Puedes asignar distintos colores a carpetas y etiquetas para que clasificar sea más intuitivo. Los chats nuevos de Gems y Notebooks también pueden encontrar solos su lugar designado.',
+          points: [
+            'arrastrar y soltar en carpetas anidadas',
+            'etiquetas visibles en el encabezado del chat',
+            'fijar carpetas y reordenarlas',
+            'carpetas por defecto para Gems y Notebooks',
+          ],
+        },
+      ],
+    },
+    features: {
+      kicker: 'resumen de funciones',
+      title: 'Más detalles, te invitamos a explorar.',
+      subtitle:
+        'Aquí tienes la lista de todas las funciones. Corren en local sin cuenta, con la esperanza silenciosa de mejorar tu eficiencia.',
+      totalLabel: 'elementos',
+      groups: [
+        {
+          label: 'organización',
+          items: [
+            { name: 'Carpetas y colores', desc: 'Arrastra chats a carpetas anidadas y dale un color a cada una.' },
+            { name: 'Etiquetas inteligentes', desc: 'Etiquetas personalizadas con colores, visibles en el encabezado del chat.' },
+            { name: 'Favoritos y fijado', desc: 'Mantén arriba los chats y prompts que más usas.' },
+            { name: 'Fijar carpetas', desc: 'Fija carpetas favoritas y arrástralas para reordenarlas.' },
+            { name: 'Hogares por defecto', desc: 'Asigna una carpeta por defecto a un Gem o Notebook; los chats nuevos se archivan solos.' },
+            { name: 'Notas del chat', desc: 'Añade una nota a cualquier chat. Al pasar el cursor ves fecha, etiquetas y notas.' },
+            { name: 'Localizar chat activo', desc: 'Un clic expande el árbol y salta a tu conversación actual.' },
+          ],
+        },
+        {
+          label: 'búsqueda y navegación',
+          items: [
+            { name: 'Búsqueda de texto completo', desc: 'Cada mensaje de tu historial, no solo los títulos.' },
+            { name: 'Filtros encadenados', desc: 'Combina condiciones de título, etiqueta y tipo para resultados precisos.' },
+            { name: 'Esquema de conversación', desc: 'Ve la estructura de una conversación larga de un vistazo.' },
+            { name: 'Barra de desplazamiento inteligente', desc: 'Barra visual para Gemini; haz clic para expandirla a una lista completa de mensajes.' },
+            { name: 'Vista de línea de tiempo', desc: 'Hoy, ayer, la semana pasada: tu flujo como línea de tiempo.' },
+          ],
+        },
+        {
+          label: 'escritura y reutilización',
+          items: [
+            { name: 'Biblioteca de prompts', desc: 'Prompts reutilizables con variables, composición e importación de prompts de sistema.' },
+            { name: 'Comandos con barra', desc: 'Escribe / en Gemini o AI Studio para invocar la biblioteca.' },
+            { name: 'Fragmentos', desc: 'Extrae destacados de cualquier respuesta a una biblioteca de fragmentos con carpetas.' },
+            { name: 'Barra de selección de texto', desc: 'Selecciona texto para explicar, resumir, guardar como fragmento o copiar.' },
+          ],
+        },
+        {
+          label: 'control de plataforma',
+          items: [
+            { name: 'Multiplataforma', desc: 'Una barra lateral en Gemini y Google AI Studio.' },
+            { name: 'Perfiles multi-cuenta', desc: 'Perfiles separados para trabajo y personal, cada uno con su propia base de datos.' },
+            { name: 'Gestión de Gems', desc: 'Explora, filtra, crea e inicia conversaciones de Gem desde la barra lateral.' },
+            { name: 'Integración con Notebooks', desc: 'Explora y organiza notebooks de Gemini sin salir de la barra lateral.' },
+            { name: 'Gemini Spark', desc: 'Aparece como pestaña nativa si Google lo ha habilitado en tu cuenta.' },
+            { name: 'Modelo por defecto', desc: 'Elige un modelo una vez; cada chat nuevo de Gemini lo usa.' },
+            { name: 'Renombrado real', desc: 'Los renombres se sincronizan con Google en tiempo real, no solo en local.' },
+            { name: 'Eliminación real', desc: 'Borrado real en el servidor, individual o por lotes. Sin chats fantasma.' },
+            { name: 'Personalización de UI', desc: 'Control de ancho, Zen Mode y visibilidad de elementos para Gemini.' },
+            { name: 'Gestor de plataformas', desc: 'Activa o desactiva plataformas y funciones desde el popup de la barra de herramientas.' },
+            { name: 'Sincronización de tema', desc: 'Sigue automáticamente el modo claro y oscuro de la plataforma.' },
+            { name: 'Descargas sin marca de agua', desc: 'Quita marcas de agua de imágenes generadas, incluido Pro HD.' },
+          ],
+        },
+        {
+          label: 'datos y privacidad',
+          items: [
+            { name: 'SQLite local', desc: 'Una base de datos integrada en tu navegador. Nada se nos envía.' },
+            { name: 'Copias de seguridad locales automáticas', desc: 'Instantáneas programadas y manuales, con reversión.' },
+            { name: 'Copia de seguridad en Google Drive', desc: 'Sube a tu propio Drive. Restaurar siempre es una descarga manual deliberada.' },
+            { name: 'Exportación de conversaciones', desc: 'Markdown, texto plano o JSON, con formato conservado.' },
+            { name: 'Exportación a Notion y Obsidian', desc: 'Envía conversaciones y fragmentos directo a tu vault o espacio de trabajo.', pack: 'power pack' },
+            { name: 'Control de datos', desc: 'Volcado SQL completo bajo demanda. Tus datos son portátiles por defecto.' },
+          ],
+        },
+      ],
+    },
+    privacy: {
+      kicker: 'privacidad y seguridad',
+      statement: 'Tranquilo: tus datos siguen siendo tuyos.',
+      note:
+        'Como necesitamos ajustar la interfaz y leer títulos para organizar, el navegador pedirá permisos para estos dominios al instalar. Solo es para que la extensión funcione bien. Tus datos se guardan en local o se sincronizan a través de tu propio Google Drive.',
+      policyLabel: 'leer la política',
+      policyLink: '/better-sidebar/es/privacy',
+      items: [
+        {
+          title: 'local por defecto',
+          desc: 'La base de datos corre por completo en local dentro de tu navegador. No tenemos servidores que reciban tus datos.',
+        },
+        {
+          title: 'sin recopilación',
+          desc: 'No recopilamos, almacenamos ni transmitimos el contenido de tus chats ni ninguna configuración personal.',
+        },
+        {
+          title: 'sin entrenamiento',
+          desc: 'Respetamos profundamente tu privacidad y nunca leeremos tus conversaciones para entrenar modelos ni para ningún otro fin.',
+        },
+        {
+          title: 'permisos mínimos',
+          desc: 'Los permisos se limitan estrictamente a los dominios necesarios. No podemos ver ninguna otra actividad de navegación.',
+        },
+      ],
+    },
+    pricing: {
+      kicker: 'consigue la extensión',
+      title: 'Si te resulta útil, eres bienvenido a apoyarnos.',
+      subtitle:
+        'Las herramientas principales de organización seguirán siendo gratis y de código abierto. Si quieres, puedes apoyar el mantenimiento continuo obteniendo las funciones extra.',
+      note: 'reembolso de 7 días sin preguntas · compra única, sin suscripción',
+      tiers: [
+        {
+          label: 'free',
+          price: '$0',
+          priceNote: 'para siempre',
+          tagline: 'Un organizador tranquilo. Sin cuenta y sin ventanas emergentes molestas.',
+          features: [
+            'carpetas, etiquetas, colores, fijado',
+            'búsqueda de texto completo y filtros encadenados',
+            'biblioteca de prompts y comandos con barra',
+            'fragmentos y esquema de conversación',
+            'gems, notebooks, multi-cuenta',
+            'exportar a markdown / texto / json',
+            'copia de seguridad en google drive',
+            'copias locales con reversión',
+            'agent — leer y preguntar (últimos 7 días)',
+          ],
+          cta: 'instalar gratis',
+          seal: true,
+          ctaLink:
+            'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj',
+        },
+        {
+          label: 'support pack',
+          price: '$5',
+          priceNote: 'única · de por vida',
+          tagline: 'Un poco más de variedad de temas, y una forma maravillosa de animarnos.',
+          features: [
+            'todos los temas premium desbloqueados de forma permanente',
+            'temas futuros sin costo adicional',
+            'temas personalizados generados por IA',
+            'slots de tema ilimitados',
+            'hasta 10 activaciones, entre perfiles y equipos',
+          ],
+          cta: 'obtener support pack',
+          ctaLink: 'https://papercranedev.gumroad.com/l/support-pack',
+        },
+        {
+          label: 'power pack',
+          price: '$19.99',
+          priceNote: 'única · de por vida',
+          featured: true,
+          inherits: 'todo lo de Support Pack incluido',
+          tagline:
+            'Desbloquea todo el potencial del asistente de IA y deja que se encargue automáticamente de la clasificación tediosa.',
+          features: [
+            'el agent actúa — auto-organizar, crear carpetas, etiquetar en lote',
+            'espacio de trabajo manos libres — renombrar, mover, fusionar, limpiar',
+            'línea de tiempo completa — todo tu historial, no solo los últimos 7 días',
+            'exportar a notion y obsidian, lotes incluidos',
+            'habilidades personalizadas del agent',
+          ],
+          cta: 'obtener power pack',
+          ctaLink: 'https://papercranedev.gumroad.com/l/power-pack',
+        },
+      ],
+    },
+    openSource: {
+      kicker: 'código abierto',
+      title: 'Abierto, y mejorando juntos.',
+      description:
+        'El proyecto es de código abierto bajo la licencia GPL-3.0. Si encuentras problemas o tienes ideas que compartir, nos encantaría oírte por GitHub Issues o Discord.',
+      viewGithub: 'ver en github',
+      joinDiscord: 'unirse a discord',
+      license: 'gpl-3.0',
+    },
+    footer: {
+      brand: 'Better Sidebar',
+      colophon:
+        'Built by Paper Crane Dev. Set in Playfair Display, Literata and JetBrains Mono. Every interface on this page is drawn in HTML, not screenshotted.',
+      links: [
+        { label: 'documentación', href: '/better-sidebar/es/guide/getting-started' },
+        { label: 'chrome web store', href: 'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj' },
+        { label: 'complemento de firefox', href: 'https://addons.mozilla.org/en-US/firefox/addon/better-sidebar-for-ai-studio' },
+        { label: 'github', href: 'https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio' },
+        { label: 'discord', href: 'https://discord.gg/FRzesxaGAx' },
+      ],
+      privacy: 'política de privacidad',
+      privacyLink: '/better-sidebar/es/privacy',
+      license: 'publicado bajo gpl-3.0',
+      disclaimer:
+        'Un proyecto independiente. No afiliado, respaldado ni patrocinado por Google.',
+      copyright: `© ${new Date().getFullYear()} paper crane dev`,
+    },
+  }}
+/>

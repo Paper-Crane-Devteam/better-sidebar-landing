@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "layout-and-width",
+    "label": "レイアウトと幅"
+  },
+  {
+    "type": "file",
+    "name": "slash-commands",
+    "label": "スラッシュコマンド"
+  },
+  {
+    "type": "file",
+    "name": "selection-toolbar",
+    "label": "選択ツールバー"
+  },
+  {
+    "type": "file",
+    "name": "smart-scrollbar",
+    "label": "スマートスクロールバー"
+  },
+  {
+    "type": "file",
+    "name": "image-download",
+    "label": "画像ダウンロード"
+  }
+]

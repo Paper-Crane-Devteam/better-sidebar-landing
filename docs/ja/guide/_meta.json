@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "はじめに"
+  },
+  {
+    "type": "file",
+    "name": "installation",
+    "label": "インストール"
+  },
+  {
+    "type": "dir",
+    "name": "sidebar",
+    "label": "サイドバー"
+  },
+  {
+    "type": "dir",
+    "name": "agent",
+    "label": "AI エージェント"
+  },
+  {
+    "type": "dir",
+    "name": "ui-customization",
+    "label": "ページ内機能"
+  },
+  {
+    "type": "dir",
+    "name": "extras",
+    "label": "エクスポートとバックアップ"
+  },
+  {
+    "type": "dir",
+    "name": "settings",
+    "label": "設定"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "label": "よくある質問"
+  }
+]
