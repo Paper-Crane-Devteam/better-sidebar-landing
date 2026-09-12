@@ -7,8 +7,6 @@ description: Download AI-generated images from Gemini without the automatic Synt
 
 When Gemini generates images, Google applies an invisible SynthID watermark to the output. This is metadata embedded in the image file that marks it as AI-generated. Better Sidebar can remove this automatic watermarking, giving you clean image downloads.
 
-<!-- IMG_PLACEHOLDER: image-download-toggle — Screenshot of the Platform Settings showing the "Remove Auto Watermark" toggle switch -->
-
 ## What It Does
 
 When the **Remove Auto Watermark** setting is enabled:

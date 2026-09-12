@@ -1,8 +1,8 @@
 [
   {
     "type": "file",
-    "name": "files-tab",
-    "label": "Files"
+    "name": "library-tab",
+    "label": "Library"
   },
   {
     "type": "file",
@@ -11,8 +11,18 @@
   },
   {
     "type": "file",
+    "name": "outline",
+    "label": "Outline"
+  },
+  {
+    "type": "file",
     "name": "prompts-tab",
     "label": "Prompts"
+  },
+  {
+    "type": "file",
+    "name": "snippets-tab",
+    "label": "Snippets"
   },
   {
     "type": "file",

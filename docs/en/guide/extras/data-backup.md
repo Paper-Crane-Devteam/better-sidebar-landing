@@ -1,99 +1,105 @@
 ---
-title: Data Backup & Restore
-description: Export your entire Better Sidebar database as a portable file, import it on another browser, or reset to a fresh start. Full control over your data.
+title: Backups & Restore
+description: Automatic local snapshots you can roll back to, plus manual database export and import. Everything lives in Settings → Data & Storage.
 ---
 
-# Data Backup & Restore
+# Backups & Restore
 
-Better Sidebar stores all your organization data (folders, tags, favorites, conversation metadata, message content) in a local SQLite database. The Data section in Settings gives you full control: export the whole thing as a file, import a backup, or reset everything.
+Better Sidebar keeps everything in a local SQLite database. There are three separate safety nets, and they're worth telling apart:
 
-<!-- IMG_PLACEHOLDER: data-backup-overview — Screenshot of the Data Settings section showing the active profile card with Export, Import, and Reset buttons -->
+| | What it protects against | Effort |
+| --- | --- | --- |
+| **Local backups** | You (or the agent) breaking your own data | None — automatic |
+| **Database export** | Moving to another browser, keeping an offline copy | Manual, one click |
+| **[Drive Sync](/en/guide/extras/drive-sync)** | Losing the whole device | None once connected |
 
-## Exporting Your Database
+![Backup, restore and Drive sync controls in Data & Storage](/images/features/drive-sync-and-backup.png)
 
-Click **Export** to download your entire database as a `.db` file. This is a raw SQLite database containing everything Better Sidebar knows:
+Everything below is in **Settings → Data & Storage**.
+
+## Local Backups
+
+Better Sidebar snapshots your database automatically and keeps the last few, so you can roll back if something goes wrong.
+
+### Automatic snapshots
+
+**Auto Backup** is on by default. A snapshot is taken before anything that could reasonably ruin your day, and each one is labelled with why it was made:
+
+| Label | When it's taken |
+| --- | --- |
+| **Routine** | Once a day, in the background |
+| **Before sync** | Ahead of a Drive sync |
+| **Before restore** | Ahead of restoring from Drive or from another backup |
+| **Before bulk delete** | Ahead of a large delete operation |
+| **Manual** | When you click Create Backup Now |
+
+That "Before restore" one matters: even a restore you immediately regret is recoverable, because restoring itself creates a snapshot first.
+
+### Slots
+
+**Max Slots** controls how many snapshots to keep, from 1 to 20. Default is 5. When the limit is reached, the oldest is dropped.
+
+:::tip
+Five is fine if you're a normal user. Raise it to 10 or more if you let the agent make sweeping changes, or if you're actively restructuring a large library — more slots means a longer window to notice that something went wrong three days ago.
+:::
+
+### Viewing and restoring
+
+Click **View** next to Backups to see the list, each with its timestamp, reason and size. Each entry offers:
+
+- **Restore** — replaces your current local data with that snapshot
+- **Delete** — removes that snapshot
+
+You can also click **Create Backup Now** to take one on demand.
+
+:::warning
+Restoring overwrites your current local data. Message content is not affected by a restore. And because a "Before restore" snapshot is taken first, you can undo a restore by restoring the snapshot it just made.
+:::
+
+## Database Export
+
+Click **Export** to download the whole database as a `.db` file, named with today's date (`ai-studio-backup-2026-09-11.db`). It's a plain SQLite file containing everything:
 
 - Folder structure and colors
-- Tags and tag assignments
-- Favorites
-- Conversation metadata (titles, dates, types)
-- Indexed message content
-- Prompt library entries
-- All settings and preferences
+- Tags and assignments
+- Favorites, pins, descriptions
+- Conversation metadata
+- Recorded message content
+- Prompt and snippet libraries
+- Settings
 
-The file downloads immediately to your downloads folder, named with a timestamp for easy identification.
-
-:::tip
-Export regularly if you're not using [Google Drive Sync](/en/guide/extras/drive-sync). It only takes a second and gives you a safety net in case anything goes wrong with your browser or extension.
-:::
-
-## Importing a Database
-
-Click **Import** to restore from a previously exported `.db` file. The file picker accepts `.db`, `.sqlite`, and `.sql` files.
-
-When you import:
-
-1. Select your backup file
-2. The extension reads the file and replaces your current database
-3. The page reloads to reflect the new data
-
-<!-- IMG_PLACEHOLDER: data-import — GIF showing clicking Import, selecting a .db file, and the page refreshing with restored data -->
-
-:::warning
-Importing a database replaces your current data entirely. Export your current database first if you want to keep a backup of what you have now. There's no merge — it's a full replacement.
-:::
-
-## Resetting Your Database
-
-The nuclear option. Click **Reset Database** to wipe all Better Sidebar data and start fresh:
-
-- All folders, tags, favorites — gone
-- All conversation metadata and indexed messages — cleared
-- Prompt library — emptied
-- Settings — preserved (they're stored separately)
-
-A confirmation dialog makes sure you really mean it. This is not reversible unless you have a backup.
-
-The reset button is visually distinct (red, in a warning-styled container) to prevent accidental clicks.
-
-:::warning
-Reset is permanent and irreversible. Always export your database first if there's even a small chance you'll want any of that data back.
-:::
-
-## Library Sync
-
-Before exporting, you might want to make sure your database is up to date with your latest conversations.
-
-### Scan Library
-
-Click **Scan Library** to walk through your conversation list on the current platform and import any titles/metadata that might be missing. This is useful if:
-
-- You've been using Gemini/AI Studio without the extension installed
-- Some conversations aren't showing up in the sidebar
-- You want to ensure completeness before backing up
-
-### Import Conversation Data (AI Studio)
-
-For AI Studio specifically, you can import full message content from a Google Drive export. Click **Import Conversation Data** to open the import dialog, which guides you through:
-
-1. Exporting your AI Studio conversations to Google Drive
-2. Downloading them as a ZIP
-3. Uploading the ZIP for Better Sidebar to index
-
-This indexes the actual *content* of your messages, making them searchable via the [Search tab](/en/guide/sidebar/search-tab).
-
-## Where to Find These Controls
-
-All backup/restore operations live in **Settings → Data** tab, inside the active profile card. You'll see:
-
-| Action | What it does |
-| --- | --- |
-| **Export** | Downloads your full database as a `.db` file |
-| **Import** | Replaces your database with an uploaded `.db` file |
-| **Reset** | Wipes all data and starts fresh |
-| **Scan Library** | Re-imports conversation titles/metadata |
-| **Import Conversation Data** | Bulk-indexes message content from export files |
+Unlike Drive Sync, an export **does** include message content, so it's the only complete copy of your data.
 
 :::tip
-A good rhythm: export your database once a week (or enable Google Drive auto-sync). If something ever goes wrong — a corrupted database, a bad extension update, accidentally deleted data — you can be back up and running in seconds by importing your backup.
+Export is the right tool for moving to a different browser or machine, and for keeping a copy somewhere Google isn't involved. If you only ever do one backup thing manually, do this once a month.
 :::
+
+## Database Import
+
+Click **Import** and pick a `.db`, `.sqlite` or `.sql` file. Better Sidebar replaces the current database with it and reloads.
+
+:::warning
+Import is a full replacement, not a merge. Export your current data first if you might want it back.
+:::
+
+## Reset Database
+
+Wipes all Better Sidebar data for the active profile: folders, tags, favorites, conversation metadata, recorded messages, prompts, snippets. Your conversations on Google's servers are untouched — only the extension's own organization is destroyed.
+
+A confirmation dialog appears, and the button is styled as destructive because it is.
+
+:::warning
+Reset does **not** clear your Drive backup. If you reset locally and then want the cloud copy gone too, click **Backup to Drive** afterwards to overwrite the cloud snapshot with the now-empty database.
+:::
+
+## Per-Profile Scope
+
+All of the above operates on the **active profile**. Each profile has its own database, its own backup slots, and its own Drive snapshot. Switching profile switches what these buttons are talking about. See [Multi-Account](/en/guide/settings/multi-account).
+
+## What a Sensible Setup Looks Like
+
+- Leave **Auto Backup** on, slots at 5 or higher
+- Connect **Drive Sync** and leave **Auto Upload** on
+- **Export** manually before anything unusual — a big migration, trying a beta build, handing your laptop to IT
+
+That covers self-inflicted damage, device loss, and browser-level weirdness, and after the initial setup it costs you nothing.

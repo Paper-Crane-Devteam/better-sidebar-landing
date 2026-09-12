@@ -7,14 +7,17 @@ description: Quick-access list of your starred conversations, with search and ta
 
 The Favorites tab is a simple, focused view: it shows only the conversations you've starred. No folders, no hierarchy — just a flat list of your most important chats, one click away.
 
-<!-- IMG_PLACEHOLDER: favorites-tab-overview — Screenshot of the Favorites tab showing a flat list of starred conversations with the filter buttons in the header -->
-
 ## What Can Be Favorited
 
-- **Conversations** — Star any conversation in the Files tab (right-click → Add to Favorites, or click the star on hover)
-- **Prompts** — Star prompts in the Prompts tab (these appear in the Prompts tab tree, not here)
+Conversations, prompts, and snippets can all be starred — but they don't all end up here.
 
-The Favorites tab only shows favorited *conversations*. Favorited prompts are pinned at the top of the Prompts tab tree instead.
+| Item | Where its favorites show |
+| --- | --- |
+| Conversations | This tab, plus floated to the top of their folder |
+| Prompts | Top of the [Prompts](/en/guide/sidebar/prompts-tab) tree, and its ⭐ filter |
+| Snippets | Top of the [Snippets](/en/guide/sidebar/snippets-tab) tree, and its ⭐ filter |
+
+The Favorites tab is conversations only. Each tab keeps its own starred set so a favourited prompt doesn't clutter your list of important chats.
 
 ## Using the Favorites Tab
 
@@ -30,7 +33,7 @@ The header provides three filter options:
 - **Tags** — Filter by assigned tags (OR logic — shows items with any selected tag)
 - **Type** — Cycle through All / Conversations / Images
 
-These filters work the same as in the Files tab but are scoped to your favorites only.
+These filters work the same as in the Library tab but are scoped to your favorites only.
 
 :::tip
 The Favorites tab is great as a "working set" — star the 5-10 conversations you're actively using this week, and switch between them without scrolling through your full library. Un-star them when you're done.
@@ -38,14 +41,14 @@ The Favorites tab is great as a "working set" — star the 5-10 conversations yo
 
 ## Favoriting Workflow
 
-You don't manage favorites from this tab — you manage them *from the Files tab*:
+You don't manage favorites from this tab — you manage them *from the Library tab*:
 
-1. In the Files tab, right-click a conversation → **Add to Favorites**
+1. In the Library tab, right-click a conversation → **Add to Favorites**
 2. Or hover over a conversation and click the star icon in the action bar
-3. The conversation immediately appears in the Favorites tab and floats to the top of its folder in the Files tab
+3. The conversation immediately appears in the Favorites tab and floats to the top of its folder in the Library tab
 
 To remove: right-click → **Remove from Favorites**, or click the star in the Favorites tab itself.
 
 :::tip
-Combine favorites with the "Favorites only" filter in the Files tab (⭐ button in the filter bar) for a quick view without leaving the tree. The Favorites tab is better for minimal-distraction access — no folders, no context, just your starred items.
+Combine favorites with the "Favorites only" filter in the Library tab (⭐ button in the filter bar) for a quick view without leaving the tree. The Favorites tab is better for minimal-distraction access — no folders, no context, just your starred items.
 :::

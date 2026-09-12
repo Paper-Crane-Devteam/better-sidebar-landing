@@ -6,13 +6,18 @@
   },
   {
     "type": "file",
-    "name": "keyboard-shortcuts",
-    "label": "Keyboard Shortcuts"
+    "name": "library",
+    "label": "Library"
   },
   {
     "type": "file",
     "name": "themes",
     "label": "Themes"
+  },
+  {
+    "type": "file",
+    "name": "keyboard-shortcuts",
+    "label": "Keyboard Shortcuts"
   },
   {
     "type": "file",
@@ -23,5 +28,10 @@
     "type": "file",
     "name": "platform-manager",
     "label": "Platform Manager"
+  },
+  {
+    "type": "file",
+    "name": "packs",
+    "label": "Packs & Licensing"
   }
 ]

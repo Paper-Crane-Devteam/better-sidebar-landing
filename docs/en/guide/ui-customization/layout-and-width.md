@@ -1,115 +1,128 @@
 ---
 title: Layout & Width
-description: Fine-tune your workspace dimensions with adjustable sidebar width, chat content width, and input box width. Plus Focus Mode and Zen Mode for distraction-free work.
+description: Fine-tune your workspace with adjustable sidebar, chat and input widths, plus Zen Mode, Compact Mode, auto-hiding input and element visibility toggles.
 ---
 
 # Layout & Width
 
-Better Sidebar gives you pixel-level control over how much screen real estate each part of the UI gets. No more fighting with Gemini's default layout — you decide exactly how wide the sidebar is, how much space the chat takes up, and whether the input box should stretch edge to edge.
+Gemini decides how wide your conversation should be. Better Sidebar lets you disagree. Every width is a slider, every piece of UI chrome has an off switch, and both changes apply the moment you drag.
 
-<!-- IMG_PLACEHOLDER: layout-overview — Annotated screenshot showing the three width zones: sidebar panel, chat content area, and input box, each with their slider values displayed -->
+Everything on this page lives in **Settings → UI Controls**, which shows the controls for whichever platform you're currently on. The same controls are also in the browser toolbar popup — click the Better Sidebar icon next to your address bar for quick access without opening the sidebar.
 
-## Sidebar Width
+![The UI Controls panel in the browser toolbar popup](/images/features/platform-popup.png)
 
-The sidebar panel itself can be resized. This is especially useful on smaller screens where you want the sidebar narrower, or on ultrawide monitors where you have pixels to spare.
+## Widths
 
-### Gemini
+### Sidebar width
 
-- Range: **300px – 550px**
-- Default: 380px
+| Platform | Range | Default |
+| --- | --- | --- |
+| Gemini | 300–550px | 360px |
+| AI Studio | 280–500px | 320px |
 
-### AI Studio
-
-- Range: **280px – 500px**
-- Default: 320px
-
-Adjust the slider in **Settings → Platform → Layout Dimensions → Sidebar Width**. The change applies instantly — no reload needed.
-
-<!-- IMG_PLACEHOLDER: sidebar-width-slider — Screenshot of the sidebar width slider in platform settings, showing the current value in pixels -->
+Each platform remembers its own value, so you can run a wide sidebar on Gemini and a narrow one on AI Studio.
 
 :::tip
-On a standard 1080p monitor, 350–380px works well. On ultrawide, try 450px+ and use the extra width for longer conversation titles to show without truncation.
+On a 1080p screen, 340–380px is comfortable. On an ultrawide, go past 450px — the extra room is what stops long conversation titles from being truncated, which makes the tree far easier to scan.
 :::
 
-## Chat Content Width (Gemini only)
+### Chat content width (Gemini only)
 
-This controls how wide the actual message area is within the main content panel. Gemini's default is often quite narrow — you can expand it to fill more of the screen.
+| Range | Default |
+| --- | --- |
+| 40–100% | 46% |
 
-- Range: **40% – 100%**
-- Default: varies by Gemini's native behavior
-
-At 100%, messages stretch across the full width of the content area. At lower percentages, messages are centered with whitespace on the sides (like a centered blog layout).
-
-<!-- IMG_PLACEHOLDER: chat-width-comparison — Side-by-side comparison: left shows 60% chat width (centered), right shows 100% chat width (full) -->
+This is how wide the message column is. Gemini's stock layout is narrow; at 100% the messages fill the whole content area.
 
 :::tip
-Code-heavy conversations benefit from 85–100% width. General text conversations are more readable at 60–75%, where the line length stays comfortable for your eyes.
+Different content wants different widths. Code and tables read better at 85–100%. Prose reads better at 55–70%, where line length stays short enough that your eye doesn't lose its place. If you mostly do one or the other, set it once and forget it.
 :::
 
-## Input Box Width (Gemini only)
+### Input box width (Gemini only)
 
-Separate from chat content width, you can control how wide the input/prompt box is. This means you can have a wide chat area but a narrower input field, or match them for visual consistency.
+| Range | Default |
+| --- | --- |
+| 40–100% | 42% |
 
-- Range: **40% – 100%**
-- Default: matches chat width
+Controlled separately from the chat width, so a wide reading column doesn't force a comically wide input box. Many people set chat to ~80% and leave input near the default.
 
-Adjust via the slider in **Settings → Platform → Layout Dimensions → Input Box Width**.
+### Table auto width (Gemini only)
+
+Gemini caps table width, which squeezes wide tables into a narrow column and wraps every cell. Turn **Table Auto Width** on to remove that cap so tables render at the full width available.
+
+Worth enabling permanently if you ask for comparisons — the difference on a six-column table is dramatic.
 
 ## Zen Mode (Gemini only)
 
-Zen Mode is a distraction-free writing environment. When enabled, it hides non-essential UI elements so you can focus entirely on the conversation.
+Zen Mode strips the interface down to the conversation and the input box. Everything else gets out of the way.
 
-<!-- IMG_PLACEHOLDER: zen-mode — Before/after comparison: left shows normal UI with header, sidebar controls, disclaimer; right shows Zen Mode with just the chat and input visible -->
-
-Toggle Zen Mode via:
-
-- **Settings → Platform → Additional Features → Zen Mode** (switch)
-- **Keyboard shortcut**: `Alt+Shift+Z` (default)
-
-What Zen Mode hides:
-
-- The Gemini logo/brand elements
-- The AI disclaimer at the bottom
-- Other visual chrome around the conversation
-
-What remains:
-
-- Your messages and the model's responses
-- The input box for typing
-- The Better Sidebar panel (if open)
+Toggle it with `Alt+Shift+Z`, or **Settings → UI Controls → Additional Features → Zen Mode**. An exit button appears while it's active.
 
 :::tip
-Zen Mode pairs well with a wider chat width (90–100%). Set both, and you get a clean full-screen writing experience that's great for long brainstorming sessions or deep work.
+Zen Mode plus a wide chat width plus [Compact Mode](#compact-mode) is the closest this gets to a distraction-free writing app. Good for long drafting sessions; less useful when you're jumping between chats.
 :::
 
-## Element Visibility (Gemini only)
+## Compact Mode
 
-Beyond Zen Mode, you can individually toggle specific UI elements:
+Compact Mode hides the sidebar's icon bar, so the tree gets the full panel width and there's nothing else to look at.
 
-| Element | What it does when hidden |
-| --- | --- |
-| **Gemini Logo** | Removes the brand logo from the top area |
-| **AI Disclaimer** | Hides the "Gemini may display inaccurate info" disclaimer |
-| **Upgrade Button** | Removes the upsell button (if present on your account) |
-| **Hotkey Helper** | Hides the keyboard shortcut hints overlay |
+Toggle it from the **⋯** menu → **Enter Compact Mode**, or simply click the **LIBRARY** title in the sidebar header. Clicking the title again brings the icon bar back.
 
-Each toggle is in **Settings → Platform → Element Visibility**. These are independent of Zen Mode — you can hide the disclaimer but keep everything else visible, for example.
+Note that hiding the icon bar means losing the tab buttons — use the `Alt+1` … `Alt+7` [shortcuts](/en/guide/settings/keyboard-shortcuts) to switch tabs while it's on.
 
 ## Auto-hide Input
 
-Available on both Gemini and AI Studio. When enabled, the input box becomes translucent and shrinks when you're scrolling through a conversation. It reappears at full opacity when you move your cursor near it or scroll to the bottom.
+Available on both platforms. The input box shrinks out of the way while you're reading and comes back when you move your cursor toward the bottom of the screen.
 
-This gives you more vertical space for reading long conversations while still keeping the input accessible.
+This buys you real vertical space on a laptop, where the input box eats a meaningful share of the window.
 
-- **Gemini**: Settings → Platform → Additional Features → Auto-hide Input
-- **AI Studio**: Settings → Platform → Additional Features → Auto-hide Input
+**Settings → UI Controls → Additional Features → Auto-hide Input**
 
-## Auto-hide Run Settings (AI Studio only)
+## Collapse Run Settings by Default (AI Studio only)
 
-On AI Studio, the "Run settings" panel (temperature, safety settings, etc.) can take up valuable space. Enable this toggle to auto-collapse it when you're not actively adjusting parameters.
+AI Studio opens the Run Settings panel (temperature, safety settings, tools) every time. If you rarely touch those, turn this on and the panel stays collapsed until you expand it yourself.
 
-Find it in **Settings → Platform → Additional Features → Auto-hide Run Settings**.
+**Settings → UI Controls → Additional Features → Collapse Run Settings by Default**
+
+## Element Visibility (Gemini only)
+
+Independent of Zen Mode, you can hide individual pieces of Gemini's chrome:
+
+| Element | What hiding it does |
+| --- | --- |
+| **Gemini Logo** | Removes the logo from the top-left |
+| **AI Disclaimer** | Removes the "Gemini may display inaccurate info" line at the bottom centre |
+| **Upgrade Button** | Removes the "Upgrade plan" button in the top right (only present on some accounts) |
+| **Shortcut Helper** | Removes the small keyboard icon in the bottom-right corner |
+
+These are separate switches — hide the disclaimer and keep everything else, if that's the one that bothers you.
 
 :::tip
-If you find yourself constantly tweaking layout dimensions, remember that changes are saved instantly and persist across sessions. Spend a few minutes finding your sweet spot once, and you're set.
+The AI disclaimer is the one most people turn off first. It's a fixed strip at the bottom of the window that you've already read a thousand times, and hiding it gives the conversation a few more lines of height.
 :::
+
+## Other Gemini Tweaks
+
+### Show conversation tag
+
+Displays the current conversation's tags next to its title in the top bar, so you know what bucket you're in without opening the sidebar. You can add and remove tags directly from there.
+
+### Remove auto watermark
+
+Strips the sparkle watermark Gemini adds to images on download. On by default. See [Image Download](/en/guide/ui-customization/image-download).
+
+### Selection toolbar
+
+Its own section in UI Controls, with a master switch plus one switch per action. See [Selection Toolbar](/en/guide/ui-customization/selection-toolbar).
+
+## Toolbar Popup Only
+
+One toggle lives *only* in the browser toolbar popup, not in the sidebar's settings modal:
+
+**Slash Commands** — whether typing `/` opens your prompt library. Available for both Gemini and AI Studio. Click the Better Sidebar icon in your browser toolbar, pick the platform tab, and you'll find it there.
+
+The popup also has a **Platforms** tab for switching Better Sidebar off entirely on one site. See [Platform Manager](/en/guide/settings/platform-manager).
+
+## Settings Persistence
+
+All of these are saved instantly and survive browser restarts. They're included in database exports and Google Drive backups too, so restoring a backup restores your layout along with your folders.

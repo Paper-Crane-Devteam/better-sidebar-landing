@@ -9,7 +9,7 @@ Better Sidebar comes with 16 customizable keyboard shortcuts that let you contro
 
 Open the hotkey settings via **Settings** (gear icon or `Alt+Shift+,`) → **Keyboard Shortcuts** tab.
 
-<!-- IMG_PLACEHOLDER: hotkeys-overview — Screenshot of the Keyboard Shortcuts settings page showing three sections (General, Navigation, Actions) with several hotkeys listed with their current bindings -->
+![The Keyboard Shortcuts settings page with General, Navigation and Actions sections](/images/features/keyboard-shortcuts.png)
 
 ## Default Shortcuts
 
@@ -18,7 +18,7 @@ Open the hotkey settings via **Settings** (gear icon or `Alt+Shift+,`) → **Key
 | Action | Default Binding | What it does |
 | --- | --- | --- |
 | Toggle Sidebar | `Alt+Shift+S` | Show/hide the Better Sidebar panel |
-| New Conversation | `Alt+Shift+N` | Start a new chat |
+| New Chat | `Alt+Shift+M` | Start a new chat |
 | Open Search | `Alt+Shift+F` | Jump to the Search tab |
 | Open Settings | `Alt+Shift+,` | Open the Settings modal |
 
@@ -26,7 +26,7 @@ Open the hotkey settings via **Settings** (gear icon or `Alt+Shift+,`) → **Key
 
 | Action | Default Binding | What it does |
 | --- | --- | --- |
-| Explorer | `Alt+1` | Switch to the Files tab |
+| Library | `Alt+1` | Switch to the Library tab |
 | Search | `Alt+2` | Switch to the Search tab |
 | Prompts | `Alt+3` | Switch to the Prompts tab |
 | Tags | `Alt+4` | Switch to the Tags tab |
@@ -45,8 +45,22 @@ Open the hotkey settings via **Settings** (gear icon or `Alt+Shift+,`) → **Key
 | Toggle View Mode | `Alt+Shift+T` | Switch between Tree and Timeline views |
 
 :::tip
-The `Alt+1` through `Alt+7` navigation shortcuts are the fastest way to jump between tabs. Once you memorize them, you'll rarely need to click the tab icons.
+The `Alt+1` … `Alt+7` navigation shortcuts are the fastest way between tabs, and they become essential in [Compact Mode](/en/guide/ui-customization/layout-and-width#compact-mode), where the tab icons are hidden entirely.
 :::
+
+## In-Tree Keys
+
+Separate from the configurable shortcuts above, the file tree responds to standard file-manager keys once a row is focused. These aren't rebindable:
+
+| Key | What it does |
+| --- | --- |
+| `↑` `↓` | Move focus between rows |
+| `→` `←` | Expand / collapse a folder |
+| `Enter` | Open the focused conversation |
+| `F2` | Rename |
+| `Delete` | Delete the focused item |
+
+There's also a **Shortcut Helper** — a small keyboard icon in the bottom-right of the page that opens this list on demand. Hide it via **Settings → UI Controls → Element Visibility → Shortcut Helper**.
 
 ## Recording a New Binding
 
@@ -56,8 +70,6 @@ To change any shortcut:
 2. The button enters **recording mode** — it pulses and shows "Recording..."
 3. Press your desired key combination
 4. The new binding is saved immediately
-
-<!-- IMG_PLACEHOLDER: hotkey-recording — GIF showing clicking a binding, the button entering recording mode (pulsing), pressing a new key combo, and the binding updating -->
 
 ### Recording rules
 
@@ -75,8 +87,6 @@ If you assign a key combination that's already used by another action, Better Si
 > ⚠️ Conflicts with: Toggle Sidebar
 
 The conflicting binding still *works* — it's not blocked. But the warning helps you notice so you can fix it.
-
-<!-- IMG_PLACEHOLDER: hotkey-conflict — Screenshot showing a binding with a red border and conflict warning text below it -->
 
 :::warning
 Conflicting bindings are allowed but unpredictable. Only one action will fire when you press the keys, and which one wins depends on registration order. Fix conflicts by rebinding one of the two actions.

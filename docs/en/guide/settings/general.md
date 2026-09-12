@@ -1,97 +1,90 @@
 ---
-title: General Settings
-description: Configure language, layout density, sidebar shortcuts, new chat behavior, and default sync folder. The core preferences that shape your everyday experience.
+title: General
+description: Interface language, which shortcut buttons appear in the sidebar, and the delete-confirmation behaviour.
 ---
 
-# General Settings
+# General
 
-The General settings page is where you configure the fundamentals: what language the extension speaks, how dense the UI feels, which shortcuts appear in the sidebar, and how new chats behave.
+The General page holds three small things: what language the extension speaks, which shortcut buttons clutter your sidebar, and whether deleting asks first.
 
-Open it via **Settings** (gear icon or `Alt+Shift+,`) → **General** tab.
+Open it with the gear icon or `Alt+Shift+,`, then pick **General**.
 
-<!-- IMG_PLACEHOLDER: general-settings-overview — Screenshot of the General settings page showing the Appearance section with language dropdown and density toggle -->
+## Language
 
-## Appearance
+Better Sidebar is fully translated into 7 languages:
 
-### Language
-
-Better Sidebar supports 7 languages:
-
-| Language | Code |
+| Language | |
 | --- | --- |
 | English | `en` |
-| 简体中文 (Simplified Chinese) | `zh-CN` |
-| 繁體中文 (Traditional Chinese) | `zh-TW` |
-| 日本語 (Japanese) | `ja` |
-| Português (Portuguese) | `pt` |
-| Español (Spanish) | `es` |
-| Русский (Russian) | `ru` |
+| 简体中文 | `zh-CN` |
+| 繁體中文 | `zh-TW` |
+| 日本語 | `ja` |
+| Português | `pt` |
+| Español | `es` |
+| Русский | `ru` |
 
-Select your language from the dropdown. The change takes effect immediately — all UI labels, tooltips, and messages switch to the selected language.
+The change applies immediately — labels, tooltips, dialogs, changelog, everything. On first install the language is guessed from your browser's locale.
 
-### Layout Density
+This setting is independent of what language Gemini itself is running in.
 
-Controls the vertical spacing between items in the sidebar:
+## Sidebar Shortcuts
 
-- **Relaxed** — More breathing room between rows. Easier to click, shows fewer items per screen.
-- **Compact** — Tighter spacing, more items visible at once. Better for large libraries where you want to see more without scrolling.
+These are the quick-link buttons in the sidebar. Each one has a switch, so you can hide the ones you never press.
 
-<!-- IMG_PLACEHOLDER: density-comparison — Side-by-side: left shows Relaxed density with wider row spacing, right shows Compact density with tighter rows -->
+**On both platforms**
 
-:::tip
-Try Compact if you have 100+ conversations. The tighter spacing means less scrolling to find what you need. If you often misclick items on touch or trackpad, Relaxed gives more target area.
-:::
-
-## Shortcuts
-
-Shortcuts are the quick-access buttons that appear at the bottom or top of the sidebar. You can toggle each one on or off depending on what you actually use.
-
-### Available on all platforms
-
-| Shortcut | What it links to |
+| Shortcut | Goes to |
 | --- | --- |
-| **Favorites** | Jump to the Favorites tab |
-| **Original UI** | Switch back to the native Gemini/AI Studio sidebar |
+| **Favorites** | Your Favorites tab |
+| **Switch to Original Sidebar** | The platform's own sidebar |
 
-### Gemini-specific shortcuts
+**Gemini only**
 
-| Shortcut | What it links to |
+| Shortcut | Goes to |
 | --- | --- |
-| **My Stuff** | Gemini's "My Stuff" page |
+| **My Stuff** | Gemini's My Stuff page |
 | **Gems** | Gemini's Gems overview |
 | **Notebooks** | Gemini's Notebooks overview |
 
-### AI Studio-specific shortcuts
+**AI Studio only**
 
-| Shortcut | What it links to |
+| Shortcut | Goes to |
 | --- | --- |
 | **Build** | AI Studio's Build page |
 | **Dashboard** | AI Studio's Dashboard |
-| **Documentation** | AI Studio's Documentation |
+| **Documentation** | AI Studio's docs |
 
-Toggle any shortcut off if you never use it — this keeps the sidebar footer clean and focused.
+The list you see depends on which site you're on — Gemini shortcuts don't appear while you're in AI Studio.
+
+:::tip
+If you're going to use [Compact Mode](/en/guide/ui-customization/layout-and-width#compact-mode) anyway, don't bother tuning these — compact mode hides the whole icon bar. This page is for people who want a *slightly* tidier sidebar rather than a bare one.
+:::
 
 ## Behavior
 
-### New Chat Behavior
+### Delete conversations without confirmation
 
-When you create a new conversation from the sidebar, where should it open?
+Off by default, and we'd suggest leaving it that way.
 
-- **Current Tab** (default) — The new chat replaces your current page. Fastest for sequential work.
-- **New Tab** — The new chat opens in a background tab. Better when you want to keep your current conversation open and start a parallel one.
+With it on, deleting a single conversation happens the instant you click — no dialog, no undo, and the conversation is removed from Google's servers as well as from Better Sidebar.
 
-### Default Sync Folder
+Batch delete still asks for confirmation regardless of this setting.
 
-When Better Sidebar discovers a new conversation (via auto-sync or scanning), where should it be placed?
-
-- **"Imported" folder** (default) — New conversations go into a default catch-all location
-- **Root level** — New conversations appear at the top level of your tree
-- **A specific folder** — Pick any folder you've created as the landing spot for new conversations
-
-Click the folder picker button to choose a specific folder. To reset back to the default behavior, click the "↩ Imported" link below the picker.
-
-<!-- IMG_PLACEHOLDER: default-sync-folder — Screenshot showing the Default Sync Folder setting with a folder picker button displaying "Work Projects" as the selected folder -->
-
-:::tip
-Set this to your "Inbox" or "Unsorted" folder and do a weekly triage — move conversations to their proper folders in batch. It keeps your tree tidy without requiring you to organize in real-time.
+:::warning
+This is the only setting in Better Sidebar that can lose data with a single misclick. Turn it on only if you're deliberately doing a lot of one-at-a-time cleanup and you're confident about what you're clicking. Batch Mode is usually the better answer for bulk deletion, because it shows you exactly what's selected before it runs.
 :::
+
+## Where Everything Else Lives
+
+The General page is intentionally small. The settings people usually come looking for are elsewhere:
+
+| Looking for | Go to |
+| --- | --- |
+| Theme, light/dark mode | [Themes](/en/guide/settings/themes) |
+| Default view mode, sort order, ignored folders | [Library](/en/guide/settings/library) |
+| Widths, Zen Mode, element visibility | [Layout & Width](/en/guide/ui-customization/layout-and-width) |
+| Hotkeys | [Keyboard Shortcuts](/en/guide/settings/keyboard-shortcuts) |
+| Backups, Drive sync, profiles, reset | [Backups](/en/guide/extras/data-backup) · [Drive Sync](/en/guide/extras/drive-sync) · [Multi-Account](/en/guide/settings/multi-account) |
+| Notion connection | [Integrations](/en/guide/extras/integrations) |
+| Agent permissions and skills | [Skills & Tools](/en/guide/agent/skills-and-tools) |
+| Licences and what's paid | [Packs](/en/guide/settings/packs) |

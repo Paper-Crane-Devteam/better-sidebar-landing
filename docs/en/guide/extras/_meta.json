@@ -1,17 +1,22 @@
 [
   {
     "type": "file",
+    "name": "export",
+    "label": "Export"
+  },
+  {
+    "type": "file",
+    "name": "integrations",
+    "label": "Notion & Obsidian"
+  },
+  {
+    "type": "file",
     "name": "drive-sync",
     "label": "Google Drive Sync"
   },
   {
     "type": "file",
-    "name": "export",
-    "label": "Conversation Export"
-  },
-  {
-    "type": "file",
     "name": "data-backup",
-    "label": "Data Backup & Restore"
+    "label": "Backups & Restore"
   }
 ]

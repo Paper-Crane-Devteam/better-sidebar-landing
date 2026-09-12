@@ -7,7 +7,7 @@ description: Create separate profiles for different Google accounts or use cases
 
 If you use multiple Google accounts (personal, work, school) or want separate organization systems for different use cases, Multi-Account profiles let you keep everything cleanly separated. Each profile has its own independent database — its own folders, tags, favorites, and conversation index.
 
-<!-- IMG_PLACEHOLDER: multi-account-overview — Screenshot of the Data Settings showing the active profile card with bound accounts, and other profiles listed below with Switch/Rename/Delete actions -->
+![Profile management in Data & Storage, showing the active profile and its bound accounts](/images/features/multi-account.png)
 
 ## How Profiles Work
 
@@ -35,8 +35,6 @@ When you first install Better Sidebar, a default profile is created automaticall
 4. Type a name (e.g., "Work", "Personal", "Research")
 5. Press Enter or click Create
 
-<!-- IMG_PLACEHOLDER: multi-account-create — GIF showing clicking New Profile, typing "Work Projects", pressing Enter, and the new profile appearing in the list -->
-
 The new profile starts with an empty database. Switch to it and the sidebar will be blank — ready for you to organize from scratch for that specific use case.
 
 :::tip
@@ -53,20 +51,23 @@ In the profiles list (Settings → Data), each inactive profile has a **Switch**
 
 A toast notification confirms the switch: "Switched to: Work Projects"
 
-<!-- IMG_PLACEHOLDER: multi-account-switch — Screenshot showing hovering over an inactive profile with the Switch, Rename, and Delete buttons visible -->
-
 The switch is nearly instant — it's just swapping which database file is active.
 
 ## Account Binding
 
-Profiles automatically bind to the Google accounts you use while they're active. If you switch to the "Work" profile and then visit Gemini logged into your work account, that account gets associated with the "Work" profile.
+Profiles bind to the Google accounts you use while they're active. Switch to the "Work" profile, then visit Gemini signed in to your work account, and that account gets associated with "Work".
 
-Bound accounts are shown as badges on the profile card:
+Bound accounts show as badges on the profile card — platform icon plus the account name.
 
-- Platform icon (Gemini/AI Studio)
-- Username/email
+### When a new account shows up
 
-This helps you remember which profile goes with which account.
+If Better Sidebar sees a Google account it doesn't recognize, it asks what to do rather than guessing: bind it to an existing profile, or create a new one for it. Nothing is merged silently.
+
+This is what makes the whole thing safe for people who are signed in to several Google accounts at once — switching account in Gemini doesn't dump your work chats into your personal tree.
+
+### Knowing which account you're in
+
+The sidebar shows the current account's avatar in its header. Handy sanity check before you start filing things: if you're seeing an empty tree that should be full, you're probably in the wrong account.
 
 ## Renaming a Profile
 
@@ -102,6 +103,25 @@ If you log into Gemini with different accounts for different purposes, create a 
 
 Want to try a completely different organization system without losing your current one? Create a new profile, experiment freely, and switch back if it doesn't work out.
 
+## Everything Is Per-Profile
+
+Worth being explicit about, because it surprises people:
+
+| Scoped to the active profile | Shared across all profiles |
+| --- | --- |
+| Folders, tags, favorites | Language |
+| Conversation metadata and messages | Theme |
+| Prompts and snippets | Widths and UI toggles |
+| [Backup slots](/en/guide/extras/data-backup) | Keyboard shortcuts |
+| [Drive snapshot](/en/guide/extras/drive-sync) | [Licence activation](/en/guide/settings/packs) |
+| Agent workspaces | |
+
+So each profile gets its own independent Drive backup and its own backup history. Switch profile and the Data & Storage page is talking about a different database entirely.
+
+:::warning
+One thing to plan for: each browser profile consumes one [licence activation slot](/en/guide/settings/packs) (there are 10). Better Sidebar *profiles* inside a single browser profile don't each cost a slot — but if you run separate Chrome profiles for work and personal, that's two.
+:::
+
 :::tip
-Multi-Account profiles pair perfectly with [Google Drive Sync](/en/guide/extras/drive-sync). Each profile can be backed up independently to Drive, giving you cloud safety for all your organizational systems.
+Pair profiles with [Drive Sync](/en/guide/extras/drive-sync) and each of your organizational systems gets independent cloud safety. Just remember to switch to the profile you want before hitting Backup — the sync panel only ever touches the active one.
 :::

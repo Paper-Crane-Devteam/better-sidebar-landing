@@ -1,111 +1,104 @@
 ---
 title: Google Drive Sync
-description: Sync your Better Sidebar data to Google Drive for cross-device backup. Connect, auto-sync, merge, and restore your conversations, folders, and tags from the cloud.
+description: Back up your folders, tags, prompts and snippets to your own Google Drive. Automatic uploads, manual downloads, per-profile snapshots.
 ---
 
 # Google Drive Sync
 
-Google Drive Sync lets you back up your entire Better Sidebar database (conversations, folders, tags, favorites, prompts) to your Google Drive account. This means you can restore your setup on a new device, recover from data loss, or keep multiple browsers in sync.
+Drive Sync keeps a copy of your Better Sidebar organization in your own Google Drive, so a new laptop or a cleared browser doesn't cost you six months of filing.
 
-<!-- IMG_PLACEHOLDER: drive-sync-overview — Screenshot of the Google Drive Sync section in Data Settings, showing connected status, last sync time, auto-sync toggle, and backup/restore buttons -->
+![Google Drive sync and local backup controls in Data & Storage](/images/features/drive-sync-and-backup.png)
 
-## Connecting Your Drive
+## What Gets Synced
 
-1. Open **Settings** → **Data** tab
-2. Find the **Google Drive Sync** section
-3. Click **Connect**
-4. A Google OAuth popup appears — sign in and grant permission
-5. Once connected, the status shows "Connected" with your sync controls visible
-
-<!-- IMG_PLACEHOLDER: drive-sync-connect — GIF showing clicking Connect, OAuth popup, then returning to the connected state -->
-
-The extension only requests access to its own app-specific folder in Google Drive. It cannot read your other Drive files.
-
-:::tip
-You can also access Google Drive Sync from the Files tab header — click the overflow menu (⋮) and select the sync option. This opens the same sync panel in a modal for quick access without opening full settings.
-:::
-
-## Auto-Sync
-
-Once connected, you can enable **Auto-Sync** with a toggle switch. When active:
-
-- Your data automatically syncs to Drive at regular intervals
-- A small status indicator shows when auto-sync is running
-- No manual intervention needed — your cloud backup stays current
-
-Auto-sync direction is a merge by default — it combines local and cloud data without overwriting either side.
-
-## Sync Directions
-
-Better Sidebar offers three sync modes:
-
-### Merge Sync (recommended)
-
-Click the **Merge Sync** button for a two-way sync that combines data from both sides:
-
-- Conversations/folders/tags that exist only locally get uploaded
-- Data that exists only in the cloud gets downloaded
-- No data is lost from either side
-
-This is the safest option and the one auto-sync uses.
-
-### Backup (Upload)
-
-Click **Backup** to push your local database to Drive. This *overwrites* whatever was previously in the cloud with your current local state.
-
-A confirmation dialog appears before the upload proceeds — because this is destructive to cloud data.
-
-### Restore (Download)
-
-Click **Restore** to pull your cloud database down and replace your local data. This *overwrites* your local state with whatever's in the cloud.
-
-A confirmation dialog appears before the download proceeds.
+| Synced | Not synced |
+| --- | --- |
+| Folders and their colors | **Message content** |
+| Tags and tag assignments | |
+| Favorites and pins | |
+| Conversation metadata (titles, dates, descriptions) | |
+| Prompt library | |
+| Snippet library | |
+| Settings and preferences | |
 
 :::warning
-Backup and Restore are one-directional operations that overwrite data on the target side. Use Merge Sync for everyday syncing. Only use Backup/Restore when you intentionally want to force one side to match the other — like setting up a fresh browser from your cloud backup.
+Messages are deliberately excluded. They're by far the largest part of the database and they can always be re-read from the platform, so syncing them would make every upload slow for very little benefit. Practically: after restoring on a new machine you'll have your whole structure, but full-text search will be empty until messages are recorded again. See [Search](/en/guide/sidebar/search-tab#import-chat-history).
 :::
 
-## Last Sync Status
+## Connecting
 
-The sync panel shows:
+1. **Settings → Data & Storage → Google Drive Sync**
+2. Click **Connect Google Drive**
+3. Approve the Google sign-in prompt
 
-- **Last sync time** — When the most recent sync completed (formatted as date + time)
-- **Sync direction** — Whether the last operation was up (backup), down (restore), or merge
-- **Auto-syncing indicator** — Shows when background sync is currently running
+The extension only asks for access to its own app-specific folder. It cannot see your other Drive files, and your data isn't sent anywhere except your own Drive.
 
-<!-- IMG_PLACEHOLDER: drive-sync-status — Screenshot showing the connected state with "Last sync: 2025-01-15 14:32 (Merge)" and auto-sync active -->
+## How Syncing Actually Works
+
+This is the part worth understanding, because it's deliberately asymmetric.
+
+### Uploads are automatic
+
+Leave **Auto Upload** on and Better Sidebar pushes a fresh snapshot after your data changes, and again every 25 minutes. You don't have to think about it.
+
+### Downloads are always manual
+
+Nothing ever comes *down* from Drive unless you click **Restore from Drive**. Your local database is treated as the source of truth, and the cloud is treated as a backup.
+
+:::tip
+Earlier versions tried to merge the two sides automatically. It went badly — automatic merges can produce results nobody asked for, and the cloud silently winning is the worst possible failure mode for something you've spent months organizing. So now the rule is simple: your machine writes to the cloud on its own, the cloud never writes to your machine on its own.
+:::
+
+### Both directions replace, not merge
+
+**Backup to Drive** replaces the whole cloud snapshot for the current profile. **Restore from Drive** replaces your whole local snapshot. Neither one merges.
+
+Before a restore, Better Sidebar takes a local safety snapshot automatically, so a restore you regret is recoverable. See [Backups](/en/guide/extras/data-backup).
+
+## When Two Devices Disagree
+
+If the cloud copy changed on another device, automatic uploading **pauses** and you get a notice: *"Cloud copy changed on another device."*
+
+Nothing is lost while it's paused — the sync is simply frozen so neither side can silently overwrite the other. You pick the direction:
+
+- **Upload** — this device's data wins, the cloud is replaced
+- **Download** — the cloud wins, this device is replaced
+
+Once you choose, automatic uploads resume.
+
+:::tip
+If you regularly use Better Sidebar on two computers, pick one as the primary and only ever upload from that one. Treat the second as read-only: download when you sit down at it, don't upload from it. Two machines both uploading is how you end up staring at a conflict notice trying to remember which one had the newer folder structure.
+:::
+
+## Per-Profile Snapshots
+
+Sync is scoped to the **active profile**, not your whole install. Each profile gets its own snapshot in Drive.
+
+That means multi-account users get independent cloud backups for each account — switch profile, and the sync panel is now talking about that profile's snapshot. See [Multi-Account](/en/guide/settings/multi-account).
 
 ## Disconnecting
 
-Click **Disconnect** to unlink your Google Drive account. This:
-
-- Stops all auto-sync activity
-- Removes the OAuth token from the extension
-- Does *not* delete your data from Drive (it remains in your app folder)
-- Does *not* affect your local data
-
-You can reconnect at any time and your cloud data will still be there.
+**Disconnect** unlinks the Drive account. It stops automatic uploads and drops the stored token. It does *not* delete the snapshot already in Drive, and it does *not* touch your local data. Reconnect later and your snapshot is still there.
 
 ## Practical Workflows
 
-### Setting up a new device
+### Setting up a new computer
 
-1. Install Better Sidebar on the new browser
-2. Open Settings → Data → Google Drive Sync
-3. Connect with the same Google account
-4. Click **Restore** to pull your existing data from the cloud
-5. Everything appears — folders, tags, favorites, prompts, the works
+1. Install the extension and sign in to Gemini or AI Studio with the same Google account
+2. **Settings → Data & Storage → Connect Google Drive**
+3. Click **Restore from Drive**
+4. Your folders, tags, prompts and snippets come back
 
-### Keeping two browsers in sync
+Then, if you want search to work on this machine, [have the agent re-sync](/en/guide/agent/better-sidebar-agent#sync-missing-messages) the conversations you care about.
 
-1. Connect both browsers to the same Google account
-2. Enable Auto-Sync on both
-3. Merge Sync keeps them aligned without conflicts
+### Before anything risky
 
-### Before a risky operation
+About to reset the database, import someone else's backup, or let the agent loose on a big reorganization? Click **Backup to Drive** first. Ten seconds now versus an afternoon of re-filing later.
 
-About to reset your database or try something experimental? Click **Backup** first. If things go wrong, you can always **Restore** from Drive.
+### Belt and braces
 
-:::tip
-Google Drive Sync is the single best insurance against data loss. The setup takes 30 seconds, and once auto-sync is on, you never have to think about backups again. Just set it and forget it.
-:::
+Drive Sync covers device loss. [Local backups](/en/guide/extras/data-backup) cover "I broke my own data five minutes ago" — they're automatic snapshots you can roll back to. Use both; they solve different problems.
+
+## Not Available?
+
+If you see *"Google Drive sync is not available in this browser"*, your browser doesn't expose the identity API the extension needs for Google OAuth. Firefox is the common case here. Use [local backups](/en/guide/extras/data-backup) and manual database export instead — both work everywhere.

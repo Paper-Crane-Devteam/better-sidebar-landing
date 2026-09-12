@@ -1,44 +1,27 @@
 ---
-title: Conversation Export
-description: Export any conversation as Plain Text, Markdown, or JSON. Download individual chats in the format that works best for your workflow.
+title: Export
+description: Get conversations and snippets out — as Markdown, plain text or JSON, or straight into Obsidian and Notion. Single items, whole folders, or batch selections.
 ---
 
-# Conversation Export
+# Export
 
-Need to save a conversation outside the browser? Better Sidebar lets you export any chat as a downloadable file in three formats. Whether you want a clean Markdown file for documentation, raw text for pasting, or structured JSON for programmatic use — it's a right-click away.
+Anything in your library can leave it. Right-click a conversation, a snippet, or a folder, choose **Export**, and pick a target.
 
-<!-- IMG_PLACEHOLDER: export-menu — Screenshot showing right-click context menu on a conversation with the Export submenu expanded, showing Plain Text, Markdown, and JSON options -->
+![The export submenu with Markdown, plain text, JSON, Obsidian and Notion targets](/images/features/export-formats.png)
 
-## How to Export
+## Targets
 
-1. Find the conversation in the Files tab (or any other tab where conversations appear)
-2. Right-click it
-3. Hover over **Export**
-4. Choose your format: **Plain Text**, **Markdown**, or **JSON**
-5. The file downloads immediately with the conversation title as the filename
-
-That's it. No dialogs, no configuration — just pick a format and the file appears in your downloads folder.
-
-## Export Formats
-
-### Plain Text
-
-The simplest format. Strips all formatting and gives you the raw dialogue:
-
-```
-User: What's the best way to handle errors in Rust?
-
-Model: In Rust, error handling revolves around the Result type...
-```
-
-Good for:
-- Quick copy-paste into emails or documents
-- Feeding into other tools that expect plain text
-- Maximum compatibility
+| Target | Result | Requires |
+| --- | --- | --- |
+| **Markdown** | `.md` file with frontmatter | Free |
+| **Plain Text** | `.txt`, no formatting | Free |
+| **JSON** | Structured `{ role, content }` array | Free |
+| **Obsidian** | Creates the note directly in your vault | [Power Pack](/en/guide/settings/packs) |
+| **Notion** | Creates a page under a target page | [Power Pack](/en/guide/settings/packs) |
 
 ### Markdown
 
-Preserves conversation structure with proper Markdown formatting:
+Headings for each turn, code blocks intact, plus frontmatter. This is the one to use for anything you're going to keep.
 
 ```markdown
 ## User
@@ -50,59 +33,65 @@ What's the best way to handle errors in Rust?
 In Rust, error handling revolves around the `Result` type...
 ```
 
-Good for:
-- Documentation and knowledge bases
-- Blog post drafts
-- Any Markdown-aware tool (Notion, Obsidian, GitHub)
-- Preserving code blocks and formatting
+### Plain Text
+
+Formatting stripped, just the dialogue. Good for pasting into an email, or feeding to a tool that chokes on Markdown.
 
 ### JSON
 
-A structured array of message objects:
-
 ```json
 [
-  {
-    "role": "user",
-    "content": "What's the best way to handle errors in Rust?"
-  },
-  {
-    "role": "model",
-    "content": "In Rust, error handling revolves around the `Result` type..."
-  }
+  { "role": "user", "content": "What's the best way to handle errors in Rust?" },
+  { "role": "model", "content": "In Rust, error handling revolves around the `Result` type..." }
 ]
 ```
 
-Good for:
-- Programmatic processing
-- Feeding into other AI tools or APIs
-- Data analysis
-- Building datasets
+For programmatic use — building a dataset, running your own analysis, feeding another tool.
 
-## Where You Can Export From
+### Obsidian
 
-Export is available anywhere a conversation appears in the sidebar:
+Opens the note directly in your vault via Obsidian's URI protocol. Obsidian must be installed and running on the same machine. Formatting and code blocks survive intact.
 
-- **Files tab** — right-click any conversation
-- **Gems tab** — right-click a conversation under a gem
-- **Notebooks tab** — right-click a conversation within a notebook
-- **Favorites tab** — right-click any favorited conversation
-- **Search results** — after finding a conversation, navigate to it and export from the tree
+Snippets go into a `Snippets` folder in your vault by default.
+
+### Notion
+
+Creates a page under the target page you configured, with the content converted to Notion blocks. Requires setup first — see [Integrations](/en/guide/extras/integrations).
+
+## What You Can Export
+
+### A single conversation
+
+Right-click it in the Library tab (or Favorites, Gems, Notebooks — anywhere a conversation appears) → **Export** → pick a target. The file downloads immediately, named after the conversation.
+
+### A whole folder
+
+Right-click a folder → **Export Folder**. Every conversation inside is exported. With a file format, you get a ZIP with one file per conversation.
+
+### A batch selection
+
+Enter Batch Mode (`Alt+Shift+B`), check what you want, then use **Export** in the batch toolbar. Same deal — one file per item, packed into a ZIP.
+
+For Notion, batch export runs page by page with a progress toast (`Exporting to Notion (7/23)…`) and can be cancelled part-way. Already-created pages stay.
+
+### Snippets
+
+Snippets export the same way, to the same targets. This is the intended path into a knowledge base: [save the good paragraph](/en/guide/sidebar/snippets-tab) while you're reading, export the collection into Obsidian later.
+
+## "No content found"
+
+If an export fails with a message about no content, the extension has that conversation's *title* but has never seen its *messages*. Nothing to export yet.
+
+Fix it by opening the conversation once so the messages get recorded, then export again. For many conversations at once, ask the [agent](/en/guide/agent/better-sidebar-agent#sync-missing-messages) to sync them first:
+
+> Export all chats in my Work folder from March onwards to Markdown, one file per chat, zipped. If any chat doesn't have its messages synced yet, tell me before exporting.
+
+The agent checks first and reports the gap rather than quietly exporting half your folder.
+
+## Exporting Your Whole Database
+
+None of the above is a backup. For a complete copy of everything — including folder structure, tags and settings — use **Settings → Data & Storage → Export**, which produces a single `.db` file. See [Backups & Restore](/en/guide/extras/data-backup).
 
 :::tip
-For batch exports, there isn't a built-in "export all" button — but you can export conversations one at a time. If you need a full database backup (all conversations at once), use the [Data Backup](/en/guide/extras/data-backup) feature instead, which exports your entire database as a single file.
-:::
-
-## File Naming
-
-The exported file uses the conversation title as its filename, with the appropriate extension:
-
-- `My Rust Questions.txt` (Plain Text)
-- `My Rust Questions.md` (Markdown)
-- `My Rust Questions.json` (JSON)
-
-Special characters in the title are preserved where the filesystem allows.
-
-:::tip
-If you're building a personal knowledge base, export your best conversations as Markdown and organize them in a tool like Obsidian or Notion. It's a great way to turn ephemeral AI chats into permanent reference material.
+The two serve different purposes. Markdown export is for *reading* your conversations somewhere else. Database export is for *restoring* Better Sidebar. Don't rely on one for the other's job.
 :::

@@ -16,13 +16,18 @@
   },
   {
     "type": "dir",
+    "name": "agent",
+    "label": "AI Agent"
+  },
+  {
+    "type": "dir",
     "name": "ui-customization",
-    "label": "UI Customization"
+    "label": "In-Page Features"
   },
   {
     "type": "dir",
     "name": "extras",
-    "label": "Extras"
+    "label": "Export & Backup"
   },
   {
     "type": "dir",

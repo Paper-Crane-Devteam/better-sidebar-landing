@@ -7,7 +7,7 @@ description: Full-text search across every message in your Gemini and AI Studio 
 
 The Search tab lets you find *any* message you've ever sent or received — not just by title, but by the actual content of your conversations. Think of it as Ctrl+F for your entire AI chat history.
 
-<!-- IMG_PLACEHOLDER: search-tab-overview — Screenshot of the Search tab showing the search input with a query typed, and grouped results below with highlighted matches -->
+![Full-text search results grouped by conversation with matches highlighted](/images/features/search-fulltext.png)
 
 ## How It Works
 
@@ -19,12 +19,10 @@ Better Sidebar maintains a local SQLite database with full-text search indexing.
 Results appear instantly as you type, with a 500ms debounce to avoid hammering the database on every keystroke.
 
 :::tip
-The Search tab searches message *content*. If you just want to filter conversations by title, use the search filter in the [Files tab](/en/guide/sidebar/files-tab#text-search) instead — that's faster for quick title lookups.
+The Search tab searches message *content*. If you just want to filter conversations by title, use the search filter in the [Library tab](/en/guide/sidebar/library-tab#text-search) instead — that's faster for quick title lookups.
 :::
 
 ## The Search Input
-
-<!-- IMG_PLACEHOLDER: search-input-options — Screenshot of the search input area with the advanced options panel expanded, showing all filter controls -->
 
 The search bar has two inline toggle buttons on the right:
 
@@ -77,8 +75,6 @@ When searching across platforms, results show a small platform icon next to each
 
 ## Reading Results
 
-<!-- IMG_PLACEHOLDER: search-results-grouped — Screenshot showing search results grouped by conversation, with one group expanded showing individual message matches with highlighted keywords -->
-
 Results are **grouped by conversation**. Each group shows:
 
 - The conversation title
@@ -103,8 +99,6 @@ Click any match to open a **full preview modal** with:
 2. A copy button for the content
 3. An expandable **Context** section showing the adjacent message — if you clicked a user message, it shows the model's response, and vice versa
 
-<!-- IMG_PLACEHOLDER: search-message-preview — Screenshot of the message preview modal showing full rendered Markdown content and the context section expanded below -->
-
 From the preview modal, you can:
 
 - **Close** — dismiss and go back to results
@@ -124,19 +118,33 @@ By default, Better Sidebar only has message content for conversations that were 
 
 To fix this, you need to import your history.
 
-<!-- IMG_PLACEHOLDER: search-import-history — Screenshot of the Import History dialog showing the step-by-step guide and file upload area -->
+![The Open in Drive button in the AI Studio library, used to start a bulk history export](/images/features/aistudio-open-in-drive.png)
 
 ### How to import (AI Studio)
 
-1. Click the **Upload** icon (📤) in the Search tab header
-2. The import dialog opens with a step-by-step guide. In short:
-   - Go to [AI Studio Library](https://aistudio.google.com/app/library)
-   - Click **Open in Drive** to sync your conversations to Google Drive
-   - In Google Drive, select all conversation files and **Download** (creates a ZIP)
-3. Upload that ZIP file in the import dialog
-4. Better Sidebar matches each file to its corresponding conversation by title, then indexes all the message content
+Open the import dialog from either place:
 
-The dialog shows real-time processing logs and a success/failure count when done.
+- The **Upload** icon in the Search tab header
+- **Settings → Data & Storage → Import Chat Data**
+
+The dialog walks you through it, but in short:
+
+1. Go to [AI Studio Library](https://aistudio.google.com/app/library) and click **Open in Drive**
+
+   ![The Open in Drive button in the AI Studio library](/images/features/aistudio-open-in-drive.png)
+
+2. In Google Drive, open the **AI Studio** folder dropdown and choose **Download**. Google zips it for you.
+
+   ![Downloading the AI Studio folder from Google Drive](/images/features/aistudio-download-conversations.png)
+
+3. Upload that ZIP back in the import dialog
+4. Better Sidebar matches each file to its conversation by title, then indexes the message content
+
+The dialog shows live processing logs and an imported/unmatched count when it finishes.
+
+:::warning
+Images inside conversations are skipped during import — only text is indexed.
+:::
 
 :::warning
 The import matches files by conversation title. If you renamed a conversation after exporting, the match may fail. Conversations that can't be matched are skipped (your data isn't lost — they just aren't indexed).
@@ -144,13 +152,18 @@ The import matches files by conversation title. If you renamed a conversation af
 
 ### For Gemini
 
-On Gemini, message content is indexed automatically as you **open** each conversation. There's currently no way to batch-import history for Gemini — conversations get indexed one by one as you visit them.
+Google doesn't offer a bulk export for Gemini, so message content is recorded as you **open** each conversation.
 
-**Scan Chat List** in the Files tab only imports conversation *titles and metadata*, not message content. So even after scanning, older conversations won't appear in full-text search until you actually open them.
+**Import Chat List** in the Library tab brings in *titles and metadata* only. Even after running it, older conversations stay out of full-text search until their messages have been seen.
 
-:::tip
-If you want older Gemini conversations to be searchable, just click through them one by one. The extension captures their content in the background as you view them. It's not ideal for hundreds of chats, but it works for the ones you care about most.
-:::
+You have two ways to catch up:
+
+- **Click through them.** Open the conversations you care about; the extension records them in the background as you view them.
+- **Let the agent do it.** This is the practical option for large libraries. Type `>` in the chat input, pick **Better Sidebar**, and ask:
+
+  > Check how many chats only have a title with no saved messages. Give me the total first, then sync the contents of the latest 30 so they show up in search.
+
+  The agent finds the empty ones, opens each in turn, and reports what it managed to record. Some very old chats are simply gone from Google's side — it will tell you which ones those are. See [Better Sidebar Agent](/en/guide/agent/better-sidebar-agent#sync-missing-messages).
 
 ## No Results?
 

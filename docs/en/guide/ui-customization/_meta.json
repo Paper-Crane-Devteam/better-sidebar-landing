@@ -6,6 +6,16 @@
   },
   {
     "type": "file",
+    "name": "slash-commands",
+    "label": "Slash Commands"
+  },
+  {
+    "type": "file",
+    "name": "selection-toolbar",
+    "label": "Selection Toolbar"
+  },
+  {
+    "type": "file",
     "name": "smart-scrollbar",
     "label": "Smart Scrollbar"
   },
