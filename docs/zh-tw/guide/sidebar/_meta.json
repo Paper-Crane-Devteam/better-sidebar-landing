@@ -1,0 +1,47 @@
+[
+  {
+    "type": "file",
+    "name": "library-tab",
+    "label": "資料庫"
+  },
+  {
+    "type": "file",
+    "name": "search-tab",
+    "label": "全文搜尋"
+  },
+  {
+    "type": "file",
+    "name": "outline",
+    "label": "對話大綱"
+  },
+  {
+    "type": "file",
+    "name": "prompts-tab",
+    "label": "提示詞庫"
+  },
+  {
+    "type": "file",
+    "name": "snippets-tab",
+    "label": "片段庫"
+  },
+  {
+    "type": "file",
+    "name": "tags-tab",
+    "label": "標籤管理"
+  },
+  {
+    "type": "file",
+    "name": "favorites-tab",
+    "label": "收藏"
+  },
+  {
+    "type": "file",
+    "name": "gems-tab",
+    "label": "Gems (Gemini)"
+  },
+  {
+    "type": "file",
+    "name": "notebooks-tab",
+    "label": "筆記本 (Gemini)"
+  }
+]

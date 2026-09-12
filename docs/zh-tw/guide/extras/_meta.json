@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "export",
+    "label": "對話匯出"
+  },
+  {
+    "type": "file",
+    "name": "integrations",
+    "label": "Notion 與 Obsidian 整合"
+  },
+  {
+    "type": "file",
+    "name": "drive-sync",
+    "label": "Google Drive 同步"
+  },
+  {
+    "type": "file",
+    "name": "data-backup",
+    "label": "資料備份與還原"
+  }
+]

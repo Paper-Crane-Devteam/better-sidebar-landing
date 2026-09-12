@@ -26,6 +26,13 @@ export default defineConfig({
         'Better Sidebar - Gemini 与 AI Studio 的增强侧边栏，文件夹、标签、搜索一应俱全。',
     },
     {
+      lang: 'zh-tw',
+      label: '繁體中文',
+      title: 'Better Sidebar',
+      description:
+        'Better Sidebar - Gemini 與 AI Studio 的增強側邊欄，資料夾、標籤、搜尋一應俱全。',
+    },
+    {
       lang: 'ja',
       label: '日本語',
       title: 'Better Sidebar',

@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Agent",
+    "link": "/#agent"
+  },
+  {
+    "text": "功能",
+    "link": "/#features"
+  },
+  {
+    "text": "定價",
+    "link": "/#pricing"
+  },
+  {
+    "text": "使用教學",
+    "link": "/guide/getting-started",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "隱私權政策",
+    "link": "/privacy"
+  }
+]

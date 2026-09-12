@@ -1,0 +1,331 @@
+---
+pageType: custom
+title: Better Sidebar - Gemini 與 AI Studio 增強側邊欄
+description: 為 Google Gemini 與 AI Studio 提供安靜、高效的對話管理體驗。你的資料始終保留在本地。
+---
+
+import LandingPage from '../../theme/components/LandingPage';
+
+<LandingPage
+  content={{
+    hero: {
+      titleTop: '為你的 AI 對話，',
+      titleBottom: '建一個安靜的家。',
+      description:
+        '我們希望為你提供一個更舒適的互動環境。用資料夾、標籤和搜尋來取代那條長長的清單，再配上一位能幫你整理歷史的智慧助手。這一切都在你的瀏覽器中本地執行，安靜而安全。',
+      cta: '安裝至 chrome',
+      ctaSecondary: 'firefox 版本',
+      meta: ['paper crane dev', 'gemini + ai studio', 'v2.9.x', 'manifest v3', '本地 sqlite'],
+      figureLabel: '側邊欄',
+      scrollHint: '向下捲動',
+    },
+    problem: {
+      kicker: '初衷',
+      statement: '隨著時間的推移，那條長長的對話清單越來越難以管理。',
+      symptoms: [
+        {
+          index: '01',
+          text: '想要找回上個月的一段精彩對話，往往需要翻找很久。',
+        },
+        {
+          index: '02',
+          text: '精心打磨過的提示詞，由於缺乏統一管理，有時很難再次找到。',
+        },
+        {
+          index: '03',
+          text: '想要搜尋一段特定的記憶，但由於搜尋功能的局限，偶爾會感到無能為力。',
+        },
+      ],
+      answer:
+        '我們開發 Better Sidebar 的初衷，是希望能提供一個稍微好用一點的歸檔方案。你可以用資料夾和標籤來整理思路，用全文搜尋找回記憶，還可以讓 AI 助手來分擔一些繁雜的資料整理工作。',
+    },
+    demo: {
+      kicker: '預覽',
+      title: '簡單了解一下',
+      description:
+        '你可以透過這段簡短的影片，看看它是否符合你的使用習慣。',
+      youtubeId: '',
+      duration: '即將上線',
+      placeholder: '錄製中',
+      playLabel: '播放',
+    },
+    agent: {
+      kicker: 'ai 助手',
+      title: '只需輸入 >，它就能為你提供幫助。',
+      description:
+        '經過一段時間的探索，我們帶來了一個小功能：AI 助手。它能理解你的本地資料，幫你完成一些連續的操作。由於它直接利用你目前的 Gemini 會話在本地執行，因此無需額外的 API 金鑰，也不會將資料傳送到外部。',
+      meta: ['無需 api key', '你自己的會話', '多步執行', '可復原'],
+      figureLabel: '自動整理',
+      safetyLabel: '安全護欄',
+      safety: [
+        '所有的修改操作，都會在獲得你的明確同意後才執行，讀取操作則直接執行。',
+        '如果你覺得它還算可靠，也可以選擇開啟快速模式減少確認。不用擔心，你隨時可以復原。',
+        '助手的狀態會安靜地顯示在輸入框上方，讓你隨時了解進展，側邊欄關閉時也能看見。',
+        '如果在執行中遇到問題或卡住，它會自動停止，並向你誠實地報告原因。',
+      ],
+      skillsLabel: '內建技能',
+      skills: [
+        {
+          name: '自動整理',
+          desc: '如果你有需要，它可以幫你閱讀標題、建立分類體系，並把最近 200 則對話分類歸檔、貼上標籤。',
+        },
+        {
+          name: '回補搜尋索引',
+          desc: '由於機制限制，舊對話可能沒有被完整記錄。這個功能可以幫你同步歷史資料的正文，讓搜尋和匯出更加完整。',
+        },
+        {
+          name: '查詢你的資料',
+          desc: '你可以像和朋友聊天一樣，向它詢問關於你對話歷史的統計和資訊。',
+        },
+        {
+          name: '批次管理提示詞與片段',
+          desc: '希望能為你節省一點時間，讓你批次改寫、重排和去除重複的提示詞。',
+        },
+        {
+          name: '自訂技能',
+          desc: '如果你有特定的使用習慣，歡迎在「設定 → Agent」中定義專屬的流程卡片，讓它更好地配合你。',
+        },
+      ],
+    },
+    highlights: {
+      kicker: '核心功能',
+      title: '也許能為你帶來一些便利的小設計。',
+      items: [
+        {
+          figure: 'search',
+          figureLabel: '鏈式搜尋',
+          label: '搜尋',
+          title: '不僅是標題，也能搜尋內容。',
+          desc: '你可以透過關鍵字、標籤等組合條件，在所有的歷史對話中進行全文搜尋。如果需要，也可以限定在目前對話內尋找。',
+          points: [
+            '全文搜尋涵蓋訊息正文',
+            '支援標題、標籤與類型條件疊加',
+            '可限定在目前對話內取得上下文',
+            '索引僅保存在你的裝置上',
+          ],
+        },
+        {
+          figure: 'prompt',
+          figureLabel: '提示詞庫',
+          label: '提示詞',
+          title: '妥善保管你的提示詞。',
+          desc: '將常用的提示詞統一管理，並支援變數設定。只需在輸入框中輸入 / ，即可輕鬆呼叫，讓輸入過程更流暢。',
+          points: [
+            '支援選項變數與提示詞組合',
+            '可輕鬆匯入系統提示詞',
+            '支援斜槓命令快速喚起',
+            '可將常用的提示詞置頂',
+          ],
+        },
+        {
+          figure: 'export',
+          figureLabel: '匯出',
+          label: '匯出',
+          title: '輕鬆匯出你的對話內容。',
+          desc: '你可以將對話完整匯出為 Markdown、純文字或 JSON。如果你習慣使用 Notion 或 Obsidian，我們也提供了一些支援（Power Pack）。',
+          points: [
+            'Markdown 完整保留結構與程式碼區塊',
+            '支援匯出至 Notion 與 Obsidian',
+            '片段庫同樣支援匯出',
+            '隨時可匯出完整的 SQL 資料備份',
+          ],
+        },
+        {
+          figure: 'tag',
+          figureLabel: '標籤與色彩',
+          label: '整理',
+          title: '用色彩來組織你的思路。',
+          desc: '你可以為資料夾和標籤設定不同的顏色，讓歸類更加直觀。Gem 和 Notebook 的新對話也可以自動歸入你設定好的預設位置。',
+          points: [
+            '支援巢狀資料夾，自由拖曳',
+            '標籤在對話標題列直觀顯示',
+            '常用資料夾可置頂與拖曳排序',
+            '支援為 Gem 與 Notebook 設定預設資料夾',
+          ],
+        },
+      ],
+    },
+    features: {
+      kicker: '功能一覽',
+      title: '更多細節，歡迎體驗。',
+      subtitle:
+        '這裡列出了所有的功能。它們都在本地執行，無需帳號，希望能悄悄地為你提升一點效率。',
+      totalLabel: '項',
+      groups: [
+        {
+          label: '整理',
+          items: [
+            { name: '資料夾與顏色', desc: '將對話歸入巢狀資料夾，並自訂顏色。' },
+            { name: '標籤', desc: '新增自訂標籤，在標題列一目了然。' },
+            { name: '收藏與置頂', desc: '把最常用的對話和提示詞放在顯眼的位置。' },
+            { name: '資料夾置頂', desc: '常用資料夾支援置頂及自由排序。' },
+            { name: '預設歸屬', desc: '為 Gem 或 Notebook 指定預設資料夾，自動歸檔。' },
+            { name: '對話備註', desc: '新增輕量備註，懸停即可查看相關資訊。' },
+            { name: '定位目前對話', desc: '一鍵在目錄樹中找到你正在檢視的對話。' },
+          ],
+        },
+        {
+          label: '搜尋與導航',
+          items: [
+            { name: '全文搜尋', desc: '在所有歷史訊息中尋找需要的內容。' },
+            { name: '鏈式篩選', desc: '組合多個條件，讓搜尋結果更精準。' },
+            { name: '對話大綱', desc: '快速了解長對話的整體結構。' },
+            { name: '智慧捲軸', desc: '視覺化捲動，點擊可展開完整的訊息清單。' },
+            { name: '時間線檢視', desc: '以時間線的方式回顧你近期的對話。' },
+          ],
+        },
+        {
+          label: '寫作與複用',
+          items: [
+            { name: '提示詞庫', desc: '沉澱常用提示詞，支援變數與組合。' },
+            { name: '斜槓命令', desc: '輸入 / 即可快速喚起提示詞庫。' },
+            { name: '片段庫', desc: '摘錄對話中的精華片段，並使用資料夾管理。' },
+            { name: '選取工具列', desc: '選取文字後快速進行解釋、總結或摘錄。' },
+          ],
+        },
+        {
+          label: '平台控制',
+          items: [
+            { name: '多平台', desc: '在同一個側邊欄中管理 Gemini 與 AI Studio。' },
+            { name: '多帳號設定檔', desc: '為工作與個人生活建立獨立的資料設定檔。' },
+            { name: 'Gem 管理', desc: '在側邊欄中方便地瀏覽和使用你的 Gem。' },
+            { name: 'Notebook 整合', desc: '無需離開目前頁面即可管理 Notebook。' },
+            { name: 'Gemini Spark', desc: '原生支援帳號已開放的 Spark 介面。' },
+            { name: '預設模型', desc: '設定好後，新對話將自動使用該模型。' },
+            { name: '真實重新命名', desc: '重新命名操作會同步至雲端，保持一致。' },
+            { name: '真實刪除', desc: '提供徹底的刪除選項，不留多餘資料。' },
+            { name: '介面自訂', desc: '調整寬度、開啟專注模式，隨心自訂。' },
+            { name: '平台管理工具', desc: '方便地隨時開啟或關閉各項平台功能。' },
+            { name: '主題跟隨', desc: '自動適配平台的淺色或深色主題。' },
+            { name: '無浮水印下載', desc: '幫助你在下載產生的圖片時去除浮水印。' },
+          ],
+        },
+        {
+          label: '資料與隱私',
+          items: [
+            { name: '本地 SQLite', desc: '資料儲存在瀏覽器中，不向我們傳送任何資訊。' },
+            { name: '自動本地備份', desc: '定期儲存快照，並在需要時隨時復原。' },
+            { name: 'Google Drive 備份', desc: '將設定備份至你的雲端硬碟，還原由你掌控。' },
+            { name: '對話匯出', desc: '保留格式，匯出為 Markdown、純文字或 JSON。' },
+            { name: 'Notion 與 Obsidian 匯出', desc: '將資料直接儲存到你的工作區（需 Power Pack）。', pack: 'power pack' },
+            { name: '資料掌控', desc: '隨時匯出完整的 SQL 資料，由你自由支配。' },
+          ],
+        },
+      ],
+    },
+    privacy: {
+      kicker: '隱私與安全',
+      statement: '請放心，你的資料始終屬於你。',
+      note:
+        '由於需要調整介面並讀取標題用於歸類，安裝時會請求相關網域的權限。這僅僅是為了讓功能正常運作，你的資料始終保存在本地或你自己的 Google Drive 中。',
+      policyLabel: '查看隱私權政策',
+      policyLink: '/better-sidebar/zh-tw/privacy',
+      items: [
+        {
+          title: '預設本地',
+          desc: '資料庫在你的瀏覽器中本地執行，我們沒有任何伺服器來接收資料。',
+        },
+        {
+          title: '不收集',
+          desc: '我們不收集、不儲存，也不會傳輸你的對話內容或任何個人設定。',
+        },
+        {
+          title: '不訓練',
+          desc: '我們非常尊重你的隱私，絕不會讀取你的對話用於任何模型訓練。',
+        },
+        {
+          title: '最小權限',
+          desc: '權限僅限於必要的網域，我們無法看到你的其他瀏覽紀錄。',
+        },
+      ],
+    },
+    pricing: {
+      kicker: '取得',
+      title: '如果你覺得有幫助，歡迎支持我們。',
+      subtitle:
+        '基礎的整理功能將始終保持免費和開源。如果你願意，也可以透過取得額外的高級功能來支持這個專案的持續維護。',
+      note: '7 天無條件退款 · 一次性買斷，無需訂閱',
+      tiers: [
+        {
+          label: '免費',
+          price: '$0',
+          priceNote: '永久',
+          tagline: '一個安靜的整理工具。沒有註冊要求，也不會有彈窗打擾你。',
+          features: [
+            '資料夾、標籤、顏色、置頂',
+            '全文搜尋與鏈式篩選',
+            '提示詞庫與斜槓命令',
+            '片段庫與對話大綱',
+            'Gem、Notebook、多帳號支援',
+            '匯出 Markdown / 純文字 / JSON',
+            'Google Drive 設定備份',
+            '本地備份與資料還原',
+            'AI 助手 —— 本地資料查詢（最近 7 天）',
+          ],
+          cta: '免費安裝',
+          seal: true,
+          ctaLink:
+            'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj',
+        },
+        {
+          label: 'support pack',
+          price: '$5',
+          priceNote: '一次性 · 永久',
+          tagline: '一點額外的主題選擇，也是對我們的鼓勵。',
+          features: [
+            '永久解鎖所有高級主題',
+            '免費取得未來新增的主題',
+            '支援使用 AI 產生自訂主題',
+            '不限制主題槽位數量',
+            '最多 10 次啟用，多個瀏覽器設定檔和多台電腦都能用',
+          ],
+          cta: '取得 support pack',
+          ctaLink: 'https://papercranedev.gumroad.com/l/support-pack',
+        },
+        {
+          label: 'power pack',
+          price: '$19.99',
+          priceNote: '一次性 · 永久',
+          featured: true,
+          inherits: '包含 Support Pack 的全部內容',
+          tagline: '釋放 AI 助手的完整能力，讓它幫你自動處理繁雜的整理工作。',
+          features: [
+            'AI 助手直接行動 —— 自動整理、建立資料夾、批次標籤',
+            '無需手動操作 —— 讓助手幫你重新命名、移動、合併',
+            '不受限制的時間線 —— 完整處理所有歷史對話',
+            '將對話批次匯出到 Notion 與 Obsidian',
+            '支援自訂專屬的 AI 技能',
+          ],
+          cta: '取得 power pack',
+          ctaLink: 'https://papercranedev.gumroad.com/l/power-pack',
+        },
+      ],
+    },
+    openSource: {
+      kicker: '開源',
+      title: '開放，與你共同完善。',
+      description:
+        '專案以 GPL-3.0 協議開源。如果在體驗中遇到問題或有任何想法，非常歡迎你透過 Issue 或加入 Discord 與我們交流。',
+      viewGithub: '在 GitHub 上查看',
+      joinDiscord: '加入 Discord',
+      license: 'gpl-3.0',
+    },
+    footer: {
+      brand: 'Better Sidebar',
+      colophon:
+        '由 Paper Crane Dev 製作。字體使用 Playfair Display、Literata 與 JetBrains Mono。本頁所有介面均由 HTML 繪製，非截圖。',
+      links: [
+        { label: '使用說明文件', href: '/better-sidebar/zh-tw/guide/getting-started' },
+        { label: 'chrome 線上應用程式商店', href: 'https://chromewebstore.google.com/detail/better-sidebar-for-google/cjeoaidogoaekodkbhijgljhenknkenj' },
+        { label: 'firefox 版本', href: 'https://addons.mozilla.org/en-US/firefox/addon/better-sidebar-for-ai-studio' },
+        { label: 'github', href: 'https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio' },
+        { label: 'discord', href: 'https://discord.gg/FRzesxaGAx' },
+      ],
+      privacy: '隱私權政策',
+      privacyLink: '/better-sidebar/zh-tw/privacy',
+      license: '以 gpl-3.0 授權發布',
+      disclaimer: '本專案為獨立開發者專案，與 Google 無關聯、未獲其背書或贊助。',
+      copyright: `© ${new Date().getFullYear()} paper crane dev`,
+    },
+  }}
+/>

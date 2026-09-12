@@ -1,0 +1,118 @@
+{
+  "languagesText": {
+    "zh-tw": "語言",
+    "es": "Idiomas"
+  },
+  "themeText": {
+    "zh-tw": "主題",
+    "es": "Tema"
+  },
+  "versionsText": {
+    "zh-tw": "版本",
+    "es": "Versiones"
+  },
+  "menuTitle": {
+    "zh-tw": "選單",
+    "es": "Menú"
+  },
+  "outlineTitle": {
+    "zh-tw": "本頁目錄",
+    "es": "En esta página"
+  },
+  "scrollToTopText": {
+    "zh-tw": "回到頂部",
+    "es": "Volver arriba"
+  },
+  "lastUpdatedText": {
+    "zh-tw": "最後更新於",
+    "es": "Última actualización"
+  },
+  "prevPageText": {
+    "zh-tw": "上一頁",
+    "es": "Página anterior"
+  },
+  "nextPageText": {
+    "zh-tw": "下一頁",
+    "es": "Página siguiente"
+  },
+  "sourceCodeText": {
+    "zh-tw": "原始碼",
+    "es": "Código fuente"
+  },
+  "searchPlaceholderText": {
+    "zh-tw": "搜尋",
+    "es": "Buscar"
+  },
+  "searchPanelCancelText": {
+    "zh-tw": "取消",
+    "es": "Cancelar"
+  },
+  "searchNoResultsText": {
+    "zh-tw": "未找到相符的結果",
+    "es": "No se encontraron resultados"
+  },
+  "searchSuggestedQueryText": {
+    "zh-tw": "嘗試搜尋不同關鍵字",
+    "es": "Intenta buscar con palabras clave diferentes"
+  },
+  "overview.filterNameText": {
+    "zh-tw": "篩選",
+    "es": "Filtrar"
+  },
+  "overview.filterPlaceholderText": {
+    "zh-tw": "搜尋 API",
+    "es": "Buscar API"
+  },
+  "overview.filterNoResultText": {
+    "zh-tw": "未找到相符的 API",
+    "es": "No se encontró ninguna API coincidente"
+  },
+  "openInText": {
+    "zh-tw": "在 {{name}} 中開啟",
+    "es": "Abrir en {{name}}"
+  },
+  "copyMarkdownText": {
+    "zh-tw": "複製 Markdown",
+    "es": "Copiar Markdown"
+  },
+  "copyMarkdownLinkText": {
+    "zh-tw": "複製 Markdown 連結",
+    "es": "Copiar enlace de Markdown"
+  },
+  "editLinkText": {
+    "zh-tw": "編輯此頁面",
+    "es": "Editar esta página"
+  },
+  "codeButtonGroupCopyButtonText": {
+    "zh-tw": "複製程式碼",
+    "es": "Copiar código"
+  },
+  "codeButtonGroupWrapButtonText": {
+    "zh-tw": "切換程式碼換行",
+    "es": "Alternar ajuste de línea"
+  },
+  "notFoundText": {
+    "zh-tw": "找不到頁面",
+    "es": "PÁGINA NO ENCONTRADA"
+  },
+  "takeMeHomeText": {
+    "zh-tw": "返回首頁",
+    "es": "Volver al inicio"
+  },
+  "promptCopyText": {
+    "zh-tw": "複製 Prompt",
+    "es": "Copiar Prompt"
+  },
+  "promptCopiedText": {
+    "zh-tw": "已複製",
+    "es": "Copiado"
+  },
+  "promptExpandText": {
+    "zh-tw": "展開",
+    "es": "Expandir"
+  },
+  "promptCollapseText": {
+    "zh-tw": "摺疊",
+    "es": "Colapsar"
+  }
+}

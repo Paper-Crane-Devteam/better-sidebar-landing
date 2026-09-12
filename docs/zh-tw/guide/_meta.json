@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "快速開始"
+  },
+  {
+    "type": "file",
+    "name": "installation",
+    "label": "安裝指南"
+  },
+  {
+    "type": "dir",
+    "name": "sidebar",
+    "label": "側邊欄功能"
+  },
+  {
+    "type": "dir",
+    "name": "agent",
+    "label": "AI Agent"
+  },
+  {
+    "type": "dir",
+    "name": "ui-customization",
+    "label": "頁面增強"
+  },
+  {
+    "type": "dir",
+    "name": "extras",
+    "label": "匯出與備份"
+  },
+  {
+    "type": "dir",
+    "name": "settings",
+    "label": "設定"
+  },
+  {
+    "type": "file",
+    "name": "faq",
+    "label": "常見問題"
+  }
+]

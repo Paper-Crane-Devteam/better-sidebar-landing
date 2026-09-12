@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "overview",
+    "label": "概覽"
+  },
+  {
+    "type": "file",
+    "name": "better-sidebar-agent",
+    "label": "Better Sidebar 助手"
+  },
+  {
+    "type": "file",
+    "name": "workspace-agent",
+    "label": "工作區助手"
+  },
+  {
+    "type": "file",
+    "name": "skills-and-tools",
+    "label": "技能與工具清單"
+  }
+]
