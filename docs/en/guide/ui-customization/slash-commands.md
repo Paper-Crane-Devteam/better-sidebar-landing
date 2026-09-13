@@ -7,7 +7,7 @@ description: Type / in the chat input to insert any prompt from your library, wi
 
 Type `/` in the Gemini or AI Studio input box and your [prompt library](/en/guide/sidebar/prompts-tab) appears inline.
 
-![Typing a slash in the chat input opens the prompt picker](/images/features/slash-command.png)
+![Typing a slash in the chat input opens the prompt picker](/images/features/slash-command.webp)
 
 Keep typing to filter. Arrow keys to move. Enter to insert. The `/query` text you typed is replaced by the prompt's full content.
 

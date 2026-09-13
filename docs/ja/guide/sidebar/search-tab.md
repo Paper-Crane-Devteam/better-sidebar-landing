@@ -7,7 +7,7 @@ description: Gemini と AI Studio の会話履歴にあるすべてのメッセ�
 
 Search タブでは、送受信した *あらゆる* メッセージを探せます — タイトルだけでなく、会話の本文そのものです。AI チャット履歴全体に対する Ctrl+F だと考えてください。
 
-![会話ごとにグループ化され、マッチがハイライトされた全文検索結果](/images/features/search-fulltext.png)
+![会話ごとにグループ化され、マッチがハイライトされた全文検索結果](/images/features/search-fulltext.webp)
 
 ## 仕組み
 
@@ -135,7 +135,7 @@ AI Studio では「Jump to Conversation」がチャット内の該当メッセ�
 
 2. Google Drive で **AI Studio** フォルダのドロップダウンを開き **Download** を選ぶ。Google が ZIP にしてくれます。
 
-   ![Google Drive から AI Studio フォルダをダウンロード](/images/features/aistudio-download-conversations.png)
+   ![Google Drive から AI Studio フォルダをダウンロード](/images/features/aistudio-download-conversations.webp)
 
 3. その ZIP をインポートダイアログにアップロード
 4. Better Sidebar が各ファイルをタイトルで会話に対応づけ、メッセージ本文をインデックス

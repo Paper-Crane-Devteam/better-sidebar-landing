@@ -7,7 +7,7 @@ description: A structural map of the conversation you're reading — every turn,
 
 The Outline is a collapsible panel at the bottom of the Library tab. It shows the structure of whatever conversation you currently have open: each turn, and inside each turn, the headings, code blocks and tables the model produced.
 
-![The Outline panel showing turns, nested headings and tables](/images/features/outline.png)
+![The Outline panel showing turns, nested headings and tables](/images/features/outline.webp)
 
 Think of it as the document outline in a code editor, applied to a conversation.
 

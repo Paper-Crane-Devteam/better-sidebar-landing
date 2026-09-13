@@ -7,7 +7,7 @@ description: Gemini 会話の横に浮かぶメッセージマップ。エント
 
 長い会話は、スクロールバーが何も伝えないので移動が難しいです。Smart Scrollbar はそれを実際の会話のマップに置き換えます。メッセージごとに 1 エントリ、読んでいるものがハイライト、クリックでジャンプ。
 
-![Gemini 会話の横に浮かぶ Smart Scrollbar](/images/features/smart-scrollbar.png)
+![Gemini 会話の横に浮かぶ Smart Scrollbar](/images/features/smart-scrollbar.webp)
 
 :::tip
 Gemini のみ。AI Studio は会話の描画が違い、未対応です。どちらのプラットフォームでも [アウトライン](/en/guide/sidebar/outline) が使えます。そちらはより深く — メッセージだけでなく、各回答内の見出し、コードブロック、表をマップします。

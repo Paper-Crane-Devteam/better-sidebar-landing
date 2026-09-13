@@ -4,11 +4,12 @@ import { defineConfig } from '@rspress/core';
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
   base: '/better-sidebar/',
+  route: { cleanUrls: true },
   title: 'Better Sidebar',
   description:
     'Better Sidebar for Gemini & AI Studio - Organize your AI conversations with folders, tags, search, and more.',
   lang: 'en',
-  icon: '/fav.png',
+  icon: '/plugin-icon.png',
   logo: '',
   locales: [
     {
@@ -74,6 +75,7 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
+    localeRedirect: 'never',
     darkMode: false,
     socialLinks: [
       {

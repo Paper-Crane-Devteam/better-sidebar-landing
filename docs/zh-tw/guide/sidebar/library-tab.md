@@ -7,7 +7,7 @@ description: 核心資料庫分頁 —— 使用資料夾、拖曳移動、時�
 
 「資料庫 (Library)」分頁是你的工作基地。你在 Gemini 或 AI Studio 中的所有對話都會出現在這裡，這也是你將混亂無章的聊天清單轉變為條理分明的個人資料庫的地方。
 
-![資料庫分頁，包含自訂顏色的資料夾樹、篩選列與頂部工具列](/images/features/overview.png)
+![資料庫分頁，包含自訂顏色的資料夾樹、篩選列與頂部工具列](/images/features/overview.webp)
 
 ## 介面概覽
 
@@ -96,7 +96,7 @@ description: 核心資料庫分頁 —— 使用資料夾、拖曳移動、時�
 
 將滑鼠懸停在任一對話上，浮動提示會顯示完整資訊：自訂備註、附加標籤、建立時間與最後活動時間。
 
-![懸停提示顯示對話的標籤、建立時間與最後活動時間](/images/features/files-rich-tooltip.png)
+![懸停提示顯示對話的標籤、建立時間與最後活動時間](/images/features/files-rich-tooltip.webp)
 
 最後活動時間對於定期整理極為實用 —— 你能一眼看出哪些資料夾裡的對話自三個月前就再也沒被開啟過。
 
@@ -203,7 +203,7 @@ Google 模型自動產生的標題往往過於籠統（例如「概念理解」�
 
 當對話數量增加時，篩選器就顯得至關重要。篩選列位於頂部工具列下方，提供四組切換開關：
 
-![包含搜尋、標籤、類型與收藏切換開關的篩選列](/images/features/files-filters.png)
+![包含搜尋、標籤、類型與收藏切換開關的篩選列](/images/features/files-filters.webp)
 
 ### 快速文字篩選
 
@@ -246,7 +246,7 @@ Google 模型自動產生的標題往往過於籠統（例如「概念理解」�
 
 點擊頂部工具列的 **清單選取** 圖示（☑）。目錄樹會切換為核取方塊模式。
 
-![批次選取模式，已選取多則對話並顯示底部批次工具列](/images/features/files-batch-operations.png)
+![批次選取模式，已選取多則對話並顯示底部批次工具列](/images/features/files-batch-operations.webp)
 
 ### 選取項目
 
@@ -289,7 +289,7 @@ Google 模型自動產生的標題往往過於籠統（例如「概念理解」�
 - **過去 30 天**
 - **更早**（按月份分組，如「2025 年 5 月」）
 
-![時間線檢視，對話依今天/昨天/過去 7 天分組](/images/features/files-timeline-view.png)
+![時間線檢視，對話依今天/昨天/過去 7 天分組](/images/features/files-timeline-view.webp)
 
 時間線檢視下停用拖曳排序，其餘右鍵功能、篩選器與批次模式均可正常使用。
 

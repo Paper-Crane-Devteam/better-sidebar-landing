@@ -7,7 +7,7 @@ description: メインの Library タブ — フォルダ、ドラッグ＆ド�
 
 Library タブはホームベースです。Gemini や AI Studio での会話はすべてここに現れ、散らかったチャット一覧をきちんと整理されたライブラリに変える場所です。
 
-![カラー分けされたフォルダツリー、フィルタバー、ヘッダーツールバーがある Library タブ](/images/features/overview.png)
+![カラー分けされたフォルダツリー、フィルタバー、ヘッダーツールバーがある Library タブ](/images/features/overview.webp)
 
 ## 概要
 
@@ -96,7 +96,7 @@ Gemini または AI Studio の会話は、ツリー上のファイルとして�
 
 会話にホバーすると、行自体に入りきらない情報が出ます。説明、タグ、作成日時、最終アクティブ日時です。
 
-![タグ、作成時刻、最終アクティブ時刻を示すホバーツールチップ](/images/features/files-rich-tooltip.png)
+![タグ、作成時刻、最終アクティブ時刻を示すホバーツールチップ](/images/features/files-rich-tooltip.webp)
 
 最終アクティブの時刻は仕分けに本当に効きます — 3 月から誰も触っていないフォルダを見つける手がかりです。
 
@@ -217,7 +217,7 @@ Gemini または AI Studio の会話は、ツリー上のファイルとして�
 
 ライブラリが画面を超えると、フィルタが不可欠になります。フィルタバーはヘッダー直下にあり、トグルは 4 つです。
 
-![検索、タグ、種類、お気に入りのトグルがあるフィルタバー](/images/features/files-filters.png)
+![検索、タグ、種類、お気に入りのトグルがあるフィルタバー](/images/features/files-filters.webp)
 
 ### テキスト検索
 
@@ -264,7 +264,7 @@ Gemini または AI Studio の会話は、ツリー上のファイルとして�
 
 ヘッダーツールバーの **checklist** アイコン（☑）をクリック。ツリーがチェックボックスモードになり、全項目にチェックが付きます。
 
-![複数会話にチェックが入り、バッチツールバーが出ている一括選択モード](/images/features/files-batch-operations.png)
+![複数会話にチェックが入り、バッチツールバーが出ている一括選択モード](/images/features/files-batch-operations.webp)
 
 ### 項目の選択
 
@@ -321,7 +321,7 @@ Tree View 専用の要点：
 - **Previous 30 Days**
 - **Older**（月ごと、例：「May 2025」）
 
-![Today / Yesterday / Previous 7 Days の下に会話をまとめたタイムライン表示](/images/features/files-timeline-view.png)
+![Today / Yesterday / Previous 7 Days の下に会話をまとめたタイムライン表示](/images/features/files-timeline-view.webp)
 
 Timeline View ではドラッグ＆ドロップは無効です。その他（右クリック、フィルタ、バッチモード）は引き続き使えます。
 

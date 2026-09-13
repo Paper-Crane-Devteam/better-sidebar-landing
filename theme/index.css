@@ -14,6 +14,7 @@
 @import './styles/typography.css';
 @import './styles/components.css';
 @import './styles/utilities.css';
+@import './styles/landing-refresh.css';
 
 /* ─── Tailwind Theme Tokens ──────────────────────────────────────────── */
 @theme {

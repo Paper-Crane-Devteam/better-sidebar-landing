@@ -9,7 +9,7 @@ Better Sidebar incluye un agente de IA. Describes un trabajo en lenguaje natural
 
 Lo importante: se ejecuta **a través de tu sesión existente de Gemini o AI Studio**. No hay clave API que pegar, ni tokens que comprar, ni servidor de por medio. El modelo con el que ya hablas es el que hace el trabajo, y tus datos no salen del navegador.
 
-![El agente trabajando en una tarea: creando carpetas, moviendo conversaciones, aplicando etiquetas](/images/features/agent-in-action.png)
+![El agente trabajando en una tarea: creando carpetas, moviendo conversaciones, aplicando etiquetas](/images/features/agent-in-action.webp)
 
 ## Dos agentes
 
@@ -26,7 +26,7 @@ El agente Better Sidebar no puede tocar tus archivos. El agente Workspace no pue
 
 Escribe `>` en el campo de chat. Aparece un selector, eliges un agente, escribes tu petición y pulsas Enter.
 
-![La pestaña Agente con pasos de uso y prompts de ejemplo](/images/features/agent-launcher.png)
+![La pestaña Agente con pasos de uso y prompts de ejemplo](/images/features/agent-launcher.webp)
 
 Esa es toda la interfaz. No hay una ventana de chat aparte, porque el agente trabaja hablando con el mismo modelo en la misma conversación en la que ya estás.
 

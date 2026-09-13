@@ -7,7 +7,7 @@ description: Crea perfiles separados para distintas cuentas de Google o usos. Ca
 
 Si usas varias cuentas de Google (personal, trabajo, escuela) o quieres sistemas de organización separados para usos distintos, los perfiles multi-cuenta te permiten mantenerlo todo limpidamente separado. Cada perfil tiene su propia base de datos independiente: sus propias carpetas, etiquetas, favoritos e índice de conversaciones.
 
-![Gestión de perfiles en Datos y almacenamiento, mostrando el perfil activo y sus cuentas vinculadas](/images/features/multi-account.png)
+![Gestión de perfiles en Datos y almacenamiento, mostrando el perfil activo y sus cuentas vinculadas](/images/features/multi-account.webp)
 
 ## Cómo funcionan los perfiles
 

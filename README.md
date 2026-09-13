@@ -15,7 +15,49 @@ npm run dev
 npm run build
 ```
 
-Output goes to `doc_build/`.
+Rspress output goes to `doc_build/`. The build then prepares `deploy_assets/`,
+mounting the site at `/better-sidebar/` for Cloudflare and generating canonical
+URL checks, language alternates, `sitemap.xml`, `robots.txt`, and redirects.
+
+## Production deployment and SEO
+
+Run `npm run deploy`. The script builds the site, checks SEO output, then
+publishes it with Wrangler. Credentials are read from environment variables
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, falling back to
+`../.kiro/secrets/cloudflare.md` (fields `apitoken:` and `accountid:`).
+Use `CLOUDFLARE_CREDENTIALS_FILE` to override that file path.
+Credentials are passed through the environment to Wrangler, never printed
+or bundled. Never commit credentials.
+
+`npm run deploy:dry` builds and validates the deployment without publishing
+or requiring credentials.
+
+### Batch image compression
+
+```bash
+npm run images:compress    # Compress PNG images and update source references
+npm run deploy:optimized   # Compress, build, and publish in one command
+```
+
+Uses Google's local `cwebp` CLI in lossless mode, with no npm dependencies,
+API key, upload, or usage quota. On another Mac, install it using
+`brew install webp`, or set `CWEBP_BIN` to its executable path.
+The current machine already has it installed.
+
+The script processes `docs/public/images/**/*.png`, generates neighboring
+`.webp` files, and updates image references in `docs/` and `theme/`.
+PNG originals remain available. GIFs and `.bak.` files are skipped.
+New conversions that are larger than their originals are skipped.
+`scripts/image-manifest.json` tracks source hashes; unchanged images are
+not recompressed. Commit the manifest, WebP files, and updated source files
+together. Original files remain in deployment output for existing links;
+the reported savings describe the converted images, not total upload size.
+The production homepage is https://papercranedev.com/better-sidebar/.
+Submit https://papercranedev.com/sitemap.xml in Google Search Console.
+Cloudflare's zone-level root redirect must point to the same HTTPS homepage.
+Unknown URLs intentionally return HTTP 404; do not enable SPA fallback.
+`Page with redirect` is expected for aliases; inspect the final canonical URL
+in Search Console to check indexing. Deployment does not force Google to index.
 
 ## Project Structure
 

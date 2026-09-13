@@ -9,7 +9,7 @@ Better Sidebar 重新定義了整頁的視覺美學，而不僅僅是側邊欄�
 
 前往 **設定 → 主題**。
 
-![主題格線展示，每張卡片皆帶有色彩預覽色帶](/images/features/themes-grid.png)
+![主題格線展示，每張卡片皆帶有色彩預覽色帶](/images/features/themes-grid.webp)
 
 ## 預設主題 (Default)
 
@@ -56,15 +56,15 @@ Better Sidebar 重新定義了整頁的視覺美學，而不僅僅是側邊欄�
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
   <figure style="margin:0">
-    <img src="/images/features/theme-tokyo-night.png" alt="Tokyo Night 主題套用於 Gemini" />
+    <img src="/images/features/theme-tokyo-night.webp" alt="Tokyo Night 主題套用於 Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Tokyo Night</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-everforest.png" alt="Everforest 主題套用於 Gemini" />
+    <img src="/images/features/theme-everforest.webp" alt="Everforest 主題套用於 Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Everforest</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-ocean-breeze.png" alt="Ocean Breeze 主題套用於 Gemini" />
+    <img src="/images/features/theme-ocean-breeze.webp" alt="Ocean Breeze 主題套用於 Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Ocean Breeze</figcaption>
   </figure>
 </div>

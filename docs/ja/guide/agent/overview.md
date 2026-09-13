@@ -9,7 +9,7 @@ Better Sidebar には AI エージェントが組み込まれています。仕�
 
 重要な点：エージェントは **既存の Gemini または AI Studio セッション経由** で動きます。貼り付ける API キーも、買うトークンも、サーバーもありません。すでに話しているモデルが仕事をし、データはブラウザの外に出ません。
 
-![タスクを進めるエージェント：フォルダ作成、会話の移動、タグの適用](/images/features/agent-in-action.png)
+![タスクを進めるエージェント：フォルダ作成、会話の移動、タグの適用](/images/features/agent-in-action.webp)
 
 ## 2 つのエージェント
 
@@ -26,7 +26,7 @@ Better Sidebar エージェントはファイルに触れません。Workspace �
 
 チャット入力で `>` と打ちます。ピッカーが出るのでエージェントを選び、依頼を書いて Enter を押します。
 
-![使い方ステップと例プロンプトがある Agent タブ](/images/features/agent-launcher.png)
+![使い方ステップと例プロンプトがある Agent タブ](/images/features/agent-launcher.webp)
 
 これがインターフェースのすべてです。別チャット窓はありません。エージェントは、すでに開いている同じ会話の同じモデルと話すことで動くからです。
 

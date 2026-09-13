@@ -9,7 +9,7 @@ Este es el agente que toca tu biblioteca: conversaciones, carpetas, etiquetas, p
 
 Inícialo escribiendo `>` en el campo de chat y eligiendo **Better Sidebar**.
 
-![El agente creando carpetas, moviendo conversaciones y aplicando etiquetas, con cada paso como una tarjeta](/images/features/agent-in-action.png)
+![El agente creando carpetas, moviendo conversaciones y aplicando etiquetas, con cada paso como una tarjeta](/images/features/agent-in-action.webp)
 
 ## A qué puede llegar
 

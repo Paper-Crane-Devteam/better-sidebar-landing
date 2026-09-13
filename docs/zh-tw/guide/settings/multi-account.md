@@ -7,7 +7,7 @@ description: 為不同的 Google 帳號或使用情境建立獨立的資料設�
 
 如果你同時使用多個 Google 帳號（個人、公司、學校），或希望為不同使用情境建立彼此隔離的整理體系，多帳號設定檔 (Multi-Account Profiles) 能夠幫你實現徹底的資料物理隔離。每個設定檔皆擁有完全獨立的本地 SQLite 資料庫 —— 擁有專屬的資料夾結構、標籤清單、收藏星號與全文索引。
 
-![「資料與儲存」中的設定檔管理介面，顯示活躍設定檔與其綁定的帳號](/images/features/multi-account.png)
+![「資料與儲存」中的設定檔管理介面，顯示活躍設定檔與其綁定的帳號](/images/features/multi-account.webp)
 
 ## 設定檔的運作原理
 

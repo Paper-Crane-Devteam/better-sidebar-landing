@@ -9,7 +9,7 @@ Better Sidebar 內建了強大的 AI 助手。你只需用日常大白話描述�
 
 最關鍵的是：它完全 **透過你當前已登入的 Gemini 或 AI Studio 會話** 運作。無需填寫任何 API Key、無需購買額外 Token，亦無任何第三方伺服器涉入。為你服務的正是你正在聊天的原生模型，你的資料始終留在瀏覽器本地。
 
-![AI 助手執行任務：建立資料夾、移動對話、批次打標籤](/images/features/agent-in-action.png)
+![AI 助手執行任務：建立資料夾、移動對話、批次打標籤](/images/features/agent-in-action.webp)
 
 ## 兩大助手模式
 
@@ -26,7 +26,7 @@ Better Sidebar 助手無法存取你的本地工作區檔案；工作區助手�
 
 在任何聊天輸入框中輸入 `>`。畫面上會彈出選取器，挑選助手模式後，輸入你的任務指令並按下 Enter。
 
-![包含操作說明與範例提示詞的 Agent 分頁](/images/features/agent-launcher.png)
+![包含操作說明與範例提示詞的 Agent 分頁](/images/features/agent-launcher.webp)
 
 這就是全部的呼叫介面。沒有多餘的獨立對話視窗，因為助手是直接在同一對話流中調用模型來完成任務。
 

@@ -7,7 +7,7 @@ description: Un mapa estructural de la conversación que estás leyendo — cada
 
 El Esquema es un panel plegable al final de la pestaña Biblioteca. Muestra la estructura de la conversación que tengas abierta: cada turno y, dentro de cada turno, los encabezados, bloques de código y tablas que produjo el modelo.
 
-![El panel Esquema mostrando turnos, encabezados anidados y tablas](/images/features/outline.png)
+![El panel Esquema mostrando turnos, encabezados anidados y tablas](/images/features/outline.webp)
 
 Piénsalo como el esquema de documento de un editor de código, aplicado a una conversación.
 

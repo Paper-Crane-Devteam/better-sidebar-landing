@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import AgentFigure from './figures/AgentFigure';
+import ProductShot from './ProductShot';
 import { Kicker, Lede, MetaRow, Section, SectionTitle, rise, stagger } from './sections/shared';
 
 export interface AgentContent {
@@ -18,7 +18,7 @@ export interface AgentContent {
 
 /**
  * 04 · AI Agent —— 主推段
- * 全站最有说服力的一屏：终端式执行记录，完全贴合 CLI 化法则。
+ * 全站最有说服力的一屏：真实助手执行截图与功能说明。
  */
 export default function AgentSection({ content }: { content: AgentContent }) {
   return (
@@ -90,7 +90,7 @@ export default function AgentSection({ content }: { content: AgentContent }) {
 
           {/* 终端图版 */}
           <motion.div variants={rise}>
-            <AgentFigure label={content.figureLabel} />
+            <ProductShot kind="agent" label={content.figureLabel} />
           </motion.div>
         </div>
 

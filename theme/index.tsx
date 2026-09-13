@@ -1,6 +1,7 @@
 import './index.css';
 import { Layout as OriginalLayout } from '@rspress/core/theme-original';
 import Logo from './components/Logo';
+import { useHead, usePage, usePages } from '@rspress/core/runtime';
 
 export * from '@rspress/core/theme-original';
 
@@ -12,6 +13,27 @@ export * from '@rspress/core/theme-original';
  * - bottom: colophon 版权页式页脚
  */
 export function Layout() {
+  const { page } = usePage();
+  const { pages } = usePages();
+  const origin = 'https://papercranedev.com/better-sidebar';
+  const unlocalized = (route: string) => route.replace(/^\/(zh|zh-tw|ja|es)(?=\/|$)/, '') || '/';
+  const siblings = pages.filter(p => unlocalized(p.routePath) === unlocalized(page.routePath));
+  const english = siblings.find(p => p.lang === 'en');
+  const canonical = origin + page.routePath;
+  useHead({
+    link: page.pageType === '404' ? [] : [
+      { rel: 'canonical', href: canonical },
+      ...siblings.map(p => ({
+        rel: 'alternate',
+        hreflang: p.lang === 'zh' ? 'zh-Hans' : p.lang === 'zh-tw' ? 'zh-Hant' : p.lang,
+        href: origin + p.routePath,
+      })),
+      ...(english ? [{ rel: 'alternate', hreflang: 'x-default', href: origin + english.routePath }] : []),
+    ],
+    meta: page.pageType === '404'
+      ? [{ name: 'robots', content: 'noindex' }]
+      : [{ property: 'og:url', content: canonical }],
+  });
   return <OriginalLayout beforeNavTitle={<NavBrand />} bottom={<Colophon />} />;
 }
 
@@ -27,7 +49,7 @@ function NavBrand() {
         textDecoration: 'none',
       }}
     >
-      <Logo size={24} />
+      <Logo size={32} />
       <span
         style={{
           fontFamily: 'var(--font-mono)',

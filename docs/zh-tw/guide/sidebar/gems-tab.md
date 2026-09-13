@@ -7,7 +7,7 @@ description: 在側邊欄中瀏覽、篩選與管理你的 Gemini Gems。快速�
 
 「Gems」分頁為你提供了一個集中管理所有 Gemini Gems 的專屬空間 —— 那些你為了特定任務所量身打造的自訂 AI 角色。不必再在 Gemini 原生選單中迷失，你將獲得一份清晰、可即時搜尋過濾的完整 Gem 清單，並能隨手發起對話或進行管理。
 
-![Gems 分頁列出已同步的 Gemini Gems](/images/features/gems.png)
+![Gems 分頁列出已同步的 Gemini Gems](/images/features/gems.webp)
 
 :::tip
 本分頁專屬於 Gemini。在 AI Studio 上不會顯示該分頁 —— Gems 是 Gemini 獨有的功能。

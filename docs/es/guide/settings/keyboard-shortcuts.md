@@ -9,7 +9,7 @@ Better Sidebar incluye 16 atajos de teclado personalizables que te permiten cont
 
 Abre los ajustes de atajos vía **Ajustes** (icono de engranaje o `Alt+Shift+,`) → pestaña **Atajos de teclado**.
 
-![La página de ajustes de Atajos de teclado con secciones General, Navegación y Acciones](/images/features/keyboard-shortcuts.png)
+![La página de ajustes de Atajos de teclado con secciones General, Navegación y Acciones](/images/features/keyboard-shortcuts.webp)
 
 ## Atajos predeterminados
 

@@ -7,7 +7,7 @@ description: Activa o desactiva Better Sidebar por sitio, y llega a los controle
 
 Haz clic en el icono de Better Sidebar en la barra de herramientas del navegador y obtienes un panel pequeño con tres pestañas. Es la forma más rápida de llegar a los ajustes de plataforma, y el único sitio para desactivar la extensión en un sitio.
 
-![El popup de la barra de herramientas del navegador con pestañas Platforms, Gemini y AI Studio](/images/features/platform-popup.png)
+![El popup de la barra de herramientas del navegador con pestañas Platforms, Gemini y AI Studio](/images/features/platform-popup.webp)
 
 ## Pestaña Platforms
 

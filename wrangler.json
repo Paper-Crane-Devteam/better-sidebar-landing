@@ -1,14 +1,15 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "better-sidebar-landing",
+	"routes": [{ "pattern": "papercranedev.com", "custom_domain": true }],
 	"compatibility_date": "2025-10-08",
 	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": true
 	},
 	"assets": {
-		"directory": "./doc_build",
-		"not_found_handling": "single-page-application",
-		"serve_directly": true
+		"directory": "./deploy_assets",
+		"not_found_handling": "404-page",
+		"html_handling": "auto-trailing-slash"
 	}
 }

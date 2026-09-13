@@ -7,7 +7,7 @@ description: A floating message map beside your Gemini conversation. Click any e
 
 Long conversations are hard to navigate because the scrollbar tells you nothing. The Smart Scrollbar replaces it with a map of the actual conversation: one entry per message, the one you're reading highlighted, click to jump.
 
-![The Smart Scrollbar floating beside a Gemini conversation](/images/features/smart-scrollbar.png)
+![The Smart Scrollbar floating beside a Gemini conversation](/images/features/smart-scrollbar.webp)
 
 :::tip
 Gemini only. AI Studio renders conversations differently and isn't supported. On either platform you can use the [Outline](/en/guide/sidebar/outline) instead, which goes deeper — it maps headings, code blocks and tables inside each answer, not just the messages.

@@ -7,7 +7,7 @@ description: 在側邊欄中管理你的 Gemini Notebooks —— 掃描同步、
 
 「筆記本 (Notebooks)」分頁是你在 Gemini 中管理 Notebooks 功能的大本營。Notebooks 是一種獨特的對話容器 —— 它們宛如專案空間，內部可容納多條子對話討論與多份資料來源。Better Sidebar 為你提供所有筆記本的樹狀檢視，並可向下展開每一本筆記本內部包含的關聯對話。
 
-![筆記本分頁列出已同步的 Gemini Notebooks](/images/features/notebooks.png)
+![筆記本分頁列出已同步的 Gemini Notebooks](/images/features/notebooks.webp)
 
 :::tip
 本分頁專屬於 Gemini。AI Studio 並無 Notebooks 概念，因此在該平台上不會顯示此分頁。

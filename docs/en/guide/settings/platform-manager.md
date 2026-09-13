@@ -7,7 +7,7 @@ description: Turn Better Sidebar on or off per site, and reach the platform UI c
 
 Click the Better Sidebar icon in your browser toolbar and you get a small panel with three tabs. It's the fastest way to reach platform settings, and the only place to switch the extension off for one site.
 
-![The browser toolbar popup with Platforms, Gemini and AI Studio tabs](/images/features/platform-popup.png)
+![The browser toolbar popup with Platforms, Gemini and AI Studio tabs](/images/features/platform-popup.webp)
 
 ## Platforms Tab
 

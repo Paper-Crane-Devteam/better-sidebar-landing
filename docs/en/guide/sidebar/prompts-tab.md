@@ -7,7 +7,7 @@ description: Build your personal prompt library with folders, variables, composi
 
 The Prompts tab is your personal prompt library — a place to save, organize, and reuse the prompts you find yourself typing over and over. Instead of copy-pasting from a text file or scrolling through old chats, you build a library once and access it instantly.
 
-![The Prompts tab with prompts organised into folders and a prompt open for editing](/images/features/prompts-library.png)
+![The Prompts tab with prompts organised into folders and a prompt open for editing](/images/features/prompts-library.webp)
 
 ## Creating a Prompt
 
@@ -94,7 +94,7 @@ Click any prompt in the tree. Its content is resolved (imports inlined, then var
 
 Type `/` in the Gemini or AI Studio input field and your library appears inline:
 
-![Typing a slash in the chat input opens the prompt picker](/images/features/slash-command.png)
+![Typing a slash in the chat input opens the prompt picker](/images/features/slash-command.webp)
 
 Keep typing to filter, arrow keys to move, Enter to insert. Full details in [Slash Commands](/en/guide/ui-customization/slash-commands).
 

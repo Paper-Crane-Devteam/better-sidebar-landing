@@ -7,7 +7,7 @@ description: 浮動於 Gemini 對話右側的訊息地圖。點擊任一項目�
 
 長篇對話往往難以導航，因為瀏覽器自帶的捲軸不會告訴你內容的位置。「智慧捲軸」將其替換為一張真實對話的微縮地圖：每則訊息一個對應項目，當前閱讀的訊息即時高亮，點擊即刻跳轉。
 
-![浮動於 Gemini 對話旁的智慧捲軸](/images/features/smart-scrollbar.png)
+![浮動於 Gemini 對話旁的智慧捲軸](/images/features/smart-scrollbar.webp)
 
 :::tip
 僅限 Gemini 平台。AI Studio 渲染機制不同，暫不支援。在任一平台上你都可以改用側邊欄內部的 [對話大綱](/zh-tw/guide/sidebar/outline)，大綱更進一步 —— 它能精準定位每則回答內部的各級標題、程式碼區塊與表格。

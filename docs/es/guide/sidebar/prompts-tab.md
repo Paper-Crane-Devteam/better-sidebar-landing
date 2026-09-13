@@ -7,7 +7,7 @@ description: Construye tu biblioteca personal de prompts con carpetas, variables
 
 La pestaña Prompts es tu biblioteca personal de prompts: un lugar para guardar, organizar y reutilizar los prompts que te encuentras escribiendo una y otra vez. En lugar de copiar y pegar de un archivo de texto o recorrer chats antiguos, construyes una biblioteca una vez y accedes a ella al instante.
 
-![La pestaña Prompts con prompts organizados en carpetas y un prompt abierto para editar](/images/features/prompts-library.png)
+![La pestaña Prompts con prompts organizados en carpetas y un prompt abierto para editar](/images/features/prompts-library.webp)
 
 ## Crear un prompt
 
@@ -94,7 +94,7 @@ Haz clic en cualquier prompt del árbol. Su contenido se resuelve (importaciones
 
 Escribe `/` en el campo de entrada de Gemini o AI Studio y tu biblioteca aparece en línea:
 
-![Escribir una barra en el campo de chat abre el selector de prompts](/images/features/slash-command.png)
+![Escribir una barra en el campo de chat abre el selector de prompts](/images/features/slash-command.webp)
 
 Sigue escribiendo para filtrar, flechas para moverte, Enter para insertar. Detalles completos en [Comandos con barra](/en/guide/ui-customization/slash-commands).
 

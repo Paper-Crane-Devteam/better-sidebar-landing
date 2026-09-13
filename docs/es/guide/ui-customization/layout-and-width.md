@@ -9,7 +9,7 @@ Gemini decide cuán ancha debe ser tu conversación. Better Sidebar te deja disc
 
 Todo en esta página vive en **Ajustes → Controles de UI**, que muestra los controles de la plataforma en la que estés. Los mismos controles están también en el popup de la barra de herramientas del navegador: haz clic en el icono de Better Sidebar junto a la barra de direcciones para acceso rápido sin abrir la barra lateral.
 
-![El panel Controles de UI en el popup de la barra de herramientas del navegador](/images/features/platform-popup.png)
+![El panel Controles de UI en el popup de la barra de herramientas del navegador](/images/features/platform-popup.webp)
 
 ## Anchos
 

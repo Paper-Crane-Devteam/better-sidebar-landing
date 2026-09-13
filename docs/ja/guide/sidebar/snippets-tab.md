@@ -9,7 +9,7 @@ Gemini との長い会話がある。その中に埋もれているのが、優�
 
 スニペットは、その良い部分の行き先です。
 
-![フォルダとリーダーで開いたスニペットがある Snippets タブ](/images/features/snippets.png)
+![フォルダとリーダーで開いたスニペットがある Snippets タブ](/images/features/snippets.webp)
 
 ## スニペットの保存
 

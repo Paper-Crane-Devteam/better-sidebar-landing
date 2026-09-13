@@ -1,18 +1,8 @@
+import ProductShot from './ProductShot';
 import { motion } from 'framer-motion';
-import SearchFigure from './figures/SearchFigure';
-import PromptFigure from './figures/PromptFigure';
-import ExportFigure from './figures/ExportFigure';
-import TagFigure from './figures/TagFigure';
 import { Kicker, Section, SectionTitle, TickRule, rise, stagger } from './sections/shared';
 
-const FIGURES = {
-  search: SearchFigure,
-  prompt: PromptFigure,
-  export: ExportFigure,
-  tag: TagFigure,
-} as const;
-
-export type FigureKey = keyof typeof FIGURES;
+export type FigureKey = 'search' | 'prompt' | 'export' | 'tag';
 
 export interface HighlightContent {
   kicker: string;
@@ -30,7 +20,7 @@ export interface HighlightContent {
 
 /**
  * 05 · 四个重点能力
- * 交错左右排版，每项配一个 HTML 图版（非截图）。
+ * 交错左右排版，每项配一张真实功能截图。
  */
 export default function HighlightSection({ content }: { content: HighlightContent }) {
   return (
@@ -50,7 +40,6 @@ export default function HighlightSection({ content }: { content: HighlightConten
 
         <div style={{ marginTop: 'var(--space-lg)' }}>
           {content.items.map((item, i) => {
-            const Figure = FIGURES[item.figure];
             const flip = i % 2 === 1;
             return (
               <motion.div
@@ -131,7 +120,7 @@ export default function HighlightSection({ content }: { content: HighlightConten
                 </div>
 
                 <div style={{ order: flip ? 1 : 2 }}>
-                  <Figure label={item.figureLabel} />
+                  <ProductShot kind={item.figure} label={item.figureLabel} />
                 </div>
               </motion.div>
             );

@@ -13,7 +13,7 @@ Better Sidebar guarda todo en una base de datos SQLite local. Hay tres redes de 
 | **Exportación de la base de datos** | Cambiar de navegador, guardar una copia sin conexión | Manual, un clic |
 | **[Drive Sync](/en/guide/extras/drive-sync)** | Perder el dispositivo entero | Ninguno una vez conectado |
 
-![Controles de copia de seguridad, restauración y sincronización con Drive en Datos y almacenamiento](/images/features/drive-sync-and-backup.png)
+![Controles de copia de seguridad, restauración y sincronización con Drive en Datos y almacenamiento](/images/features/drive-sync-and-backup.webp)
 
 Todo lo de abajo está en **Ajustes → Datos y almacenamiento**.
 

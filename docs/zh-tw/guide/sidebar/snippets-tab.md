@@ -9,7 +9,7 @@ description: 從五十輪對話中提煉出那一整段最精彩的文字。將�
 
 「片段庫 (Snippets)」就是安放這份精華的地方。
 
-![片段庫分頁，包含分類資料夾並在閱讀器中展示選取的片段](/images/features/snippets.png)
+![片段庫分頁，包含分類資料夾並在閱讀器中展示選取的片段](/images/features/snippets.webp)
 
 ## 儲存片段
 

@@ -13,7 +13,7 @@ Better Sidebar 將所有資料儲存在本地的 SQLite 資料庫中。系統提
 | **資料庫匯出 (.db)** | 遷移至新瀏覽器、保留離線完整拷貝 | 手動單擊下載 |
 | **[Google Drive 同步](/zh-tw/guide/extras/drive-sync)** | 防止電腦遺失或硬體故障 | 設定一次後全自動 |
 
-![「資料與儲存」設定中的備份、還原與 Drive 同步控制項](/images/features/drive-sync-and-backup.png)
+![「資料與儲存」設定中的備份、還原與 Drive 同步控制項](/images/features/drive-sync-and-backup.webp)
 
 以下所有控制選項均位於 **設定 → 資料與儲存**。
 

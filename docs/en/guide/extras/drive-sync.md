@@ -7,7 +7,7 @@ description: Back up your folders, tags, prompts and snippets to your own Google
 
 Drive Sync keeps a copy of your Better Sidebar organization in your own Google Drive, so a new laptop or a cleared browser doesn't cost you six months of filing.
 
-![Google Drive sync and local backup controls in Data & Storage](/images/features/drive-sync-and-backup.png)
+![Google Drive sync and local backup controls in Data & Storage](/images/features/drive-sync-and-backup.webp)
 
 ## What Gets Synced
 

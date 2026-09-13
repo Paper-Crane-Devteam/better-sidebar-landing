@@ -9,7 +9,7 @@ Better Sidebar 內建了 16 組可自訂的鍵盤快速鍵，讓你在不碰滑�
 
 前往 **設定**（齒輪圖示或 `Alt+Shift+,`）→ **鍵盤快速鍵 (Keyboard Shortcuts)**。
 
-![包含常規、導航與動作三個區塊的快速鍵設定頁面](/images/features/keyboard-shortcuts.png)
+![包含常規、導航與動作三個區塊的快速鍵設定頁面](/images/features/keyboard-shortcuts.webp)
 
 ## 預設快速鍵清單
 

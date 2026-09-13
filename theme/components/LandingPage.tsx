@@ -76,7 +76,7 @@ export default function LandingPage({ content }: { content: LandingPageContent }
   }, []);
 
   return (
-    <div
+    <div className="landing-page"
       style={{
         background: 'var(--paper-1)',
         color: 'var(--ink-1)',

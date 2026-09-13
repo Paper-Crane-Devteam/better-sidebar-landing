@@ -7,7 +7,7 @@ description: 在聊天輸入框中鍵入 / 即可直接調用提示詞庫，自�
 
 在 Gemini 或 AI Studio 的訊息輸入框中輸入 `/`，你的 [提示詞庫](/zh-tw/guide/sidebar/prompts-tab) 就會直接在游標處彈出。
 
-![在輸入框鍵入斜槓開啟提示詞選取器](/images/features/slash-command.png)
+![在輸入框鍵入斜槓開啟提示詞選取器](/images/features/slash-command.webp)
 
 繼續打字進行過濾。使用方向鍵選擇，按下 Enter 插入。原本鍵入的 `/關鍵字` 會被整段完整的提示詞內容即刻取代。
 

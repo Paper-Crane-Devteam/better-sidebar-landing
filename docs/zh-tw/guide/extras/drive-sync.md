@@ -7,7 +7,7 @@ description: 將資料夾、標籤、提示詞與片段庫安全備份至你的�
 
 Drive 同步能夠在你的個人 Google Drive 中保存一份 Better Sidebar 整理架構的備份。更換新筆記型電腦或不小心清除瀏覽器快取時，不會讓你數個月以來的精心分類毀於一旦。
 
-![「資料與儲存」設定中的 Google Drive 同步與本地備份控制項](/images/features/drive-sync-and-backup.png)
+![「資料與儲存」設定中的 Google Drive 同步與本地備份控制項](/images/features/drive-sync-and-backup.webp)
 
 ## 同步內容範圍
 

@@ -7,7 +7,7 @@ description: Respalda tus carpetas, etiquetas, prompts y snippets en tu propio G
 
 Drive Sync guarda una copia de tu organización de Better Sidebar en tu propio Google Drive, para que un portátil nuevo o un navegador limpio no te cuesten seis meses de archivo.
 
-![Controles de sincronización con Google Drive y copia de seguridad local en Datos y almacenamiento](/images/features/drive-sync-and-backup.png)
+![Controles de sincronización con Google Drive y copia de seguridad local en Datos y almacenamiento](/images/features/drive-sync-and-backup.webp)
 
 ## Qué se sincroniza
 

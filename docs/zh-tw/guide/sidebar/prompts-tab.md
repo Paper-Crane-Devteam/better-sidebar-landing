@@ -7,7 +7,7 @@ description: 建立你的個人提示詞庫 —— 支援資料夾分類、動�
 
 「提示詞庫 (Prompts)」分頁是你的個人 Prompt 知識庫 —— 用來儲存、整理並重複使用那些你經常手動鍵入的優質提示詞。不必再從記事本複製貼上，或在舊對話中漫無目的地翻找；只需構建一次，隨處隨時秒速調用。
 
-![提示詞庫分頁，提示詞按資料夾分類並開啟編輯面板](/images/features/prompts-library.png)
+![提示詞庫分頁，提示詞按資料夾分類並開啟編輯面板](/images/features/prompts-library.webp)
 
 ## 建立提示詞
 
@@ -92,7 +92,7 @@ description: 建立你的個人提示詞庫 —— 支援資料夾分類、動�
 
 在 Gemini 或 AI Studio 的訊息輸入框中輸入 `/`，提示詞庫浮動清單即刻現身：
 
-![在聊天輸入框輸入斜槓開啟提示詞選取器](/images/features/slash-command.png)
+![在聊天輸入框輸入斜槓開啟提示詞選取器](/images/features/slash-command.webp)
 
 繼續打字進行即時搜尋，使用方向鍵移動，按 Enter 即刻插入。詳見 [斜槓命令說明](/zh-tw/guide/ui-customization/slash-commands)。
 

@@ -7,7 +7,7 @@ description: Explora, filtra y gestiona tus Gemini Gems desde la barra lateral. 
 
 La pestaña Gems te da un espacio dedicado para gestionar todos tus Gemini Gems: esas personas de IA personalizadas que has creado para tareas concretas. En lugar de buscar en la UI nativa de Gemini, obtienes una vista de árbol limpia y filtrable de cada gem que posees, más acciones rápidas para empezar chats, editar o crear nuevos.
 
-![La pestaña Gems listando Gemini Gems sincronizados](/images/features/gems.png)
+![La pestaña Gems listando Gemini Gems sincronizados](/images/features/gems.webp)
 
 :::tip
 Esta pestaña es exclusiva de Gemini. Si estás en AI Studio, no la verás en la barra lateral: los Gems son una función solo de Gemini.

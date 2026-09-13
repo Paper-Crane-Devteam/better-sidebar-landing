@@ -22,7 +22,7 @@ export default function PrivacySection({ content }: { content: PrivacySectionCon
     <Section id="privacy" tone="paper-1" crease creasePosition="center 78%" creaseOpacity={0.45}>
       {/* 折纸鹤水印 —— 单色 PNG，靠 opacity 压成纸上的淡印子 */}
       <img
-        src="/better-sidebar/images/crane-mark.png"
+        src="/better-sidebar/images/crane-mark.webp"
         alt=""
         aria-hidden="true"
         loading="lazy"

@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "rspress dev",
-    "build": "rspress build",
+    "build": "rspress build && node scripts/prepare-deploy.mjs",
     "preview": "rspress preview",
-    "deploy": "npm run build && wrangler deploy",
-    "deploy:dry": "npm run build && wrangler deploy --dry-run"
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:dry": "node scripts/deploy.mjs --dry-run",
+    "images:compress": "node scripts/compress-images.mjs",
+    "deploy:optimized": "npm run images:compress && npm run deploy"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

@@ -7,7 +7,7 @@ description: 会話とスニペットを取り出す — Markdown、プレーン
 
 ライブラリのものはすべて外に出せます。会話、スニペット、フォルダを右クリックし、**Export** を選んで出力先を選びます。
 
-![Markdown、プレーンテキスト、JSON、Obsidian、Notion の出力先があるエクスポートサブメニュー](/images/features/export-formats.png)
+![Markdown、プレーンテキスト、JSON、Obsidian、Notion の出力先があるエクスポートサブメニュー](/images/features/export-formats.webp)
 
 ## 出力先
 

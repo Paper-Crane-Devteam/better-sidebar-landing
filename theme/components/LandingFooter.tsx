@@ -90,7 +90,7 @@ export default function LandingFooter({ content }: { content: FooterContent }) {
           {/* 法务 —— 折纸鹤是工作室落款，上方的方块 mark 是产品标 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <img
-              src="/better-sidebar/images/crane-mark.png"
+              src="/better-sidebar/plugin-icon.png"
               alt=""
               aria-hidden="true"
               loading="lazy"

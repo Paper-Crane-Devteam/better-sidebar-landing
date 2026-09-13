@@ -7,7 +7,7 @@ description: Saca conversaciones y snippets — como Markdown, texto plano o JSO
 
 Cualquier cosa de tu biblioteca puede salir de ella. Clic derecho en una conversación, un snippet o una carpeta, elige **Exportar** y escoge un destino.
 
-![El submenú de exportar con destinos Markdown, texto plano, JSON, Obsidian y Notion](/images/features/export-formats.png)
+![El submenú de exportar con destinos Markdown, texto plano, JSON, Obsidian y Notion](/images/features/export-formats.webp)
 
 ## Destinos
 

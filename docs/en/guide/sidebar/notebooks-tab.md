@@ -7,7 +7,7 @@ description: Manage your Gemini Notebooks from the sidebar — scan, browse, fil
 
 The Notebooks tab is your hub for Gemini's Notebooks feature. Notebooks are a different kind of conversation — they're project-like containers that can hold multiple threads and sources. Better Sidebar gives you a tree view of all your notebooks, with the ability to expand each one to see its child conversations.
 
-![The Notebooks tab listing synced Gemini Notebooks](/images/features/notebooks.png)
+![The Notebooks tab listing synced Gemini Notebooks](/images/features/notebooks.webp)
 
 :::tip
 This tab is exclusive to Gemini. AI Studio doesn't have a Notebooks concept, so you won't see this tab on that platform.

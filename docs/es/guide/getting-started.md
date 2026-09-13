@@ -7,7 +7,7 @@ description: Introducción rápida a Better Sidebar para Gemini y AI Studio — 
 
 Better Sidebar es una extensión de navegador que da a **Google Gemini** y **Google AI Studio** una capa de organización de verdad: carpetas, etiquetas, búsqueda de texto completo, una biblioteca de prompts, una biblioteca de snippets y un agente de IA que puede archivar por ti. Se ejecuta por completo en tu navegador, sin servidores externos. Tus datos siguen siendo tuyos.
 
-![Better Sidebar en Gemini, con el árbol de carpetas, etiquetas y filtros visibles](/images/features/overview.png)
+![Better Sidebar en Gemini, con el árbol de carpetas, etiquetas y filtros visibles](/images/features/overview.webp)
 
 ## Qué puedes hacer
 
@@ -58,8 +58,8 @@ Better Sidebar está **vinculada a la cuenta**. Debes haber iniciado sesión en 
 Ve a [gemini.google.com](https://gemini.google.com) o [aistudio.google.com](https://aistudio.google.com). Better Sidebar reemplaza la barra lateral nativa automáticamente.
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
-  <img src="/images/features/overview-gemini.png" alt="Better Sidebar en Gemini" />
-  <img src="/images/features/overview-aistudio.png" alt="Better Sidebar en AI Studio" />
+  <img src="/images/features/overview-gemini.webp" alt="Better Sidebar en Gemini" />
+  <img src="/images/features/overview-aistudio.webp" alt="Better Sidebar en AI Studio" />
 </div>
 
 Puedes volver a la barra lateral de la plataforma en cualquier momento con `Alt+Shift+Q`, o con el botón **Cambiar a la barra lateral original** en el pie de la barra lateral. No se pierde nada al hacerlo: tus carpetas y etiquetas siguen ahí cuando vuelvas.

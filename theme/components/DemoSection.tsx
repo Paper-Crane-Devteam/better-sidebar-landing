@@ -16,7 +16,7 @@ export interface DemoContent {
 
 /**
  * 03 · Demo
- * 真实录屏是全站唯一的凭据（其余界面呈现均为 HTML 复刻图版）。
+ * 真实录屏与功能截图共同展示产品。
  * 点击后才加载 iframe：不预连第三方，与"隐私优先"的主张一致。
  */
 export default function DemoSection({ content }: { content: DemoContent }) {
@@ -80,6 +80,7 @@ export default function DemoSection({ content }: { content: DemoContent }) {
                 src={`https://www.youtube-nocookie.com/embed/${content.youtubeId}?autoplay=1&rel=0`}
                 title={content.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
               />
@@ -88,7 +89,7 @@ export default function DemoSection({ content }: { content: DemoContent }) {
                 type="button"
                 disabled={!hasVideo}
                 onClick={() => hasVideo && setPlaying(true)}
-                className={hasVideo ? 'glow-on-hover' : undefined}
+                className={hasVideo ? 'demo-poster glow-on-hover' : undefined}
                 style={{
                   position: 'absolute',
                   inset: 0,
@@ -105,6 +106,7 @@ export default function DemoSection({ content }: { content: DemoContent }) {
                   cursor: hasVideo ? 'pointer' : 'default',
                 }}
               >
+                {hasVideo && <img src="/better-sidebar/images/features/overview-gemini.webp" alt="" loading="lazy" />}
                 {/* 直角播放标记 — 不用图标库 */}
                 <span
                   aria-hidden="true"
@@ -141,6 +143,10 @@ export default function DemoSection({ content }: { content: DemoContent }) {
             )}
           </div>
         </motion.div>
+        {hasVideo && <a href={`https://www.youtube.com/watch?v=${content.youtubeId}`} target="_blank" rel="noreferrer"
+          style={{ display: 'inline-block', marginTop: 16, color: 'var(--brand-indigo)', fontFamily: 'var(--font-mono)', fontSize: 12 }}>
+          {content.playLabel} · YouTube ↗
+        </a>}
       </motion.div>
     </Section>
   );

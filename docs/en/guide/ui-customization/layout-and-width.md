@@ -9,7 +9,7 @@ Gemini decides how wide your conversation should be. Better Sidebar lets you dis
 
 Everything on this page lives in **Settings → UI Controls**, which shows the controls for whichever platform you're currently on. The same controls are also in the browser toolbar popup — click the Better Sidebar icon next to your address bar for quick access without opening the sidebar.
 
-![The UI Controls panel in the browser toolbar popup](/images/features/platform-popup.png)
+![The UI Controls panel in the browser toolbar popup](/images/features/platform-popup.webp)
 
 ## Widths
 

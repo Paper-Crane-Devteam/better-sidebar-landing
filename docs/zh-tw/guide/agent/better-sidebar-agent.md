@@ -9,7 +9,7 @@ description: 專注於管理個人資料庫的 AI 助手 —— 自動整理對�
 
 在聊天輸入框輸入 `>` 並選擇 **Better Sidebar** 即可啟動。
 
-![AI 助手建立資料夾、移動對話與打標籤，每個步驟以卡片清晰呈現](/images/features/agent-in-action.png)
+![AI 助手建立資料夾、移動對話與打標籤，每個步驟以卡片清晰呈現](/images/features/agent-in-action.webp)
 
 ## 它的權限與能力邊界
 

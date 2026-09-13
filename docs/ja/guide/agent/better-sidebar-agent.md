@@ -9,7 +9,7 @@ description: ライブラリを扱うエージェント — 会話のフォル�
 
 チャット入力で `>` と打ち、**Better Sidebar** を選んで開始します。
 
-![フォルダ作成・会話移動・タグ適用を進め、各ステップがカードで示されるエージェント](/images/features/agent-in-action.png)
+![フォルダ作成・会話移動・タグ適用を進め、各ステップがカードで示されるエージェント](/images/features/agent-in-action.webp)
 
 ## 届く範囲
 

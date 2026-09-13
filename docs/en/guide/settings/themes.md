@@ -9,7 +9,7 @@ Better Sidebar restyles the whole page, not just its own panel. Pick a theme and
 
 **Settings → Themes**
 
-![The theme grid with colour preview strips on each card](/images/features/themes-grid.png)
+![The theme grid with colour preview strips on each card](/images/features/themes-grid.webp)
 
 ## Default
 
@@ -56,15 +56,15 @@ Every preset has a fixed light or dark palette, because the whole point of a des
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
   <figure style="margin:0">
-    <img src="/images/features/theme-tokyo-night.png" alt="The Tokyo Night theme applied to Gemini" />
+    <img src="/images/features/theme-tokyo-night.webp" alt="The Tokyo Night theme applied to Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Tokyo Night</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-everforest.png" alt="The Everforest theme applied to Gemini" />
+    <img src="/images/features/theme-everforest.webp" alt="The Everforest theme applied to Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Everforest</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-ocean-breeze.png" alt="The Ocean Breeze theme applied to Gemini" />
+    <img src="/images/features/theme-ocean-breeze.webp" alt="The Ocean Breeze theme applied to Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Ocean Breeze</figcaption>
   </figure>
 </div>

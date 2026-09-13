@@ -9,7 +9,7 @@ Tienes una conversación larga con Gemini. Enterrada en ella hay una explicació
 
 Snippets es donde va la parte buena.
 
-![La pestaña Snippets con carpetas y un snippet abierto en el lector](/images/features/snippets.png)
+![La pestaña Snippets con carpetas y un snippet abierto en el lector](/images/features/snippets.webp)
 
 ## Guardar un snippet
 

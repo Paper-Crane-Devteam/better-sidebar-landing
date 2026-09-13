@@ -7,7 +7,7 @@ description: The main Library tab — organize conversations with folders, drag-
 
 The Library tab is your home base. Every conversation you have on Gemini or AI Studio shows up here, and this is where you turn a chaotic chat list into a well-organized library.
 
-![The Library tab with a colour-coded folder tree, filter bar and header toolbar](/images/features/overview.png)
+![The Library tab with a colour-coded folder tree, filter bar and header toolbar](/images/features/overview.webp)
 
 ## Overview
 
@@ -96,7 +96,7 @@ Click it. That's it — the page navigates to that conversation. Want to keep yo
 
 Hover over any conversation and a tooltip shows what the row itself has no space for: your description, its tags, when it was created, and when it was last active.
 
-![Hover tooltip showing a conversation's tags, creation time and last active time](/images/features/files-rich-tooltip.png)
+![Hover tooltip showing a conversation's tags, creation time and last active time](/images/features/files-rich-tooltip.webp)
 
 That last-active timestamp is genuinely useful for triage — it's how you spot the folder full of chats nobody has touched since March.
 
@@ -217,7 +217,7 @@ Pre-naming is great for work logs. Create a chat called "2024-06-16 Debug sessio
 
 When your library grows beyond a screenful, filters become essential. The filter bar sits just below the header and offers four toggles:
 
-![The filter bar with search, tag, type and favourites toggles](/images/features/files-filters.png)
+![The filter bar with search, tag, type and favourites toggles](/images/features/files-filters.webp)
 
 ### Text search
 
@@ -264,7 +264,7 @@ When you need to clean up, reorganize, or tag a bunch of conversations at once, 
 
 Click the **checklist** icon (☑) in the header toolbar. The tree switches to checkbox mode — every item gets a checkbox.
 
-![Batch selection mode with several conversations checked and the batch toolbar showing](/images/features/files-batch-operations.png)
+![Batch selection mode with several conversations checked and the batch toolbar showing](/images/features/files-batch-operations.webp)
 
 ### Selecting items
 
@@ -321,7 +321,7 @@ Conversations are automatically grouped into time buckets:
 - **Previous 30 Days**
 - **Older** (grouped by month, e.g. "May 2025")
 
-![Timeline view, grouping conversations under Today / Yesterday / Previous 7 Days](/images/features/files-timeline-view.png)
+![Timeline view, grouping conversations under Today / Yesterday / Previous 7 Days](/images/features/files-timeline-view.webp)
 
 Drag and drop is disabled in Timeline View. All other features (right-click actions, filtering, batch mode) still work.
 

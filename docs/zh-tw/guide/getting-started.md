@@ -7,7 +7,7 @@ description: Better Sidebar for Gemini 與 AI Studio 快速入門指南 — 功�
 
 Better Sidebar 是一款瀏覽器擴充功能，為 **Google Gemini** 與 **Google AI Studio** 帶來強大而細緻的整理層 —— 包含資料夾、標籤、全文搜尋、提示詞庫、片段庫，以及能替你分擔整理任務的 AI 助手。它完全在你的瀏覽器本地執行，無需外部伺服器，你的資料永遠屬於你自己。
 
-![Better Sidebar 在 Gemini 上執行，顯示資料夾樹狀目錄、標籤與篩選器](/images/features/overview.png)
+![Better Sidebar 在 Gemini 上執行，顯示資料夾樹狀目錄、標籤與篩選器](/images/features/overview.webp)
 
 ## 你可以做些什麼
 
@@ -58,8 +58,8 @@ Better Sidebar 與 **帳號綁定**。你必須在 Gemini 或 AI Studio 處於�
 前往 [gemini.google.com](https://gemini.google.com) 或 [aistudio.google.com](https://aistudio.google.com)。Better Sidebar 會自動取代原生側邊欄。
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
-  <img src="/images/features/overview-gemini.png" alt="Better Sidebar on Gemini" />
-  <img src="/images/features/overview-aistudio.png" alt="Better Sidebar on AI Studio" />
+  <img src="/images/features/overview-gemini.webp" alt="Better Sidebar on Gemini" />
+  <img src="/images/features/overview-aistudio.webp" alt="Better Sidebar on AI Studio" />
 </div>
 
 你可以隨時使用快速鍵 `Alt+Shift+Q`，或點擊側邊欄底部的 **切換至原生側邊欄** 按鈕切換回去。切換時不會遺失任何資料 —— 當你切換回 Better Sidebar 時，所有資料夾與標籤依然完好如初。

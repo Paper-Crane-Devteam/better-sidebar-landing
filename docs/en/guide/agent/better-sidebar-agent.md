@@ -9,7 +9,7 @@ This is the agent that touches your library: conversations, folders, tags, promp
 
 Start it by typing `>` in the chat input and picking **Better Sidebar**.
 
-![The agent creating folders, moving conversations and applying tags, with each step shown as a card](/images/features/agent-in-action.png)
+![The agent creating folders, moving conversations and applying tags, with each step shown as a card](/images/features/agent-in-action.webp)
 
 ## What It Can Reach
 

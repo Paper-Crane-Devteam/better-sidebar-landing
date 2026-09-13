@@ -9,7 +9,7 @@ You have a long conversation with Gemini. Buried in it is one excellent explanat
 
 Snippets is where the good part goes.
 
-![The Snippets tab with folders and a snippet open in the reader](/images/features/snippets.png)
+![The Snippets tab with folders and a snippet open in the reader](/images/features/snippets.webp)
 
 ## Saving a Snippet
 

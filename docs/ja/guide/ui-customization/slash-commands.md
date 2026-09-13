@@ -7,7 +7,7 @@ description: チャット入力で / と打ち、ライブラリの任意のプ�
 
 Gemini または AI Studio の入力欄で `/` と打つと、[プロンプトライブラリ](/en/guide/sidebar/prompts-tab) がインラインで出ます。
 
-![チャット入力でスラッシュを打つとプロンプトピッカーが開く](/images/features/slash-command.png)
+![チャット入力でスラッシュを打つとプロンプトピッカーが開く](/images/features/slash-command.webp)
 
 続けて打ってフィルター。矢印キーで移動。Enter で挿入。打った `/query` テキストはプロンプトの全文に置き換わります。
 

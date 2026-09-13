@@ -65,7 +65,7 @@ export function Section({
     >
       {crease && (
         <img
-          src="/better-sidebar/images/paper-crease.png"
+          src="/better-sidebar/images/paper-crease.webp"
           alt=""
           aria-hidden="true"
           loading="lazy"

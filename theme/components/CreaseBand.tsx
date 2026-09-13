@@ -30,7 +30,7 @@ export default function CreaseBand({
       }}
     >
       <img
-        src="/better-sidebar/images/paper-crease.png"
+        src="/better-sidebar/images/paper-crease.webp"
         alt=""
         loading="lazy"
         decoding="async"

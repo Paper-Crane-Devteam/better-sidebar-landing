@@ -7,7 +7,7 @@ description: Full-text search across every message in your Gemini and AI Studio 
 
 The Search tab lets you find *any* message you've ever sent or received — not just by title, but by the actual content of your conversations. Think of it as Ctrl+F for your entire AI chat history.
 
-![Full-text search results grouped by conversation with matches highlighted](/images/features/search-fulltext.png)
+![Full-text search results grouped by conversation with matches highlighted](/images/features/search-fulltext.webp)
 
 ## How It Works
 
@@ -135,7 +135,7 @@ The dialog walks you through it, but in short:
 
 2. In Google Drive, open the **AI Studio** folder dropdown and choose **Download**. Google zips it for you.
 
-   ![Downloading the AI Studio folder from Google Drive](/images/features/aistudio-download-conversations.png)
+   ![Downloading the AI Studio folder from Google Drive](/images/features/aistudio-download-conversations.webp)
 
 3. Upload that ZIP back in the import dialog
 4. Better Sidebar matches each file to its conversation by title, then indexes the message content

@@ -7,7 +7,7 @@ description: サイドバーから Gemini Notebooks を管理 — スキャン�
 
 Notebooks タブは Gemini の Notebooks 機能のハブです。Notebook は別種の会話 — 複数のスレッドとソースを持てるプロジェクト的な入れ物です。Better Sidebar はすべてのノートブックのツリービューを提供し、それぞれを展開して子会話を見られます。
 
-![同期された Gemini Notebooks を一覧する Notebooks タブ](/images/features/notebooks.png)
+![同期された Gemini Notebooks を一覧する Notebooks タブ](/images/features/notebooks.webp)
 
 :::tip
 このタブは Gemini 専用です。AI Studio に Notebooks の概念はないので、そのプラットフォームではこのタブは出ません。

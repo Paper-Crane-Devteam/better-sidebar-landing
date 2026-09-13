@@ -7,7 +7,7 @@ description: Get conversations and snippets out — as Markdown, plain text or J
 
 Anything in your library can leave it. Right-click a conversation, a snippet, or a folder, choose **Export**, and pick a target.
 
-![The export submenu with Markdown, plain text, JSON, Obsidian and Notion targets](/images/features/export-formats.png)
+![The export submenu with Markdown, plain text, JSON, Obsidian and Notion targets](/images/features/export-formats.webp)
 
 ## Targets
 

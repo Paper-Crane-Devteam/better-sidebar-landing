@@ -13,7 +13,7 @@ Better Sidebar keeps everything in a local SQLite database. There are three sepa
 | **Database export** | Moving to another browser, keeping an offline copy | Manual, one click |
 | **[Drive Sync](/en/guide/extras/drive-sync)** | Losing the whole device | None once connected |
 
-![Backup, restore and Drive sync controls in Data & Storage](/images/features/drive-sync-and-backup.png)
+![Backup, restore and Drive sync controls in Data & Storage](/images/features/drive-sync-and-backup.webp)
 
 Everything below is in **Settings → Data & Storage**.
 

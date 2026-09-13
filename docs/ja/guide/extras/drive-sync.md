@@ -7,7 +7,7 @@ description: フォルダ、タグ、プロンプト、スニペットを自分�
 
 Drive Sync は Better Sidebar の整理状態のコピーを、自分の Google Drive に保ちます。新しいノート PC やブラウザのデータ消去で、半年分の整理が消えないようにするためです。
 
-![Data & Storage にある Google Drive 同期とローカルバックアップの操作](/images/features/drive-sync-and-backup.png)
+![Data & Storage にある Google Drive 同期とローカルバックアップの操作](/images/features/drive-sync-and-backup.webp)
 
 ## 同期されるもの
 

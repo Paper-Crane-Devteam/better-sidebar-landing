@@ -9,7 +9,7 @@ Gemini 預設決定了你的對話寬度。Better Sidebar 讓你擁有完全的�
 
 本頁涉及的所有選項均位於 **設定 → 介面控制 (UI Controls)** 中，自動呈現當前所處平台的專屬選項。此外，亦可透過瀏覽器網址列旁的 Better Sidebar 工具列圖示開啟快速設定彈窗。
 
-![瀏覽器工具列彈窗中的介面控制面板](/images/features/platform-popup.png)
+![瀏覽器工具列彈窗中的介面控制面板](/images/features/platform-popup.webp)
 
 ## 寬度自訂
 

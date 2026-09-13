@@ -7,7 +7,7 @@ description: Gestiona tus Gemini Notebooks desde la barra lateral — escanea, e
 
 La pestaña Notebooks es tu centro para la función Notebooks de Gemini. Los Notebooks son un tipo distinto de conversación: son contenedores tipo proyecto que pueden albergar varios hilos y fuentes. Better Sidebar te da una vista de árbol de todos tus notebooks, con la capacidad de expandir cada uno para ver sus conversaciones hijas.
 
-![La pestaña Notebooks listando Gemini Notebooks sincronizados](/images/features/notebooks.png)
+![La pestaña Notebooks listando Gemini Notebooks sincronizados](/images/features/notebooks.webp)
 
 :::tip
 Esta pestaña es exclusiva de Gemini. AI Studio no tiene un concepto de Notebooks, así que no verás esta pestaña en esa plataforma.

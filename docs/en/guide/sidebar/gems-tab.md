@@ -7,7 +7,7 @@ description: Browse, filter, and manage your Gemini Gems from the sidebar. Start
 
 The Gems tab gives you a dedicated space to manage all your Gemini Gems — those custom AI personas you've crafted for specific tasks. Instead of hunting through Gemini's native UI, you get a clean, filterable tree view of every gem you own, plus quick actions to start chats, edit, or create new ones.
 
-![The Gems tab listing synced Gemini Gems](/images/features/gems.png)
+![The Gems tab listing synced Gemini Gems](/images/features/gems.webp)
 
 :::tip
 This tab is exclusive to Gemini. If you're on AI Studio, you won't see it in the sidebar — Gems are a Gemini-only feature.

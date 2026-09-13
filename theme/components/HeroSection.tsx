@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import SidebarFigure from './figures/SidebarFigure';
+import ProductShot from './ProductShot';
 import { CHROME_URL, FIREFOX_URL, MetaRow, MonoButton, MonoLink, TickRule, rise, stagger } from './sections/shared';
 
 export interface HeroContent {
@@ -18,12 +18,12 @@ export interface HeroContent {
 
 /**
  * 01 · Hero
- * 不对称编辑式排版。零光栅截图 —— 右侧是 HTML 复刻的侧边栏图版。
+ * 不对称编辑式排版。右侧展示真实插件截图。
  * 无光球、无渐变文字、无胶囊按钮。
  */
 export default function HeroSection({ content }: { content: HeroContent }) {
   return (
-    <section
+    <section className="landing-hero"
       style={{
         background: 'var(--paper-1)',
         padding: 'calc(var(--space-xl) - 24px) 24px var(--space-xl)',
@@ -62,7 +62,7 @@ export default function HeroSection({ content }: { content: HeroContent }) {
             >
               {content.titleTop}
               <br />
-              <span style={{ fontStyle: 'italic' }}>{content.titleBottom}</span>
+              <span style={{ fontStyle: 'italic', color: 'var(--brand-indigo)' }}>{content.titleBottom}</span>
             </motion.h1>
 
             <motion.div variants={rise} style={{ marginTop: 'var(--space-md)' }}>
@@ -100,13 +100,13 @@ export default function HeroSection({ content }: { content: HeroContent }) {
             </motion.div>
           </div>
 
-          {/* ── 右：侧边栏图版（HTML 复刻，非截图） ─────────────── */}
+          {/* ── 右：真实侧边栏截图 ─────────────── */}
           <motion.div
             variants={rise}
-            className="stacked-sheet"
-            style={{ maxWidth: '440px', width: '100%', justifySelf: 'end' }}
+
+            style={{ width: '100%', justifySelf: 'end' }}
           >
-            <SidebarFigure label={content.figureLabel} />
+            <ProductShot kind="overview" label={content.figureLabel} priority />
           </motion.div>
         </motion.div>
 

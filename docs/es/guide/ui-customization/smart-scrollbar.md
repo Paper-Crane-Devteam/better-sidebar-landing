@@ -7,7 +7,7 @@ description: Un mapa flotante de mensajes junto a tu conversación de Gemini. Ha
 
 Las conversaciones largas son difíciles de navegar porque la barra de desplazamiento no te dice nada. La Smart Scrollbar la reemplaza con un mapa de la conversación real: una entrada por mensaje, el que estás leyendo resaltado, clic para saltar.
 
-![La Smart Scrollbar flotando junto a una conversación de Gemini](/images/features/smart-scrollbar.png)
+![La Smart Scrollbar flotando junto a una conversación de Gemini](/images/features/smart-scrollbar.webp)
 
 :::tip
 Solo Gemini. AI Studio renderiza las conversaciones de forma distinta y no está soportado. En cualquiera de las plataformas puedes usar el [Esquema](/en/guide/sidebar/outline) en su lugar, que va más profundo: mapea encabezados, bloques de código y tablas dentro de cada respuesta, no solo los mensajes.

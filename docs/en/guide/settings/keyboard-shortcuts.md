@@ -9,7 +9,7 @@ Better Sidebar comes with 16 customizable keyboard shortcuts that let you contro
 
 Open the hotkey settings via **Settings** (gear icon or `Alt+Shift+,`) → **Keyboard Shortcuts** tab.
 
-![The Keyboard Shortcuts settings page with General, Navigation and Actions sections](/images/features/keyboard-shortcuts.png)
+![The Keyboard Shortcuts settings page with General, Navigation and Actions sections](/images/features/keyboard-shortcuts.webp)
 
 ## Default Shortcuts
 

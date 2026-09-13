@@ -7,7 +7,7 @@ description: 將對話與精華片段匯出為 Markdown、純文字或 JSON，�
 
 資料庫中的任何資料均可自由遷出。在對話、片段或資料夾上按右鍵，選擇 **匯出** 並挑選目標格式。
 
-![包含 Markdown、純文字、JSON、Obsidian 與 Notion 目標的匯出子選單](/images/features/export-formats.png)
+![包含 Markdown、純文字、JSON、Obsidian 與 Notion 目標的匯出子選單](/images/features/export-formats.webp)
 
 ## 支援的匯出目標
 

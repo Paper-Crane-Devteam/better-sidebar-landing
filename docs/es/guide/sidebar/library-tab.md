@@ -7,7 +7,7 @@ description: La pestaña principal Biblioteca — organiza conversaciones con ca
 
 La pestaña Biblioteca es tu base. Cada conversación que tienes en Gemini o AI Studio aparece aquí, y aquí es donde conviertes una lista de chats caótica en una biblioteca bien organizada.
 
-![La pestaña Biblioteca con un árbol de carpetas coloreado, barra de filtros y barra de herramientas del encabezado](/images/features/overview.png)
+![La pestaña Biblioteca con un árbol de carpetas coloreado, barra de filtros y barra de herramientas del encabezado](/images/features/overview.webp)
 
 ## Descripción general
 
@@ -96,7 +96,7 @@ Haz clic. Eso es todo: la página navega a esa conversación. ¿Quieres conserva
 
 Pasa el ratón sobre cualquier conversación y un tooltip muestra lo que la fila no tiene espacio para: tu descripción, sus etiquetas, cuándo se creó y cuándo estuvo activa por última vez.
 
-![Tooltip al pasar el ratón mostrando etiquetas, hora de creación y última actividad de una conversación](/images/features/files-rich-tooltip.png)
+![Tooltip al pasar el ratón mostrando etiquetas, hora de creación y última actividad de una conversación](/images/features/files-rich-tooltip.webp)
 
 Esa marca de última actividad es de verdad útil para el triaje: es cómo detectas la carpeta llena de chats que nadie ha tocado desde marzo.
 
@@ -217,7 +217,7 @@ Pre-nombrar es ideal para registros de trabajo. Crea un chat llamado «2024-06-1
 
 Cuando tu biblioteca crece más de una pantalla, los filtros se vuelven esenciales. La barra de filtros se sitúa justo debajo del encabezado y ofrece cuatro interruptores:
 
-![La barra de filtros con interruptores de búsqueda, etiqueta, tipo y favoritos](/images/features/files-filters.png)
+![La barra de filtros con interruptores de búsqueda, etiqueta, tipo y favoritos](/images/features/files-filters.webp)
 
 ### Búsqueda de texto
 
@@ -264,7 +264,7 @@ Cuando necesitas limpiar, reorganizar o etiquetar un montón de conversaciones a
 
 Haz clic en el icono de **lista de verificación** (☑) de la barra de herramientas del encabezado. El árbol cambia a modo de casillas: cada elemento obtiene una casilla.
 
-![Modo de selección por lotes con varias conversaciones marcadas y la barra de lotes visible](/images/features/files-batch-operations.png)
+![Modo de selección por lotes con varias conversaciones marcadas y la barra de lotes visible](/images/features/files-batch-operations.webp)
 
 ### Seleccionar elementos
 
@@ -321,7 +321,7 @@ Las conversaciones se agrupan automáticamente en cubos de tiempo:
 - **Últimos 30 días**
 - **Anteriores** (agrupados por mes, p. ej. «mayo 2025»)
 
-![Vista de línea de tiempo, agrupando conversaciones bajo Hoy / Ayer / Últimos 7 días](/images/features/files-timeline-view.png)
+![Vista de línea de tiempo, agrupando conversaciones bajo Hoy / Ayer / Últimos 7 días](/images/features/files-timeline-view.webp)
 
 Arrastrar y soltar está desactivado en la vista de línea de tiempo. Todas las demás funciones (acciones de clic derecho, filtrado, modo por lotes) siguen funcionando.
 

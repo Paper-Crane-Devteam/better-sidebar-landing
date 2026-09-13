@@ -7,7 +7,7 @@ description: フォルダ、変数、合成、スラッシュコマンド挿入�
 
 Prompts タブは個人用のプロンプトライブラリです。何度も打ってしまうプロンプトを保存・整理・再利用する場所です。テキストファイルからコピーしたり、古いチャットをスクロールしたりする代わりに、一度ライブラリを作ればすぐ呼び出せます。
 
-![フォルダに整理されたプロンプトと、編集中のプロンプトがある Prompts タブ](/images/features/prompts-library.png)
+![フォルダに整理されたプロンプトと、編集中のプロンプトがある Prompts タブ](/images/features/prompts-library.webp)
 
 ## プロンプトの作成
 
@@ -94,7 +94,7 @@ Review the following code for security issues...
 
 Gemini または AI Studio の入力欄で `/` と打つと、ライブラリがインライン表示されます。
 
-![チャット入力でスラッシュを打つとプロンプトピッカーが開く](/images/features/slash-command.png)
+![チャット入力でスラッシュを打つとプロンプトピッカーが開く](/images/features/slash-command.webp)
 
 打ち続けて絞り込み、矢印で移動、Enter で挿入。詳細は [スラッシュコマンド](/en/guide/ui-customization/slash-commands) を参照してください。
 

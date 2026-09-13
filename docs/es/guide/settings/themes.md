@@ -9,7 +9,7 @@ Better Sidebar restiliza toda la página, no solo su propio panel. Elige un tema
 
 **Ajustes → Temas**
 
-![La cuadrícula de temas con franjas de vista previa de color en cada tarjeta](/images/features/themes-grid.png)
+![La cuadrícula de temas con franjas de vista previa de color en cada tarjeta](/images/features/themes-grid.webp)
 
 ## Predeterminado
 
@@ -56,15 +56,15 @@ Cada preajuste tiene una paleta fija clara u oscura, porque el punto de un tema 
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
   <figure style="margin:0">
-    <img src="/images/features/theme-tokyo-night.png" alt="El tema Tokyo Night aplicado a Gemini" />
+    <img src="/images/features/theme-tokyo-night.webp" alt="El tema Tokyo Night aplicado a Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Tokyo Night</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-everforest.png" alt="El tema Everforest aplicado a Gemini" />
+    <img src="/images/features/theme-everforest.webp" alt="El tema Everforest aplicado a Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Everforest</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-ocean-breeze.png" alt="El tema Ocean Breeze aplicado a Gemini" />
+    <img src="/images/features/theme-ocean-breeze.webp" alt="El tema Ocean Breeze aplicado a Gemini" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Ocean Breeze</figcaption>
   </figure>
 </div>

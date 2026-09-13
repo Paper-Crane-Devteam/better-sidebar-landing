@@ -7,7 +7,7 @@ description: Create separate profiles for different Google accounts or use cases
 
 If you use multiple Google accounts (personal, work, school) or want separate organization systems for different use cases, Multi-Account profiles let you keep everything cleanly separated. Each profile has its own independent database — its own folders, tags, favorites, and conversation index.
 
-![Profile management in Data & Storage, showing the active profile and its bound accounts](/images/features/multi-account.png)
+![Profile management in Data & Storage, showing the active profile and its bound accounts](/images/features/multi-account.webp)
 
 ## How Profiles Work
 

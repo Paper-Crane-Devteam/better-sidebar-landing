@@ -9,7 +9,7 @@ Better Sidebar は自パネルだけでなくページ全体を再スタイル�
 
 **設定 → テーマ**
 
-![各カードに色プレビューストリップがあるテーマグリッド](/images/features/themes-grid.png)
+![各カードに色プレビューストリップがあるテーマグリッド](/images/features/themes-grid.webp)
 
 ## デフォルト
 
@@ -56,15 +56,15 @@ Better Sidebar は自パネルだけでなくページ全体を再スタイル�
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
   <figure style="margin:0">
-    <img src="/images/features/theme-tokyo-night.png" alt="Gemini に適用された Tokyo Night テーマ" />
+    <img src="/images/features/theme-tokyo-night.webp" alt="Gemini に適用された Tokyo Night テーマ" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Tokyo Night</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-everforest.png" alt="Gemini に適用された Everforest テーマ" />
+    <img src="/images/features/theme-everforest.webp" alt="Gemini に適用された Everforest テーマ" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Everforest</figcaption>
   </figure>
   <figure style="margin:0">
-    <img src="/images/features/theme-ocean-breeze.png" alt="Gemini に適用された Ocean Breeze テーマ" />
+    <img src="/images/features/theme-ocean-breeze.webp" alt="Gemini に適用された Ocean Breeze テーマ" />
     <figcaption style="font-size:13px;opacity:.7;text-align:center">Ocean Breeze</figcaption>
   </figure>
 </div>

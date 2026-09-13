@@ -9,7 +9,7 @@ Better Sidebar has an AI agent built in. You describe a job in plain language, i
 
 The important part: it runs **through your existing Gemini or AI Studio session**. There's no API key to paste, no tokens to buy, and no server involved. The model you're already talking to is the one doing the work, and your data never leaves the browser.
 
-![The agent working through a task: creating folders, moving conversations, applying tags](/images/features/agent-in-action.png)
+![The agent working through a task: creating folders, moving conversations, applying tags](/images/features/agent-in-action.webp)
 
 ## Two Agents
 
@@ -26,7 +26,7 @@ The Better Sidebar agent cannot touch your files. The Workspace agent cannot see
 
 Type `>` in the chat input. A picker appears, you choose an agent, then write your request and press Enter.
 
-![The Agent tab with usage steps and example prompts](/images/features/agent-launcher.png)
+![The Agent tab with usage steps and example prompts](/images/features/agent-launcher.webp)
 
 That's the whole interface. There's no separate chat window, because the agent works by talking to the same model in the same conversation you're already in.
 

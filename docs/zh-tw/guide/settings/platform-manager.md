@@ -7,7 +7,7 @@ description: 針對不同網站獨立開關 Better Sidebar，並直接從瀏覽�
 
 點擊瀏覽器工具列上的 Better Sidebar 圖示，會展開一個帶有三個分頁的精緻彈窗。這是存取各平台介面設定最便捷的入口，也是單獨為特定網站徹底關閉擴充功能的唯一位置。
 
-![包含平台、Gemini 與 AI Studio 分頁的瀏覽器工具列彈窗](/images/features/platform-popup.png)
+![包含平台、Gemini 與 AI Studio 分頁的瀏覽器工具列彈窗](/images/features/platform-popup.webp)
 
 ## 「平台」分頁 (Platforms Tab)
 

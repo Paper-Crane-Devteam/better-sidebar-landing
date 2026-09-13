@@ -7,7 +7,7 @@ description: 跨越 Gemini 與 AI Studio 歷史記錄中每則訊息的全文檢
 
 「搜尋」分頁讓你能夠精準找到發送或接收過的 *任何* 訊息 —— 不僅限於標題，而是深入到對話的真實內文中。你可以將它視為整個 AI 聊天記錄的專屬 Ctrl+F。
 
-![按對話分組並高亮顯示相符關鍵字的全文搜尋結果](/images/features/search-fulltext.png)
+![按對話分組並高亮顯示相符關鍵字的全文搜尋結果](/images/features/search-fulltext.webp)
 
 ## 運作原理
 
@@ -131,7 +131,7 @@ Better Sidebar 在你的瀏覽器內部維護一個具有全文搜尋索引的�
 
 2. 在 Google Drive 中，點擊 **AI Studio** 資料夾下拉選單並選擇 **下載**。Google 會自動為你打包成 ZIP 檔。
 
-   ![從 Google Drive 下載 AI Studio 資料夾](/images/features/aistudio-download-conversations.png)
+   ![從 Google Drive 下載 AI Studio 資料夾](/images/features/aistudio-download-conversations.webp)
 
 3. 將該 ZIP 檔上傳回 Better Sidebar 的匯入視窗中
 4. 擴充功能會自動按標題與對話配對，並在本地建立全文索引

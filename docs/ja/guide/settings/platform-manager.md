@@ -7,7 +7,7 @@ description: サイトごとに Better Sidebar のオン／オフを切り替え
 
 ブラウザツールバーの Better Sidebar アイコンをクリックすると、3 タブの小さなパネルが出ます。プラットフォーム設定へのいちばん速い道で、1 サイトだけ拡張機能をオフにできる唯一の場所でもあります。
 
-![Platforms、Gemini、AI Studio タブがあるブラウザツールバーのポップアップ](/images/features/platform-popup.png)
+![Platforms、Gemini、AI Studio タブがあるブラウザツールバーのポップアップ](/images/features/platform-popup.webp)
 
 ## Platforms タブ
 

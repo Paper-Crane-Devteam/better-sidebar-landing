@@ -7,7 +7,7 @@ description: Búsqueda de texto completo en cada mensaje de tu historial de conv
 
 La pestaña Búsqueda te permite encontrar *cualquier* mensaje que hayas enviado o recibido: no solo por título, sino por el contenido real de tus conversaciones. Piénsalo como Ctrl+F para todo tu historial de chats de IA.
 
-![Resultados de búsqueda de texto completo agrupados por conversación con coincidencias resaltadas](/images/features/search-fulltext.png)
+![Resultados de búsqueda de texto completo agrupados por conversación con coincidencias resaltadas](/images/features/search-fulltext.webp)
 
 ## Cómo funciona
 
@@ -135,7 +135,7 @@ El diálogo te guía, pero en resumen:
 
 2. En Google Drive, abre el desplegable de la carpeta **AI Studio** y elige **Download**. Google lo comprime en un ZIP por ti.
 
-   ![Descargar la carpeta AI Studio desde Google Drive](/images/features/aistudio-download-conversations.png)
+   ![Descargar la carpeta AI Studio desde Google Drive](/images/features/aistudio-download-conversations.webp)
 
 3. Sube ese ZIP de vuelta en el diálogo de importación
 4. Better Sidebar empareja cada archivo con su conversación por título y luego indexa el contenido de los mensajes

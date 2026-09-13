@@ -13,7 +13,7 @@ Better Sidebar はすべてをローカル SQLite データベースに保ちま
 | **データベースエクスポート** | 別ブラウザへの移行、オフラインコピーの保持 | 手動、ワンクリック |
 | **[Drive Sync](/en/guide/extras/drive-sync)** | 端末そのものの喪失 | 接続後はなし |
 
-![Data & Storage のバックアップ、復元、Drive 同期の操作](/images/features/drive-sync-and-backup.png)
+![Data & Storage のバックアップ、復元、Drive 同期の操作](/images/features/drive-sync-and-backup.webp)
 
 以下はすべて **Settings → Data & Storage** にあります。
 

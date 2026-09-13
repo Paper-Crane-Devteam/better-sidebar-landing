@@ -7,7 +7,7 @@ description: Better Sidebar for Gemini / AI Studio のクイック紹介 — 何
 
 Better Sidebar は、**Google Gemini** と **Google AI Studio** に本格的な整理レイヤーを追加するブラウザ拡張機能です。フォルダ、タグ、全文検索、プロンプトライブラリ、スニペットライブラリ、そして整理作業を任せる AI エージェントまで揃っています。すべてブラウザ内で完結し、外部サーバーは使いません。データはあなたのものとして手元に残ります。
 
-![Gemini 上で動作する Better Sidebar。フォルダツリー、タグ、フィルターが見える](/images/features/overview.png)
+![Gemini 上で動作する Better Sidebar。フォルダツリー、タグ、フィルターが見える](/images/features/overview.webp)
 
 ## できること
 
@@ -58,8 +58,8 @@ Better Sidebar は **アカウントに紐づきます**。Gemini または AI S
 [gemini.google.com](https://gemini.google.com) または [aistudio.google.com](https://aistudio.google.com) に移動します。Better Sidebar がネイティブのサイドバーを自動で置き換えます。
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
-  <img src="/images/features/overview-gemini.png" alt="Gemini 上の Better Sidebar" />
-  <img src="/images/features/overview-aistudio.png" alt="AI Studio 上の Better Sidebar" />
+  <img src="/images/features/overview-gemini.webp" alt="Gemini 上の Better Sidebar" />
+  <img src="/images/features/overview-aistudio.webp" alt="AI Studio 上の Better Sidebar" />
 </div>
 
 いつでも `Alt+Shift+Q`、またはサイドバーフッターの **元のサイドバーに切り替え** でプラットフォーム標準のサイドバーに戻せます。切り替えてもデータは失われません — 戻ればフォルダやタグはそのままです。

@@ -7,7 +7,7 @@ description: Escribe / en el campo de chat para insertar cualquier prompt de tu 
 
 Escribe `/` en el campo de entrada de Gemini o AI Studio y tu [biblioteca de prompts](/en/guide/sidebar/prompts-tab) aparece en línea.
 
-![Escribir una barra en el campo de chat abre el selector de prompts](/images/features/slash-command.png)
+![Escribir una barra en el campo de chat abre el selector de prompts](/images/features/slash-command.webp)
 
 Sigue escribiendo para filtrar. Flechas para moverte. Enter para insertar. El texto `/query` que escribiste se reemplaza por el contenido completo del prompt.
 

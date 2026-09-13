@@ -7,7 +7,7 @@ description: サイドバーから Gemini Gems を閲覧・フィルター・管
 
 Gems タブは、特定タスク向けに作ったカスタム AI ペルソナである Gemini Gems をまとめて管理する専用スペースです。Gemini 標準 UI を探す代わりに、所有するすべての Gem をきれいでフィルター可能なツリーで見られ、チャット開始、編集、新規作成のクイックアクションも使えます。
 
-![同期された Gemini Gems を一覧する Gems タブ](/images/features/gems.png)
+![同期された Gemini Gems を一覧する Gems タブ](/images/features/gems.webp)
 
 :::tip
 このタブは Gemini 専用です。AI Studio ではサイドバーに出ません — Gems は Gemini 専用機能です。
