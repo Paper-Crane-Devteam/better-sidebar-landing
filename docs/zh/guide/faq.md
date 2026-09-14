@@ -1,62 +1,164 @@
 ---
 title: 常见问题
-description: Better Sidebar 的常见问题解答。
+description: 关于 Better Sidebar 的常见问题与解答 —— 费用、隐私、AI 助手、对话同步、搜索与疑难排解。
 ---
 
 # 常见问题
 
-## 通用
+## 费用与授权
 
-### Better Sidebar 免费吗？
+### Better Sidebar 是免费的吗？
 
-是的，Better Sidebar 是免费且开源的，基于 GPL-3.0 许可证。
+核心整理功能完全免费且持续免费：文件夹、标签、搜索、提示词、片段、Markdown 导出、本地备份，以及处于唯读模式的 AI 助手。无需另外注册账号。
 
-### 它同时支持 Gemini 和 AI Studio 吗？
+另有两款选用的一次性买断功能包 —— $5 的主题外观包，以及 $19.99 允许 AI 助手直接采取修改行动的进阶功能包。详见 [功能包与授权](/zh/guide/settings/packs)。
 
-是的。Better Sidebar 可以在 [gemini.google.com](https://gemini.google.com) 和 [aistudio.google.com](https://aistudio.google.com) 上使用。
+### 它是开源的吗？
 
-### 我的数据安全吗？
+是的，采用 GPL-3.0 开源协议。[前往 GitHub 查看原始码](https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio)。
 
-所有数据使用 SQLite WASM 存储在浏览器本地。我们不会收集、存储或传输你的数据到任何服务器。详见我们的[隐私政策](/zh/privacy)。
+### 是否有任何按月订阅费用？
 
-## 技术问题
+没有。两个功能包均为终身一次性买断，并享有 7 天无条件退款承诺。
 
-### 为什么扩展需要主机权限？
+### 我的授权序号可以在多少台电脑上使用？
 
-Better Sidebar 需要在 Gemini 和 AI Studio 页面上运行，以注入侧边栏覆盖层并读取对话标题/ID 用于组织管理。
+每个授权包含 10 次启用额度，每个 *浏览器设置档 (Browser Profile)* 消耗一次启用。同一个浏览器内部 Better Sidebar 自己的多账号切换不消耗额外额度。详见 [启用名额说明](/zh/guide/settings/packs#启用名额)。
 
-### 它在隐身/无痕模式下工作吗？
+## 隐私与资料安全
 
-默认情况下，Chrome 扩展不在隐身模式下运行。你可以在浏览器扩展设置中手动启用，但请注意隐身模式下存储的数据可能不会持久化。
+### 我的资料存储在哪里？
 
-### 它会让 Gemini 或 AI Studio 变慢吗？
+完全存储在你的浏览器本地 SQLite 数据库中（透过 WASM 与 OPFS 支持）。Better Sidebar 没有任何自己的服务器。请参阅 [隐私权政策](/zh/privacy)。
 
-不会。扩展运行一个轻量级覆盖层并使用优化的 SQLite 数据库。对页面性能的影响可以忽略不计。
+### AI 助手会将我的资料传送到其他地方吗？
 
-### 我可以使用多个 Google 账户吗？
+AI 助手完全透过你现有的 Gemini 或 AI Studio 会话执行。无需 API 金钥、无额外费用，亦无任何第三方服务器中转。
 
-可以。Better Sidebar 支持多账户使用。它会检测当前活跃的账户，并将每个账户的对话分开管理。
+传送给 Google 的内容，与你在输入框手动打字一模一样：包含提示词以及助手为了回答问题而读取的本地资料。这是基于大型语言模型运行的必然过程 —— 但资料绝不会流向 Google 之外的任何地方。
 
-## 故障排除
+### 为什么扩展程序需要网域主机权限？
+
+为了在 Gemini 与 AI Studio 页面上正常执行：注入侧边栏浮层、读取对话标题与 ID，并撷取消息内文以建立搜索索引。扩展程序仅会请求这两个网站的权限。
+
+Notion API 存取属于 *独立的选用权限*，仅在你主动启用 Notion 整合时才会请求。
+
+## 支持平台
+
+### 它是否同时支持 Gemini 与 AI Studio？
+
+是的。部分功能专属于特定平台，因为两个网站的架构不同 —— Zen 模式、智能滚动条、划词工具栏、Gems 与 Notebooks 仅限 Gemini；批量历史导入仅限 AI Studio。详见 [平台差异对照表](/zh/guide/settings/platform-manager#平台功能差异)。
+
+### 它是否支持 ChatGPT 或 Claude？
+
+目前尚未支持。
+
+### 支持哪些浏览器？
+
+Chrome 以及所有 Chromium 核心浏览器（Edge、Brave、Arc、Vivaldi）可直接透过 Chrome 商店安装，Firefox 则透过 Firefox 附加组件安装。
+
+请注意，Google Drive 同步功能在 Firefox 上无法使用 —— 该功能需要依赖 Firefox 未开放的专用 Identity API。[本地备份](/zh/guide/extras/data-backup) 则在所有浏览器上均可使用。
+
+### 无痕模式 (Incognito) 下能用吗？
+
+默认情况下浏览器扩展程序不会在无痕模式中执行，除非你在浏览器的扩展程序管理设置中手动开启。即使开启，无痕工作阶段中存储的资料也可能不会持久保存。
+
+### 它会拖慢 Gemini 的运行速度吗？
+
+不会。它是纯界面浮层配合本地 SQLite 运行，核心操作无任何网路等待延迟。
+
+## 找不到资料 / 同步问题
+
+### 我的旧对话没有出现在侧边栏中
+
+扩展程序默认只能抓取到平台当前载入的近期对话。请点击 **⋯ 选单 → 导入聊天记录列表** 以拉取完整列表。详见 [保持树状目录同步](/zh/guide/sidebar/library-tab#保持树状目录同步)。
+
+### 搜索找不到旧对话
+
+导入聊天记录列表只会抓取 *标题*，不会包含 *消息内文*。全文搜索需要实际的消息内容，这需要额外步骤建立：
+
+- **AI Studio** — 透过 Google Drive 导出包进行批量导入
+- **Gemini** — 当你开启对话时会自动记录，或者吩咐 [AI 助手](/zh/guide/agent/better-sidebar-agent#回补搜索索引) 批量为你同步
+
+详情请参阅 [搜索指南](/zh/guide/sidebar/search-tab#导入聊天记录)。
+
+### 部分旧对话同步显示为空
+
+非常早期的旧对话有时在 Google 服务器端已无法被检索。AI 助手会如实回报哪些对话为空，而不会假装成功。在这种情况下无法救回内容。
+
+### 大纲显示的内容与画面上不一致
+
+这通常发生在分支对话或切换版本之后。使用 [智能滚动条](/zh/guide/ui-customization/smart-scrollbar#当大纲与页面不符时) 上的清空并重新载入按钮，即可重建该对话已存储的消息结构。
+
+## AI 助手
+
+### 我需要准备 API Key 吗？
+
+完全不需要。它直接利用你当前浏览器中已登录的对话工作阶段。
+
+### 它会消耗我的 Token 配额吗？
+
+没有单独的费用或配额。它就像你自己正在与模型正常对话一样 —— 因为其本质就是如此。
+
+### 它会不小心删除我的资料吗？
+
+所有写入或修改操作默认均会先征求你的同意，且在执行改变资料的任务后会提供 **复原变更 (Undo changes)** 按钮。复原窗口会在开始下一个新任务时关闭。批量删除前系统亦会自动先建立 [本地快照备份](/zh/guide/extras/data-backup)。
+
+详见 [掌控与安全护栏](/zh/guide/agent/overview#掌控与安全护栏)。
+
+### 助手突然中断并提示它侦测到回圈？
+
+这是刻意设计的保护机制。引擎会自动侦测重复相同的工具呼叫或连续失败，并主动中止而不是无止境空转。请阅读它已完成的部分，然后微调语句重新发起。详见 [自动防护中断](/zh/guide/agent/overview#自动防护中断)。
+
+### 它暂停并提示「已自主完成 12 步」？
+
+这是一次常规的确认签入，而不是错误。在经过较长时间的自主执行后，它会自动暂停以让你视图进度，再决定是 **继续执行** 还是 **在此停止**。
+
+## 资料安全
+
+### 如果我清除了浏览器资料会怎样？
+
+Better Sidebar 的本地数据库也会一并被清除。你可以透过开启 [Google Drive 同步](/zh/guide/extras/drive-sync) 或偶尔手动导出资料库来防范这一点。
+
+请注意，Drive 同步不包含完整的对话消息内文 —— 若要完整保存，请前往 **设置 → 数据与存储 → 导出** 下载完整资料库。
+
+### 我可以把资料转移到另一台电脑吗？
+
+可以，两种方式：Drive 同步（仅架构与设置，不含内文）或数据库导出/导入（包含一切完整资料）。详见 [备份与还原](/zh/guide/extras/data-backup)。
+
+### 在 Better Sidebar 里删除对话，Google 上的也会被删除吗？
+
+是的。删除操作是真实的服务器端同步删除。如果你只是希望它不要在侧边栏占空间，可使用支持平台上的 **隐藏** 功能。
+
+## 疑难排解
 
 ### 侧边栏没有出现
 
-1. 确保扩展在浏览器扩展管理中已启用
-2. 尝试刷新页面
-3. 检查扩展是否有权限在当前网站上运行
+1. 确认你在该页面已登录 Google 账号 —— 扩展程序与账号绑定
+2. 检查浏览器工具栏图示的 [平台管理工具](/zh/guide/settings/platform-manager) 是否关闭了该平台
+3. 重新整理页面
+4. 确认浏览器已启用该扩展程序
 
-### 搜索找不到最近的对话
+### 之前一直正常，今天突然无法使用
 
-搜索索引在对话加载时更新。尝试滚动浏览对话列表以触发旧对话的索引。
+通常是 Google 平台调整了前端界面。更新扩展程序，或等待补丁释出 —— 我们通常会迅速修复。透过扩展程序内的意见回馈标签页回报会有很大帮助。
 
-### 清除浏览器数据后数据消失了
+### 标签页闲置很久后侧边栏没有反应
 
-Better Sidebar 将数据存储在浏览器本地存储（IndexedDB / OPFS）中。清除浏览器数据会删除它。请使用导出数据库功能进行定期备份。
+刷新标签页即可。此问题在 v2.9.0 已经大幅优化，请确保你的扩展程序保持在最新版本。
 
-## 参与贡献
+### 斜杠命令开关在哪里？
 
-Better Sidebar 是开源的。你可以：
+在 **浏览器工具栏图示弹窗** 中，而不是在侧边栏内部的设置窗口。点击浏览器工具栏上的 Better Sidebar 图示，切换到对应平台标签页即可开关。详见 [斜杠命令](/zh/guide/ui-customization/slash-commands#关闭功能)。
 
-- [报告 Bug](https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio/issues)
-- [提交功能建议](https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio/issues)
-- [贡献代码](https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio)
+### Notion 提示「找不到页面」
+
+你的整合金钥虽然正确，但尚未授予任何 Notion 页面的存取权限。Notion 要求必须手动将整合链接到具体页面。详见 [Notion 整合指南](/zh/guide/extras/integrations#找不到页面)。
+
+## 取得协助
+
+- [回报问题或提出建议](https://github.com/Paper-Crane-Devteam/better-sidebar-for-google-ai-studio/issues)
+- [官方 Discord](https://discord.gg/FRzesxaGAx)
+- 侧边栏内的 **意见回馈** 标签页
+
+这是一个独立开发者专案。在留下负评之前，欢迎随时透过上述管道与我联系 —— 问题通常很快就能获得解决。

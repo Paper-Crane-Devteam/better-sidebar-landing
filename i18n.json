@@ -100,18 +100,22 @@
     "es": "Volver al inicio"
   },
   "promptCopyText": {
+    "zh": "复制 Prompt",
     "zh-tw": "複製 Prompt",
     "es": "Copiar Prompt"
   },
   "promptCopiedText": {
+    "zh": "已复制",
     "zh-tw": "已複製",
     "es": "Copiado"
   },
   "promptExpandText": {
+    "zh": "展开",
     "zh-tw": "展開",
     "es": "Expandir"
   },
   "promptCollapseText": {
+    "zh": "折叠",
     "zh-tw": "摺疊",
     "es": "Colapsar"
   }

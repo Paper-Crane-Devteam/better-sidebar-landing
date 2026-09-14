@@ -24,8 +24,7 @@ function alias(from, to) {
   if (!canonicalPaths.has(from) && canonicalPaths.has(to)) aliases.set(from, to);
 }
 // Preserve old guide URLs and work around locale-menu links emitted without
-// /guide/. Chinese docs still use the older structure; fall back to the actual
-// English article only where no Chinese article exists.
+// /guide/.
 const legacyGuides = {
   'folders-and-tags': 'sidebar/library-tab',
   'prompt-library': 'sidebar/prompts-tab',

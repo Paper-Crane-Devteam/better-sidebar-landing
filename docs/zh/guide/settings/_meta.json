@@ -1,0 +1,37 @@
+[
+  {
+    "type": "file",
+    "name": "general",
+    "label": "常规设置"
+  },
+  {
+    "type": "file",
+    "name": "library",
+    "label": "资料库设置"
+  },
+  {
+    "type": "file",
+    "name": "themes",
+    "label": "主题外观"
+  },
+  {
+    "type": "file",
+    "name": "keyboard-shortcuts",
+    "label": "快捷键一览"
+  },
+  {
+    "type": "file",
+    "name": "multi-account",
+    "label": "多账号管理"
+  },
+  {
+    "type": "file",
+    "name": "platform-manager",
+    "label": "平台管理工具"
+  },
+  {
+    "type": "file",
+    "name": "packs",
+    "label": "功能包与授权激活"
+  }
+]

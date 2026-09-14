@@ -1,0 +1,27 @@
+[
+  {
+    "type": "file",
+    "name": "layout-and-width",
+    "label": "版面与宽度"
+  },
+  {
+    "type": "file",
+    "name": "slash-commands",
+    "label": "斜杠命令"
+  },
+  {
+    "type": "file",
+    "name": "selection-toolbar",
+    "label": "划词工具栏"
+  },
+  {
+    "type": "file",
+    "name": "smart-scrollbar",
+    "label": "智能滚动条"
+  },
+  {
+    "type": "file",
+    "name": "image-download",
+    "label": "无水印图片下载"
+  }
+]

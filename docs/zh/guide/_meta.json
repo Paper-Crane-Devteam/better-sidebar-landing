@@ -7,32 +7,32 @@
   {
     "type": "file",
     "name": "installation",
-    "label": "安装"
+    "label": "安装指南"
   },
   {
-    "type": "file",
-    "name": "folders-and-tags",
-    "label": "文件夹与标签"
+    "type": "dir",
+    "name": "sidebar",
+    "label": "侧边栏功能"
   },
   {
-    "type": "file",
-    "name": "prompt-library",
-    "label": "提示词库"
+    "type": "dir",
+    "name": "agent",
+    "label": "AI Agent"
   },
   {
-    "type": "file",
-    "name": "search",
-    "label": "全文搜索"
+    "type": "dir",
+    "name": "ui-customization",
+    "label": "页面增强"
   },
   {
-    "type": "file",
-    "name": "drive-sync",
-    "label": "Google Drive 同步"
+    "type": "dir",
+    "name": "extras",
+    "label": "导出与备份"
   },
   {
-    "type": "file",
-    "name": "export",
-    "label": "对话导出"
+    "type": "dir",
+    "name": "settings",
+    "label": "设置"
   },
   {
     "type": "file",
