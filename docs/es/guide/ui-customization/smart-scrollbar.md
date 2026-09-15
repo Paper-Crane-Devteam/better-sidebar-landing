@@ -1,6 +1,6 @@
 ---
 title: Barra de desplazamiento inteligente
-description: Un mapa flotante de mensajes junto a tu conversación de Gemini. Haz clic en cualquier entrada para saltar directo a ese mensaje, expandirlo a una lista completa o colapsarlo a un icono.
+description: Un mapa flotante de mensajes junto a tu conversación de Gemini. Haz clic en cualquier entrada para saltar a ese mensaje, expandirlo o colapsarlo a un icono.
 ---
 
 # Smart Scrollbar

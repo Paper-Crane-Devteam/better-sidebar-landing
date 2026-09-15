@@ -1,6 +1,6 @@
 ---
 title: 工作區助手 (Workspace Agent)
-description: 一個獨立的本地檔案空間，AI 能夠在此讀取、編寫並精準編輯真實檔案 —— 從零建立純文字與程式碼，以及在完整保留原始格式的前提下審閱修改 Word、Excel、PDF 與 PowerPoint。
+description: 一個獨立的本地檔案空間，AI 能在此讀取、編寫並精準編輯真實檔案 —— 從零建立純文字與程式碼，以及在完整保留原始格式的前提下審閱修改 Word、Excel、PDF 與 PowerPoint。
 ---
 
 # 工作區助手 (Workspace Agent)

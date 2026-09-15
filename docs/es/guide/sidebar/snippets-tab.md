@@ -1,6 +1,6 @@
 ---
 title: Snippets
-description: Conserva el párrafo bueno de una conversación de cincuenta turnos. Guarda cualquier parte de una respuesta en una biblioteca organizada por carpetas, con Markdown intacto.
+description: Conserva el párrafo bueno de una conversación de cincuenta turnos. Guarda cualquier parte de una respuesta en una biblioteca por carpetas, con Markdown intacto.
 ---
 
 # Snippets

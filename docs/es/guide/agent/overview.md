@@ -1,6 +1,6 @@
 ---
 title: Descripción general del agente
-description: Un agente de IA que se ejecuta dentro de tu propia sesión de Gemini y hace el trabajo de verdad: archivar, etiquetar, buscar, exportar, editar archivos. Sin clave API, sin coste extra, nada sale de tu dispositivo.
+description: Un agente de IA dentro de tu sesión de Gemini que archiva, etiqueta, busca, exporta y edita archivos. Sin clave API ni coste extra, nada sale de tu dispositivo.
 ---
 
 # Descripción general del agente

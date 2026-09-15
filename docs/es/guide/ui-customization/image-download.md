@@ -1,6 +1,6 @@
 ---
 title: Descarga de imágenes
-description: Descarga imágenes generadas por IA desde Gemini sin la marca de agua automática SynthID. Obtén archivos de imagen limpios y sin modificar para tus proyectos creativos.
+description: Descarga imágenes generadas por IA desde Gemini sin la marca de agua automática SynthID. Obtén archivos limpios y sin modificar para tus proyectos creativos.
 ---
 
 # Descarga de imágenes

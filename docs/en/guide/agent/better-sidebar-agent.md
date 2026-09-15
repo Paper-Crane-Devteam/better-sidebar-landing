@@ -1,6 +1,6 @@
 ---
 title: Better Sidebar Agent
-description: The agent that works on your library — organizing conversations into folders, tagging in bulk, deep search, syncing missing messages, and refactoring your prompt and snippet collections.
+description: The agent for your library — filing conversations into folders, bulk tagging, deep search, syncing missing messages, refactoring prompt and snippet collections.
 ---
 
 # Better Sidebar Agent

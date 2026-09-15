@@ -1,6 +1,6 @@
 ---
 title: Exportar
-description: Saca conversaciones y snippets — como Markdown, texto plano o JSON, o directamente a Obsidian y Notion. Elementos sueltos, carpetas enteras o selecciones por lotes.
+description: Saca conversaciones y snippets — como Markdown, texto plano o JSON, o a Obsidian y Notion. Elementos sueltos, carpetas enteras o selecciones por lotes.
 ---
 
 # Exportar

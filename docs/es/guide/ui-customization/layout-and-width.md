@@ -1,6 +1,6 @@
 ---
 title: Diseño y ancho
-description: Afina tu espacio de trabajo con anchos ajustables de barra lateral, chat y entrada, más Zen Mode, Compact Mode, entrada que se oculta sola e interruptores de visibilidad de elementos.
+description: Afina tu espacio de trabajo con anchos ajustables de barra lateral, chat y entrada, más Zen Mode, Compact Mode y controles de visibilidad de elementos.
 ---
 
 # Diseño y ancho

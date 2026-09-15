@@ -1,6 +1,6 @@
 ---
 title: Agent Overview
-description: An AI agent that runs inside your own Gemini session and actually does the work — filing, tagging, searching, exporting, editing files. No API key, no extra cost, nothing leaves your device.
+description: An AI agent inside your Gemini session that files, tags, searches, exports, and edits files. No API key, no extra cost, nothing leaves your device.
 ---
 
 # Agent Overview

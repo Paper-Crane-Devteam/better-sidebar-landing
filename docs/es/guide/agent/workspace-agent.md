@@ -1,6 +1,6 @@
 ---
 title: Agente Workspace
-description: Un área privada de archivos donde la IA puede leer, escribir y editar archivos reales — texto y código desde cero, más Word, Excel, PDF y PowerPoint conservando el formato.
+description: Un área privada donde la IA puede leer, escribir y editar archivos reales — texto y código desde cero, más Word, Excel, PDF y PowerPoint conservando el formato.
 ---
 
 # Agente Workspace

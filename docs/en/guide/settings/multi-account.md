@@ -1,6 +1,6 @@
 ---
 title: Multi-Account
-description: Create separate profiles for different Google accounts or use cases. Each profile has its own database, folders, tags, and settings — switch between them instantly.
+description: Create separate profiles for different Google accounts or use cases. Each has its own database, folders, tags, and settings — switch between them instantly.
 ---
 
 # Multi-Account

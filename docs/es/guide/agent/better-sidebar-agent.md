@@ -1,6 +1,6 @@
 ---
 title: Agente Better Sidebar
-description: El agente que trabaja sobre tu biblioteca: organizar conversaciones en carpetas, etiquetar en bloque, búsqueda profunda, sincronizar mensajes que faltan y refactorizar tus colecciones de prompts y snippets.
+description: El agente para tu biblioteca: organizar chats en carpetas, etiquetar en bloque, búsqueda profunda, sincronizar mensajes y refactorizar prompts y snippets.
 ---
 
 # Agente Better Sidebar

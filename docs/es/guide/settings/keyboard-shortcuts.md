@@ -1,6 +1,6 @@
 ---
 title: Atajos de teclado
-description: Personaliza 16 atajos de teclado en 3 categorías. Graba nuevas combinaciones, detecta conflictos y restablece a los valores predeterminados — todo sin salir del panel de ajustes.
+description: Personaliza 16 atajos de teclado en 3 categorías. Graba combinaciones, detecta conflictos y restablece los valores predeterminados sin salir de los ajustes.
 ---
 
 # Atajos de teclado

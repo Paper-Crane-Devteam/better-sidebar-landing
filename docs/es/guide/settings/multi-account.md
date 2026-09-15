@@ -1,6 +1,6 @@
 ---
 title: Varias cuentas
-description: Crea perfiles separados para distintas cuentas de Google o usos. Cada perfil tiene su propia base de datos, carpetas, etiquetas y ajustes — cambia entre ellos al instante.
+description: Crea perfiles separados para distintas cuentas de Google o usos. Cada uno tiene su base de datos, carpetas, etiquetas y ajustes — cambia al instante.
 ---
 
 # Varias cuentas

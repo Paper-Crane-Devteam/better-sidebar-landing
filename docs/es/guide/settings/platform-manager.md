@@ -1,6 +1,6 @@
 ---
 title: Gestor de plataformas
-description: Activa o desactiva Better Sidebar por sitio, y llega a los controles de UI de la plataforma desde la barra de herramientas del navegador sin abrir la barra lateral.
+description: Activa o desactiva Better Sidebar por sitio, y llega a los controles de UI desde la barra de herramientas del navegador sin abrir la barra lateral.
 ---
 
 # Gestor de plataformas

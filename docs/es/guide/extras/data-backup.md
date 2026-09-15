@@ -1,6 +1,6 @@
 ---
 title: Copias de seguridad y restauración
-description: Instantáneas locales automáticas a las que puedes volver, más exportación e importación manual de la base de datos. Todo vive en Ajustes → Datos y almacenamiento.
+description: Instantáneas locales automáticas a las que puedes volver, más exportación e importación de la base de datos. Todo vive en Ajustes → Datos y almacenamiento.
 ---
 
 # Copias de seguridad y restauración

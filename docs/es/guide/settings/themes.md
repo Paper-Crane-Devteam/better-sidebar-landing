@@ -1,6 +1,6 @@
 ---
 title: Temas
-description: 19 temas elaborados a mano para Gemini y AI Studio, una vista previa gratuita de 5 minutos en cada uno, más temas personalizados generados por IA que puedes importar.
+description: 19 temas hechos a mano para Gemini y AI Studio, vista previa gratuita de 5 minutos en cada uno, más temas personalizados generados por IA que puedes importar.
 ---
 
 # Temas
