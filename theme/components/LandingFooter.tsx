@@ -1,4 +1,6 @@
+import { usePage } from '@rspress/core/runtime';
 import Logo from './Logo';
+import { FAMILY, FAMILY_LABEL, type Lang } from './family';
 import { CHROME_URL, DISCORD_URL, GITHUB_URL, TickRule } from './sections/shared';
 
 export interface FooterContent {
@@ -25,6 +27,9 @@ export default function LandingFooter({ content }: { content: FooterContent }) {
     textTransform: 'uppercase' as const,
     color,
   });
+  const { page } = usePage();
+  const lang: Lang = page.lang && page.lang in FAMILY_LABEL ? (page.lang as Lang) : 'en';
+  const family = FAMILY.filter((p) => p.id !== 'better-sidebar');
 
   return (
     <footer style={{ background: 'var(--paper-2)', padding: 'var(--space-lg) 24px' }}>
@@ -112,12 +117,55 @@ export default function LandingFooter({ content }: { content: FooterContent }) {
             <span style={mono(0.6)}>{content.copyright}</span>
           </div>
         </div>
+
+        {/* 互链：同一工作室的其他产品。列表在 family.ts，多了会自动换行 */}
+        {family.length > 0 && (
+          <nav aria-label={FAMILY_LABEL[lang]} style={{ marginTop: 'var(--space-md)' }}>
+            <TickRule style={{ width: '100%', marginBottom: 'var(--space-sm)' }} />
+            <div style={{ ...mono(0.6), marginBottom: 'var(--space-sm)' }}>{FAMILY_LABEL[lang]}</div>
+            <ul className="footer-family">
+              {family.map((p) => (
+                <li key={p.id}>
+                  <a href={p.href} className="footer-family-link">
+                    <img src={p.icon} alt="" width={22} height={22} loading="lazy" decoding="async" />
+                    <span>
+                      <span className="footer-family-name">{p.name}</span>
+                      <span className="footer-family-desc">{p.desc[lang]}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </div>
 
       <style>{`
         @media (max-width: 780px) {
           .footer-grid { grid-template-columns: minmax(0, 1fr) !important; }
         }
+        .footer-family {
+          list-style: none; margin: 0; padding: 0;
+          display: grid; gap: var(--space-xs) var(--space-md);
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        }
+        .footer-family-link {
+          display: flex; align-items: flex-start; gap: 12px;
+          padding: var(--space-xs) 0; text-decoration: none;
+        }
+        .footer-family-link img { width: 22px; height: 22px; border-radius: 5px; flex: none; margin-top: 1px; opacity: .85; }
+        .footer-family-name {
+          display: block; font-family: var(--font-mono); font-size: 0.64rem;
+          letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2);
+        }
+        .footer-family-desc {
+          display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 0.6rem;
+          line-height: 1.7; letter-spacing: 0.04em; color: var(--ink-3);
+        }
+        .footer-family-link:hover .footer-family-name { color: var(--ink-1); }
+        .footer-family-link:hover .footer-family-desc { color: var(--ink-2); }
+        .footer-family-link:hover img { opacity: 1; }
+        .footer-family-link:focus-visible { outline: 2px solid var(--ink-2); outline-offset: 4px; }
       `}</style>
     </footer>
   );
