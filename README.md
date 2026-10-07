@@ -60,7 +60,11 @@ products to its cards and footer, and to `theme/components/family.ts`.
 Store links on it carry `utm_source=papercranedev.com&utm_campaign=studio-home`,
 which the Chrome Web Store dashboard breaks down under page views.
 Better Sidebar's homepage is https://papercranedev.com/better-sidebar/.
-Submit https://papercranedev.com/sitemap.xml in Google Search Console.
+Submit https://papercranedev.com/sitemap.xml in Google Search Console. It is a
+sitemap index: `/sitemap-pages.xml` (studio home + Better Sidebar, generated
+here) plus each sibling Worker's own sitemap, e.g. `/better-playlists/sitemap.xml`
+(maintained in that repo). New products go in `SIBLING_SITEMAPS` in
+`scripts/prepare-deploy.mjs`.
 The root must not redirect: keep no Cloudflare zone-level redirect rule on `/`.
 Unknown URLs intentionally return HTTP 404; do not enable SPA fallback.
 `Page with redirect` is expected for aliases; inspect the final canonical URL

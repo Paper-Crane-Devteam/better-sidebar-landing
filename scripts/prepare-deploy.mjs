@@ -101,7 +101,14 @@ await writeFile(new URL('better-sidebar/404.html', output), notFound);
 redirects.push(...[...aliases].map(([from, to]) => `${from} ${to} 301`));
 await writeFile(new URL('_redirects', output), redirects.join('\n') + '\n');
 await writeFile(new URL('robots.txt', output), `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
-await writeFile(new URL('sitemap.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${origin}/</loc></url>\n${pages.map(f => `  <url><loc>${urlFor(f)}</loc></url>`).join('\n')}\n</urlset>\n`);
+// /sitemap.xml is a sitemap index (the URL submitted in Search Console).
+// This Worker's own pages (studio home + Better Sidebar) go in sitemap-pages.xml;
+// other products deployed as separate Workers on the same host publish their
+// own sitemap under their path. Add new products to SIBLING_SITEMAPS.
+const SIBLING_SITEMAPS = ['/better-playlists/sitemap.xml'];
+await writeFile(new URL('sitemap-pages.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${origin}/</loc></url>\n${pages.map(f => `  <url><loc>${urlFor(f)}</loc></url>`).join('\n')}\n</urlset>\n`);
+const sitemaps = ['/sitemap-pages.xml', ...SIBLING_SITEMAPS];
+await writeFile(new URL('sitemap.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemaps.map(p => `  <sitemap><loc>${origin}${p}</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`);
 console.log(`Prepared ${pages.length} canonical pages, language alternates, Open Graph, Twitter cards, sitemap, redirects, and real 404 handling.`);
 if (truncated.length) {
   console.log(`\n${truncated.length} snippet(s) exceed Google's display budget and will be cut off:`);
