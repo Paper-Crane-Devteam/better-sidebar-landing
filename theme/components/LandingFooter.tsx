@@ -122,7 +122,9 @@ export default function LandingFooter({ content }: { content: FooterContent }) {
         {family.length > 0 && (
           <nav aria-label={FAMILY_LABEL[lang]} style={{ marginTop: 'var(--space-md)' }}>
             <TickRule style={{ width: '100%', marginBottom: 'var(--space-sm)' }} />
-            <div style={{ ...mono(0.6), marginBottom: 'var(--space-sm)' }}>{FAMILY_LABEL[lang]}</div>
+            <a href="/" style={{ ...mono(0.6), display: 'inline-block', textDecoration: 'none', marginBottom: 'var(--space-sm)' }}>
+              {FAMILY_LABEL[lang]} →
+            </a>
             <ul className="footer-family">
               {family.map((p) => (
                 <li key={p.id}>

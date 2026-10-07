@@ -52,9 +52,16 @@ New conversions that are larger than their originals are skipped.
 not recompressed. Commit the manifest, WebP files, and updated source files
 together. Original files remain in deployment output for existing links;
 the reported savings describe the converted images, not total upload size.
-The production homepage is https://papercranedev.com/better-sidebar/.
+https://papercranedev.com/ is the Paper Crane Dev studio home: plain HTML/CSS
+in `studio/`, copied to the deploy root by `scripts/prepare-deploy.mjs`
+(assets under `/studio/`). It is not part of Rspress, so `npm run dev` doesn't
+serve it; preview it with `npx wrangler dev` after `npm run build`. Add new
+products to its cards and footer, and to `theme/components/family.ts`.
+Store links on it carry `utm_source=papercranedev.com&utm_campaign=studio-home`,
+which the Chrome Web Store dashboard breaks down under page views.
+Better Sidebar's homepage is https://papercranedev.com/better-sidebar/.
 Submit https://papercranedev.com/sitemap.xml in Google Search Console.
-Cloudflare's zone-level root redirect must point to the same HTTPS homepage.
+The root must not redirect: keep no Cloudflare zone-level redirect rule on `/`.
 Unknown URLs intentionally return HTTP 404; do not enable SPA fallback.
 `Page with redirect` is expected for aliases; inspect the final canonical URL
 in Search Console to check indexing. Deployment does not force Google to index.

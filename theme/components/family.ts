@@ -3,6 +3,7 @@
  * 新增产品时在这里加一项即可，页脚会自动排版（并排除当前站点自己）。
  * Better Playlists 落地页（chrome-extensions/youtube-extensions/Better Playlists/landing-page/
  * public/better-playlists/*.html 的 `footer-family`）里也写了一份，加产品时两边一起改。
+ * 工作室主页 studio/index.html（papercranedev.com/）的产品卡片和页脚也要加一项。
  */
 export type Lang = 'en' | 'zh' | 'zh-tw' | 'ja' | 'es';
 

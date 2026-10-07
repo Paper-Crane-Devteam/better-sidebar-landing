@@ -84,7 +84,7 @@ export function Layout() {
           // 免费加内购。不写 aggregateRating —— 没有真实评分数据，
           // 编造的评分会被 Google 当作违规的结构化数据。
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          publisher: { '@type': 'Organization', name: 'Paper Crane Dev', url: ORIGIN },
+          publisher: { '@type': 'Organization', name: 'Paper Crane Dev', url: 'https://papercranedev.com/' },
         }),
       }]
       : [],
@@ -151,7 +151,7 @@ function Colophon() {
         background: 'var(--paper-1)',
       }}
     >
-      Paper Crane Dev &nbsp;·&nbsp; set in Playfair Display &amp; JetBrains Mono
+      <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Paper Crane Dev</a> &nbsp;·&nbsp; set in Playfair Display &amp; JetBrains Mono
     </div>
   );
 }

@@ -17,7 +17,16 @@ const urlFor = file => origin + base + file.replace(/index\.html$/, '').replace(
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(source, new URL('better-sidebar/', output), { recursive: true });
-const redirects = [`/ ${origin}${base} 301`, `/better-sidebar ${base} 301`];
+// Studio home (Paper Crane Dev brand page) lives at the root as plain
+// HTML/CSS in studio/. Its assets go under /studio/ so they never collide with
+// /better-sidebar/ or the separate /better-playlists* Worker route.
+const studio = new URL('../studio/', import.meta.url);
+await cp(new URL('index.html', studio), new URL('index.html', output));
+await mkdir(new URL('studio/', output), { recursive: true });
+await cp(new URL('style.css', studio), new URL('studio/style.css', output));
+const studioHtml = await readFile(new URL('index.html', output), 'utf8');
+assert(studioHtml.includes(`rel="canonical" href="${origin}/"`), 'Studio home canonical missing');
+const redirects = [`/better-sidebar ${base} 301`];
 const canonicalPaths = new Set(pages.map(f => new URL(urlFor(f)).pathname));
 const aliases = new Map();
 function alias(from, to) {
@@ -92,7 +101,7 @@ await writeFile(new URL('better-sidebar/404.html', output), notFound);
 redirects.push(...[...aliases].map(([from, to]) => `${from} ${to} 301`));
 await writeFile(new URL('_redirects', output), redirects.join('\n') + '\n');
 await writeFile(new URL('robots.txt', output), `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
-await writeFile(new URL('sitemap.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(f => `  <url><loc>${urlFor(f)}</loc></url>`).join('\n')}\n</urlset>\n`);
+await writeFile(new URL('sitemap.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${origin}/</loc></url>\n${pages.map(f => `  <url><loc>${urlFor(f)}</loc></url>`).join('\n')}\n</urlset>\n`);
 console.log(`Prepared ${pages.length} canonical pages, language alternates, Open Graph, Twitter cards, sitemap, redirects, and real 404 handling.`);
 if (truncated.length) {
   console.log(`\n${truncated.length} snippet(s) exceed Google's display budget and will be cut off:`);
