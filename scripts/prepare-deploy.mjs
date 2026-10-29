@@ -105,7 +105,7 @@ await writeFile(new URL('robots.txt', output), `User-agent: *\nAllow: /\n\nSitem
 // This Worker's own pages (studio home + Better Sidebar) go in sitemap-pages.xml;
 // other products deployed as separate Workers on the same host publish their
 // own sitemap under their path. Add new products to SIBLING_SITEMAPS.
-const SIBLING_SITEMAPS = ['/better-playlists/sitemap.xml'];
+const SIBLING_SITEMAPS = ['/better-playlists/sitemap.xml', '/creator-research/sitemap.xml'];
 await writeFile(new URL('sitemap-pages.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${origin}/</loc></url>\n${pages.map(f => `  <url><loc>${urlFor(f)}</loc></url>`).join('\n')}\n</urlset>\n`);
 const sitemaps = ['/sitemap-pages.xml', ...SIBLING_SITEMAPS];
 await writeFile(new URL('sitemap.xml', output), `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemaps.map(p => `  <sitemap><loc>${origin}${p}</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`);
