@@ -5,7 +5,7 @@ description: 使用 Better Sidebar for Gemini & AI Studio 与 Better Sidebar Web
 
 # 服务条款
 
-*最后更新：2026 年 10 月 21 日*
+*最后更新：2026 年 10 月 30 日*
 
 本条款适用于 Paper Crane Dev（下称「我们」）发布的 **Better Sidebar for Gemini & AI Studio** 及其可选配套扩展 **Better Sidebar Web Agent Connector**（合称「本扩展」）。安装或使用本扩展，即表示你同意本条款。
 
@@ -17,10 +17,14 @@ description: 使用 Better Sidebar for Gemini & AI Studio 与 Better Sidebar Web
 
 ## 2. Support Pack 与 Power Pack
 
-- 部分功能需要 Support Pack 或 Power Pack，可通过 Gumroad 或爱发电购买。付款、凭证和退款由这些平台按各自的条款处理。
+- 部分功能需要 Support Pack 或 Power Pack，可通过 Gumroad 或爱发电购买。付款和凭证由这些平台按各自的条款处理。
+- **一次买断，永不过期。** 功能包只需付费一次，授权不会过期，没有订阅或续费。
 - 一个许可证密钥可以在有限数量的浏览器 profile 中解锁对应功能。你可以在扩展设置中释放某个激活，再到别处使用。
 - 请不要分享、转售或公开许可证密钥。对明显被滥用的密钥，我们可能会停用。
-- 我们会尽力让已有的付费功能持续可用。但 Gemini 和 AI Studio 由 Google 运营，随时可能变化，某些功能可能因此失效或不得不移除。
+- **更新。** 在我们积极维护本扩展期间，会提供更新和兼容性修复，但不承诺永久维护。Gemini 和 AI Studio 由 Google 运营，随时可能变化，某些功能可能在修复发布前失效，或不得不移除。
+- **后续新增内容。** 之后版本新增的主题，包含在目前已含主题的功能包中。我们不承诺今后所有新的付费功能都会加入你已购买的功能包。
+- **如果我们停止维护本扩展，** 我们会发布一个最终版本，无需我们的授权服务器即可解锁你已购功能包的功能。只要 Gemini 和 AI Studio 仍然兼容，你的购买就能在该版本中继续使用。
+- **退款。** 如果功能包对你没有帮助，可在购买后 7 天内申请全额退款（发邮件至 contact@papercranedev.com，或回复购买凭证），无需说明理由。退款后密钥将失效。本条款不影响你所在地消费者保护法赋予你的权利。
 
 ## 3. 你对 Google 服务的使用
 
@@ -48,7 +52,7 @@ description: 使用 Better Sidebar for Gemini & AI Studio 与 Better Sidebar Web
 
 ## 8. 变更与终止
 
-我们可能修改、暂停或停止本扩展的任何部分，也可能修改本条款。顶部日期即最新版本，重要变更会写在更新说明里。你可以随时卸载本扩展以停止使用。
+我们可能修改、暂停或停止本扩展的任何部分，也可能修改本条款。顶部日期即最新版本，重要变更会写在更新说明里。你可以随时卸载本扩展以停止使用。如果我们停止维护本扩展，已购功能包的处理方式见第 2 条。
 
 ## 9. 联系我们
 

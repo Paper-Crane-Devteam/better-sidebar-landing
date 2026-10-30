@@ -5,7 +5,7 @@ description: Terms for using Better Sidebar for Gemini & AI Studio and the Bette
 
 # Terms of Service
 
-*Last Updated: October 21, 2026*
+*Last Updated: October 30, 2026*
 
 These Terms cover **Better Sidebar for Gemini & AI Studio** and its optional companion **Better Sidebar Web Agent Connector** (together, "the Extensions"), published by Paper Crane Dev ("we", "our"). By installing or using the Extensions, you agree to these Terms.
 
@@ -17,10 +17,14 @@ The names "Better Sidebar" and "Paper Crane Dev", and the logos, are not covered
 
 ## 2. Support Pack and Power Pack
 
-- Some features need a Support Pack or a Power Pack, bought through Gumroad or Afdian. Payments, receipts and refunds are handled by those platforms under their own terms.
+- Some features need a Support Pack or a Power Pack, bought through Gumroad or Afdian. Payments and receipts are processed by those platforms under their own terms.
+- **One-time purchase, no expiry.** A pack is paid for once and its license does not expire. There is no subscription or renewal fee.
 - A license key unlocks the pack's features in a limited number of browser profiles. You can release an activation from the extension's settings and use it elsewhere.
 - Please do not share, resell or publish license keys. We may disable keys that are clearly being abused.
-- We will keep a pack's existing features working for as long as we reasonably can. Because Gemini and AI Studio are run by Google and change without notice, a feature may break or have to be removed when they change.
+- **Updates.** We provide updates and compatibility fixes while we actively maintain the Extensions. We don't promise to maintain them forever. Because Gemini and AI Studio are run by Google and change without notice, a feature may break until a fix ships, or have to be removed.
+- **Later additions.** Themes added in later versions are included in the packs that include themes today. We don't promise that every future premium feature will be added to a pack you already own.
+- **If we stop maintaining the Extensions,** we will release a final version that unlocks the features of the packs you bought without needing our license server, so your purchase keeps working in that version for as long as Gemini and AI Studio allow.
+- **Refunds.** If a pack isn't useful to you, ask within 7 days of purchase (email contact@papercranedev.com or reply to your receipt) for a full refund, no questions asked. A refunded key stops working. This doesn't limit any rights you have under consumer law where you live.
 
 ## 3. Your Use of Google Services
 
@@ -48,7 +52,7 @@ To the fullest extent permitted by law, we are not liable for any indirect, inci
 
 ## 8. Changes and Termination
 
-We may change, suspend or stop any part of the Extensions or these Terms. The date at the top shows the latest version, and significant changes will be mentioned in the update notes. You can stop using the Extensions at any time by uninstalling them.
+We may change, suspend or stop any part of the Extensions or these Terms. The date at the top shows the latest version, and significant changes will be mentioned in the update notes. You can stop using the Extensions at any time by uninstalling them. If we stop maintaining the Extensions, section 2 describes what happens to packs you already bought.
 
 ## 9. Contact
 

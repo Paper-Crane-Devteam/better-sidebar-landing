@@ -14,7 +14,7 @@ Las herramientas de organización de Better Sidebar son gratis y seguirán sién
 | | Gratis | Support Pack | Power Pack |
 | --- | --- | --- | --- |
 | Precio | 0 $ | 5 $ | 29,99 $ |
-| | para siempre | una sola vez, de por vida | una sola vez, de por vida |
+| | para siempre | una sola vez, sin caducidad | una sola vez, sin caducidad |
 
 ### Gratis
 
@@ -63,7 +63,9 @@ La forma honesta de decidir: el agente gratis te dirá exactamente qué *haría*
 | Internacional | [Gumroad](https://papercranedev.gumroad.com/l/support-pack) · [Power Pack](https://papercranedev.gumroad.com/l/power-pack) |
 | China | 爱发电 — enlaces en **Ajustes → Packs** |
 
-Ambos son compras de una sola vez. No hay suscripción.
+Ambos son compras de una sola vez y la licencia no caduca. No hay suscripción.
+
+**Actualizaciones mientras lo mantengamos.** Publicamos actualizaciones y correcciones de compatibilidad mientras Better Sidebar se mantenga activamente, y los temas nuevos están incluidos. No podemos prometer mantenerlo para siempre, y los cambios de Google pueden romper una función hasta que salga una corrección. Si algún día lo dejamos, publicaremos una versión final que mantenga tu pack desbloqueado sin nuestro servidor de licencias. Consulta los [Términos](/es/terms).
 
 **Reembolso de 7 días sin preguntas.** Escribe por correo en 7 días para un reembolso completo. Sin formularios, sin justificación necesaria.
 

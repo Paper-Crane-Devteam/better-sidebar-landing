@@ -14,7 +14,7 @@ Better Sidebar's organizing tools are free and stay free. Two optional one-time 
 | | Free | Support Pack | Power Pack |
 | --- | --- | --- | --- |
 | Price | $0 | $5 | $29.99 |
-| | forever | one-time, lifetime | one-time, lifetime |
+| | forever | one-time, never expires | one-time, never expires |
 
 ### Free
 
@@ -63,7 +63,9 @@ The honest way to decide: the free agent will tell you exactly what it *would* d
 | International | [Gumroad](https://papercranedev.gumroad.com/l/support-pack) · [Power Pack](https://papercranedev.gumroad.com/l/power-pack) |
 | China | 爱发电 — links in **Settings → Packs** |
 
-Both are one-time purchases. There's no subscription.
+Both are one-time purchases and the license never expires. There's no subscription.
+
+**Updates while we maintain it.** Updates and compatibility fixes ship while Better Sidebar is actively maintained, and new themes are included. We can't promise to maintain it forever, and Google changes can break a feature until a fix ships. If we ever stop, we'll release a final version that keeps your pack unlocked without our license server. See the [Terms](/en/terms).
 
 **7-day no-questions-asked refund.** Email within 7 days for a full refund. No forms, no justification needed.
 
