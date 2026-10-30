@@ -13,7 +13,7 @@ Las herramientas de organización de Better Sidebar son gratis y seguirán sién
 
 | | Gratis | Support Pack | Power Pack |
 | --- | --- | --- | --- |
-| Precio | 0 $ | 5 $ | 19,99 $ |
+| Precio | 0 $ | 5 $ | 29,99 $ |
 | | para siempre | una sola vez, de por vida | una sola vez, de por vida |
 
 ### Gratis
@@ -42,7 +42,7 @@ Temas, y una forma de dar las gracias.
 
 Consulta [Temas](/en/guide/settings/themes).
 
-### Power Pack — 19,99 $
+### Power Pack — 29,99 $
 
 Todo lo del Support Pack, más el agente deja de ser de solo lectura.
 

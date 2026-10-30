@@ -11,7 +11,7 @@ description: Preguntas habituales sobre Better Sidebar — coste, privacidad, el
 
 Las herramientas de organización son gratis y seguirán siéndolo: carpetas, etiquetas, búsqueda, prompts, snippets, exportación a Markdown, copias de seguridad y el agente en modo solo lectura. No hace falta cuenta.
 
-Dos compras opcionales de una sola vez añaden extras: 5 $ por los temas y 19,99 $ para que el agente pueda hacer cambios. Consulta [Packs](/en/guide/settings/packs).
+Dos compras opcionales de una sola vez añaden extras: 5 $ por los temas y 29,99 $ para que el agente pueda hacer cambios. Consulta [Packs](/en/guide/settings/packs).
 
 ### ¿Es de código abierto?
 

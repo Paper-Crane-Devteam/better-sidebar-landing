@@ -11,7 +11,7 @@ description: Common questions about Better Sidebar — cost, privacy, the agent,
 
 The organizing tools are free and stay free: folders, tags, search, prompts, snippets, export to Markdown, backups, and the agent in read-only mode. No account needed.
 
-Two optional one-time purchases add extras — $5 for themes, $19.99 to let the agent make changes. See [Packs](/en/guide/settings/packs).
+Two optional one-time purchases add extras — $5 for themes, $29.99 to let the agent make changes. See [Packs](/en/guide/settings/packs).
 
 ### Is it open source?
 
